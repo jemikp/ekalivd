@@ -1,0 +1,43 @@
+{
+  "Configuration": {
+    "name": "Default",
+    "status": {
+      "level": "debug",
+      "dest": "console"
+    },
+    "monitorInterval": 30,
+    "Appenders": {
+      "RollingFile": {
+        "name": "RollingFileAppender",
+        "fileName": "application.log",
+        "filePattern": "application-%d{yyyy-MM-dd}-%i.log.zip",
+        "PatternLayout": {
+          "pattern": "%-5p | %d{yyyy-MM-dd HH:mm:ss zzz} | thread=%t | fqcn=%C{1.1.*} | file=%F | method=%M | line=%L | mdc=%X | message=%m%n"
+        },
+        "Policies": {
+          "TimeBasedTriggeringPolicy": {
+            "interval": 1,
+            "modulate": true
+          },
+          "SizeBasedTriggeringPolicy": {
+            "size": "10MB"
+          }
+        },
+        "Strategy": {
+          "DefaultRolloverStrategy": {
+            "max": "10",
+            "compressionLevel": "5"
+          }
+        }
+      }
+    },
+    "Loggers": {
+      "Root": {
+        "level": "info",
+        "AppenderRef": {
+          "ref": "RollingFileAppender"
+        }
+      }
+    }
+  }
+}
