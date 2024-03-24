@@ -31,11 +31,14 @@ public class User extends BaseEntity{
 	@Column(name = "last_name")
 	String lastName;
 	
-	@Column(name = "mobile")
-	Integer mobile;
+	@Column(name = "mobile",columnDefinition = "varchar(20)")
+	String mobile;
 	
-	@Column(name = "whatsapp")
-	Integer whatsApp;
+	@Column(name = "whatsapp",columnDefinition = "varchar(20)")
+	String whatsApp;
+
+	@Column(name = "whatsapp_verified",columnDefinition = "varchar(1) default 'N'")
+	String whatsAppVerified;
 	
 	public User(UserDTO userDTO) {
 
