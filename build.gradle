@@ -3,13 +3,13 @@ plugins {
     id 'war'
     id 'org.springframework.boot' version '3.2.4'
     id 'io.spring.dependency-management' version '1.1.4'
+    id 'org.jetbrains.kotlin.jvm'
 }
 
 group = 'com.csr'
 version = rootProject.file('src/main/resources/version.txt').text.trim()
 
 java {
-    sourceCompatibility = '17'
 }
 
 configurations {
@@ -21,22 +21,65 @@ configurations {
 repositories {
     mavenCentral()
 }
+war.rootSpec.exclude('**/static/.retain')
+war.rootSpec.exclude('**/template/.retain')
+
+//configurations {
+//    configureEach {
+//        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+//    }
+//}
 
 dependencies {
+
+//    //log4j2 yaml
+//    implementation "org.apache.logging.log4j:log4j-core:2.20.0"
+//    implementation "org.apache.logging.log4j:log4j-api:2.20.0"
+//    implementation "org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0"
+//    implementation "com.fasterxml.jackson.core:jackson-databind:2.15.4"
+//    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.15.4"
+    
+    // Apache Commons
+    implementation 'org.apache.commons:commons-lang3:3.14.0'
+
+    // jakarta
+//    compileOnly 'jakarta.servlet:jakarta.servlet-api:6.1.0-M2'
+    implementation 'jakarta.validation:jakarta.validation-api:3.1.0-M2'
+
+
+    //Spring Boot
+//    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-   // implementation 'org.springframework.boot:spring-boot-starter-security'
-   // implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation('org.springframework.boot:spring-boot-starter-web')
-  //  implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
-    implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.0.2'
-    compileOnly 'org.projectlombok:lombok'
-    runtimeOnly 'com.mysql:mysql-connector-j'
-    annotationProcessor 'org.projectlombok:lombok'
+//            {
+//                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-core'
+//                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-el'
+//                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-websocket'
+//            }
     providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+//            {
+//                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-core'
+//                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-el'
+//                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-websocket'
+//            }
+    
+    // lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // MySQL
+    implementation 'com.mysql:mysql-connector-j'
+
+    // Tests
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(17)
 }
