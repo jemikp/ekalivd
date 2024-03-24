@@ -23,12 +23,22 @@ repositories {
 }
 war.rootSpec.exclude('**/static/.retain')
 war.rootSpec.exclude('**/template/.retain')
-configurations {
-    configureEach {
-        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
-    }
-}
+
+//configurations {
+//    configureEach {
+//        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+//    }
+//}
+
 dependencies {
+
+//    //log4j2 yaml
+//    implementation "org.apache.logging.log4j:log4j-core:2.20.0"
+//    implementation "org.apache.logging.log4j:log4j-api:2.20.0"
+//    implementation "org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0"
+//    implementation "com.fasterxml.jackson.core:jackson-databind:2.15.4"
+//    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.15.4"
+    
     // Apache Commons
     implementation 'org.apache.commons:commons-lang3:3.14.0'
 
@@ -38,12 +48,10 @@ dependencies {
 
 
     //Spring Boot
-    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
-
+//    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation('org.springframework.boot:spring-boot-starter-web')
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
 //            {
 //                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-core'
 //                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-el'
@@ -55,6 +63,7 @@ dependencies {
 //                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-el'
 //                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-websocket'
 //            }
+    
     // lombok
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'

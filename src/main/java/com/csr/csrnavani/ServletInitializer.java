@@ -7,7 +7,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 public class ServletInitializer extends SpringBootServletInitializer {
 	private static final Logger initLogger = LogManager.getLogger(ServletInitializer.class);
-	
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		initLogger.fatal("[ APP STARTED ]");
