@@ -33,30 +33,35 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.14.0'
 
     // jakarta
-    compileOnly 'jakarta.servlet:jakarta.servlet-api:6.1.0-M2'
+//    compileOnly 'jakarta.servlet:jakarta.servlet-api:6.1.0-M2'
+    implementation 'jakarta.validation:jakarta.validation-api:3.1.0-M2'
+
 
     //Spring Boot
     implementation 'org.springframework.boot:spring-boot-starter-log4j2'
-    
-    implementation'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation'org.springframework.boot:spring-boot-starter-security'
-    implementation('org.springframework.boot:spring-boot-starter-web') {
-        exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-core'
-        exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-el'
-        exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-websocket'
-    }
-    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat') {
-        exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-core'
-        exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-el'
-        exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-websocket'
-    }
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+//            {
+//                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-core'
+//                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-el'
+//                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-websocket'
+//            }
+    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+//            {
+//                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-core'
+//                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-el'
+//                exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-websocket'
+//            }
     // lombok
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    
+
     // MySQL
     implementation 'com.mysql:mysql-connector-j'
-    
+
     // Tests
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
