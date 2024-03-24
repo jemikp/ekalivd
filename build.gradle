@@ -23,6 +23,7 @@ repositories {
 }
 war.rootSpec.exclude('**/static/.retain')
 war.rootSpec.exclude('**/template/.retain')
+war.rootSpec.exclude('**/default_application.properties')
 
 //configurations {
 //    configureEach {
