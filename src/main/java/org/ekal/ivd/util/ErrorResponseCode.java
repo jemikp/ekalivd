@@ -3,7 +3,7 @@
  * @Author LALIT
  * 
  */
-package com.csr.csrnavani.util;
+package org.ekal.ivd.util;
 
 /**
  * 

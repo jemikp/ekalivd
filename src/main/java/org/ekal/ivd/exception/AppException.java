@@ -3,11 +3,10 @@
  * @Author LALIT
  * 
  */
-package com.csr.csrnavani.exception;
+package org.ekal.ivd.exception;
 
+import org.ekal.ivd.dto.ErrorResponseDTO;
 import org.springframework.http.HttpStatus;
-
-import com.csr.csrnavani.dto.ErrorResponseDTO;
 
 /**
  * 

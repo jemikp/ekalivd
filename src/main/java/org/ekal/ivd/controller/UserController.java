@@ -1,4 +1,4 @@
-package com.csr.csrnavani.controller;
+package org.ekal.ivd.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.csr.csrnavani.dao.UserDao;
-import com.csr.csrnavani.dto.PaginationDTO;
-import com.csr.csrnavani.dto.UserDTO;
-import com.csr.csrnavani.util.CommonConstant;
+import org.ekal.ivd.dao.UserDao;
+import org.ekal.ivd.dto.PaginationDTO;
+import org.ekal.ivd.dto.UserDTO;
+import org.ekal.ivd.util.CommonConstant;
 
 import jakarta.validation.Valid;
 import lombok.AccessLevel;

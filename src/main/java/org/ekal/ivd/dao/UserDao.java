@@ -1,4 +1,4 @@
-package com.csr.csrnavani.dao;
+package org.ekal.ivd.dao;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,13 +13,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import com.csr.csrnavani.dto.ErrorResponseDTO;
-import com.csr.csrnavani.dto.PaginationDTO;
-import com.csr.csrnavani.dto.UserDTO;
-import com.csr.csrnavani.entity.User;
-import com.csr.csrnavani.exception.AppException;
-import com.csr.csrnavani.repository.UserRepository;
-import com.csr.csrnavani.util.ErrorResponseCode;
+import org.ekal.ivd.dto.ErrorResponseDTO;
+import org.ekal.ivd.dto.PaginationDTO;
+import org.ekal.ivd.dto.UserDTO;
+import org.ekal.ivd.entity.User;
+import org.ekal.ivd.exception.AppException;
+import org.ekal.ivd.repository.UserRepository;
+import org.ekal.ivd.util.ErrorResponseCode;
 
 import jakarta.validation.Valid;
 import lombok.AccessLevel;
