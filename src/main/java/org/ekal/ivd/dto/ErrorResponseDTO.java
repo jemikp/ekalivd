@@ -1,11 +1,10 @@
-package com.csr.csrnavani.dto;
+package org.ekal.ivd.dto;
 
-import com.csr.csrnavani.util.ErrorResponseCode;
+import org.ekal.ivd.util.ErrorResponseCode;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;

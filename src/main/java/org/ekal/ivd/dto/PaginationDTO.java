@@ -3,7 +3,7 @@
  * @Author LALIT
  * 
  */
-package com.csr.csrnavani.dto;
+package org.ekal.ivd.dto;
 
 import java.util.List;
 

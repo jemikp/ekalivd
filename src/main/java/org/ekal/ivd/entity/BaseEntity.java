@@ -1,4 +1,4 @@
-package com.csr.csrnavani.entity;
+package org.ekal.ivd.entity;
 
 import java.time.LocalDateTime;
 

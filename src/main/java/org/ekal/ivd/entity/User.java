@@ -1,12 +1,11 @@
-package com.csr.csrnavani.entity;
+package org.ekal.ivd.entity;
 
 import java.util.Optional;
 
-import com.csr.csrnavani.dto.UserDTO;
+import org.ekal.ivd.dto.UserDTO;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.Data;

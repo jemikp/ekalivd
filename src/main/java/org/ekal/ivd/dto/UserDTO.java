@@ -1,14 +1,13 @@
-package com.csr.csrnavani.dto;
+package org.ekal.ivd.dto;
 
 import java.util.Optional;
 
-import com.csr.csrnavani.entity.User;
+import org.ekal.ivd.entity.User;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
