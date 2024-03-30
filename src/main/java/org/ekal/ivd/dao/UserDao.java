@@ -1,13 +1,16 @@
 package org.ekal.ivd.dao;
 
-import java.math.BigDecimal;
-import java.security.SecureRandom;
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
-import java.util.List;
-import java.util.Optional;
-
+import jakarta.validation.Valid;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
+import org.ekal.ivd.dto.ErrorResponseDTO;
+import org.ekal.ivd.dto.PaginationDTO;
+import org.ekal.ivd.dto.UserDTO;
+import org.ekal.ivd.entity.User;
+import org.ekal.ivd.exception.AppException;
+import org.ekal.ivd.repository.UserRepository;
 import org.ekal.ivd.util.CommonConstant;
+import org.ekal.ivd.util.ErrorResponseCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,19 +21,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import org.ekal.ivd.dto.ErrorResponseDTO;
-import org.ekal.ivd.dto.PaginationDTO;
-import org.ekal.ivd.dto.UserDTO;
-import org.ekal.ivd.entity.User;
-import org.ekal.ivd.exception.AppException;
-import org.ekal.ivd.repository.UserRepository;
-import org.ekal.ivd.util.ErrorResponseCode;
-
-import jakarta.validation.Valid;
-import lombok.AccessLevel;
-import lombok.experimental.FieldDefaults;
-
-import javax.swing.text.html.Option;
+import java.security.SecureRandom;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -99,39 +94,42 @@ public class UserDao {
         return secureRandom.nextInt(max - min + 1) + min;
     }
 
-    public void sendOtp(String whatsAppNo){
+    public void sendOtp(String whatsAppNo) {
         Optional<User> optUser = userRepository.getByWhatsApp(whatsAppNo);
-        if(optUser.isEmpty()){
+        if (optUser.isEmpty()) {
             throw new AppException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_INVALID), HttpStatus.BAD_REQUEST, whatsAppNo);
         }
         User user = optUser.get();
-        if("N".equalsIgnoreCase(user.getWhatsAppVerified())){
+        if ("N".equalsIgnoreCase(user.getWhatsAppVerified())) {
             throw new AppException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_NOT_VERIFIED), HttpStatus.BAD_REQUEST, whatsAppNo);
         }
-        user.setOtp(generateOtp().toString());
+        String otp = generateOtp().toString();
+        logger.info("OTP -> {}", otp);
+        user.setOtp(otp);
         user.setOtp_time(LocalDateTime.now());
         userRepository.save(user);
 
         // Call method to send OTP in WhatsAPP
     }
 
-    public void validateOTP(String whatsAppNo,String otp){
+    public User validateOTP(String whatsAppNo, String otp) {
         Optional<User> optUser = userRepository.getByWhatsApp(whatsAppNo);
-        if(optUser.isEmpty()){
+        if (optUser.isEmpty()) {
             throw new AppException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_INVALID), HttpStatus.BAD_REQUEST, whatsAppNo);
         }
         User user = optUser.get();
-        if("N".equalsIgnoreCase(user.getWhatsAppVerified())){
+        if ("N".equalsIgnoreCase(user.getWhatsAppVerified())) {
             throw new AppException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_NOT_VERIFIED), HttpStatus.BAD_REQUEST, whatsAppNo);
         }
         LocalDateTime current = LocalDateTime.now();
         LocalDateTime otpTime = user.getOtp_time();
         long minutes = otpTime.until(current, ChronoUnit.MINUTES);
-        if(!otp.equals(user.getOtp())){
+        if (!otp.equals(user.getOtp())) {
             throw new AppException(new ErrorResponseDTO(ErrorResponseCode.INVALID_OTP), HttpStatus.BAD_REQUEST, otp);
         }
-        if(minutes > CommonConstant.OTP_VALIDATION_TIME){
+        if (minutes > CommonConstant.OTP_VALIDATION_TIME) {
             throw new AppException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_OTP_TIME_OVER), HttpStatus.BAD_REQUEST, otp);
         }
+        return optUser.get();
     }
 }
