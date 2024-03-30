@@ -1,5 +1,6 @@
 package org.ekal.ivd.entity;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 import org.ekal.ivd.dto.UserDTO;
@@ -38,7 +39,13 @@ public class User extends BaseEntity{
 
 	@Column(name = "whatsapp_verified",columnDefinition = "varchar(1) default 'N'")
 	String whatsAppVerified;
-	
+
+	@Column(name = "otp",columnDefinition = "varchar(6)")
+	String otp;
+
+	@Column(name = "otp_time",columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP" )
+	LocalDateTime otp_time;
+
 	public User(UserDTO userDTO) {
 
 		Optional.ofNullable(userDTO).ifPresent(u -> {
