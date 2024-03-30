@@ -10,7 +10,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		initLogger.fatal("[ APP STARTED ]");
-		return application.sources(CsrnavaniApplication.class);
+		return application.sources(EkalIvd.class);
 	}
 
 }
