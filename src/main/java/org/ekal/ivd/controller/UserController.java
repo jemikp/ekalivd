@@ -56,4 +56,11 @@ public class UserController {
 		PaginationDTO<UserDTO> userPageDTO = userDao.getAllUsers(page, size);
 		return ResponseEntity.status(HttpStatus.OK).body(userPageDTO);
 	}
+
+	@GetMapping(value = "/{whatsApp}",produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> getAllBin(@PathVariable(name = "whatsApp") String whatsApp)
+	{
+		userDao.sendOtp(whatsApp);
+		return ResponseEntity.status(HttpStatus.OK).body("OTP Validated successfully");
+	}
 }

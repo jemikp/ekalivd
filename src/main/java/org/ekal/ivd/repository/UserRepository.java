@@ -1,6 +1,7 @@
 package org.ekal.ivd.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -11,4 +12,6 @@ import org.ekal.ivd.entity.User;
 public interface UserRepository extends JpaRepository<User, Integer> {
 
 	List<User> findByIdOrWhatsApp(int id,String whatsApp);
+
+	Optional<User> getByWhatsApp(String whatsApp);
 }
