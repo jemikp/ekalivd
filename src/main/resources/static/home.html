@@ -1,12 +1,20 @@
 <html>
 <head>
     <title>Home Page</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
 <style>
-    body, html{
+    body, html {
         overflow: hidden !important;
     }
+
     body {
         font-family: 'Segoe UI', 'Segoe UI Light', 'Segoe UI Semibold', 'Segoe UI Semilight', 'Segoe UI Symbol', Arial;
         font-size: 13px;
@@ -14,6 +22,7 @@
         margin: 0;
         padding: 0;
     }
+
     .leftSideBar {
         display: none;
     }
@@ -21,6 +30,7 @@
     .topBar {
         display: none;
     }
+
     #homeDashboard .nav-list {
         justify-content: center;
         display: flex;
@@ -28,9 +38,11 @@
         flex-direction: row;
         gap: 5px;
     }
+
     #homeDashboard li.nav-item.top-navitembar {
         border-right: 1px solid #437495;
     }
+
     #homeDashboard .navbar-nav .nav-item .nav-link {
         margin: 0 10px;
         color: #444;
@@ -41,9 +53,11 @@
         cursor: pointer;
         text-decoration: none;
     }
+
     #homeDashboard a.nav-link.wcm-txt {
         color: #41AB46 !important;
     }
+
     #homeDashboard .navbar-expand-lg {
         position: relative;
         display: -ms-flexbox;
@@ -86,6 +100,7 @@
     #homeDashboard .navbar:after {
         display: none !important;
     }
+
     #homeDashboard .main-page-header {
         color: #283891;
         font-size: 50px;
@@ -98,12 +113,14 @@
         gap: 10px;
         margin-top: 60px;
     }
+
     #homeDashboard .main-page-body {
         margin-top: 45px;
         display: flex;
         flex-direction: column;
         gap: 25px;
     }
+
     #homeDashboard .main-page-body .ivd-cont {
         border-radius: 10px;
         border: 1px solid #EEE;
@@ -111,6 +128,7 @@
         box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
         padding: 15px 20px;
     }
+
     #homeDashboard .ivd-cont .ivd-cont-header {
         color: #BD5332;
         font-size: 30px;
@@ -118,11 +136,13 @@
         font-weight: 700;
         line-height: normal;
     }
+
     #homeDashboard .ivd-cont .ivd-cont-body {
         margin-top: 20px;
         display: flex;
         gap: 20px;
     }
+
     #homeDashboard .ivd-cont-body .ivd-details-box {
         width: 315px;
         padding: 15px;
@@ -135,6 +155,7 @@
         box-shadow: 0px 3px 5px -5px rgba(0, 0, 0, 0.25);
         cursor: pointer;
     }
+
     #homeDashboard .ivd-details-box .ivd-details-header {
         color: #444;
         font-size: 18px;
@@ -142,12 +163,14 @@
         font-weight: 600;
         line-height: normal;
     }
+
     #homeDashboard .ivd-body-section {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
     }
+
     #homeDashboard .ivd-body-section .ivd-details-imgs {
         align-items: center;
         justify-content: flex-end;
@@ -155,25 +178,30 @@
         flex-direction: row;
         gap: 8px;
     }
+
     #homeDashboard .btn.btn-img {
         padding: 4px 8px;
         color: #303030;
         border-radius: 3.5px;
         box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.25);
     }
+
     #homeDashboard .btn.btn-orng {
         border: 1px solid #E9AA4F;
         background: #FFE9C9;
     }
+
     #homeDashboard .btn.btn-green {
         border: 1px solid #41AB46;
         background: #e9ffea;
     }
+
     #homeDashboard .btn.btn-prpl {
         border: 1px solid #9A72FF;
         background: rgba(154, 114, 255, 0.25);
     }
-    #homeDashboard .bg-2{
+
+    #homeDashboard .bg-2 {
         width: 100%;
         margin-top: 20%;
         background-position: center top;
@@ -183,17 +211,21 @@
         left: 0;
         z-index: 0;
     }
-    #homeDashboard .navbar-collapse{
+
+    #homeDashboard .navbar-collapse {
         justify-content: flex-end !important;
         display: flex !important;
         gap: 190px !important;
     }
-    #homeDashboard .navbar-collapse:after{
+
+    #homeDashboard .navbar-collapse:after {
         display: none;
     }
-    #homeDashboard .navbar-collapse:before{
+
+    #homeDashboard .navbar-collapse:before {
         display: none;
     }
+
     #homeDashboard .main-page-body .ivd-cont:hover {
         background: #C3DEDC;
         box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
@@ -207,111 +239,94 @@
         <a class="navbar-brand p-0" href="https://www.ekal.org/in/" style="height: fit-content;">
             <img src="https://www.ekal.org/assets/images/ekal-logo.png" style="width: 60px;"></a>
         <div class="collapse navbar-collapse" id="toggleNav" style="display: flex !important;">
-        <ul class="navbar-nav nav-list p-0">
+            <ul class="navbar-nav nav-list p-0">
 
-            <li class="nav-item" style="">
-                <a class="nav-link" style="">HOME</a>
-            </li><li class="nav-item" style="">
-            <a class="nav-link" style="">ABOUT</a>
-        </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CAUSES <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">0</a></li>
-                    <li><a href="#">1</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FUTURE PLAN <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">0</a></li>
-                    <li><a href="#">1</a></li>
-                </ul>
-            </li>
-            <li class="nav-item" style="">
-            <a class="nav-link" data-toggle="dropdown" aria-expanded="false">REPORTS</a>
-        </li><li class="nav-item top-navitembar" style="
+                <li class="nav-item" style="">
+                    <a class="nav-link" style="">HOME</a>
+                </li>
+                <li class="nav-item" style="">
+                    <a class="nav-link" style="">ABOUT</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CAUSES <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">0</a></li>
+                        <li><a href="#">1</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FUTURE PLAN <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">0</a></li>
+                        <li><a href="#">1</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" style="">
+                    <a class="nav-link" data-toggle="dropdown" aria-expanded="false">REPORTS</a>
+                </li>
+                <li class="nav-item top-navitembar" style="
     padding-right: 10px;
 ">
-            <a class="nav-link" data-toggle="dropdown" aria-expanded="false">CONTACT</a>
-        </li>
-            <li class="nav-item" style="
+                    <a class="nav-link" data-toggle="dropdown" aria-expanded="false">CONTACT</a>
+                </li>
+                <li class="nav-item" style="
     margin-left: 10px;
 ">
-                <section class="center">
-                    <div hidden="">
-                        <div data-name="popover-content">
-                            <div class="input-group">
-                                <input type="text" class="form-control form-control-sm" placeholder="Search" name="search">
-                                <div class="input-group-btn">
-                                    <button class="btn btn-danger" type="submit">
-                                        <i class="bi bi-search fa fa-search"></i>
-                                    </button>
+                    <section class="center">
+                        <div hidden="">
+                            <div data-name="popover-content">
+                                <div class="input-group">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Search" name="search">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-danger" type="submit">
+                                            <i class="bi bi-search fa fa-search"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <a id="example" tabindex="0" class="dropdown-toggle nav-link" role="button" data-bs-toggle="popover" title="Search Section"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        <a id="example" tabindex="0" class="dropdown-toggle nav-link" role="button" data-bs-toggle="popover" title="Search Section"><i class="fa fa-search" aria-hidden="true"></i></a>
 
-                </section>
-            </li>
-        </ul>
-        <ul class="navbar-nav nav-list p-0" style="">
-            <li class="nav-item top-navitembar" style="">
-                <a class="nav-link wcm-txt" style="">Welcome Mahesh Navani !</a>
-            </li>
-            <li class="nav-item top-navitembar" style="">
-                <a class="nav-link" style="">Log Out</a>
-            </li>
-            <li class="nav-item top-navitembar" style="border: 0;margin-left: 10px;">
-                <button type="button" href="https://www.ekal.org/in/donation" target="_self" class="btn btn-main sml_btn" style="">Donate</button>
-            </li>
-        </ul>
+                    </section>
+                </li>
+            </ul>
+            <ul class="navbar-nav nav-list p-0" style="">
+                <li class="nav-item top-navitembar" style="">
+                    <a class="nav-link wcm-txt" style="">Welcome Mahesh Navani !</a>
+                </li>
+                <li class="nav-item top-navitembar" style="">
+                    <a class="nav-link" style="">Log Out</a>
+                </li>
+                <li class="nav-item top-navitembar" style="border: 0;margin-left: 10px;">
+                    <button type="button" href="https://www.ekal.org/in/donation" target="_self" class="btn btn-main sml_btn" style="">Donate</button>
+                </li>
+            </ul>
     </nav>
     <div class="homepagewrapper">
         <div class="row wrapper-homepage mx-auto" style="margin-left: auto;margin-right: auto;">
-            <div class="bg-2"><img src="./img/bg-img-2.png" style="width: 100%;"></div>
+            <div class="bg-2"><img src="public/img/bg-img-2.png" style="width: 100%;"></div>
             <div class="col-sm-12">
-                 <div class="col-sm-12 main-page-header">
-                     <img src="./img/ivd_icon.png"> My IVD
-                 </div>
+                <div class="col-sm-12 main-page-header">
+                    <img src="public/img/ivd_icon.png"> My IVD
+                </div>
                 <div class="col-sm-12 main-page-body">
                     <div class="col-sm-12 ivd-cont">
                         <div class="col-sm-12 ivd-cont-header">Maharashtra (Jogmodi)
-                            <i class="fa fa-info-circle" title="Info" aria-hidden="true"></i> </div>
+                            <i class="fa fa-info-circle" title="Info" aria-hidden="true"></i></div>
                         <div class="col-sm-12 ivd-cont-body">
-                                <div class="ivd-details-box">
-                            <div class="ivd-img-section">
-                                <img src="./img/education.png">
-                            </div>
-                            <div class="col-sm-12 p-0 ivd-body-section">
-                                <div class="col-sm-12 p-0 ivd-details-header">Education</div>
-                                <div class="col-sm-12 p-0 ivd-details-imgs">
-                                    <button type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
-                                        <i class="fa fa-commenting-o" aria-hidden="true"></i>
-                                    </button>
-                                    <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
-                                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                    </button>
-                                     <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn" title="Organization Structure" style="">
-                                        <i class="fa fa-sitemap" aria-hidden="true"></i>
-                                     </button>
-                                </div>
-                            </div>
-                        </div>
-                                <div class="ivd-details-box">
+                            <div class="ivd-details-box">
                                 <div class="ivd-img-section">
-                                    <img src="./img/arogya.png">
+                                    <img src="public/img/education.png">
                                 </div>
                                 <div class="col-sm-12 p-0 ivd-body-section">
-                                    <div class="col-sm-12 p-0 ivd-details-header">Arogya</div>
+                                    <div class="col-sm-12 p-0 ivd-details-header">Education</div>
                                     <div class="col-sm-12 p-0 ivd-details-imgs">
                                         <button type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
-                                            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                            <i class="fa-regular fa-comment"></i>
                                         </button>
                                         <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
-                                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                            <i class="fa-regular fa-file"></i>
                                         </button>
                                         <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn" title="Organization Structure" style="">
                                             <i class="fa fa-sitemap" aria-hidden="true"></i>
@@ -319,18 +334,37 @@
                                     </div>
                                 </div>
                             </div>
-                                <div class="ivd-details-box">
+                            <div class="ivd-details-box">
                                 <div class="ivd-img-section">
-                                    <img src="./img/women_empowerment_center.png">
+                                    <img src="public/img/arogya.png">
+                                </div>
+                                <div class="col-sm-12 p-0 ivd-body-section">
+                                    <div class="col-sm-12 p-0 ivd-details-header">Arogya</div>
+                                    <div class="col-sm-12 p-0 ivd-details-imgs">
+                                        <button type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
+                                            <i class="fa-regular fa-comment"></i>
+                                        </button>
+                                        <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
+                                            <i class="fa-regular fa-file"></i>
+                                        </button>
+                                        <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn" title="Organization Structure" style="">
+                                            <i class="fa fa-sitemap" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ivd-details-box">
+                                <div class="ivd-img-section">
+                                    <img src="public/img/women_empowerment_center.png">
                                 </div>
                                 <div class="col-sm-12 p-0 ivd-body-section">
                                     <div class="col-sm-12 p-0 ivd-details-header">Women Empowerment Centers</div>
                                     <div class="col-sm-12 p-0 ivd-details-imgs">
                                         <button type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
-                                            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                            <i class="fa-regular fa-comment"></i>
                                         </button>
                                         <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
-                                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                            <i class="fa-regular fa-file"></i>
                                         </button>
                                         <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn" title="Organization Structure" style="">
                                             <i class="fa fa-sitemap" aria-hidden="true"></i>
@@ -347,8 +381,16 @@
 </div>
 </div>
 <script>
-    $(document).ready(function() {
 
+    var Home = () => {
+    }
+    
+    Home.init=()=>{
+        
+    }
+
+    $(document).ready(function () {
+        Home.init();
         var options = {
             html: true,
             title: "Optional: HELLO(Will overide the default-the inline title)",

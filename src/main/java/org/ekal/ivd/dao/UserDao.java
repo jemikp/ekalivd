@@ -101,7 +101,9 @@ public class UserDao {
 
     public void sendOtp(String whatsAppNo){
         User user = validateWhatsApp(whatsAppNo);
-        user.setOtp(generateOtp().toString());
+        String otp = generateOtp().toString();
+        logger.info("OTP ->{}",otp);
+        user.setOtp(otp);
         user.setOtp_time(LocalDateTime.now());
         userRepository.save(user);
 
@@ -120,7 +122,7 @@ public class UserDao {
         return user;
     }
 
-    public void validateOTP(String whatsAppNo,String otp){
+    public User validateOTP(String whatsAppNo,String otp){
         User user = validateWhatsApp(whatsAppNo);
         LocalDateTime current = LocalDateTime.now();
         LocalDateTime otpTime = user.getOtp_time();
@@ -131,5 +133,6 @@ public class UserDao {
         if(minutes > CommonConstant.OTP_VALIDATION_TIME){
             throw new AppException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_OTP_TIME_OVER), HttpStatus.BAD_REQUEST, otp);
         }
+        return user;
     }
 }
