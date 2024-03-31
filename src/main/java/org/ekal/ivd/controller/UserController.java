@@ -49,7 +49,7 @@ public class UserController {
 	}
 
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> getAllBin(@RequestParam(name = "page", defaultValue = CommonConstant.PAGE) int page,
+	public ResponseEntity<?> getAllUsers(@RequestParam(name = "page", defaultValue = CommonConstant.PAGE) int page,
 			@RequestParam(name = "size", defaultValue = CommonConstant.SIZE) int size)
 			{
 
@@ -57,8 +57,8 @@ public class UserController {
 		return ResponseEntity.status(HttpStatus.OK).body(userPageDTO);
 	}
 
-	@GetMapping(value = "/{whatsApp}",produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> getAllBin(@PathVariable(name = "whatsApp") String whatsApp)
+	@GetMapping(value = "/otp/{whatsApp}",produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> sendWhatsAPPOtp(@PathVariable(name = "whatsApp") String whatsApp)
 	{
 		userDao.sendOtp(whatsApp);
 		return ResponseEntity.status(HttpStatus.OK).body("OTP Validated successfully");
