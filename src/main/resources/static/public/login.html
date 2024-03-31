@@ -7,7 +7,222 @@
 </head>
 <body>
 <style>
-   
+    body {
+        font-family: 'Segoe UI', 'Segoe UI Light', 'Segoe UI Semibold', 'Segoe UI Semilight', 'Segoe UI Symbol', Arial;
+        font-size: 13px;
+        color: #696969;
+        margin: 0;
+        padding: 0;
+    }
+
+    .leftSideBar {
+        display: none;
+    }
+
+    .topBar {
+        display: none;
+    }
+
+    #loginPageDashboard .navbar-expand-lg {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    #loginPageDashboard .navbar-expand-lg {
+        padding: 0 20px;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #loginPageDashboard .btn-main {
+        background: #F1592A;
+        border-color: #F1592A;
+    }
+
+    #loginPageDashboard .sml_btn {
+        padding: 0.7rem 1.875rem;
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    #loginPageDashboard .navbar:before {
+        display: none !important;
+    }
+
+    #loginPageDashboard .navbar:after {
+        display: none !important;
+    }
+
+    #loginPageDashboard .bg-1 {
+        width: 100%;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        z-index: 6;
+    }
+
+    #loginPageDashboard .img-txt {
+        width: 173px;
+        display: inline-block;
+        border-radius: 10px;
+        background: #BD5332;
+        padding: 10px;
+        color: #FFF;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-left: -45px;
+    }
+
+    #loginPageDashboard .img-section {
+        position: relative;
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    #loginPageDashboard .box-section {
+        z-index: 10;
+        padding: 10px 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 1px solid #D9D9D9;
+        height: 440px;
+    }
+
+    #loginPageDashboard .login-container {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 85px;
+        margin-top: 70px;
+    }
+
+    #loginPageDashboard .login-header {
+        color: #000;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+
+    /*nav-tabs start*/
+    #loginPageDashboard .tabbable-line > .nav-tabs {
+        border: none;
+        margin: 0px;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li {
+        margin-right: 2px;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li > a {
+        border: 0;
+        margin-right: 0;
+        color: #737373;
+        width: 215px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li > a > i {
+        color: #a6a6a6;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+        border-bottom: 4px solid #00498E;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+        border: 0;
+        background: none !important;
+        color: #333333;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
+        color: #a6a6a6;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
+        margin-top: 0px;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.active {
+        border-bottom: 4px solid #00498E;
+        position: relative;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.active > a {
+        border: 0;
+        color: #333333;
+        font-weight: 700;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.active > a > i {
+        color: #404040;
+    }
+
+    #loginPageDashboard .tabbable-line > .tab-content {
+        margin-top: -3px;
+        background-color: #fff;
+        border: 0;
+        border-top: 1px solid #eee;
+        padding: 15px 0;
+    }
+
+    #loginPageDashboard .portlet .tabbable-line > .tab-content {
+        padding-bottom: 0;
+    }
+
+    /*nav-tabs end*/
+
+    #loginPageDashboard .row-eq-height {
+        flex-direction: column;
+        display: flex;
+        gap: 15px;
+    }
+
+    #loginPageDashboard .form-control.login-field {
+        height: 36px;
+        border-radius: 5px;
+    }
+
+    #loginPageDashboard .btn.btn-login {
+        background-color: #00498E;
+        border-radius: 5px;
+        color: #fff;
+        padding: 4px 8px;
+        width: 140px;
+        height: 42px;
+        font-weight: 600;
+    }
+
+    #loginPageDashboard a.link-txt {
+        color: #00498E;
+        font-weight: 600;
+    }
 </style>
 <div id="loginPageDashboard" class="BlueDialog">
     <nav class="navbar navbar-expand-lg">
