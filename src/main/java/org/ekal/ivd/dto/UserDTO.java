@@ -2,6 +2,7 @@ package org.ekal.ivd.dto;
 
 import java.util.Optional;
 
+import org.ekal.ivd.entity.RoleMaster;
 import org.ekal.ivd.entity.User;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -33,6 +34,8 @@ public class UserDTO {
 	String whatsApp;
 	
 	String whatsAppVerified;
+
+	RoleMasterDTO role;
 	
 	public UserDTO(User user) {
 
@@ -43,6 +46,7 @@ public class UserDTO {
 			this.mobile = u.getMobile();
 			this.whatsApp = u.getWhatsApp();
 			this.whatsAppVerified = u.getWhatsAppVerified();
+			this.role = new RoleMasterDTO(u.getRoleId());
 		});
 	}
 

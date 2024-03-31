@@ -100,14 +100,7 @@ public class UserDao {
     }
 
     public void sendOtp(String whatsAppNo){
-        Optional<User> optUser = userRepository.getByWhatsApp(whatsAppNo);
-        if(optUser.isEmpty()){
-            throw new AppException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_INVALID), HttpStatus.BAD_REQUEST, whatsAppNo);
-        }
-        User user = optUser.get();
-        if("N".equalsIgnoreCase(user.getWhatsAppVerified())){
-            throw new AppException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_NOT_VERIFIED), HttpStatus.BAD_REQUEST, whatsAppNo);
-        }
+        User user = validateWhatsApp(whatsAppNo);
         user.setOtp(generateOtp().toString());
         user.setOtp_time(LocalDateTime.now());
         userRepository.save(user);
@@ -115,7 +108,7 @@ public class UserDao {
         // Call method to send OTP in WhatsAPP
     }
 
-    public void validateOTP(String whatsAppNo,String otp){
+    public User validateWhatsApp(String whatsAppNo){
         Optional<User> optUser = userRepository.getByWhatsApp(whatsAppNo);
         if(optUser.isEmpty()){
             throw new AppException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_INVALID), HttpStatus.BAD_REQUEST, whatsAppNo);
@@ -124,6 +117,11 @@ public class UserDao {
         if("N".equalsIgnoreCase(user.getWhatsAppVerified())){
             throw new AppException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_NOT_VERIFIED), HttpStatus.BAD_REQUEST, whatsAppNo);
         }
+        return user;
+    }
+
+    public void validateOTP(String whatsAppNo,String otp){
+        User user = validateWhatsApp(whatsAppNo);
         LocalDateTime current = LocalDateTime.now();
         LocalDateTime otpTime = user.getOtp_time();
         long minutes = otpTime.until(current, ChronoUnit.MINUTES);
