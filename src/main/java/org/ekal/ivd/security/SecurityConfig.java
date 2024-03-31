@@ -7,30 +7,27 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
 
-import java.util.Arrays;
-
 @Configuration
-@EnableWebSecurity
+@EnableWebSecurity(debug = true)
 public class SecurityConfig {
 
     private static final String[] SESSIONLESS_URLS = {
             "/LoginController/**",
-            "/LoginController/validateOTP",
             "/public/**",
             "/index.html"
     };
-    
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        System.out.println(Arrays.toString(SESSIONLESS_URLS));
-        http.csrf(AbstractHttpConfigurer::disable)
+        http.cors(AbstractHttpConfigurer::disable)
+                .csrf(AbstractHttpConfigurer::disable)
                 .formLogin(AbstractHttpConfigurer::disable);
         http
                 .authorizeHttpRequests((authorize) -> authorize
                         .requestMatchers(SESSIONLESS_URLS).permitAll()
-                        .anyRequest().authenticated()
+                        .anyRequest().permitAll()
+//                        .anyRequest().authenticated()
                 );
-//        http.cors(AbstractHttpConfigurer::disable);
 
         return http.build();
     }
