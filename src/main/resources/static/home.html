@@ -641,56 +641,59 @@
         padding-right: 15px;
     }
     /*chat section css start*/
-    #homeDashboard .box-cont {
-         border-radius: 10px;
-         border: 1px solid #B0B0B0;
-         background: #FFF;
-         width: -webkit-fill-available;
-     }
-    #homeDashboard .chat-section header {
-        color: #41AB46;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        /*margin-bottom: 10px;*/
-        padding: 15px;
+    .popover{
+        max-width: 750px;
     }
-    #homeDashboard .chat-section .chat-body {
+    .popover-body{
+        padding: 0 !important;
+    }
+    .popover-header{
+        color: #41AB46 !important;
+        font-size: 20px !important;
+        background-color: #fff;
+        border: 0;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        line-height: normal !important;
+        /* margin-bottom: 10px; */
+        padding: 15px !important;
+    }
+    .pophoverContainer .chat-section .chat-body {
         padding: 0 0 15px 15px;
         height: 260px;
     }
-    #homeDashboard .chat-section .chat-body-height {
+    .pophoverContainer .chat-section .chat-body-height {
         padding-right: 10px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        gap: 10px;
     }
-    #homeDashboard .chat-section .chat-box.other-chat {
+    .pophoverContainer .chat-section .chat-box.other-chat {
         justify-content: flex-start;
         border-radius: 0px 10px 10px 0px;
         max-width: 450px;
         width: fit-content;
         align-items: flex-start;
     }
-    #homeDashboard .chat-section .chat-box {
+    .pophoverContainer .chat-section .chat-box {
         display: flex;
         /* align-items: center; */
         gap: 5px;
         flex-direction: column;
     }
-    #homeDashboard .chat-section .chat-box.my-chat {
+    .pophoverContainer .chat-section .chat-box.my-chat {
         justify-content: end;
         align-items: end;
     }
-    #homeDashboard .chat-section .msg-info-name {
+    .pophoverContainer .chat-section .msg-info-name {
         color: #1C8BCB;
         font-size: 14px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
     }
-    #homeDashboard .chat-section .chat {
+    .pophoverContainer .chat-section .chat {
         max-width: 450px;
         /* padding: 15px; */
         border-radius: 15px;
@@ -704,47 +707,47 @@
         font-weight: 600;
         line-height: normal;
     }
-    #homeDashboard .chat-section form.msger-inputarea {
+    .pophoverContainer .chat-section .msger-inputarea {
         display: flex;
         padding: 10px;
         background: #C5E1F1;
         gap: 5px;
         align-items: center;
     }
-    #homeDashboard .modal-footer{
+    .pophoverContainer .modal-footer{
         display: none;
     }
-    #homeDashboard i.fa-solid.fa-paper-plane {
+    .pophoverContainer i.fa-solid.fa-paper-plane {
         color: #1C8BCB;
         font-size: 18px;
+        padding: 0 5px;
     }
     /*overflow css start*/
-    #homeDashboard .scrollbar {
+    .pophoverContainer .scrollbar {
         width: 100%;
-        overflow-y: scroll;
+        overflow-y: auto;
     }
-    #homeDashboard .force-overflow {
+    .pophoverContainer .force-overflow {
         min-height: 100%;
     }
-    #homeDashboard #style-1::-webkit-scrollbar-track
+    .pophoverContainer #style-1::-webkit-scrollbar-track
     {
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
         border-radius: 10px;
         background-color: #F5F5F5;
     }
-    #homeDashboard #style-1::-webkit-scrollbar
+    .pophoverContainer #style-1::-webkit-scrollbar
     {
         width: 12px;
         background-color: #F5F5F5;
     }
-    #homeDashboard #style-1::-webkit-scrollbar-thumb
+    .pophoverContainer #style-1::-webkit-scrollbar-thumb
     {
         border-radius: 10px;
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
         background-color: #ccc;
     }
     /*overflow css end*/
-    /*Chat section css end*/
 </style>
 <div id="homeDashboard" class="BlueDialog">
     <nav class="navbar navbar-expand-lg">
@@ -837,7 +840,7 @@
                                 <div class="col-sm-12 p-0 ivd-body-section">
                                     <div class="col-sm-12 p-0 ivd-details-header">Education</div>
                                     <div class="col-sm-12 p-0 ivd-details-imgs">
-                                        <button popovertarget="my-popover" type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
+                                        <button type="button" class="btn btn-green btn-img sml_btn" data-bs-content="" style="" id="chatSection" aria-label="Chat Section" data-bs-original-title="Chat Section" aria-describedby="popover650856">
                                             <i class="fa-regular fa-comment"></i>
                                         </button>
                                         <div popover="" id="my-popover" style="position: absolute;inset: auto auto 0px 0px;margin: 0px;transform: translate(288px, -133px);border: 0;padding: 0;">
@@ -880,7 +883,7 @@
                                 <div class="col-sm-12 p-0 ivd-body-section">
                                     <div class="col-sm-12 p-0 ivd-details-header">Arogya</div>
                                     <div class="col-sm-12 p-0 ivd-details-imgs">
-                                        <button popovertarget="my-popover" type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
+                                        <button type="button" class="btn btn-green btn-img sml_btn" data-bs-content="" style="" id="chatSection" aria-label="Chat Section" data-bs-original-title="Chat Section" aria-describedby="popover650856">
                                             <i class="fa-regular fa-comment"></i>
                                         </button>
                                         <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
@@ -899,7 +902,7 @@
                                 <div class="col-sm-12 p-0 ivd-body-section">
                                     <div class="col-sm-12 p-0 ivd-details-header">Women Empowerment Centers</div>
                                     <div class="col-sm-12 p-0 ivd-details-imgs">
-                                        <button popovertarget="my-popover" type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
+                                        <button type="button" class="btn btn-green btn-img sml_btn" data-bs-content="" style="" id="chatSection" aria-label="Chat Section" data-bs-original-title="Chat Section" aria-describedby="popover650856">
                                             <i class="fa-regular fa-comment"></i>
                                         </button>
                                         <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
@@ -977,7 +980,6 @@
         </div>
     </div>
 </div>
-</div>
 <script>
 
     var Home = () => {
@@ -1029,6 +1031,44 @@
             $('#viewerContainer').addClass('col-sm-8');
             $('#timelineDiv').show(300);
         }
+    });
+</script>
+<script>
+    $(function() {
+        $('#chatSection').popover({
+            title: '<i class="fa-solid fa-comment-dots"></i> Communication',
+            animation: true,
+            placement: 'right',
+            html: true,
+            sanitize: false,
+            content: function () {
+                var html = "";
+                html += '<div class="pophoverContainer">';
+                html += '    <div class="box-cont">';
+                html += '       <div class="chat-section">';
+                html += '            <div class="scrollbar chat-body" id="style-1">';
+                html += '                <div class="chat-body-height force-overflow">';
+                html += '                    <div class="chat-box other-chat">';
+                html += '                        <div class="chat">Give me screenshot of Woman Empowerment Centers</div>';
+                html += '                        <div class="msg-info-name">Mahesh Navani</div>';
+                html += '                    </div>';
+                html += '                    <div class="chat-box my-chat">';
+                html += '                        <div class="chat">I have sent you an eMail with a Link which contains all the screenshots for Women Empowerment Centers';
+                html += '                        </div>';
+                html += '                        <div class="msg-info-name">Bhaskar</div>';
+                html += '                    </div>';
+                html += '                </div>';
+                html += '            </div>';
+                html += '            <div class="msger-inputarea">';
+                html += '                <input id="searchField" name="searchField" type="text" class="form-control login-field" placeholder="Type Here" autocomplete="off">';
+                html += '                <i class="fa-solid fa-paper-plane"></i>';
+                html += '            </div>';
+                html += '       </div>';
+                html += '   </div>';
+                html += '</div>';
+                return html;
+            }
+        });
     });
 </script>
 </body>
