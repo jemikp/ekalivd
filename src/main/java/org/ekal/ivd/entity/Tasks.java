@@ -1,5 +1,6 @@
 package org.ekal.ivd.entity;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -21,39 +22,38 @@ import java.time.LocalDate;
 @EqualsAndHashCode(callSuper = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-@Table(name = "project")
-public class Project extends BaseEntity {
+@Table(name = "tasks")
+public class Tasks extends BaseEntity {
 
-    @Column(name = "project_name", columnDefinition = "varchar(255)")
-    String projectName;
+    @Column(name = "task_name", columnDefinition = "VARCHAR(255)")
+    String taskName;
 
-    @Column(name = "project_desc", columnDefinition = "text")
-    String projectDescription;
-
-
-    @Column(name = "status", columnDefinition = "INT DEFAULT 0")
-    Integer projectStatus;
-
-    @Column(name = "delflag", columnDefinition = "INT DEFAULT 0")
-    Integer delflag;
+    @Column(name = "task_description", columnDefinition = "TEXT")
+    String taskDescription;
 
     @Column(name = "start_date")
     LocalDate startDate;
+    
+    @Column(name = "status", columnDefinition = "INT DEFAULT 0")
+    Integer taskStatus;
+
+    @Column(name = "delflag", columnDefinition = "INT DEFAULT 0")
+    Integer delflag;
 
     @Column(name = "end_date")
     LocalDate endDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ivd_id", referencedColumnName = "id", insertable = false, updatable = false)
-    IVDMaster ivd;
+    @JoinColumn(name = "project_id", referencedColumnName = "id", insertable = false, updatable = false)
+    Project project;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "coordinator", referencedColumnName = "id", insertable = false, updatable = false)
-    User coordinator;
+    @JoinColumn(name = "program_id", referencedColumnName = "id", insertable = false, updatable = false)
+    ProgramMaster program;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "sub_coordinator", referencedColumnName = "id", insertable = false, updatable = false)
-    User subCoordinator;
+    @JoinColumn(name = "assignee_to", referencedColumnName = "id", insertable = false, updatable = false)
+    User assignedto;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "created_by", referencedColumnName = "id", insertable = false, updatable = false)
@@ -63,3 +63,5 @@ public class Project extends BaseEntity {
     @JoinColumn(name = "modified_by", referencedColumnName = "id", insertable = false, updatable = false)
     User modifiedBy;
 }
+    
+

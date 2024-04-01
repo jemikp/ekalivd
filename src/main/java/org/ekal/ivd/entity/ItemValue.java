@@ -1,5 +1,6 @@
 package org.ekal.ivd.entity;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -13,47 +14,32 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
-import java.time.LocalDate;
-
 @Data
 @NoArgsConstructor
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-@Table(name = "project")
-public class Project extends BaseEntity {
+@Table(name = "itemvalue")
+public class ItemValue extends BaseEntity {
+    
+    @Column(name = "value", columnDefinition = "TEXT")
+    String taskDescription;
 
-    @Column(name = "project_name", columnDefinition = "varchar(255)")
-    String projectName;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "project_id", referencedColumnName = "id", insertable = false, updatable = false)
+    Project project;
 
-    @Column(name = "project_desc", columnDefinition = "text")
-    String projectDescription;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "task_id", referencedColumnName = "id", insertable = false, updatable = false)
+    Tasks task;
 
-
-    @Column(name = "status", columnDefinition = "INT DEFAULT 0")
-    Integer projectStatus;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "item_id", referencedColumnName = "id", insertable = false, updatable = false)
+    ItemMaster item;
 
     @Column(name = "delflag", columnDefinition = "INT DEFAULT 0")
     Integer delflag;
-
-    @Column(name = "start_date")
-    LocalDate startDate;
-
-    @Column(name = "end_date")
-    LocalDate endDate;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ivd_id", referencedColumnName = "id", insertable = false, updatable = false)
-    IVDMaster ivd;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "coordinator", referencedColumnName = "id", insertable = false, updatable = false)
-    User coordinator;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "sub_coordinator", referencedColumnName = "id", insertable = false, updatable = false)
-    User subCoordinator;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "created_by", referencedColumnName = "id", insertable = false, updatable = false)
