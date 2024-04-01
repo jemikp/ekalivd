@@ -32,11 +32,11 @@ public class UserChatController {
 	}
 
 	@GetMapping(value = "/chat", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> getChat(@RequestParam(name = "projectId",required = false) int projectId,
-									 @RequestParam(name = "departmentId",required = false) int departmentId,
-									 @RequestParam(name = "taskId",required = false) int taskId) {
+	public ResponseEntity<?> getChat(@RequestParam(name = "projectId",required = false) Integer projectId,
+									 @RequestParam(name = "programId",required = false) Integer programId,
+									 @RequestParam(name = "taskId",required = false) Integer taskId) {
 
-		List<UserChatDTO> userChatDTO = userChatDao.getUserChat(projectId,departmentId,taskId);
+		List<UserChatDTO> userChatDTO = userChatDao.getUserChat(projectId,programId,taskId);
 		return ResponseEntity.status(HttpStatus.OK).body(userChatDTO);
 	}
 }

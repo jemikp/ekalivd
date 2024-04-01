@@ -10,7 +10,7 @@ import java.util.List;
 public interface UserChatRepository extends JpaRepository<UserChat, Integer> {
     List<UserChat> getByProjectId(int projectId);
 
-    List<UserChat> getByProjectIdAndDepartmentId(int projectId,int departmentId);
+    List<UserChat> getByProjectIdAndProgramId(int projectId,int programId);
 
     List<UserChat> getByTaskId(int taskId);
 }

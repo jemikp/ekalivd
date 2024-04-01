@@ -1,18 +1,16 @@
 package org.ekal.ivd.dto;
 
-import java.util.Optional;
-
-import org.ekal.ivd.entity.RoleMaster;
-import org.ekal.ivd.entity.User;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-
 import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.ekal.ivd.entity.User;
+
+import java.util.Optional;
 
 @Data
 @JsonSerialize
@@ -46,7 +44,7 @@ public class UserDTO {
 			this.mobile = u.getMobile();
 			this.whatsApp = u.getWhatsApp();
 			this.whatsAppVerified = u.getWhatsAppVerified();
-			this.role = new RoleMasterDTO(u.getRoleId());
+			this.role = new RoleMasterDTO(u.getRole());
 		});
 	}
 
