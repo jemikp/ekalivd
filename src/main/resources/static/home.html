@@ -23,14 +23,6 @@
         padding: 0;
     }
 
-    .leftSideBar {
-        display: none;
-    }
-
-    .topBar {
-        display: none;
-    }
-
     #homeDashboard .nav-list {
         justify-content: center;
         display: flex;
@@ -44,7 +36,6 @@
     }
 
     #homeDashboard .navbar-nav .nav-item .nav-link {
-        margin: 0 10px;
         color: #444;
         font-size: 16px;
         font-style: normal;
@@ -52,6 +43,8 @@
         line-height: normal;
         cursor: pointer;
         text-decoration: none;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     #homeDashboard a.nav-link.wcm-txt {
@@ -83,7 +76,6 @@
     }
 
     #homeDashboard .sml_btn {
-        padding: 0.7rem 1.875rem;
         color: #fff;
         font-weight: 700;
         text-transform: uppercase;
@@ -117,11 +109,12 @@
     #homeDashboard .main-page-body {
         margin-top: 45px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 25px;
     }
 
     #homeDashboard .main-page-body .ivd-cont {
+        height: -webkit-fill-available;
         border-radius: 10px;
         border: 1px solid #EEE;
         background: #FFF;
@@ -169,6 +162,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
+        flex: auto !important;
     }
 
     #homeDashboard .ivd-body-section .ivd-details-imgs {
@@ -180,8 +174,12 @@
     }
 
     #homeDashboard .btn.btn-img {
-        padding: 4px 8px;
+        height: 30px;
+        width: 30px;
+        align-items: center;
+        justify-content: center;
         color: #303030;
+        display: flex;
         border-radius: 3.5px;
         box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.25);
     }
@@ -230,6 +228,523 @@
         background: #C3DEDC;
         box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
     }
+    #homeDashboard .section-header {
+        color: #283891;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+    #homeDashboard .section-details {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    /*organization structure css start*/
+    #homeDashboard ol.organizational-chart,
+    #homeDashboard ol.organizational-chart ol,
+    #homeDashboard ol.organizational-chart li,
+    #homeDashboard ol.organizational-chart li > div {
+        position: relative;
+    }
+
+    #homeDashboard ol.organizational-chart,
+    #homeDashboard ol.organizational-chart ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #homeDashboard ol.organizational-chart {
+        text-align: center;
+    }
+
+    #homeDashboard ol.organizational-chart ol {
+        padding-top: 1em;
+    }
+
+    #homeDashboard ol.organizational-chart ol:before,
+    #homeDashboard ol.organizational-chart ol:after,
+    #homeDashboard ol.organizational-chart li:before,
+    #homeDashboard ol.organizational-chart li:after,
+    #homeDashboard ol.organizational-chart > li > div:before,
+    #homeDashboard ol.organizational-chart > li > div:after {
+        background-color: #b7a6aa;
+        content: '';
+        position: absolute;
+    }
+
+    #homeDashboard ol.organizational-chart ol > li {
+        padding: 1em 0 0 1em;
+    }
+
+    #homeDashboard ol.organizational-chart > li ol:before {
+        height: 1em;
+        left: 50%;
+        top: 0;
+        width: 3px;
+    }
+
+    #homeDashboard ol.organizational-chart > li ol:after {
+        height: 3px;
+        left: 3px;
+        top: 1em;
+        width: 50%;
+    }
+
+    #homeDashboard ol.organizational-chart > li ol > li:not(:last-of-type):before {
+        height: 3px;
+        left: 0;
+        top: 2em;
+        width: 1em;
+    }
+
+    #homeDashboard ol.organizational-chart > li ol > li:not(:last-of-type):after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 3px;
+    }
+
+    #homeDashboard ol.organizational-chart > li ol > li:last-of-type:before {
+        height: 3px;
+        left: 0;
+        top: 2em;
+        width: 1em;
+    }
+
+    #homeDashboard ol.organizational-chart > li ol > li:last-of-type:after {
+        height: 2em;
+        left: 0;
+        top: 0;
+        width: 3px;
+    }
+
+    #homeDashboard ol.organizational-chart li > div {
+        background-color: #fff;
+        border-radius: 3px;
+        min-height: 2em;
+        padding: 0.5em;
+        border-radius: 10px;
+        border: 1px solid #9FA8DB;
+        background: #FFF;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+    #homeDashboard ol.organizational-chart li > div:hover {
+        border: 1px solid #EEE;
+        background: #C3DEDC;
+        box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    /*** PRIMARY ***/
+    #homeDashboard ol.organizational-chart > li > div {
+        margin-right: 1em;
+        border-radius: 10px;
+        border: 1px solid #9FA8DB;
+        background: #FFF;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+    #homeDashboard ol.organizational-chart > li > div:hover {
+        border: 1px solid #EEE;
+        background: #C3DEDC;
+        box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
+    }
+    #homeDashboard ol.organizational-chart .txt-1{
+        color: #BD5332;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+    }
+    #homeDashboard ol.organizational-chart .txt-2{
+        color: #444;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: 0;
+    }
+
+    #homeDashboard ol.organizational-chart > li > div:before {
+        bottom: 2em;
+        height: 3px;
+        right: -1em;
+        width: 1em;
+    }
+
+    #homeDashboard ol.organizational-chart > li > div:first-of-type:after {
+        bottom: 0;
+        height: 2em;
+        right: -1em;
+        width: 3px;
+    }
+
+    #homeDashboard ol.organizational-chart > li > div + div {
+        margin-top: 1em;
+    }
+
+    #homeDashboard ol.organizational-chart > li > div + div:after {
+        height: calc(100% + 1em);
+        right: -1em;
+        top: -1em;
+        width: 3px;
+    }
+
+    /*** SECONDARY ***/
+    #homeDashboard ol.organizational-chart > li > ol:before {
+        left: inherit;
+        right: 0;
+    }
+
+    #homeDashboard ol.organizational-chart > li > ol:after {
+        left: 0;
+        width: 100%;
+    }
+
+
+    /*** TERTIARY ***/
+    #homeDashboard ol.organizational-chart > li > ol > li > ol > li > div {
+        background-color: #fd6470;
+    }
+
+    /*** QUATERNARY ***/
+    #homeDashboard ol.organizational-chart > li > ol > li > ol > li > ol > li > div {
+        background-color: #fca858;
+    }
+
+    /*** QUINARY ***/
+    #homeDashboard ol.organizational-chart > li > ol > li > ol > li > ol > li > ol > li > div {
+        background-color: #fddc32;
+    }
+
+    /*** MEDIA QUERIES ***/
+    @media only screen and ( min-width: 64em ) {
+
+        #homeDashboard ol.organizational-chart {
+            margin-left: -1em;
+            margin-right: -1em;
+        }
+
+        /* PRIMARY */
+        #homeDashboard ol.organizational-chart > li > div {
+            display: inline-block;
+            float: none;
+            margin: 0 1em 1em 1em;
+            vertical-align: bottom;
+        }
+
+        #homeDashboard ol.organizational-chart > li > div:only-of-type {
+            width: calc((100% / 1) - 2em - 4px);
+        }
+
+        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2),
+        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2) ~ div {
+            width: calc((100% / 2) - 2em - 4px);
+        }
+
+        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3),
+        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3) ~ div {
+            width: calc((100% / 3) - 2em - 4px);
+        }
+
+        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4),
+        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4) ~ div {
+            width: calc((100% / 4) - 2em - 4px);
+        }
+
+        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5),
+        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5) ~ div {
+            width: calc((100% / 5) - 2em - 4px);
+        }
+
+        #homeDashboard ol.organizational-chart > li > div:before,
+        #homeDashboard ol.organizational-chart > li > div:after {
+            bottom: -1em!important;
+            top: inherit!important;
+        }
+
+        #homeDashboard ol.organizational-chart > li > div:before {
+            height: 1em!important;
+            left: 50%!important;
+            width: 3px!important;
+        }
+
+        #homeDashboard ol.organizational-chart > li > div:only-of-type:after {
+            display: none;
+        }
+
+        #homeDashboard ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after,
+        #homeDashboard ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+            bottom: -1em;
+            height: 3px;
+            width: calc(50% + 1em + 3px);
+        }
+
+        #homeDashboard ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after {
+            left: calc(50% + 3px);
+        }
+
+        #homeDashboard ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+            left: calc(-1em - 3px);
+        }
+
+        #homeDashboard ol.organizational-chart > li > div + div:not(:last-of-type):after {
+            height: 3px;
+            left: -2em;
+            width: calc(100% + 4em);
+        }
+
+        /* SECONDARY */
+        #homeDashboard ol.organizational-chart > li > ol {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        #homeDashboard ol.organizational-chart > li > ol:before,
+        #homeDashboard ol.organizational-chart > li > ol > li:before {
+            height: 1em!important;
+            left: 50%!important;
+            top: 0!important;
+            width: 3px!important;
+        }
+
+        #homeDashboard ol.organizational-chart > li > ol:after {
+            display: none;
+        }
+
+        #homeDashboard ol.organizational-chart > li > ol > li {
+            flex-grow: 1;
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-top: 1em;
+        }
+
+        #homeDashboard ol.organizational-chart > li > ol > li:only-of-type {
+            padding-top: 0;
+        }
+
+        #homeDashboard ol.organizational-chart > li > ol > li:only-of-type:before,
+        #homeDashboard ol.organizational-chart > li > ol > li:only-of-type:after {
+            display: none;
+        }
+
+        #homeDashboard ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after,
+        #homeDashboard ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+            height: 3px;
+            top: 0;
+            width: 50%;
+        }
+
+        #homeDashboard ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after {
+            left: 50%;
+        }
+
+        #homeDashboard ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+            left: 0;
+        }
+
+        #homeDashboard ol.organizational-chart > li > ol > li + li:not(:last-of-type):after {
+            height: 3px;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+    }
+    /*organization structure css end*/
+    #homeDashboard .back-btn-icon{
+        color: #303030;
+        align-items: center;
+        display: flex;
+        margin-right: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    #homeDashboard .timeline-deatils {
+        color: #000;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    /*timeline css start */
+
+    #homeDashboard .history-tl-container{
+        font-family: "Roboto",sans-serif;
+        margin:auto;
+        display:block;
+        position:relative;
+    }
+    #homeDashboard .history-tl-container ul.tl{
+        margin:20px 0;
+        padding:0;
+        display:inline-block;
+
+    }
+    #homeDashboard .history-tl-container ul.tl li{
+        list-style: none;
+        margin: auto;
+        margin-left: 50px;
+        margin-right: 50px;
+        min-height: 50px;
+        /* background: rgba(255, 255, 0, 0.1); */
+        border-left: 1px dashed #86D6FF;
+        padding: 0 0 30px 15px;
+        position: relative;
+    }
+    #homeDashboard .history-tl-container ul.tl li:last-child{ border-left:0;}
+    #homeDashboard .history-tl-container ul.tl li::before{
+        position: absolute;
+        left: -9px;
+        content: " ";
+        border: 8px solid #283891;
+        border-radius: 500%;
+    }
+    #homeDashboard .history-tl-container ul.tl li:hover::before{
+        border-color:  #258CC7;
+        transition: all 1000ms ease-in-out;
+    }
+    #homeDashboard ul.tl li .item-title{
+        padding-top: 22px;
+        color: #303030;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    #homeDashboard ul.tl li .item-detail{
+        color:rgba(0,0,0,0.5);
+        font-size:12px;
+    }
+    #homeDashboard ul.tl li .timestamp{
+        position: absolute;
+        width: 100px;
+        color: #BD5332;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    /*timeline css end*/
+    #homeDashboard .sub-cont {
+        border-left: 1px solid #C3DEDC;
+        transition: all 0.3s;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    /*chat section css start*/
+    #homeDashboard .box-cont {
+         border-radius: 10px;
+         border: 1px solid #B0B0B0;
+         background: #FFF;
+         width: -webkit-fill-available;
+     }
+    #homeDashboard .chat-section header {
+        color: #41AB46;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        /*margin-bottom: 10px;*/
+        padding: 15px;
+    }
+    #homeDashboard .chat-section .chat-body {
+        padding: 0 0 15px 15px;
+        height: 260px;
+    }
+    #homeDashboard .chat-section .chat-body-height {
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    #homeDashboard .chat-section .chat-box.other-chat {
+        justify-content: flex-start;
+        border-radius: 0px 10px 10px 0px;
+        max-width: 450px;
+        width: fit-content;
+        align-items: flex-start;
+    }
+    #homeDashboard .chat-section .chat-box {
+        display: flex;
+        /* align-items: center; */
+        gap: 5px;
+        flex-direction: column;
+    }
+    #homeDashboard .chat-section .chat-box.my-chat {
+        justify-content: end;
+        align-items: end;
+    }
+    #homeDashboard .chat-section .msg-info-name {
+        color: #1C8BCB;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    #homeDashboard .chat-section .chat {
+        max-width: 450px;
+        /* padding: 15px; */
+        border-radius: 15px;
+        background: #EEE;
+        border-radius: 10px 0px 0px 10px;
+        padding: 10px;
+        color: #444;
+        font-family: "Segoe UI";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    #homeDashboard .chat-section form.msger-inputarea {
+        display: flex;
+        padding: 10px;
+        background: #C5E1F1;
+        gap: 5px;
+        align-items: center;
+    }
+    #homeDashboard .modal-footer{
+        display: none;
+    }
+    #homeDashboard i.fa-solid.fa-paper-plane {
+        color: #1C8BCB;
+        font-size: 18px;
+    }
+    /*overflow css start*/
+    #homeDashboard .scrollbar {
+        width: 100%;
+        overflow-y: scroll;
+    }
+    #homeDashboard .force-overflow {
+        min-height: 100%;
+    }
+    #homeDashboard #style-1::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+    #homeDashboard #style-1::-webkit-scrollbar
+    {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+    #homeDashboard #style-1::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #ccc;
+    }
+    /*overflow css end*/
+    /*Chat section css end*/
 </style>
 <div id="homeDashboard" class="BlueDialog">
     <nav class="navbar navbar-expand-lg">
@@ -303,17 +818,17 @@
                 </li>
             </ul>
     </nav>
-    <div class="homepagewrapper">
+    <div class="homepagewrapper" style="padding: 0 15px;">
         <div class="row wrapper-homepage mx-auto" style="margin-left: auto;margin-right: auto;">
             <div class="bg-2"><img src="public/img/bg-img-2.png" style="width: 100%;"></div>
-            <div class="col-sm-12">
+            <div class="col-sm-12" style="padding:0 15px; z-index: 10;position: relative;">
                 <div class="col-sm-12 main-page-header">
                     <img src="public/img/ivd_icon.png"> My IVD
                 </div>
-                <div class="col-sm-12 main-page-body">
-                    <div class="col-sm-12 ivd-cont">
+                <div class="col-sm-12 main-page-body" id="mainViewerDiv">
+                    <div class="col-sm-12 ivd-cont" id="viewerContainer">
                         <div class="col-sm-12 ivd-cont-header">Maharashtra (Jogmodi)
-                            <i class="fa fa-info-circle" title="Info" aria-hidden="true"></i></div>
+                            <i class="fa fa-info-circle" type="button" href="" target="_self" title="Info" style="" id="infoFind" data-l10n-id="findbar" aria-expanded="true" aria-controls="findbar" autocomplete="off" aria-hidden="true"></i></div>
                         <div class="col-sm-12 ivd-cont-body">
                             <div class="ivd-details-box">
                                 <div class="ivd-img-section">
@@ -322,13 +837,37 @@
                                 <div class="col-sm-12 p-0 ivd-body-section">
                                     <div class="col-sm-12 p-0 ivd-details-header">Education</div>
                                     <div class="col-sm-12 p-0 ivd-details-imgs">
-                                        <button type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
+                                        <button popovertarget="my-popover" type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
                                             <i class="fa-regular fa-comment"></i>
                                         </button>
+                                        <div popover="" id="my-popover" style="position: absolute;inset: auto auto 0px 0px;margin: 0px;transform: translate(288px, -133px);border: 0;padding: 0;">
+                                            <div class="box-cont" style="border: 1px solid #283891;box-shadow: 0px 4px 16px -3px rgba(90, 103, 113, 0.25);">
+                                                <div class="chat-section">
+                                                    <header>
+                                                        <i class="fa-solid fa-comment-dots"></i>   Communication
+                                                    </header>
+                                                    <div class="scrollbar chat-body" id="style-1">
+                                                        <div class="chat-body-height force-overflow">
+                                                            <div class="chat-box other-chat">
+                                                                <div class="chat">Give me screenshot of Woman Empowerment Centers</div>
+                                                                <div class="msg-info-name">Mahesh Navani</div>
+                                                            </div>
+                                                            <div class="chat-box my-chat">
+                                                                <div class="chat">I have sent you an eMail with a Link which contains all the screenshots for Women Empowerment Centers</div>
+                                                                <div class="msg-info-name">Bhaskar</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <form class="msger-inputarea">
+                                                        <input type="text" class="form-control login-field" placeholder="Type Here" autocomplete="off">
+                                                        <i class="fa-solid fa-paper-plane"></i>
+                                                    </form>
+                                                </div>
+                                            </div></div>
                                         <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
                                             <i class="fa-regular fa-file"></i>
                                         </button>
-                                        <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn" title="Organization Structure" style="">
+                                        <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn" title="Organization Structure" style="" id="viewFind" data-l10n-id="findbar" aria-expanded="true" aria-controls="findbar" autocomplete="off">
                                             <i class="fa fa-sitemap" aria-hidden="true"></i>
                                         </button>
                                     </div>
@@ -341,7 +880,7 @@
                                 <div class="col-sm-12 p-0 ivd-body-section">
                                     <div class="col-sm-12 p-0 ivd-details-header">Arogya</div>
                                     <div class="col-sm-12 p-0 ivd-details-imgs">
-                                        <button type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
+                                        <button popovertarget="my-popover" type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
                                             <i class="fa-regular fa-comment"></i>
                                         </button>
                                         <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
@@ -360,7 +899,7 @@
                                 <div class="col-sm-12 p-0 ivd-body-section">
                                     <div class="col-sm-12 p-0 ivd-details-header">Women Empowerment Centers</div>
                                     <div class="col-sm-12 p-0 ivd-details-imgs">
-                                        <button type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
+                                        <button popovertarget="my-popover" type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
                                             <i class="fa-regular fa-comment"></i>
                                         </button>
                                         <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
@@ -371,6 +910,65 @@
                                         </button>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 sub-cont" id="searchResultOuterDiv" style="display:none;">
+                        <div class="section-header">
+                            <a class="back-btn-icon" href="">
+                                <i class="fa fa-reply" aria-hidden="true" style="font-size: 20px;"></i>
+                            </a>
+                            <i class="fa fa-sitemap" aria-hidden="true"></i>Organization structure
+                        </div>
+                        <div class="section-details">
+                            <ol class="organizational-chart">
+                                <li>
+                                    <div>
+                                        <h1 class="txt-1">Ashok Gavali</h1>
+                                        <h1 class="txt-2">IVD Project Coordinator</h1>
+                                    </div>
+                                    <ol>
+                                        <li>
+                                            <div>
+                                                <h2 class="txt-1">Bhaskar</h2>
+                                                <h2 class="txt-2">IVD Project Sub-Coordinator</h2>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 sub-cont" id="timelineDiv" style="display: none;">
+                        <div class="section-header">
+                            <a class="back-btn-icon" href="">
+                                <i class="fa fa-reply" aria-hidden="true" style="font-size: 20px;"></i>
+                            </a>
+                            <img src="public/img/timeline.png">Timeline
+                        </div>
+                        <div class="section-details" style="margin-left: 0;margin-right: 0;">
+                            <div class="timeline-deatils">The Jogmodi IVD was started in the year of 2021 by Janki Foundation's co-founder's Mr and Mrs Mahesh Navani. Jogmodi village is a central hub for about 30 villages around it and hence it was selected as the anchor for this IVD. As part of this IVD, the founders of Janki Foundation wanted to work on 3 main causes to make the village more self suffient 1) A skill development centers like Taloring classes, Computer training institutes etc 2) Coaching the villagers on Organic Farming using new farming practices 3) Health and Nutrition awareness through our Arogya Sevikas.</div>
+                            <div class="history-tl-container">
+                                <ul class="tl">
+                                    <li class="tl-item" ng-repeat="item in retailer_history">
+                                        <div class="timestamp">
+                                            June 2021
+                                        </div>
+                                        <div class="item-title">Jogmodi IVD was started by Mr. Mahesh Navani on June 2021.</div>
+                                    </li>
+                                    <li class="tl-item" ng-repeat="item in retailer_history">
+                                        <div class="timestamp">
+                                            Aug 2022
+                                        </div>
+                                        <div class="item-title">Computer Training lab Project was insisted  on Aug 2022.</div>
+                                    </li>
+                                    <li class="tl-item" ng-repeat="item in retailer_history">
+                                        <div class="timestamp">
+                                            Sep 2023
+                                        </div>
+                                        <div class="item-title">Arogya Program was started on Sep 2023.</div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -405,6 +1003,33 @@
         var popover = new bootstrap.Popover(exampleEl, options)
     })
 
+</script>
+<script>
+    $("#viewFind").click(function () {
+        $('#timelineDiv').hide();
+        if  ($('#searchResultOuterDiv').is(':visible')){
+            $('#searchResultOuterDiv').hide(300);
+            $('#viewerContainer').addClass('col-sm-12');
+            $('#viewerContainer').removeClass('col-sm-8');
+        } else {
+            $('#viewerContainer').removeClass('col-sm-12');
+            $('#viewerContainer').addClass('col-sm-8');
+            $('#searchResultOuterDiv').show(300);
+        }
+
+    });
+    $("#infoFind").click(function () {
+        $('#searchResultOuterDiv').hide();
+        if($("#timelineDiv").is(':visible')){
+            $('#viewerContainer').addClass('col-sm-12');
+            $('#viewerContainer').removeClass('col-sm-8');
+            $('#timelineDiv').hide(300);
+        }else{
+            $('#viewerContainer').removeClass('col-sm-12');
+            $('#viewerContainer').addClass('col-sm-8');
+            $('#timelineDiv').show(300);
+        }
+    });
 </script>
 </body>
 </html>
