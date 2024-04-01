@@ -27,9 +27,9 @@ import java.util.Optional;
 @Table(name = "user")
 public class User extends BaseEntity{
 
-	@ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "role_id", referencedColumnName = "id", insertable = false, updatable = false)
-	RoleMaster roleId;
+	RoleMaster role;
 
 	@Column(name = "first_name")
 	String firstName;

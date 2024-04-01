@@ -9,6 +9,9 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
+import org.ekal.ivd.dto.ProgramMasterDTO;
+
+import java.util.Optional;
 
 
 @Data
@@ -17,13 +20,21 @@ import lombok.experimental.FieldDefaults;
 @EqualsAndHashCode(callSuper = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-@Table(name = "role_master")
-public class RoleMaster extends BaseEntity{
+@Table(name = "program_master")
+public class ProgramMaster extends BaseEntity{
 
-	@Column(name = "role_name",columnDefinition = "VARCHAR(50)")
-	String roleName;
+	@Column(name = "name",columnDefinition = "varchar(50)",nullable = false)
+	String name;
 
 	@Column(name = "delflag",columnDefinition = "INT DEFAULT 0")
 	int delflag = 0;
+
+	public ProgramMaster(ProgramMasterDTO programMasterDTO) {
+
+		Optional.ofNullable(programMasterDTO).ifPresent(p -> {
+			this.id = p.getId();
+			this.name = p.getName();
+		});
+	}
 
 }
