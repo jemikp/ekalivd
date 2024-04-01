@@ -1,15 +1,10 @@
 package org.ekal.ivd.entity;
 
-import java.time.LocalDateTime;
-import java.util.Optional;
-
-import jakarta.persistence.FetchType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
-import org.ekal.ivd.dto.UserDTO;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.Data;
@@ -17,6 +12,10 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
+import org.ekal.ivd.dto.UserDTO;
+
+import java.time.LocalDateTime;
+import java.util.Optional;
 
 
 @Data
@@ -28,7 +27,7 @@ import lombok.experimental.FieldDefaults;
 @Table(name = "user")
 public class User extends BaseEntity{
 
-	@OneToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "role_id", referencedColumnName = "id", insertable = false, updatable = false)
 	RoleMaster roleId;
 
