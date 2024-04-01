@@ -33,7 +33,7 @@ public class Tasks extends BaseEntity {
 
     @Column(name = "start_date")
     LocalDate startDate;
-    
+
     @Column(name = "status", columnDefinition = "INT DEFAULT 0")
     Integer taskStatus;
 
@@ -43,25 +43,35 @@ public class Tasks extends BaseEntity {
     @Column(name = "end_date")
     LocalDate endDate;
 
+    @Column(name = "project_id")
+    Integer projectId;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "project_id", referencedColumnName = "id", insertable = false, updatable = false)
     Project project;
 
+    @Column(name = "program_id")
+    Integer programId;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "program_id", referencedColumnName = "id", insertable = false, updatable = false)
     ProgramMaster program;
 
+    @Column(name = "assignee_to")
+    Integer assigneeTo;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "assignee_to", referencedColumnName = "id", insertable = false, updatable = false)
-    User assignedto;
+    User assignedToUser;
 
+    @Column(name = "created_by")
+    Integer createdBy;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "created_by", referencedColumnName = "id", insertable = false, updatable = false)
-    User createdBy;
+    User createdByUser;
 
+    @Column(name = "modified_by")
+    Integer modifiedBy;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "modified_by", referencedColumnName = "id", insertable = false, updatable = false)
-    User modifiedBy;
+    User modifiedByUser;
 }
     
 

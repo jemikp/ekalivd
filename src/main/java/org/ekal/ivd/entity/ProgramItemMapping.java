@@ -36,11 +36,15 @@ public class ProgramItemMapping extends BaseEntity {
     @Column(name = "delflag", columnDefinition = "INT DEFAULT 0")
     Integer delflag;
 
+    @Column(name = "created_by")
+    Integer createdBy;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "created_by", referencedColumnName = "id", insertable = false, updatable = false)
-    User createdBy;
+    User createdByUser;
 
+    @Column(name = "modified_by")
+    Integer modifiedBy;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "modified_by", referencedColumnName = "id", insertable = false, updatable = false)
-    User modifiedBy;
+    User modifiedByUser;
 }

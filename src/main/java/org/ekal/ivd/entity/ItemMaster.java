@@ -26,12 +26,15 @@ public class ItemMaster extends BaseEntity {
     String itemName;
 
     @Column(name = "item_type")
-    int itemType;
+    Integer itemType;
 
     @Column(name = "delflag", columnDefinition = "INT DEFAULT 0")
     Integer delflag;
-
+    
+    @Column(name = "created_by", columnDefinition = "INT DEFAULT 0")
+    Integer createdBy;
+    
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "created_by", referencedColumnName = "id", insertable = false, updatable = false)
-    User createdBy;
+    User createdByUser;
 }

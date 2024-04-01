@@ -42,24 +42,34 @@ public class Project extends BaseEntity {
 
     @Column(name = "end_date")
     LocalDate endDate;
-
+    
+    @Column(name = "ivd_id")
+    Integer ivdId;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ivd_id", referencedColumnName = "id", insertable = false, updatable = false)
     IVDMaster ivd;
 
+    @Column(name = "coordinator")
+    Integer coordinator;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "coordinator", referencedColumnName = "id", insertable = false, updatable = false)
-    User coordinator;
+    User coordinatorUser;
 
+    @Column(name = "sub_coordinator")
+    Integer subCoordinator;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sub_coordinator", referencedColumnName = "id", insertable = false, updatable = false)
-    User subCoordinator;
+    User subCoordinatorUser;
 
+    @Column(name = "created_by")
+    Integer createdBy;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "created_by", referencedColumnName = "id", insertable = false, updatable = false)
-    User createdBy;
+    User createdByUser;
 
+    @Column(name = "modified_by")
+    Integer modifiedBy;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "modified_by", referencedColumnName = "id", insertable = false, updatable = false)
-    User modifiedBy;
+    User modifiedByUser;
 }
