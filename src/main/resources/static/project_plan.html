@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Plan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+<!--    <script src="https://code.jquery.com/jquery-3.7.1.min.js"-->
+<!--            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>-->
+<!--    &lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+
+<!--    &lt;!&ndash; Optional theme &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+
+<!--    &lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+
+
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"-->
+<!--          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="-->
+<!--          crossorigin="anonymous" referrerpolicy="no-referrer"/>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/js/bootstrap-dialog.min.js" integrity="sha512-LbO5ZwEjd9FPp4KVKsS6fBk2RRvKcXYcsHatEapmINf8bMe9pONiJbRWTG9CF/WDzUig99yvvpGb64dNQ27Y4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/css/bootstrap-dialog.min.css" integrity="sha512-PvZCtvQ6xGBLWHcXnyHD67NTP+a+bNrToMsIdX/NUqhw+npjLDhlMZ/PhSHZN4s9NdmuumcxKHQqbHlGVqc8ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+</head>
+<body>
+<style>
+    body, html {
+        overflow: hidden !important;
+    }
+
+    body {
+        font-family: 'Segoe UI', 'Segoe UI Light', 'Segoe UI Semibold', 'Segoe UI Semilight', 'Segoe UI Symbol', Arial;
+        font-size: 13px;
+        color: #696969;
+        margin: 0;
+        padding: 0;
+    }
+
+    #projectPlanDashboard .nav-list {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 5px;
+    }
+    #projectPlanDashboard .navbar-nav {
+        float: left;
+        margin: 0;
+    }
+    #projectPlanDashboard .navbar-brand, .navbar-nav>li>a {
+        text-shadow: 0 1px 0 rgba(255,255,255,.25);
+    }
+    #projectPlanDashboard .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    #projectPlanDashboard li.nav-item.top-navitembar {
+        border-right: 1px solid #437495;
+    }
+
+    #projectPlanDashboard .navbar-nav .nav-item .nav-link {
+        color: #444;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        cursor: pointer;
+        text-decoration: none;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #projectPlanDashboard a.nav-link.wcm-txt {
+        color: #41AB46 !important;
+    }
+
+    #projectPlanDashboard .navbar-expand-lg {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    #projectPlanDashboard .navbar-expand-lg {
+        padding: 0 20px;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #projectPlanDashboard .btn-main {
+        background: #F1592A;
+        border-color: #F1592A;
+    }
+
+    #projectPlanDashboard .sml_btn {
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    #projectPlanDashboard .navbar:before {
+        display: none !important;
+    }
+
+    #projectPlanDashboard .navbar:after {
+        display: none !important;
+    }
+
+    #projectPlanDashboard .main-page-header {
+        color: #283891;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 60px;
+    }
+
+    #projectPlanDashboard .main-page-body {
+        margin-top: 45px;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    #projectPlanDashboard .main-page-body .ivd-cont {
+        height: -webkit-fill-available;
+        border-radius: 10px;
+        border: 1px solid #EEE;
+        background: #FFF;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+        padding: 15px 20px;
+    }
+
+    #projectPlanDashboard .ivd-cont-header {
+        color: #BD5332;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        flex-direction: row;
+        gap: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    #projectPlanDashboard .ivd-cont .ivd-cont-body {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+    }
+
+    #projectPlanDashboard .ivd-cont-body .ivd-details-box {
+        width: 315px;
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        border-radius: 10px;
+        border: 1px solid #85D0FB;
+        background: #FFF;
+        box-shadow: 0px 3px 5px -5px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+    }
+
+    #projectPlanDashboard .ivd-details-box .ivd-details-header {
+        color: #444;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    #projectPlanDashboard .ivd-body-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    #projectPlanDashboard .ivd-body-section .ivd-details-imgs {
+        align-items: center;
+        justify-content: flex-end;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    #projectPlanDashboard .btn.btn-img {
+        padding: 4px 8px;
+        color: #303030;
+        border-radius: 3.5px;
+        box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    #projectPlanDashboard .btn.btn-orng {
+        border: 1px solid #E9AA4F;
+        background: #FFE9C9;
+    }
+
+    #projectPlanDashboard .btn.btn-green {
+        border: 1px solid #41AB46;
+        background: #e9ffea;
+    }
+
+    #projectPlanDashboard .btn.btn-prpl {
+        border: 1px solid #9A72FF;
+        background: rgba(154, 114, 255, 0.25);
+    }
+
+    #projectPlanDashboard .bg-2 {
+        width: 100%;
+        margin-top: 20%;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        z-index: 0;
+    }
+
+    #projectPlanDashboard .navbar-collapse {
+        justify-content: flex-end !important;
+        display: flex !important;
+        gap: 190px !important;
+    }
+
+    #projectPlanDashboard .navbar-collapse:after {
+        display: none;
+    }
+
+    #projectPlanDashboard .navbar-collapse:before {
+        display: none;
+    }
+
+    #projectPlanDashboard .main-page-body .ivd-cont:hover {
+        background: #C3DEDC;
+        box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    #projectPlanDashboard .section-header {
+        color: #283891;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    #projectPlanDashboard .section-details {
+        margin-left: 25px;
+        margin-right: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #projectPlanDashboard .mask-header {
+        align-items: center;
+        display: flex;
+        /*justify-content: center;*/
+        gap: 10px;
+    }
+
+
+    /*organization structure css start*/
+    #projectPlanDashboard ol.organizational-chart,
+    #projectPlanDashboard ol.organizational-chart ol,
+    #projectPlanDashboard ol.organizational-chart li,
+    #projectPlanDashboard ol.organizational-chart li > div {
+        position: relative;
+    }
+
+    #projectPlanDashboard ol.organizational-chart,
+    #projectPlanDashboard ol.organizational-chart ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #projectPlanDashboard ol.organizational-chart {
+        text-align: center;
+    }
+
+    #projectPlanDashboard ol.organizational-chart ol {
+        padding-top: 1em;
+    }
+
+    #projectPlanDashboard ol.organizational-chart ol:before,
+    #projectPlanDashboard ol.organizational-chart ol:after,
+    #projectPlanDashboard ol.organizational-chart li:before,
+    #projectPlanDashboard ol.organizational-chart li:after,
+    #projectPlanDashboard ol.organizational-chart > li > div:before,
+    #projectPlanDashboard ol.organizational-chart > li > div:after {
+        background-color: #b7a6aa;
+        content: '';
+        position: absolute;
+    }
+
+    #projectPlanDashboard ol.organizational-chart ol > li {
+        padding: 1em 0 0 1em;
+    }
+
+    #projectPlanDashboard ol.organizational-chart > li ol:before {
+        height: 1em;
+        left: 50%;
+        top: 0;
+        width: 3px;
+    }
+
+    #projectPlanDashboard ol.organizational-chart > li ol:after {
+        height: 3px;
+        left: 3px;
+        top: 1em;
+        width: 50%;
+    }
+
+    #projectPlanDashboard ol.organizational-chart > li ol > li:not(:last-of-type):before {
+        height: 3px;
+        left: 0;
+        top: 2em;
+        width: 1em;
+    }
+
+    #projectPlanDashboard ol.organizational-chart > li ol > li:not(:last-of-type):after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 3px;
+    }
+
+    #projectPlanDashboard ol.organizational-chart > li ol > li:last-of-type:before {
+        height: 3px;
+        left: 0;
+        top: 2em;
+        width: 1em;
+    }
+
+    #projectPlanDashboard ol.organizational-chart > li ol > li:last-of-type:after {
+        height: 2em;
+        left: 0;
+        top: 0;
+        width: 3px;
+    }
+
+    #projectPlanDashboard ol.organizational-chart li > div {
+        background-color: #fff;
+        border-radius: 3px;
+        min-height: 2em;
+        padding: 0.5em;
+        border-radius: 10px;
+        border: 1px solid #9FA8DB;
+        background: #FFF;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #projectPlanDashboard ol.organizational-chart li > div:hover {
+        border: 1px solid #EEE;
+        background: #C3DEDC;
+        box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    /*** PRIMARY ***/
+    #projectPlanDashboard ol.organizational-chart > li > div {
+        margin-right: 1em;
+        border-radius: 10px;
+        border: 1px solid #9FA8DB;
+        background: #FFF;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #projectPlanDashboard ol.organizational-chart > li > div:hover {
+        border: 1px solid #EEE;
+        background: #C3DEDC;
+        box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    #projectPlanDashboard ol.organizational-chart .txt-1 {
+        color: #BD5332;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+    }
+
+    #projectPlanDashboard ol.organizational-chart .txt-2 {
+        color: #444;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: 0;
+    }
+
+    #projectPlanDashboard ol.organizational-chart > li > div:before {
+        bottom: 2em;
+        height: 3px;
+        right: -1em;
+        width: 1em;
+    }
+
+    #projectPlanDashboard ol.organizational-chart > li > div:first-of-type:after {
+        bottom: 0;
+        height: 2em;
+        right: -1em;
+        width: 3px;
+    }
+
+    #projectPlanDashboard ol.organizational-chart > li > div + div {
+        margin-top: 1em;
+    }
+
+    #projectPlanDashboard ol.organizational-chart > li > div + div:after {
+        height: calc(100% + 1em);
+        right: -1em;
+        top: -1em;
+        width: 3px;
+    }
+
+    /*** SECONDARY ***/
+    #projectPlanDashboard ol.organizational-chart > li > ol:before {
+        left: inherit;
+        right: 0;
+    }
+
+    #projectPlanDashboard ol.organizational-chart > li > ol:after {
+        left: 0;
+        width: 100%;
+    }
+
+
+    /*** TERTIARY ***/
+    #projectPlanDashboard ol.organizational-chart > li > ol > li > ol > li > div {
+        background-color: #fd6470;
+    }
+
+    /*** QUATERNARY ***/
+    #projectPlanDashboard ol.organizational-chart > li > ol > li > ol > li > ol > li > div {
+        background-color: #fca858;
+    }
+
+    /*** QUINARY ***/
+    #projectPlanDashboard ol.organizational-chart > li > ol > li > ol > li > ol > li > ol > li > div {
+        background-color: #fddc32;
+    }
+
+    /*** MEDIA QUERIES ***/
+    @media only screen and ( min-width: 64em ) {
+
+        #projectPlanDashboard ol.organizational-chart {
+            margin-left: -1em;
+            margin-right: -1em;
+        }
+
+        /* PRIMARY */
+        #projectPlanDashboard ol.organizational-chart > li > div {
+            display: inline-block;
+            float: none;
+            margin: 0 1em 1em 1em;
+            vertical-align: bottom;
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > div:only-of-type {
+            width: calc((100% / 1) - 2em - 4px);
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2),
+        #projectPlanDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2) ~ div {
+            width: calc((100% / 2) - 2em - 4px);
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3),
+        #projectPlanDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3) ~ div {
+            width: calc((100% / 3) - 2em - 4px);
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4),
+        #projectPlanDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4) ~ div {
+            width: calc((100% / 4) - 2em - 4px);
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5),
+        #projectPlanDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5) ~ div {
+            width: calc((100% / 5) - 2em - 4px);
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > div:before,
+        #projectPlanDashboard ol.organizational-chart > li > div:after {
+            bottom: -1em !important;
+            top: inherit !important;
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > div:before {
+            height: 1em !important;
+            left: 50% !important;
+            width: 3px !important;
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > div:only-of-type:after {
+            display: none;
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after,
+        #projectPlanDashboard ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+            bottom: -1em;
+            height: 3px;
+            width: calc(50% + 1em + 3px);
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after {
+            left: calc(50% + 3px);
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+            left: calc(-1em - 3px);
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > div + div:not(:last-of-type):after {
+            height: 3px;
+            left: -2em;
+            width: calc(100% + 4em);
+        }
+
+        /* SECONDARY */
+        #projectPlanDashboard ol.organizational-chart > li > ol {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > ol:before,
+        #projectPlanDashboard ol.organizational-chart > li > ol > li:before {
+            height: 1em !important;
+            left: 50% !important;
+            top: 0 !important;
+            width: 3px !important;
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > ol:after {
+            display: none;
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > ol > li {
+            flex-grow: 1;
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-top: 1em;
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > ol > li:only-of-type {
+            padding-top: 0;
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > ol > li:only-of-type:before,
+        #projectPlanDashboard ol.organizational-chart > li > ol > li:only-of-type:after {
+            display: none;
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after,
+        #projectPlanDashboard ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+            height: 3px;
+            top: 0;
+            width: 50%;
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after {
+            left: 50%;
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+            left: 0;
+        }
+
+        #projectPlanDashboard ol.organizational-chart > li > ol > li + li:not(:last-of-type):after {
+            height: 3px;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+    }
+
+    /*organization structure css end*/
+    #projectPlanDashboard .back-btn-icon {
+        color: #303030;
+        align-items: center;
+        display: flex;
+        margin-right: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #projectPlanDashboard .timeline-deatils {
+        color: #000;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    /*timeline css start */
+
+    #projectPlanDashboard .history-tl-container {
+        font-family: "Roboto", sans-serif;
+        margin: auto;
+        display: block;
+        position: relative;
+    }
+
+    #projectPlanDashboard .history-tl-container ul.tl {
+        margin: 20px 0;
+        padding: 0;
+        display: inline-block;
+
+    }
+
+    #projectPlanDashboard .history-tl-container ul.tl li {
+        list-style: none;
+        margin: auto;
+        margin-left: 50px;
+        margin-right: 50px;
+        min-height: 50px;
+        /* background: rgba(255, 255, 0, 0.1); */
+        border-left: 1px dashed #86D6FF;
+        padding: 0 0 30px 15px;
+        position: relative;
+    }
+
+    #projectPlanDashboard .history-tl-container ul.tl li:last-child {
+        border-left: 0;
+    }
+
+    #projectPlanDashboard .history-tl-container ul.tl li::before {
+        position: absolute;
+        left: -9px;
+        content: " ";
+        border: 8px solid #283891;
+        border-radius: 500%;
+    }
+
+    #projectPlanDashboard .history-tl-container ul.tl li:hover::before {
+        border-color: #258CC7;
+        transition: all 1000ms ease-in-out;
+    }
+
+    #projectPlanDashboard ul.tl li .item-title {
+        padding-top: 22px;
+        color: #303030;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    #projectPlanDashboard ul.tl li .item-detail {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 12px;
+    }
+
+    #projectPlanDashboard ul.tl li .timestamp {
+        position: absolute;
+        width: 100px;
+        color: #BD5332;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    /*timeline css end*/
+    #projectPlanDashboard label.form-label-custom {
+        color: #4C5268;
+        text-align: right;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    #projectPlanDashboard label.form-label-custom.label-sub {
+        color: #1C8BCB;
+        font-family: "Segoe UI";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    #projectPlanDashboard .form-group.label-txt {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #projectPlanDashboard .lebel-section {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+
+    #projectPlanDashboard i.fa.fa-phone {
+        color: #15760D;
+    }
+
+    #projectPlanDashboard i.fa.fa-envelope {
+        color: #5E92C1;
+    }
+
+    #projectPlanDashboard .table > thead > tr > th {
+        background: #B9E7BC !important;
+        color: #163E58 !important;
+        font-size: 20px !important;
+        font-style: normal;
+        font-weight: 700 !important;
+        line-height: normal !important;
+        vertical-align: bottom;
+        text-transform: inherit !important;
+    }
+
+    #projectPlanDashboard .BlueDialog table td {
+        border: none;
+    }
+
+    #projectPlanDashboard .task-section .task-details {
+        color: #1C8BCB !important;
+        font-size: 18px !important;
+        font-style: normal !important;
+        font-weight: 700 !important;
+        line-height: normal !important;
+    }
+
+    #projectPlanDashboard .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        color: #101010;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #projectPlanDashboard .task-details {
+        text-align: left !important;
+    }
+
+    #projectPlanDashboard .icon-set {
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #projectPlanDashboard i.fa.fa-trash {
+        color: #EF080B;
+    }
+
+    #projectPlanDashboard i.fa.fa-edit {
+        color: #5E92C1;
+    }
+
+    #projectPlanDashboard .BlueDialog .form-control {
+        padding: 3px 10px;
+        height: 25px;
+        font-size: 12px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    #projectPlanDashboard select.input-sm {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    #projectPlanDashboard .form-group .form-control {
+        color: #303030 !important;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 5px;
+        border: 0.5px solid #A9A9A9;
+        background: #FFF;
+        box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.25);
+        height: 32px;
+    }
+
+    #projectPlanDashboard i.fa-solid.fa-envelope {
+        color: #5E92C1;
+    }
+
+    #projectPlanDashboard .table {
+        border: 1px solid rgba(0, 0, 0, 0.22);
+        background: #FFF;
+    }
+
+    #projectPlanDashboard .form-group .dropdown-toggle {
+        width: 100%;
+        color: #303030 !important;
+        text-align: left;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 5px;
+        border: 0.5px solid #A9A9A9;
+        background: #FFF;
+        box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.25);
+        height: 32px;
+    }
+
+    #projectPlanDashboard .form-group .dropdown-toggle:hover {
+        background-color: #eeeeee;
+    }
+
+    #projectPlanDashboard .dropdown-menu.show {
+        width: 100% !important;
+    }
+
+    #projectPlanDashboard tr th:nth-child(2) {
+        text-align: left !important;
+    }
+
+    #projectPlanDashboard tr td:nth-child(2) {
+        text-align: left !important;
+    }
+
+    /*Popup Css Start*/
+    #projectPlanDashboard #newTask .modal-header {
+        background-color: #F1592A;
+        color: #fff;
+        padding: 6px 12px;
+    }
+
+    #projectPlanDashboard #newTask .modal-dialog {
+        max-width: 1200px !important;
+        width: 1200px;
+    }
+
+    #projectPlanDashboard #newTask .filter-section {
+        background-color: #E9F8FF;
+        padding: 15px !important;
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #projectPlanDashboard .mask-header {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #projectPlanDashboard .tab-section {
+        background-color: #fff;
+    }
+
+    #projectPlanDashboard .tabbable-line > .nav-tabs > li.active {
+        border-bottom: 4px solid #00498E;
+        position: relative;
+    }
+
+    #projectPlanDashboard .tabbable-line > .nav-tabs > li.active > a {
+        border: 0;
+        color: #333333;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    #projectPlanDashboard .tabbable-line > .nav-tabs > li > a {
+        border: 0;
+        margin-right: 0;
+        color: #737373;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        /* justify-content: center; */
+        gap: 5px;
+        /* width: 50px; */
+        text-decoration: none;
+    }
+
+    #projectPlanDashboard .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 6px 15px;
+    }
+
+    #projectPlanDashboard .box-cont {
+        border-radius: 10px;
+        border: 1px solid #B0B0B0;
+        background: #FFF;
+        width: -webkit-fill-available;
+    }
+
+    #projectPlanDashboard .text-section {
+        border-radius: 5px;
+        background: #FFF;
+        padding: 10px;
+        height: 110px;
+    }
+
+    #projectPlanDashboard .misc_questions {
+        margin-bottom: 10px;
+        display: flex;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.80);
+    }
+
+    #projectPlanDashboard .text-section label {
+        color: #111;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    #projectPlanDashboard .count-txt {
+        color: #1C8BCB;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    #projectPlanDashboard .chat-section header {
+        color: #41AB46;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        /*margin-bottom: 10px;*/
+        padding: 15px;
+    }
+    #projectPlanDashboard .chat-section .chat-body {
+        padding: 0 0 15px 15px;
+        height: 260px;
+    }
+    #projectPlanDashboard .chat-section .chat-body-height {
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    #projectPlanDashboard .chat-section .chat-box.other-chat {
+        justify-content: flex-start;
+        border-radius: 0px 10px 10px 0px;
+        max-width: 450px;
+        width: fit-content;
+        align-items: flex-start;
+    }
+    #projectPlanDashboard .chat-section .chat-box {
+        display: flex;
+        /* align-items: center; */
+        gap: 5px;
+        flex-direction: column;
+    }
+    #projectPlanDashboard .chat-section .chat-box.my-chat {
+        justify-content: end;
+        align-items: end;
+    }
+    #projectPlanDashboard .chat-section .msg-info-name {
+        color: #1C8BCB;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    #projectPlanDashboard .chat-section .chat {
+        max-width: 450px;
+        /* padding: 15px; */
+        border-radius: 15px;
+        background: #EEE;
+        border-radius: 10px 0px 0px 10px;
+        padding: 10px;
+        color: #444;
+        font-family: "Segoe UI";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    #projectPlanDashboard .chat-section form.msger-inputarea {
+        display: flex;
+        padding: 10px;
+        background: #C5E1F1;
+        gap: 5px;
+        align-items: center;
+    }
+    #projectPlanDashboard .modal-footer{
+        display: none;
+    }
+    #projectPlanDashboard i.fa-solid.fa-paper-plane {
+        color: #1C8BCB;
+        font-size: 18px;
+    }
+    /*overflow css start*/
+    #projectPlanDashboard .scrollbar {
+        width: 100%;
+        overflow-y: scroll;
+    }
+    #projectPlanDashboard .force-overflow {
+        min-height: 100%;
+    }
+    #projectPlanDashboard #style-1::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+    #projectPlanDashboard #style-1::-webkit-scrollbar
+    {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+    #projectPlanDashboard #style-1::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #ccc;
+    }
+    /*overflow css end*/
+    /*Popup Css Start*/
+</style>
+<div id="projectPlanDashboard" class="BlueDialog">
+    <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleNav"
+                aria-controls="toggleNav" aria-expanded="false" aria-label="Toggle navigation" style="display: none;">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <a class="navbar-brand p-0" href="https://www.ekal.org/in/" style="height: fit-content;">
+            <img src="https://www.ekal.org/assets/images/ekal-logo.png" style="width: 60px;"></a>
+        <div class="collapse navbar-collapse" id="toggleNav" style="display: flex !important;">
+            <ul class="navbar-nav nav-list p-0">
+
+                <li class="nav-item" style="">
+                    <a class="nav-link" style="">HOME</a>
+                </li>
+                <li class="nav-item" style="">
+                    <a class="nav-link" style="">ABOUT</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">CAUSES <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">0</a></li>
+                        <li><a href="#">1</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">FUTURE PLAN <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">0</a></li>
+                        <li><a href="#">1</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" style="">
+                    <a class="nav-link" data-toggle="dropdown" aria-expanded="false">REPORTS</a>
+                </li>
+                <li class="nav-item top-navitembar" style="padding-right: 10px;">
+                    <a class="nav-link" data-toggle="dropdown" aria-expanded="false">CONTACT</a>
+                </li>
+                <li class="nav-item" style="margin-left: 10px;">
+                    <section class="center">
+                        <div hidden="">
+                            <div data-name="popover-content">
+                                <div class="input-group">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Search"
+                                           name="search">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-danger" type="submit">
+                                            <i class="bi bi-search fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a id="example" tabindex="0" class="dropdown-toggle nav-link" role="button"
+                           data-bs-toggle="popover" title="Search Section"><i class="fa fa-search"
+                                                                              aria-hidden="true"></i></a>
+
+                    </section>
+                </li>
+            </ul>
+            <ul class="navbar-nav nav-list p-0" style="">
+                <li class="nav-item top-navitembar" style="">
+                    <a class="nav-link wcm-txt" style="">Welcome Mahesh Navani !</a>
+                </li>
+                <li class="nav-item top-navitembar" style="">
+                    <a class="nav-link" style="">Log Out</a>
+                </li>
+                <li class="nav-item top-navitembar" style="border: 0;margin-left: 10px;">
+                    <button type="button" href="https://www.ekal.org/in/donation" target="_self"
+                            class="btn btn-main sml_btn" style="">Donate
+                    </button>
+                </li>
+            </ul>
+    </nav>
+    <div class="homepagewrapper">
+        <div class="row wrapper-homepage mx-auto" style="margin-left: auto;margin-right: auto;padding: 0 20px;">
+            <div class="bg-2"><img src="public/img/bg-img-2.png" style="width: 100%;"></div>
+            <div class="col-sm-12 pr-0" style="z-index: 10;position: relative;">
+                <div class="section-header" style="margin-top: 60px;">
+                    <a class="back-btn-icon" href="">
+                        <i class="fa fa-reply" aria-hidden="true" style="font-size: 20px;"></i>
+                    </a>
+                    <img src="public/img/project-plan.png">Project Plan
+                </div>
+
+                <div class="section-details">
+                    <div class="col-md-3 p-0 mask-header" style="">
+                        <label class="form-label-custom p-0 col-lg-3" style="">Filter By :</label>
+                        <div class="form-group col-lg-9 m-0 p-0">
+                            <div class="dropdown">
+                                <butoon class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    Filter By :
+                                </butoon>
+                                <ul class="dropdown-menu" style="">
+                                    <li><a class="dropdown-item" href="#">0</a></li>
+                                    <li><a class="dropdown-item" href="#">1</a></li>
+                                    <li><a class="dropdown-item" href="#">2</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 p-0 ivd-cont-header" style="">
+                        <img src="public/img/profile-picture.png" style="width: 50px;height: 50px;"> (SAIVDJOG)
+                        Maharashtra - Jogmodi IVD
+                        <div class="ivd-details-imgs">
+                            <button popovertarget="my-popover" type="button" href="" target="_self" class="btn btn-green btn-img sml_btn" title="Chat Section" style="">
+                                <i class="fa-regular fa-comment"></i>
+                            </button>
+                            <div popover="" id="my-popover" style="position: absolute;inset: auto auto 0px 0px;margin: 0px;transform: translate(752px, -304px);border: 0;padding: 0;">
+                                <div class="box-cont" style="">
+                                    <div class="chat-section">
+                                        <header>
+                                            <i class="fa-solid fa-comment-dots"></i>   Communication
+                                        </header>
+                                        <div class="scrollbar chat-body" id="style-1">
+                                            <div class="chat-body-height force-overflow">
+                                                <div class="chat-box other-chat">
+                                                    <div class="chat">Give me screenshot of Woman Empowerment Centers</div>
+                                                    <div class="msg-info-name">Mahesh Navani</div>
+                                                </div>
+                                                <div class="chat-box my-chat">
+                                                    <div class="chat">I have sent you an eMail with a Link which contains all the screenshots for Women Empowerment Centers</div>
+                                                    <div class="msg-info-name">Bhaskar</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <form class="msger-inputarea">
+                                            <input type="text" class="form-control login-field" placeholder="Type Here" autocomplete="off">
+                                            <i class="fa-solid fa-paper-plane"></i>
+                                        </form>
+                                    </div>
+                                </div></div>
+                            <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn"
+                                    title="Organization Structure" style="" id="viewFind" data-l10n-id="findbar"
+                                    aria-expanded="true" aria-controls="findbar" autocomplete="off">
+                                <i class="fa fa-sitemap" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="lebel-section">
+                        <div class="mask-header" style="">
+                            <label class="form-label-custom label-sub" style="">IVD Project Coordinator Name:</label>
+                            <div class="form-group label-txt m-0">ASHOK GAVALI</div>
+                        </div>
+                        <div class="mask-header" style="">
+                            <label class="form-label-custom label-sub" style="">Project Coordinator Number:</label>
+                            <div class="form-group label-txt m-0"><i class="fa fa-phone" aria-hidden="true"></i>
+                                7350264172
+                            </div>
+                        </div>
+                        <div class="mask-header" style="">
+                            <label class="form-label-custom label-sub" style="">Project Coordinator Email:</label>
+                            <div class="form-group label-txt m-0"><i class="fa-solid fa-envelope"
+                                                                     aria-hidden="true"></i> ekal.jagan@gmail.com
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 p-0" style="">
+                        <div class="form-group col-lg-9 m-0 p-0">
+                            <input type="text" class="form-control login-field" placeholder="Search By"
+                                   autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-md-12 p-0" style="justify-content: flex-end;display: flex;">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#newTask" href=""
+                                class="btn btn-main sml_btn" style="" autocomplete="off"><i class="fa fa-plus-circle"
+                                                                                            aria-hidden="true"></i> Add
+                            Task
+                        </button>
+                    </div>
+                    <div class="col-sm-12 p-0">
+                        <div class="panel panel-default" style="">
+
+                            <table class="table table-responsive table-hover" s tyle="">
+                                <thead>
+                                <tr>
+                                    <th style="">Task ID</th>
+                                    <th>Task Details</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>AssignTo</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td class="task-section" colspan="6">
+                                        <div class="task-details"><i data-bs-toggle="collapse" href="#collapseExample"
+                                                                     role="button" aria-expanded="true"
+                                                                     aria-controls="collapseExample"
+                                                                     class="fa-regular fa-square-minus"></i> Education
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="collapse" id="collapseExample" style="">
+                                    <td>651225</td>
+                                    <td class="task-details">Photographs and short brief activities</td>
+                                    <td>3/18/2024</td>
+                                    <td>06/16/2024</td>
+                                    <td>Bhaskar</td>
+                                    <td>Open</td>
+                                    <td>
+                                        <div class="icon-set"><i class="fa fa-edit" aria-hidden="true"></i><i
+                                                class="fa fa-trash" aria-hidden="true"></i></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td colspan="6" class="task-section">
+                                        <div class="task-details "><i data-bs-toggle="collapse" href="#collapseExample1"
+                                                                      role="button" aria-expanded="true"
+                                                                      aria-controls="collapseExample1"
+                                                                      class="fa-regular fa-square-minus"></i> Women
+                                            Empowerment Centres
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="collapse" id="collapseExample1" style="">
+                                    <td>651227</td>
+                                    <td class="task-details">Order Tailoring Machine</td>
+                                    <td>3/10/2024</td>
+                                    <td>07/16/2024</td>
+                                    <td>Bhaskar</td>
+                                    <td>Open</td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade show" id="newTask" tabindex="-1" aria-labelledby="newTaskLabel"
+                 style="display: block;padding-left: 0px; display: none;" aria-modal="true" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header justify-content-between" style="">
+                            <h5 class="modal-title" id="newTaskLabel">Add Task</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                    autocomplete="off" style="background: none;border: 0;">
+                                <i class="fa-regular fa-circle-xmark" style="color: #fff;font-size: 20px;"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="" id="">
+                                <div class="col-12 p-0 filter-section">
+                                    <div class="col-sm-12 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 9.666667%;">Filter By :</label>
+                                        <div class="form-group m-0 p-0" style="width: 90.333333%;">
+                                            <input type="text" class="form-control login-field" placeholder="Search By"
+                                                   autocomplete="off" style="
+    /* width: 100% !important; */">
+                                        </div>
+                                    </div>
+                                    <div style="display: flex;">
+                                        <div class="col-sm-3 mask-header" style="">
+                                            <label class="form-label-custom" style="width: 44.666667%;">Start Date
+                                                :</label>
+                                            <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                                <input type="text" class="form-control login-field"
+                                                       placeholder="Search By" autocomplete="off" style="
+    /* width: 100% !important; */">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 mask-header" style="">
+                                            <label class="form-label-custom" style="width: 44.666667%;">End Date
+                                                :</label>
+                                            <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                                <input type="text" class="form-control login-field"
+                                                       placeholder="Search By" autocomplete="off" style="
+    /* width: 100% !important; */">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 mask-header" style="">
+                                            <label class="form-label-custom" style="width: 44.666667%;">Assign To
+                                                :</label>
+                                            <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                                <input type="text" class="form-control login-field"
+                                                       placeholder="Search By" autocomplete="off" style="
+    /* width: 100% !important; */">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 mask-header" style="">
+                                            <label class="form-label-custom" style="width: 44.666667%;">Status :</label>
+                                            <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                                <input type="text" class="form-control login-field"
+                                                       placeholder="Search By" autocomplete="off" style="
+    /* width: 100% !important; */">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 p-0 tab-section">
+                                    <div class="tabbable-panel">
+                                        <div class="tabbable-line">
+                                            <ul class="nav nav-tabs ">
+                                                <li class="active" style="">
+                                                    <a href="#tab_default_1" data-toggle="tab">
+                                                        <i class="fa-solid fa-bars"></i> Checklist</a>
+                                                </li>
+                                                <li class="" style="">
+                                                    <a href="#tab_default_1" data-toggle="tab">
+                                                        <i class="fa-solid fa-clock-rotate-left"></i> Logs</a>
+                                                </li>
+                                                <li class="" style="">
+                                                    <a href="#tab_default_1" data-toggle="tab">
+                                                        <i class="fa-solid fa-paperclip"></i> Attachments</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane active" id="tab_default_1">
+                                                    <div class="col-sm-12" style="display: flex;padding: 15px;justify-content: center;gap: 15px;">
+                                                        <div class="box-cont" style="width: 48%;"><div class="col-sm-12 text-section" id="style-1" style="height: 349px;">
+                                                            <div class="form-group misc_questions col-sm-12" style="">
+                                                                <label for="" class="col-sm-10 p-0" style="text-align:left;">Number  of Schools</label>
+                                                                <div style="text-align: right;" class="col-sm-2 count-txt"><a>30</a></div>
+                                                            </div>
+                                                            <div class="form-group misc_questions col-sm-12" style="">
+                                                                <label for="" class="col-sm-10 p-0" style="text-align:left;">Number  of Boys</label>
+                                                                <div style="text-align: right;" class="col-sm-2 count-txt"><a>376</a></div>
+                                                            </div></div></div>
+                                                        <div class="box-cont" style="width: 48%;">
+                                                            <div class="chat-section">
+                                                                <header>
+                                                                    <i class="fa-solid fa-comment-dots"></i>   Communication
+                                                                </header>
+                                                                <div class="scrollbar chat-body" id="style-1">
+                                                                    <div class="chat-body-height force-overflow">
+                                                                    <div class="chat-box other-chat">
+                                                                        <div class="chat">Give me screenshot of Woman Empowerment Centers</div>
+                                                                        <div class="msg-info-name">Mahesh Navani</div>
+                                                                    </div>
+                                                                    <div class="chat-box my-chat">
+                                                                        <div class="chat">I have sent you an eMail with a Link which contains all the screenshots for Women Empowerment Centers</div>
+                                                                    <div class="msg-info-name">Bhaskar</div>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                                <form class="msger-inputarea">
+                                                                    <input type="text" class="form-control login-field" placeholder="Type Here" autocomplete="off">
+                                                                    <i class="fa-solid fa-paper-plane"></i>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="tab_default_2">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    $(function() {
+        $("[data-toggle=popover]").popover({
+            html: true,
+            placement:"bottom",
+            content: function() {
+                var content = $(this).attr("data-popover-content");
+                return $(content).children(".popover-body").html();
+            },
+            title: function() {
+                var title = $(this).attr("data-popover-content");
+                return $(title).children(".popover-heading").html();
+            }
+        });
+    });
+</script>
+</body>
+</html>
