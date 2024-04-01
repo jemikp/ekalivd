@@ -11,7 +11,7 @@ import org.springframework.http.HttpStatus;
 /**
  * 
  */
-public class AppException extends RuntimeException {
+public class DynamicException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
 
 	private ErrorResponseDTO error;
@@ -20,25 +20,25 @@ public class AppException extends RuntimeException {
 
 	private String description;
 
-	public AppException(String msg) {
+	public DynamicException(String msg) {
 
 		super(msg);
 	}
 
-	public AppException(ErrorResponseDTO error) {
+	public DynamicException(ErrorResponseDTO error) {
 
 		super(error.getMessage());
 		this.error = error;
 	}
 
-	public AppException(ErrorResponseDTO error, HttpStatus status) {
+	public DynamicException(ErrorResponseDTO error, HttpStatus status) {
 
 		super(error.getMessage());
 		this.error = error;
 		this.status = status;
 	}
 
-	public AppException(ErrorResponseDTO error, HttpStatus status, String description) {
+	public DynamicException(ErrorResponseDTO error, HttpStatus status, String description) {
 
 		super(error.getMessage());
 		this.error = error;
@@ -46,7 +46,7 @@ public class AppException extends RuntimeException {
 		this.description = description;
 	}
 
-	public AppException(String message, HttpStatus status) {
+	public DynamicException(String message, HttpStatus status) {
 
 		super(message);
 		this.status = status;
