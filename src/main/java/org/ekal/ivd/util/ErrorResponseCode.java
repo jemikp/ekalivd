@@ -18,7 +18,8 @@ public enum ErrorResponseCode {
 	WHATSAPP_OTP_TIME_OVER(1005,"OTP validation time passed away."),
 	IVD_ALREADY_EXIST(1006,"IVD Already Exist with the name"),
 	PROGRAM_ALREADY_EXIST(1007,"Program Already Exist with the name"),
-	PROGRAM_NOT_FOUND(1008,"Program not found.");
+	PROGRAM_NOT_FOUND(1008,"Program not found."),
+	DUPLICATE_PROJECT(1009,"Project already created with the same name ");
 
 	private int code;
 
