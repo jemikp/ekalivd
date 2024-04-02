@@ -811,7 +811,7 @@
                     <a class="nav-link wcm-txt" style="">Welcome Mahesh Navani !</a>
                 </li>
                 <li class="nav-item top-navitembar" style="">
-                    <a class="nav-link" style="">Log Out</a>
+                    <a class="nav-link" style="" onclick="window.location.href='./public/login.html'">Log Out</a>
                 </li>
                 <li class="nav-item top-navitembar" style="border: 0;margin-left: 10px;">
                     <button type="button" href="https://www.ekal.org/in/donation" target="_self" class="btn btn-main sml_btn" style="">Donate</button>
@@ -1030,6 +1030,7 @@
             $('#timelineDiv').show(300);
         }
     });
+    $(".wcm-txt").html("Welcome "+localStorage.getItem("username")+" !");
 </script>
 </body>
 </html>
