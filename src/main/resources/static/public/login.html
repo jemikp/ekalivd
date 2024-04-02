@@ -130,6 +130,8 @@
     #loginPageDashboard .tabbable-line > .nav-tabs {
         border: none;
         margin: 0px;
+        padding-bottom: 15px;
+        padding-top: 25px;
     }
 
     #loginPageDashboard .tabbable-line > .nav-tabs > li {
@@ -201,7 +203,7 @@
     #loginPageDashboard .row-eq-height {
         flex-direction: column;
         display: flex;
-        gap: 15px;
+        gap: 25px;
     }
 
     #loginPageDashboard .form-control.login-field {
@@ -222,6 +224,9 @@
     #loginPageDashboard a.link-txt {
         color: #00498E;
         font-weight: 600;
+        padding: 0 5px;
+        cursor: pointer;
+
     }
     #loginPageDashboard .nav>li>a {
         position: relative;
@@ -245,27 +250,28 @@
             <img src="./img/round-circle.png" style="width: 295px;height: 295px;">
             <span class="img-txt">Fundraising organization for helpless people</span>
         </div>
-        <div class="box-section">
-            <div class="login-header">Choose an option to login</div>
+        <div class="box-section" id="tab_default_1">
+<!--            <div class="login-header">Login</div>-->
             <div class="col-md-12">
                 <div class="tabbable-panel">
                     <div class="tabbable-line">
                         <ul class="nav nav-tabs ">
                             <li class="active" style="width: 100%">
-                                <a href="#tab_default_1" data-toggle="tab">
+                                <a href="" data-toggle="tab">
                                     <i class="fa fa-phone" aria-hidden="true"></i> Login with Phone Number </a>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-pane active" id="tab_default_1">
+                            <div class="tab-pane active">
                                 <div class="row row-eq-height">
                                     <div class="col-sm-12 p-0" style="justify-content: center;display: flex;">
                                         <div class="col-sm-6">
                                             <label>Phone Number</label>
                                             <input type="number" class="form-control login-field" id="txtPhoneNumber" placeholder="Enter Phone Number" autocomplete="off">
+                                            <div class="errmsgdiv" style="display: none;"><span style="display: none; align-items: center;justify-content: center;color: red;">Invalid Phone Number</span></div>
                                         </div>
                                     </div>
-                                    <div class="errmsgdiv" style="display: none;"><span style="display: none; align-items: center;justify-content: center;color: red;">Invalid Phone Number</span></div>
+
                                     <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 15px;" id="getOtpDiv">
                                         <button class="btn btn-primary btn-login btn-sm" onclick="LoginPage.sendOTP()" style="">Get OTP</button>
                                     </div>
@@ -278,37 +284,58 @@
                                     <div class="col-sm-12 validateOTP" style="justify-content: center;display: flex;margin-top: 15px;" id="validateOtpDiv">
                                         <button class="btn btn-primary btn-login btn-sm" onclick="LoginPage.validateOTP()" style="">Validate OTP</button>
                                     </div>
-                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 20px;">
-                                        Kindly <a class="link-txt" style="padding: 0 5px;"> Sign Up </a> if you are a new user.
+                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 40px;">
+                                        Kindly <a class="link-txt" id="newUser" style=""> Sign Up </a> if you are a new user.
                                     </div>
                                     <div class="col-sm-12" style="justify-content: center;display: flex;">
-                                        <a class="link-txt" style="padding: 0 5px;">Create</a> / <a class="link-txt" style="padding: 0 5px;">Get User ID</a> If you have existing account details.
+                                        <a class="link-txt" style="">Create</a> / <a class="link-txt" style="">Get User ID</a> If you have existing account details.
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="tab_default_2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-section" id="tab_default_2" style="display: none;">
+<!--            <div class="login-header">Create Account</div>-->
+            <div class="col-md-12">
+                <div class="tabbable-panel">
+                    <div class="tabbable-line">
+                        <ul class="nav nav-tabs ">
+                            <li class="active" style="width: 100%">
+                                <a href="" data-toggle="tab">
+                                    <i class="fa fa-phone" aria-hidden="true"></i> Create Account </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active">
                                 <div class="row row-eq-height">
-                                    <div class="col-sm-12 p-0">
-                                        <div class="col-sm-6">
-                                            <label>User ID</label>
-                                            <input type="text" class="form-control login-field" placeholder="Enter User ID">
+                                    <div class="col-sm-12 p-0" style="justify-content: center;display: flex;">
+                                        <div class="col-sm-6" style="padding: 0 15px;">
+                                            <label>First Name</label>
+                                            <input type="text" class="form-control login-field" id="" placeholder="Enter First Name" autocomplete="off">
                                         </div>
-                                        <div class="col-sm-6">
-                                            <label>Password</label>
-                                            <input type="text" class="form-control login-field" placeholder="Enter Password" autocomplete="off">
+                                        <div class="col-sm-6" style="padding: 0 15px;">
+                                            <label>Last Name</label>
+                                            <input type="text" class="form-control login-field" id="" placeholder="Enter Last Name" autocomplete="off">
+                                        </div></div>
+                                    <div class="col-sm-12 p-0" style="justify-content: center;display: flex;">
+                                        <div class="col-sm-6" style="padding: 0 15px;">
+                                            <label>Mobile Number</label>
+                                            <input type="text" class="form-control login-field" id="" placeholder="Enter Mobile Number" autocomplete="off">
+                                        </div>
+                                        <div class="col-sm-6" style="padding: 0 15px;">
+                                            <label>Whatsapp Number</label>
+                                            <input type="text" class="form-control login-field" id="" placeholder="Enter Whatsapp Number" autocomplete="off">
                                         </div>
                                     </div>
-                                    <div class="col-sm-12">
-                                        <a style="float: right;" class="link-txt">Forgot Password</a>
+                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 15px;">
+
+                                        <button class="btn btn-primary btn-login btn-sm" onclick="" style="">Create Account</button>
                                     </div>
-                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 15px">
-                                        <button class="btn btn-primary btn-login btn-sm" style="">LOGIN</button>
-                                    </div>
-                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 20px;">
-                                        Kindly <a class="link-txt" style="padding: 0 5px;"> Sign Up </a> if you are a new user.
-                                    </div>
-                                    <div class="col-sm-12" style="justify-content: center;display: flex;">
-                                        <a class="link-txt" style="padding: 0 5px;">Create</a> / <a class="link-txt" style="padding: 0 5px;">Get User ID</a> If you have existing account details.
+
+                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 30px;">Already have an account? <a class="link-txt" id="loginUser" style="padding: 0 5px;cursor: pointer;">Login</a>
                                     </div>
                                 </div>
                             </div>
@@ -362,6 +389,24 @@
     $(document).ready(() => {
         $(".validateOTP").hide();
     })
+</script>
+<script>
+    $("#newUser").click(function () {
+        $('#tab_default_1').hide();
+        if($("#tab_default_2").is(':visible')){
+            $('#tab_default_1').hide(300);
+        }else{
+            $('#tab_default_2').show(300);
+        }
+    });
+    $("#loginUser").click(function () {
+        $('#tab_default_2').hide();
+        if($("#tab_default_1").is(':visible')){
+            $('#tab_default_2').hide(300);
+        }else{
+            $('#tab_default_1').show(300);
+        }
+    });
 </script>
 </body>
 </html>
