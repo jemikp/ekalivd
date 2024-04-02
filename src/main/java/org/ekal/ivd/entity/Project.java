@@ -12,8 +12,10 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
+import org.ekal.ivd.dto.ProjectDTO;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 @Data
 @NoArgsConstructor
@@ -29,7 +31,6 @@ public class Project extends BaseEntity {
 
     @Column(name = "project_desc", columnDefinition = "text")
     String projectDescription;
-
 
     @Column(name = "status", columnDefinition = "INT DEFAULT 0")
     Integer projectStatus;
@@ -72,4 +73,18 @@ public class Project extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "modified_by", referencedColumnName = "id", insertable = false, updatable = false)
     User modifiedByUser;
+
+    public Project(ProjectDTO project) {
+        Optional.ofNullable(project).ifPresent(p -> {
+            this.id = p.getId();
+            this.projectName = p.getProjectName();
+            this.projectDescription = p.getProjectDescription();
+            this.projectStatus = p.getProjectStatus();
+            this.startDate = p.getStartDate();
+            this.endDate = p.getEndDate();
+            this.ivdId = p.getIvdId();
+            this.coordinator = p.getCoordinatorUserId();
+            this.subCoordinator = p.getSubCoordinatorUserId();
+        });
+    }
 }
