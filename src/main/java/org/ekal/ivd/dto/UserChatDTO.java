@@ -3,13 +3,10 @@ package org.ekal.ivd.dto;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.ekal.ivd.entity.User;
 import org.ekal.ivd.entity.UserChat;
 
 import java.time.LocalDateTime;
@@ -28,7 +25,7 @@ public class UserChatDTO {
 
 	Integer projectId;
 
-	Integer departmentId;
+	Integer programId;
 
 	Integer taskId;
 
@@ -36,11 +33,21 @@ public class UserChatDTO {
 
 	LocalDateTime chatTime;
 
-	String fromName;
+	UserDTO userDTO;
+
+	ProgramMasterDTO programMasterDTO;
+
 	public UserChatDTO(UserChat userChat) {
 
 		Optional.ofNullable(userChat).ifPresent(u -> {
 			this.id = u.getId();
+			this.projectId = u.getProjectId();
+			this.programId = u.getProgramId();
+			this.taskId = u.getTaskId();
+			this.chatContent = u.getChatContent();
+			this.chatTime = u.getChatTime();
+			this.userDTO = new UserDTO(u.getUser());
+			this.programMasterDTO = new ProgramMasterDTO(u.getProgramMaster());
 		});
 	}
 

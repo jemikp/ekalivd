@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.Data;
@@ -13,8 +13,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 import org.ekal.ivd.dto.UserChatDTO;
-import org.ekal.ivd.dto.UserDTO;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -28,16 +26,22 @@ import java.util.Optional;
 @Entity
 @Table(name = "user_chat")
 public class UserChat extends BaseEntity{
+	@Column(name = "from_id")
+	Integer fromId;
 
-	@OneToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "from_id", referencedColumnName = "id", insertable = false, updatable = false)
-	User fromId;
+	User user;
 
 	@Column(name = "project_id")
 	Integer projectId;
 
-	@Column(name = "department_id")
-	Integer departmentId;
+	@Column(name = "program_id")
+	Integer programId;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "program_id", referencedColumnName = "id", insertable = false, updatable = false)
+	ProgramMaster programMaster;
 
 	@Column(name = "task_id")
 	Integer taskId;
@@ -51,11 +55,11 @@ public class UserChat extends BaseEntity{
 	public UserChat(UserChatDTO userChatDTO) {
 
 		Optional.ofNullable(userChatDTO).ifPresent(u -> {
-			this.fromId.id = u.getFromId();
+			this.fromId = u.getFromId();
 			this.chatContent = u.getChatContent();
 			this.chatTime = LocalDateTime.now();
 			this.projectId = u.getProjectId();
-			this.departmentId = u.getDepartmentId();
+			this.programId = u.getProgramId();
 			this.taskId = u.getTaskId();
 		});
 	}

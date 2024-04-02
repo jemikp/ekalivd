@@ -102,7 +102,8 @@
         background-color: #fff;
         border-radius: 10px;
         border: 1px solid #D9D9D9;
-        height: 440px;
+        /*height: 440px;*/
+        height: auto;
         width: 460px;
     }
 
@@ -266,14 +267,22 @@
                                     <div class="col-sm-12 p-0" style="justify-content: center;display: flex;">
                                         <div class="col-sm-6">
                                             <label>Phone Number</label>
-                                            <input type="text" class="form-control login-field" id="txtPhoneNumber" placeholder="Enter Phone Number" autocomplete="off">
+                                            <input type="number" class="form-control login-field" id="txtPhoneNumber" placeholder="Enter Phone Number" autocomplete="off">
                                             <div class="errmsgdiv" style="display: none;"><span style="display: none; align-items: center;justify-content: center;color: red;">Invalid Phone Number</span></div>
                                         </div>
                                     </div>
 
-                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 15px;">
-
-                                        <button class="btn btn-primary btn-login btn-sm" onclick="LoginPage.sendOTP()" style="">LOGIN</button>
+                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 15px;" id="getOtpDiv">
+                                        <button class="btn btn-primary btn-login btn-sm" onclick="LoginPage.sendOTP()" style="">Get OTP</button>
+                                    </div>
+                                    <div class="col-sm-12 p-0 validateOTP" style="justify-content: center;display: flex;margin-top: 15px;">
+                                        <div class="col-sm-6">
+                                            <label>OTP</label>
+                                            <input type="password" class="form-control login-field" id="txtOTP" placeholder="Enter OTP" maxlength="6" minlength="6" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 validateOTP" style="justify-content: center;display: flex;margin-top: 15px;" id="validateOtpDiv">
+                                        <button class="btn btn-primary btn-login btn-sm" onclick="LoginPage.validateOTP()" style="">Validate OTP</button>
                                     </div>
                                     <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 40px;">
                                         Kindly <a class="link-txt" id="newUser" style=""> Sign Up </a> if you are a new user.
@@ -349,12 +358,36 @@
             "whatsApp": $('#txtPhoneNumber').val()
         }
         $.post(url, parmas, function (resp) {
+            $("#getOtpDiv").hide();
+            $(".validateOTP").show();
+        }).done(function(resp) {
+            $("#getOtpDiv").hide();
+            $(".validateOTP").show();
+        }).fail(function(data) {
+            alert(data.responseJSON.message);
+        });
+    }
 
+    LoginPage.validateOTP = () => {
+        var val = $("#txtOTP").val();
+        let url = `${LoginPage.controller}/validateOTP`;
+        let parmas = {
+            "whatsApp": $('#txtPhoneNumber').val(),
+            "otp" : val
+        }
+        $.post(url, parmas, function (resp) {
+          //  window.location.href = "../home.html";
+        }).done(function(data) {
+            console.log(data);
+            localStorage.setItem("username",data.firstName+" "+data.lastName)
+            window.location.href = "../home.html";
+        }).fail(function(data) {
+            alert(data.responseJSON.message);
         });
     }
 
     $(document).ready(() => {
-
+        $(".validateOTP").hide();
     })
 </script>
 <script>
