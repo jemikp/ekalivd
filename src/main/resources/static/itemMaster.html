@@ -1355,6 +1355,18 @@
         </button>
         <a class="navbar-brand p-0" href="https://www.ekal.org/in/" style="height: fit-content;">
             <img src="https://www.ekal.org/assets/images/ekal-logo.png" style="width: 60px;"></a>
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Action
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+        </div>
         <div class="collapse navbar-collapse" id="toggleNav" style="display: flex !important;">
             <ul class="navbar-nav nav-list p-0" style="display: none">
 
@@ -1441,7 +1453,7 @@
                         <div class="" style="
     float: right;
     margin-bottom: 20px;
-"><button type="button" href="https://www.ekal.org/in/donation" target="_self" class="btn btn-main sml_btn" style=""><i class="fa fa-plus" aria-hidden="true"></i> Add
+"><button type="button" id="btnAddItem" target="_self" class="btn btn-main sml_btn" style=""><i class="fa fa-plus" aria-hidden="true"></i> Add
                         </button></div><table class="table table-responsive table-hover" s="" tyle="">
                         <thead>
                         <tr>
@@ -1473,12 +1485,12 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade show" id="newTask" tabindex="-1" aria-labelledby="newTaskLabel" style="display: block;padding-left: 0px;display: none;" aria-modal="true" role="dialog">
+        <div class="modal fade show" id="newItem" tabindex="-1" aria-labelledby="newTaskLabel" style="display: block;padding-left: 0px;display: none;" aria-modal="true" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header justify-content-between" style="">
                         <h5 class="modal-title" id="newTaskLabel">Search User</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" autocomplete="off" style="background: none;border: 0;">
+                        <button type="button" id="dialogClose" class="close" data-dismiss="modal" aria-label="Close" autocomplete="off" style="background: none;border: 0;">
                             <i class="fa-regular fa-circle-xmark" style="color: #fff;font-size: 20px;"></i>
                         </button>
                     </div>
@@ -1540,4 +1552,18 @@
     </div>
 </div>
 </body>
+<script>
+    $("#btnAddItem").on("click",function(e){
+        $("#newItem").addClass('show').removeClass('hide');
+        $("#newItem").css('display','block');
+    });
+    $("#newItem").addClass('hide').removeClass('show');
+    $("#newItem").css('display','none');
+
+    $("#dialogClose").on("click",function (e){
+        $("#newItem").addClass('hide').removeClass('show');
+        $("#newItem").css('display','none');
+    });
+
+</script>
 </html>
