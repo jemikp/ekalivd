@@ -36,6 +36,10 @@ public class UserDao {
     UserRepository userRepository;
 
     public void createUser(@Valid UserDTO userDTO) {
+        Optional<User> optUser = userRepository.getByWhatsApp(userDTO.getWhatsApp());
+        if(optUser.isPresent()){
+            throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_AVAILABLE), HttpStatus.BAD_REQUEST, userDTO.getWhatsApp());
+        }
         User user = new User(userDTO);
         userRepository.save(user);
         userDTO.setId(user.getId());

@@ -314,25 +314,25 @@
                                     <div class="col-sm-12 p-0" style="justify-content: center;display: flex;">
                                         <div class="col-sm-6" style="padding: 0 15px;">
                                             <label>First Name</label>
-                                            <input type="text" class="form-control login-field" id="" placeholder="Enter First Name" autocomplete="off">
+                                            <input type="text" class="form-control login-field" id="u_firstName" placeholder="Enter First Name" autocomplete="off">
                                         </div>
                                         <div class="col-sm-6" style="padding: 0 15px;">
                                             <label>Last Name</label>
-                                            <input type="text" class="form-control login-field" id="" placeholder="Enter Last Name" autocomplete="off">
+                                            <input type="text" class="form-control login-field" id="u_lastName" placeholder="Enter Last Name" autocomplete="off">
                                         </div></div>
                                     <div class="col-sm-12 p-0" style="justify-content: center;display: flex;">
                                         <div class="col-sm-6" style="padding: 0 15px;">
                                             <label>Mobile Number</label>
-                                            <input type="text" class="form-control login-field" id="" placeholder="Enter Mobile Number" autocomplete="off">
+                                            <input type="text" class="form-control login-field" id="u_mobile" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Enter Mobile Number" autocomplete="off">
                                         </div>
                                         <div class="col-sm-6" style="padding: 0 15px;">
                                             <label>Whatsapp Number</label>
-                                            <input type="text" class="form-control login-field" id="" placeholder="Enter Whatsapp Number" autocomplete="off">
+                                            <input type="text" class="form-control login-field" id="u_whatsapp" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Enter Whatsapp Number" autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 15px;">
 
-                                        <button class="btn btn-primary btn-login btn-sm" onclick="" style="">Create Account</button>
+                                        <button class="btn btn-primary btn-login btn-sm" onclick="LoginPage.createUser()" style="">Create Account</button>
                                     </div>
 
                                     <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 30px;">Already have an account? <a class="link-txt" id="loginUser" style="padding: 0 5px;cursor: pointer;">Login</a>
@@ -351,6 +351,61 @@
     var LoginPage = () => {
     }
     LoginPage.controller = '/ekalivd/LoginController'
+
+    LoginPage.createUser = () => {
+        let firstName = $.trim($("#u_firstName").val());
+        let lastName = $.trim($("#u_lastName").val());
+        let mobile = $.trim($("#u_mobile").val());
+        let whatsapp = $.trim($("#u_whatsapp").val());
+        if(firstName === ""){
+            alert("First Name missing");
+            $("#u_firstName").focus();
+            return true;
+        }
+        if(lastName === ""){
+            alert("Last Name missing");
+            $("#u_lastName").focus();
+            return true;
+        }
+        if(whatsapp === ""){
+            alert("Whatsapp Number missing");
+            $("#u_whatsapp").focus();
+            return true;
+        }
+        if(whatsapp.length !== 10){
+            alert("Invalid whatsapp number");
+            $("#u_whatsapp").focus();
+            return true;
+        }
+        let settings = {
+            "url": "/ekalivd/user",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "data": JSON.stringify({
+                "firstName" : firstName,
+                "lastName" : lastName,
+                "mobile" : mobile,
+                "whatsApp" : whatsapp
+            }),
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+        // let url = '/ekalivd/user';
+        // $.post(url, { data : JSON.stringify(params)}, function (resp) {
+        //     // $("#getOtpDiv").hide();
+        //     // $(".validateOTP").show();
+        // }).done(function(resp) {
+        //     // $("#getOtpDiv").hide();
+        //     // $(".validateOTP").show();
+        // }).fail(function(data) {
+        //     alert(data.responseJSON.message);
+        // });
+    }
 
     LoginPage.sendOTP = () => {
         let url = `${LoginPage.controller}/sendOTP`;
@@ -389,8 +444,6 @@
     $(document).ready(() => {
         $(".validateOTP").hide();
     })
-</script>
-<script>
     $("#newUser").click(function () {
         $('#tab_default_1').hide();
         if($("#tab_default_2").is(':visible')){
