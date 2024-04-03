@@ -1418,6 +1418,7 @@
         height: 2px;
         background-color: grey;
     }
+
     .line-inner-active {
         background-color: #d65470;
     }
@@ -1426,6 +1427,17 @@
     .line-inner-spacer {
         width: 100%;
         height: 3ch;
+    }
+
+    .wiz-outer {
+        display: flex;
+        gap: 15px;
+        padding: 15px 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: 1px solid #85D0FB;
+        background: #E9F7FF;
+        box-shadow: 0px 3px 5px -5px rgba(0, 0, 0, 0.25);
     }
 </style>
 <!--wizard css end-->
@@ -1699,21 +1711,21 @@
 
                                         </div>
                                         <div class="" style="display: flex; width: 100%;align-items: center;justify-content: center">
-                                            
+
                                         </div>
                                         <div class="form-group clearfix">
 
                                         </div>
                                     </div>
                                     <div class=" theHide" id="divProgramDetails">
-                                        <div class="col-sm-12 ivd-cont-body" style="display: flex;gap: 20px;">
+                                        <div class="col-sm-12 ivd-cont-body wiz-outer" style="display: flex;gap: 20px;">
                                             <div class="ivd-details-box">
                                                 <div class="ivd-img-section">
                                                     <img src="public/img/education.png">
                                                 </div>
                                                 <div class="col-sm-12 p-0 ivd-body-section">
                                                     <div class="col-sm-12 p-0 ivd-details-header">
-                                                        <input type="checkbox"  id="chkEdu">
+                                                        <input type="checkbox" id="chkEdu">
                                                         Education
                                                     </div>
                                                     <div class="col-sm-12 p-0 ivd-details-imgs">
@@ -1762,8 +1774,9 @@
                                                 </div>
                                                 <div class="col-sm-12 p-0 ivd-body-section">
                                                     <div class="col-sm-12 p-0 ivd-details-header">
-                                                        <input type="checkbox"  id="chkArogya">
-                                                        Arogya</div>
+                                                        <input type="checkbox" id="chkArogya">
+                                                        Arogya
+                                                    </div>
                                                     <div class="col-sm-12 p-0 ivd-details-imgs">
                                                         <button type="button" class="btn btn-green btn-img sml_btn" data-bs-content="" style="" id="chatSection" aria-label="Chat Section"
                                                                 data-bs-original-title="Chat Section" aria-describedby="popover650856">
@@ -1784,8 +1797,9 @@
                                                 </div>
                                                 <div class="col-sm-12 p-0 ivd-body-section">
                                                     <div class="col-sm-12 p-0 ivd-details-header">
-                                                        <input type="checkbox"  id="ckhWoman">
-                                                        Women Empowerment Centers</div>
+                                                        <input type="checkbox" id="ckhWoman">
+                                                        Women Empowerment Centers
+                                                    </div>
                                                     <div class="col-sm-12 p-0 ivd-details-imgs">
                                                         <button type="button" class="btn btn-green btn-img sml_btn" data-bs-content="" style="" id="chatSection" aria-label="Chat Section"
                                                                 data-bs-original-title="Chat Section" aria-describedby="popover650856">
@@ -1808,15 +1822,9 @@
                                     </div>
                                     <div class=" theHide" id="divStaffDetails">
                                         <div class="col-sm-12" style="/* overflow: auto; *//* height: 358px; *//* margin: 0 15px; */">
-                                            <div class="panel panel-default" style="">
+                                            <div class="wiz-outer panel panel-default" style="">
 
-                                                <div class="" style="
-    float: right;
-    margin-bottom: 20px;
-">
-                                                    <button type="button" id="showNewUserDialog" class="btn btn-main sml_btn" style=""><i class="fa fa-plus" aria-hidden="true"></i> Add
-                                                    </button>
-                                                </div>
+                                                
                                                 <table class="table table-responsive table-hover" s="" tyle="">
                                                     <thead>
                                                     <tr>
@@ -1844,6 +1852,13 @@
 
                                                     </tbody>
                                                 </table>
+                                                <div class="" style="
+    float: right;
+    margin-bottom: 20px;
+">
+                                                    <button type="button" id="showNewUserDialog" class="btn btn-main sml_btn" style="width: 12ch;"><i class="fa fa-plus" aria-hidden="true"></i> Add
+                                                    </button>
+                                                </div>
                                             </div>
 
                                         </div>
@@ -1947,7 +1962,7 @@
                                             <td>5648522585</td>
                                             <td>abc@gmail.com</td>
                                         </tr>
-
+                                        1
                                         </tbody>
                                     </table>
                                 </div>
@@ -1989,17 +2004,17 @@
         $('.programLine').removeClass('line-inner-active');
         $('#divStaffDetails').addClass('theHide');
     }
-    
-    $("#showNewUserDialog").on("click",function(e){
+
+    $("#showNewUserDialog").on("click", function (e) {
         $("#newUser").addClass('show').removeClass('hide');
-        $("#newUser").css('display','block');
+        $("#newUser").css('display', 'block');
     });
     $("#newUser").addClass('hide').removeClass('show');
-    $("#newUser").css('display','none');
+    $("#newUser").css('display', 'none');
 
-    $("#newUserDialogClose").on("click",function (e){
+    $("#newUserDialogClose").on("click", function (e) {
         $("#newUser").addClass('hide').removeClass('show');
-        $("#newUser").css('display','none');
+        $("#newUser").css('display', 'none');
     });
 </script>
 </body>
