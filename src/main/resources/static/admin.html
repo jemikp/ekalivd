@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin View</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/css/bootstrap-multiselect.min.css" integrity="sha512-fZNmykQ6RlCyzGl9he+ScLrlU0LWeaR6MO/Kq9lelfXOw54O63gizFMSD5fVgZvU1YfDIc6mxom5n60qJ1nCrQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/js/bootstrap-multiselect.min.js" integrity="sha512-lxQ4VnKKW7foGFV6L9zlSe+6QppP9B2t+tMMaV4s4iqAv4iHIyXED7O+fke1VeLNaRdoVkVt8Hw/jmZ+XocsXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+</head>
+<body>
+<style>
+    body, html {
+        overflow: auto !important;
+    }
+
+    body {
+        font-family: 'Segoe UI', 'Segoe UI Light', 'Segoe UI Semibold', 'Segoe UI Semilight', 'Segoe UI Symbol', Arial;
+        font-size: 13px;
+        color: #696969;
+        margin: 0;
+        padding: 0;
+    }
+
+    #adminDashboard .nav-list {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 5px;
+    }
+    #adminDashboard .navbar-nav {
+        float: left;
+        margin: 0;
+    }
+    #adminDashboard .navbar-brand, .navbar-nav>li>a {
+        text-shadow: 0 1px 0 rgba(255,255,255,.25);
+    }
+    #adminDashboard .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    #adminDashboard li.nav-item.top-navitembar {
+        border-right: 1px solid #437495;
+    }
+
+    #adminDashboard .navbar-nav .nav-item .nav-link {
+        color: #444;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        cursor: pointer;
+        text-decoration: none;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #adminDashboard a.nav-link.wcm-txt {
+        color: #41AB46 !important;
+    }
+
+    #adminDashboard .navbar-expand-lg {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    #adminDashboard .navbar-expand-lg {
+        padding: 0 20px;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #adminDashboard .btn-main {
+        background: #F1592A;
+        border-color: #F1592A;
+        color: #fff;
+    }
+
+    #adminDashboard .sml_btn {
+        color: #fff;
+        font-weight: 700;
+        border: none;
+        border-radius: 0;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    #adminDashboard .navbar:before {
+        display: none !important;
+    }
+
+    #adminDashboard .navbar:after {
+        display: none !important;
+    }
+
+    #adminDashboard .main-page-header {
+        color: #283891;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 60px;
+    }
+
+    #adminDashboard .main-page-body {
+        margin-top: 45px;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    #adminDashboard .main-page-body .ivd-cont {
+        height: -webkit-fill-available;
+        border-radius: 10px;
+        border: 1px solid #EEE;
+        background: #FFF;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+        padding: 15px 20px;
+    }
+
+    #adminDashboard .ivd-cont-header {
+        color: #BD5332;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        flex-direction: row;
+        gap: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    #adminDashboard .ivd-cont .ivd-cont-body {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+    }
+
+    #adminDashboard .ivd-cont-body .ivd-details-box {
+        width: 315px;
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        border-radius: 10px;
+        border: 1px solid #85D0FB;
+        background: #FFF;
+        box-shadow: 0px 3px 5px -5px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+    }
+
+    #adminDashboard .ivd-details-box .ivd-details-header {
+        color: #444;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    #adminDashboard .ivd-body-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex: auto !important;
+    }
+
+    #adminDashboard .ivd-body-section .ivd-details-imgs {
+        align-items: center;
+        justify-content: flex-end;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    #adminDashboard .btn.btn-img {
+        padding: 4px 8px;
+        color: #303030;
+        border-radius: 3.5px;
+        box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    #adminDashboard .btn.btn-orng {
+        border: 1px solid #E9AA4F;
+        background: #FFE9C9;
+    }
+
+    #adminDashboard .btn.btn-green {
+        border: 1px solid #41AB46;
+        background: #e9ffea;
+    }
+
+    #adminDashboard .btn.btn-prpl {
+        border: 1px solid #9A72FF;
+        background: rgba(154, 114, 255, 0.25);
+    }
+
+    #adminDashboard .bg-2 {
+        width: 100%;
+        margin-top: 20%;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        z-index: 0;
+    }
+
+    #adminDashboard .navbar-collapse {
+        justify-content: flex-end !important;
+        display: flex !important;
+        gap: 190px !important;
+    }
+
+    #adminDashboard .navbar-collapse:after {
+        display: none;
+    }
+
+    #adminDashboard .navbar-collapse:before {
+        display: none;
+    }
+
+    #adminDashboard .main-page-body .ivd-cont:hover {
+        background: #C3DEDC;
+        box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    #adminDashboard .section-header {
+        color: #283891;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    #adminDashboard .section-details {
+        margin-left: 25px;
+        margin-right: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #adminDashboard .mask-header {
+        align-items: center;
+        display: flex;
+        /*justify-content: center;*/
+        gap: 10px;
+    }
+
+
+    /*organization structure css start*/
+    #adminDashboard ol.organizational-chart,
+    #adminDashboard ol.organizational-chart ol,
+    #adminDashboard ol.organizational-chart li,
+    #adminDashboard ol.organizational-chart li > div {
+        position: relative;
+    }
+
+    #adminDashboard ol.organizational-chart,
+    #adminDashboard ol.organizational-chart ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #adminDashboard ol.organizational-chart {
+        text-align: center;
+    }
+
+    #adminDashboard ol.organizational-chart ol {
+        padding-top: 1em;
+    }
+
+    #adminDashboard ol.organizational-chart ol:before,
+    #adminDashboard ol.organizational-chart ol:after,
+    #adminDashboard ol.organizational-chart li:before,
+    #adminDashboard ol.organizational-chart li:after,
+    #adminDashboard ol.organizational-chart > li > div:before,
+    #adminDashboard ol.organizational-chart > li > div:after {
+        background-color: #b7a6aa;
+        content: '';
+        position: absolute;
+    }
+
+    #adminDashboard ol.organizational-chart ol > li {
+        padding: 1em 0 0 1em;
+    }
+
+    #adminDashboard ol.organizational-chart > li ol:before {
+        height: 1em;
+        left: 50%;
+        top: 0;
+        width: 3px;
+    }
+
+    #adminDashboard ol.organizational-chart > li ol:after {
+        height: 3px;
+        left: 3px;
+        top: 1em;
+        width: 50%;
+    }
+
+    #adminDashboard ol.organizational-chart > li ol > li:not(:last-of-type):before {
+        height: 3px;
+        left: 0;
+        top: 2em;
+        width: 1em;
+    }
+
+    #adminDashboard ol.organizational-chart > li ol > li:not(:last-of-type):after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 3px;
+    }
+
+    #adminDashboard ol.organizational-chart > li ol > li:last-of-type:before {
+        height: 3px;
+        left: 0;
+        top: 2em;
+        width: 1em;
+    }
+
+    #adminDashboard ol.organizational-chart > li ol > li:last-of-type:after {
+        height: 2em;
+        left: 0;
+        top: 0;
+        width: 3px;
+    }
+
+    #adminDashboard ol.organizational-chart li > div {
+        background-color: #fff;
+        border-radius: 3px;
+        min-height: 2em;
+        padding: 0.5em;
+        border-radius: 10px;
+        border: 1px solid #9FA8DB;
+        background: #FFF;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #adminDashboard ol.organizational-chart li > div:hover {
+        border: 1px solid #EEE;
+        background: #C3DEDC;
+        box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    /*** PRIMARY ***/
+    #adminDashboard ol.organizational-chart > li > div {
+        margin-right: 1em;
+        border-radius: 10px;
+        border: 1px solid #9FA8DB;
+        background: #FFF;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #adminDashboard ol.organizational-chart > li > div:hover {
+        border: 1px solid #EEE;
+        background: #C3DEDC;
+        box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    #adminDashboard ol.organizational-chart .txt-1 {
+        color: #BD5332;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+    }
+
+    #adminDashboard ol.organizational-chart .txt-2 {
+        color: #444;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: 0;
+    }
+
+    #adminDashboard ol.organizational-chart > li > div:before {
+        bottom: 2em;
+        height: 3px;
+        right: -1em;
+        width: 1em;
+    }
+
+    #adminDashboard ol.organizational-chart > li > div:first-of-type:after {
+        bottom: 0;
+        height: 2em;
+        right: -1em;
+        width: 3px;
+    }
+
+    #adminDashboard ol.organizational-chart > li > div + div {
+        margin-top: 1em;
+    }
+
+    #adminDashboard ol.organizational-chart > li > div + div:after {
+        height: calc(100% + 1em);
+        right: -1em;
+        top: -1em;
+        width: 3px;
+    }
+
+    /*** SECONDARY ***/
+    #adminDashboard ol.organizational-chart > li > ol:before {
+        left: inherit;
+        right: 0;
+    }
+
+    #adminDashboard ol.organizational-chart > li > ol:after {
+        left: 0;
+        width: 100%;
+    }
+
+
+    /*** TERTIARY ***/
+    #adminDashboard ol.organizational-chart > li > ol > li > ol > li > div {
+        background-color: #fd6470;
+    }
+
+    /*** QUATERNARY ***/
+    #adminDashboard ol.organizational-chart > li > ol > li > ol > li > ol > li > div {
+        background-color: #fca858;
+    }
+
+    /*** QUINARY ***/
+    #adminDashboard ol.organizational-chart > li > ol > li > ol > li > ol > li > ol > li > div {
+        background-color: #fddc32;
+    }
+
+    /*** MEDIA QUERIES ***/
+    @media only screen and ( min-width: 64em ) {
+
+        #adminDashboard ol.organizational-chart {
+            margin-left: -1em;
+            margin-right: -1em;
+        }
+
+        /* PRIMARY */
+        #adminDashboard ol.organizational-chart > li > div {
+            display: inline-block;
+            float: none;
+            margin: 0 1em 1em 1em;
+            vertical-align: bottom;
+        }
+
+        #adminDashboard ol.organizational-chart > li > div:only-of-type {
+            width: calc((100% / 1) - 2em - 4px);
+        }
+
+        #adminDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2),
+        #adminDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2) ~ div {
+            width: calc((100% / 2) - 2em - 4px);
+        }
+
+        #adminDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3),
+        #adminDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3) ~ div {
+            width: calc((100% / 3) - 2em - 4px);
+        }
+
+        #adminDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4),
+        #adminDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4) ~ div {
+            width: calc((100% / 4) - 2em - 4px);
+        }
+
+        #adminDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5),
+        #adminDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5) ~ div {
+            width: calc((100% / 5) - 2em - 4px);
+        }
+
+        #adminDashboard ol.organizational-chart > li > div:before,
+        #adminDashboard ol.organizational-chart > li > div:after {
+            bottom: -1em !important;
+            top: inherit !important;
+        }
+
+        #adminDashboard ol.organizational-chart > li > div:before {
+            height: 1em !important;
+            left: 50% !important;
+            width: 3px !important;
+        }
+
+        #adminDashboard ol.organizational-chart > li > div:only-of-type:after {
+            display: none;
+        }
+
+        #adminDashboard ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after,
+        #adminDashboard ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+            bottom: -1em;
+            height: 3px;
+            width: calc(50% + 1em + 3px);
+        }
+
+        #adminDashboard ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after {
+            left: calc(50% + 3px);
+        }
+
+        #adminDashboard ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+            left: calc(-1em - 3px);
+        }
+
+        #adminDashboard ol.organizational-chart > li > div + div:not(:last-of-type):after {
+            height: 3px;
+            left: -2em;
+            width: calc(100% + 4em);
+        }
+
+        /* SECONDARY */
+        #adminDashboard ol.organizational-chart > li > ol {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        #adminDashboard ol.organizational-chart > li > ol:before,
+        #adminDashboard ol.organizational-chart > li > ol > li:before {
+            height: 1em !important;
+            left: 50% !important;
+            top: 0 !important;
+            width: 3px !important;
+        }
+
+        #adminDashboard ol.organizational-chart > li > ol:after {
+            display: none;
+        }
+
+        #adminDashboard ol.organizational-chart > li > ol > li {
+            flex-grow: 1;
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-top: 1em;
+        }
+
+        #adminDashboard ol.organizational-chart > li > ol > li:only-of-type {
+            padding-top: 0;
+        }
+
+        #adminDashboard ol.organizational-chart > li > ol > li:only-of-type:before,
+        #adminDashboard ol.organizational-chart > li > ol > li:only-of-type:after {
+            display: none;
+        }
+
+        #adminDashboard ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after,
+        #adminDashboard ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+            height: 3px;
+            top: 0;
+            width: 50%;
+        }
+
+        #adminDashboard ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after {
+            left: 50%;
+        }
+
+        #adminDashboard ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+            left: 0;
+        }
+
+        #adminDashboard ol.organizational-chart > li > ol > li + li:not(:last-of-type):after {
+            height: 3px;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+    }
+
+    /*organization structure css end*/
+    #adminDashboard .back-btn-icon {
+        color: #303030;
+        align-items: center;
+        display: flex;
+        margin-right: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #adminDashboard .timeline-deatils {
+        color: #000;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    /*timeline css start */
+
+    #adminDashboard .history-tl-container {
+        font-family: "Roboto", sans-serif;
+        margin: auto;
+        display: block;
+        position: relative;
+    }
+
+    #adminDashboard .history-tl-container ul.tl {
+        margin: 20px 0;
+        padding: 0;
+        display: inline-block;
+
+    }
+
+    #adminDashboard .history-tl-container ul.tl li {
+        list-style: none;
+        margin: auto;
+        margin-left: 50px;
+        margin-right: 50px;
+        min-height: 50px;
+        /* background: rgba(255, 255, 0, 0.1); */
+        border-left: 1px dashed #86D6FF;
+        padding: 0 0 30px 15px;
+        position: relative;
+    }
+
+    #adminDashboard .history-tl-container ul.tl li:last-child {
+        border-left: 0;
+    }
+
+    #adminDashboard .history-tl-container ul.tl li::before {
+        position: absolute;
+        left: -9px;
+        content: " ";
+        border: 8px solid #283891;
+        border-radius: 500%;
+    }
+
+    #adminDashboard .history-tl-container ul.tl li:hover::before {
+        border-color: #258CC7;
+        transition: all 1000ms ease-in-out;
+    }
+
+    #adminDashboard ul.tl li .item-title {
+        padding-top: 22px;
+        color: #303030;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    #adminDashboard ul.tl li .item-detail {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 12px;
+    }
+
+    #adminDashboard ul.tl li .timestamp {
+        position: absolute;
+        width: 100px;
+        color: #BD5332;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    /*timeline css end*/
+    #adminDashboard label.form-label-custom {
+        color: #4C5268;
+        text-align: right;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        width: 20%;
+    }
+
+    #adminDashboard label.form-label-custom.label-sub {
+        color: #1C8BCB;
+        font-family: "Segoe UI";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    #adminDashboard .form-group.label-txt {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #adminDashboard .lebel-section {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+
+    #adminDashboard i.fa.fa-phone {
+        color: #15760D;
+    }
+
+    #adminDashboard i.fa.fa-envelope {
+        color: #5E92C1;
+    }
+
+    #adminDashboard .table > thead > tr > th {
+        background: #B9E7BC !important;
+        color: #163E58 !important;
+        font-size: 20px !important;
+        font-style: normal;
+        font-weight: 700 !important;
+        line-height: normal !important;
+        vertical-align: bottom;
+        text-transform: inherit !important;
+    }
+
+    #adminDashboard .BlueDialog table td {
+        border: none;
+    }
+
+    #adminDashboard .task-section .task-details {
+        color: #1C8BCB !important;
+        font-size: 18px !important;
+        font-style: normal !important;
+        font-weight: 700 !important;
+        line-height: normal !important;
+    }
+
+    #adminDashboard .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        color: #101010;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #adminDashboard .task-details {
+        text-align: left !important;
+    }
+
+    #adminDashboard .icon-set {
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #adminDashboard i.fa.fa-trash {
+        color: #EF080B;
+    }
+
+    #adminDashboard i.fa.fa-edit {
+        color: #5E92C1;
+    }
+
+    #adminDashboard .BlueDialog .form-control {
+        padding: 3px 10px;
+        height: 25px;
+        font-size: 12px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    #adminDashboard select.input-sm {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    #adminDashboard .form-group .form-control {
+        color: #303030 !important;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 5px;
+        border: 0.5px solid #A9A9A9;
+        background: #FFF;
+        box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.25);
+        height: 32px;
+    }
+
+    #adminDashboard i.fa-solid.fa-envelope {
+        color: #5E92C1;
+    }
+
+    #adminDashboard .table {
+        border: 1px solid rgba(0, 0, 0, 0.22);
+        background: #FFF;
+    }
+
+    #adminDashboard .form-group .dropdown-toggle {
+        width: 100%;
+        color: #303030 !important;
+        text-align: left;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 5px;
+        border: 0.5px solid #A9A9A9;
+        background: #FFF;
+        box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.25);
+        height: 32px;
+    }
+
+    #adminDashboard .form-group .dropdown-toggle:hover {
+        background-color: #eeeeee;
+    }
+
+    #adminDashboard .dropdown-menu.show {
+        width: 100% !important;
+    }
+
+    #adminDashboard tr th:nth-child(2) {
+        text-align: left !important;
+    }
+
+    #adminDashboard tr td:nth-child(1) {
+        text-align: left !important;
+    }
+    #adminDashboard tr th:nth-child(1) {
+        text-align: left !important;
+    }
+
+    #adminDashboard tr td:nth-child(2) {
+        text-align: left !important;
+    }
+    /*Popup Css Start*/
+    #adminDashboard .modal-header {
+        background-color: #F1592A;
+        color: #fff;
+        padding: 6px 12px;
+    }
+
+    #adminDashboard .modal-dialog {
+        max-width: 1200px !important;
+        width: 1200px;
+    }
+
+    #adminDashboard .filter-section {
+        background-color: #E9F8FF;
+        padding: 15px !important;
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #adminDashboard .mask-header {
+        align-items: center;
+        display: flex;
+        /*justify-content: center;*/
+        gap: 10px;
+    }
+
+    #adminDashboard .tab-section {
+        background-color: #fff;
+    }
+
+    #adminDashboard .tabbable-line > .nav-tabs > li.active {
+        border-bottom: 4px solid #00498E;
+        position: relative;
+    }
+
+    #adminDashboard .tabbable-line > .nav-tabs > li.active > a {
+        border: 0;
+        color: #333333;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    #adminDashboard .tabbable-line > .nav-tabs > li > a {
+        border: 0;
+        margin-right: 0;
+        color: #737373;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        /* justify-content: center; */
+        gap: 5px;
+        /* width: 50px; */
+        text-decoration: none;
+    }
+
+    #adminDashboard .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 6px 15px;
+    }
+
+    #adminDashboard .box-cont {
+        border-radius: 10px;
+        border: 1px solid #B0B0B0;
+        background: #FFF;
+        width: -webkit-fill-available;
+    }
+
+    #adminDashboard .text-section {
+        border-radius: 5px;
+        background: #FFF;
+        padding: 10px;
+        height: 110px;
+    }
+
+    #adminDashboard .misc_questions {
+        margin-bottom: 10px;
+        display: flex;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.80);
+    }
+
+    #adminDashboard .text-section label {
+        color: #111;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    #adminDashboard .count-txt {
+        color: #1C8BCB;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .popover{
+        max-width: 750px;
+    }
+    .popover-body{
+        padding: 0 !important;
+    }
+    .popover-header{
+        color: #41AB46 !important;
+        font-size: 20px !important;
+        background-color: #fff;
+        border: 0;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        line-height: normal !important;
+        /* margin-bottom: 10px; */
+        padding: 15px !important;
+    }
+    .pophoverContainer header{
+        color: #41AB46 !important;
+        font-size: 20px !important;
+        background-color: #fff;
+        border: 0;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        line-height: normal !important;
+        /* margin-bottom: 10px; */
+        padding: 15px !important;
+    }
+    .pophoverContainer .chat-section .chat-body {
+        padding: 0 0 15px 15px;
+        height: 260px;
+    }
+    .pophoverContainer .chat-section .chat-body-height {
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .pophoverContainer .chat-section .chat-box.other-chat {
+        justify-content: flex-start;
+        border-radius: 0px 10px 10px 0px;
+        max-width: 450px;
+        width: fit-content;
+        align-items: flex-start;
+    }
+    .pophoverContainer .chat-section .chat-box {
+        display: flex;
+        /* align-items: center; */
+        gap: 5px;
+        flex-direction: column;
+    }
+    .pophoverContainer .chat-section .chat-box.my-chat {
+        justify-content: end;
+        align-items: end;
+    }
+    .pophoverContainer .chat-section .msg-info-name {
+        color: #1C8BCB;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .pophoverContainer .chat-section .chat {
+        max-width: 450px;
+        /* padding: 15px; */
+        border-radius: 15px;
+        background: #EEE;
+        border-radius: 10px 0px 0px 10px;
+        padding: 10px;
+        color: #444;
+        font-family: "Segoe UI";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .pophoverContainer .chat-section .msger-inputarea {
+        display: flex;
+        padding: 10px;
+        background: #C5E1F1;
+        gap: 5px;
+        align-items: center;
+    }
+    .pophoverContainer .modal-footer{
+        display: none;
+    }
+    .pophoverContainer i.fa-solid.fa-paper-plane {
+        color: #1C8BCB;
+        font-size: 18px;
+        padding: 0 5px;
+    }
+    /*overflow css start*/
+    .pophoverContainer .scrollbar {
+        width: 100%;
+        overflow-y: auto;
+    }
+    .pophoverContainer .force-overflow {
+        min-height: 100%;
+    }
+    .pophoverContainer #style-1::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+    .pophoverContainer #style-1::-webkit-scrollbar
+    {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+    .pophoverContainer #style-1::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #ccc;
+    }
+    /*overflow css end*/
+    /*Popup Css Start*/
+</style>
+<!--wizard css start-->
+<style>
+    body {
+        background-color: #ffffff;
+        color: #444444;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0;
+        padding: 0;
+    }
+    .form-wizard-header p{
+
+    }
+    .wizard-content-left {
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.45);
+        background-image: url("https://i.ibb.co/X292hJF/form-wizard-bg-2.jpg");
+        background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        padding: 30px;
+    }
+
+    .wizard-content-left h1 {
+        color: #ffffff;
+        font-size: 38px;
+        font-weight: 600;
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    .form-wizard {
+        color: #888888;
+        padding: 30px;
+    }
+
+    .form-wizard .wizard-form-radio {
+        display: inline-block;
+        margin-left: 5px;
+        position: relative;
+    }
+
+    .form-wizard .wizard-form-radio input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        background-color: #dddddd;
+        height: 25px;
+        width: 25px;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .form-wizard .wizard-form-radio input[type="radio"]:focus {
+        outline: 0;
+    }
+
+    .form-wizard .wizard-form-radio input[type="radio"]:checked {
+        background-color: #fb1647;
+    }
+
+    .form-wizard .wizard-form-radio input[type="radio"]:checked::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        background-color: #ffffff;
+        border-radius: 50%;
+        left: 1px;
+        right: 0;
+        margin: 0 auto;
+        top: 8px;
+    }
+
+    .form-wizard .wizard-form-radio input[type="radio"]:checked::after {
+        content: "";
+        display: inline-block;
+        webkit-animation: click-radio-wave 0.65s;
+        -moz-animation: click-radio-wave 0.65s;
+        animation: click-radio-wave 0.65s;
+        background: #000000;
+        content: '';
+        display: block;
+        position: relative;
+        z-index: 100;
+        border-radius: 50%;
+    }
+
+    .form-wizard .wizard-form-radio input[type="radio"] ~ label {
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+    .form-wizard .form-wizard-header {
+        text-align: center;
+    }
+
+    .form-wizard .form-wizard-next-btn, .form-wizard .form-wizard-previous-btn, .form-wizard .form-wizard-submit {
+        background-color: #d65470;
+        color: #ffffff;
+        display: inline-block;
+        min-width: 100px;
+        min-width: 120px;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .form-wizard .form-wizard-next-btn:hover, .form-wizard .form-wizard-next-btn:focus, .form-wizard .form-wizard-previous-btn:hover, .form-wizard .form-wizard-previous-btn:focus, .form-wizard .form-wizard-submit:hover, .form-wizard .form-wizard-submit:focus {
+        color: #ffffff;
+        opacity: 0.6;
+        text-decoration: none;
+    }
+
+    .form-wizard . {
+        display: none;
+    }
+
+    .form-wizard ..show {
+        display: block;
+    }
+
+    .form-wizard .wizard-form-error {
+        display: none;
+        background-color: #d70b0b;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+    }
+
+    .form-wizard .form-wizard-previous-btn {
+        background-color: #fb1647;
+    }
+
+    .form-wizard .form-control {
+        font-weight: 300;
+        height: auto !important;
+        padding: 10px 15px;
+        color: #888888;
+        background-color: #f1f1f1;
+        border: none;
+    }
+
+    .form-wizard .form-control:focus {
+        box-shadow: none;
+    }
+
+    .form-wizard .form-group {
+        position: relative;
+        margin: 10px 0;
+    }
+
+    .form-wizard .wizard-form-text-label {
+        position: absolute;
+        left: 10px;
+        top: 8px;
+        transition: 0.2s linear all;
+    }
+
+    .form-wizard .focus-input .wizard-form-text-label {
+        color: #d65470;
+        top: -18px;
+        transition: 0.2s linear all;
+        font-size: 12px;
+    }
+
+    .form-wizard .form-wizard-steps {
+        margin: 30px 0;
+        justify-content: center;
+        display: flex;
+
+    }
+
+    .form-wizard .form-wizard-steps li {
+        width: 25%;
+        float: left;
+        position: relative;
+    }
+
+    .form-wizard .form-wizard-steps li::after {
+        background-color: #f3f3f3;
+        content: "";
+        height: 5px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 30%;
+        transform: translateY(-50%);
+        width: 100%;
+        border-bottom: 1px solid #dddddd;
+        border-top: 1px solid #dddddd;
+    }
+
+    .form-wizard .form-wizard-steps li span {
+        background-color: #dddddd;
+        border-radius: 50%;
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+        text-align: center;
+        width: 40px;
+        z-index: 1;
+    }
+
+    .form-wizard .form-wizard-steps li:last-child::after {
+        width: 50%;
+    }
+
+    .form-wizard .form-wizard-steps li.active span, .form-wizard .form-wizard-steps li.activated span {
+        background-color: #d65470;
+        color: #ffffff;
+    }
+
+    .form-wizard .form-wizard-steps li.active::after, .form-wizard .form-wizard-steps li.activated::after {
+        background-color: #d65470;
+        left: 50%;
+        width: 50%;
+        border-color: #d65470;
+    }
+
+    .form-wizard .form-wizard-steps li.activated::after {
+        width: 100%;
+        border-color: #d65470;
+    }
+
+    .form-wizard .form-wizard-steps li:last-child::after {
+        left: 0;
+    }
+
+    .form-wizard .wizard-password-eye {
+        position: absolute;
+        right: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    @keyframes click-radio-wave {
+        0% {
+            width: 25px;
+            height: 25px;
+            opacity: 0.35;
+            position: relative;
+        }
+        100% {
+            width: 60px;
+            height: 60px;
+            margin-left: -15px;
+            margin-top: -15px;
+            opacity: 0.0;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .wizard-content-left {
+            height: auto;
+        }
+    }
+    .form-set {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: 1px solid #85D0FB;
+        background: #E9F7FF;
+        box-shadow: 0px 3px 5px -5px rgba(0, 0, 0, 0.25);
+    }
+    .theHide {
+        display: none !important;
+    }
+</style>
+<!--wizard css end-->
+<div id="adminDashboard" class="BlueDialog">
+    <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleNav"
+                aria-controls="toggleNav" aria-expanded="false" aria-label="Toggle navigation" style="display: none;">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <a class="navbar-brand p-0" href="https://www.ekal.org/in/" style="height: fit-content;">
+            <img src="https://www.ekal.org/assets/images/ekal-logo.png" style="width: 60px;"></a>
+        <div class="collapse navbar-collapse" id="toggleNav" style="display: flex !important;">
+            <ul class="navbar-nav nav-list p-0">
+
+                <li class="nav-item" style="">
+                    <a class="nav-link" style="">HOME</a>
+                </li>
+                <li class="nav-item" style="">
+                    <a class="nav-link" style="">ABOUT</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">CAUSES <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">0</a></li>
+                        <li><a href="#">1</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">FUTURE PLAN <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">0</a></li>
+                        <li><a href="#">1</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" style="">
+                    <a class="nav-link" data-toggle="dropdown" aria-expanded="false">REPORTS</a>
+                </li>
+                <li class="nav-item top-navitembar" style="
+    padding-right: 10px;
+">
+                    <a class="nav-link" data-toggle="dropdown" aria-expanded="false">CONTACT</a>
+                </li>
+                <li class="nav-item" style="
+    margin-left: 10px;
+">
+                    <section class="center">
+                        <div hidden="">
+                            <div data-name="popover-content">
+                                <div class="input-group">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Search"
+                                           name="search">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-danger" type="submit">
+                                            <i class="bi bi-search fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a id="example" tabindex="0" class="dropdown-toggle nav-link" role="button"
+                           data-bs-toggle="popover" title="Search Section"><i class="fa fa-search"
+                                                                              aria-hidden="true"></i></a>
+
+                    </section>
+                </li>
+            </ul>
+            <ul class="navbar-nav nav-list p-0" style="">
+                <li class="nav-item top-navitembar" style="">
+                    <a class="nav-link wcm-txt" style="">Welcome Mahesh Navani !</a>
+                </li>
+                <li class="nav-item top-navitembar" style="">
+                    <a class="nav-link" style="" onclick="window.location.href='./public/login.html'">Log Out</a>
+                </li>
+                <li class="nav-item top-navitembar" style="border: 0;margin-left: 10px;">
+                    <button type="button" href="https://www.ekal.org/in/donation" target="_self"
+                            class="btn btn-main sml_btn" style="">Donate
+                    </button>
+                </li>
+            </ul>
+    </nav>
+    <div class="homepagewrapper" style="padding: 0 15px;">
+        <div class="row wrapper-homepage mx-auto" style="margin-left: auto;margin-right: auto;">
+            <div class="bg-2"><img src="public/img/bg-img-2.png" style="width: 100%;"></div>
+            <div class="col-sm-12" style="padding:0 15px; z-index: 10;position: relative;">
+                <section class="wizard-section">
+                    <div class="row no-gutters">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-wizard">
+                                <div>
+                                    <div class="form-wizard-header">
+                                        <div class="section-header" style="margin-top: 40px;">
+                                            <a class="back-btn-icon" href="">
+                                                <i class="fa fa-reply" aria-hidden="true" style="font-size: 20px;"></i>
+                                            </a>
+                                            <img src="public/img/admin.png">Admin Panel
+                                        </div>
+                                        <ul class="list-unstyled form-wizard-steps clearfix">
+<!--                                            <li class="active">-->
+<!--                                                <div style="-->
+<!--    display: flex;-->
+<!--    align-items: center;-->
+<!--    flex-direction: column;-->
+<!--    gap: 10px;-->
+<!--"><span>1</span>User Details</div>-->
+<!--                                            </li>-->
+                                            <li class="active" id="ivd_details">
+                                                <div style="
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+"><span>1</span>IVD Deatils</div>
+                                            </li>
+                                            <li id="programDetails">
+                                                <div style="
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+"><span>2</span>Program Details
+                                                </div>
+                                            </li>
+                                            <li id="projectDetails">
+                                                <div style="
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+"><span>3</span>Staff Details</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="" id="divIvdDetails" style="">
+                                        <div class="col-sm-12" style="">
+                                            <div class="col-sm-12 form-set"><div class="col-md-12 p-0 mask-header" style="">
+                                                <label class="form-label-custom col-sm-4 p-0" style="">Donor Name:</label>
+                                                <div class="form-group col-sm-4 m-0 p-0" style="
+    /* width: 30%; */
+">
+                                                    <input type="text" class="form-control login-field" placeholder="" autocomplete="off" style="
+    /* width: 60%; */
+">
+                                                </div>
+                                            </div>
+
+                                                <div class="col-md-12 p-0 mask-header" style="">
+                                                    <label class="form-label-custom col-sm-4 p-0" style="">Project ID:</label>
+                                                    <div class="form-group col-sm-4 m-0 p-0" style="
+    /* width: 30%; */
+">
+                                                        <input type="text" class="form-control login-field" placeholder="" autocomplete="off" style="
+    /* width: 60%; */
+">
+                                                    </div>
+                                                </div><div class="col-md-12 p-0 mask-header" style="">
+                                                    <label class="form-label-custom col-sm-4 p-0" style="">Start Date:</label>
+                                                    <div class="form-group col-sm-4 m-0 p-0" style="
+    /* width: 30%; */
+">
+                                                        <input type="text" class="form-control login-field" placeholder="Start Date" autocomplete="off" style="
+    /* width: 60%; */
+">
+                                                    </div>
+                                                </div><div class="col-md-12 p-0 mask-header" style="">
+                                                    <label class="form-label-custom col-sm-4 p-0" style="">End Date:</label>
+                                                    <div class="form-group col-sm-4 m-0 p-0" style="
+    /* width: 30%; */
+">
+                                                        <input type="text" class="form-control login-field" placeholder="End Date" autocomplete="off" style="
+    /* width: 60%; */
+">
+                                                    </div>
+                                                </div><div class="col-md-12 p-0 mask-header" style="">
+                                                    <label class="form-label-custom col-sm-4 p-0" style="">Name of the Donor Board:</label>
+                                                    <div class="form-group col-sm-4 m-0 p-0" style="
+    /* width: 30%; */
+">
+                                                        <input type="text" class="form-control login-field" placeholder="Name of the Donor Board" autocomplete="off" style="
+    /* width: 60%; */
+">
+                                                    </div>
+                                                </div><div class="col-md-12 p-0 mask-header" style="">
+                                                    <label class="form-label-custom col-sm-4 p-0" style="">Location :</label>
+                                                    <div class="form-group col-sm-4 m-0 p-0" style="
+    /* width: 30%; */
+">
+                                                        <input type="text" class="form-control login-field" placeholder="Location" autocomplete="off" style="
+    /* width: 60%; */
+">
+                                                    </div>
+                                                </div><div class="col-md-12 p-0 mask-header" style="">
+                                                    <label class="form-label-custom col-sm-4 p-0" style="">State :</label>
+                                                    <div class="form-group col-sm-4 m-0 p-0" style="
+    /* width: 30%; */
+">
+                                                        <div class="dropdown">
+                                                            <butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select State</butoon>
+                                                            <ul class="dropdown-menu" style="">
+                                                                <li><a class="dropdown-item" href="#">0</a></li>
+                                                                <li><a class="dropdown-item" href="#">1</a></li>
+                                                                <li><a class="dropdown-item" href="#">2</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><div class="col-md-12 p-0 mask-header" style="">
+                                                    <label class="form-label-custom col-sm-4 p-0" style="">District :</label>
+                                                    <div class="form-group col-sm-4 m-0 p-0" style="
+    /* width: 30%; */
+">
+                                                        <div class="dropdown">
+                                                            <butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select District</butoon>
+                                                            <ul class="dropdown-menu" style="">
+                                                                <li><a class="dropdown-item" href="#">0</a></li>
+                                                                <li><a class="dropdown-item" href="#">1</a></li>
+                                                                <li><a class="dropdown-item" href="#">2</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><div class="col-md-12 p-0 mask-header" style="">
+                                                    <label class="form-label-custom col-sm-4 p-0" style="">City :</label>
+                                                    <div class="form-group col-sm-4 m-0 p-0" style="
+    /* width: 30%; */
+">
+                                                        <div class="dropdown">
+                                                            <butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select City</butoon>
+                                                            <ul class="dropdown-menu" style="">
+                                                                <li><a class="dropdown-item" href="#">0</a></li>
+                                                                <li><a class="dropdown-item" href="#">1</a></li>
+                                                                <li><a class="dropdown-item" href="#">2</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><div class="col-md-12 p-0 mask-header" style="">
+                                                    <label class="form-label-custom col-sm-4 p-0" style="">Village :</label>
+                                                    <div class="form-group col-sm-4 m-0 p-0" style="
+    /* width: 30%; */
+">
+                                                        <div class="dropdown">
+                                                            <butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Village</butoon>
+                                                            <ul class="dropdown-menu" style="">
+                                                                <li><a class="dropdown-item" href="#">0</a></li>
+                                                                <li><a class="dropdown-item" href="#">1</a></li>
+                                                                <li><a class="dropdown-item" href="#">2</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><div class="col-md-12 p-0 mask-header" style="">
+                                                    <label class="form-label-custom col-sm-4 p-0" style="">Address of the Location :</label>
+                                                    <div class="form-group col-sm-4 m-0 p-0" style="
+    /* width: 30%; */
+">
+                                                        <textarea type="text" class="form-control login-field" placeholder="Address of the Location" autocomplete="off" style=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="" style="display: flex; width: 100%;align-items: center;justify-content: center">
+                                            <button onclick="Admin.showProgramDetails()" class="btn btn-main" style="margin-right: auto;margin-left: 1ch">Next</button>
+                                            <button type="button" data-bs-toggle="modal" data-bs-target="#newTask" class="btn btn-main sml_btn" style="padding: 10px 14px;" autocomplete="off"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add IVD</button>
+                                        </div>
+                                        <div class="form-group clearfix">
+
+                                        </div>
+                                    </div>
+                                    <div class=" theHide" id="divProgramDetails" >
+                                        <div class="col-sm-12 ivd-cont-body" style="display: flex;gap: 20px;">
+                                            <div class="ivd-details-box">
+                                                <div class="ivd-img-section">
+                                                    <img src="public/img/education.png">
+                                                </div>
+                                                <div class="col-sm-12 p-0 ivd-body-section">
+                                                    <div class="col-sm-12 p-0 ivd-details-header">Education</div>
+                                                    <div class="col-sm-12 p-0 ivd-details-imgs">
+                                                        <button type="button" class="btn btn-green btn-img sml_btn" data-bs-content="" style="" id="chatSection" aria-label="Chat Section" data-bs-original-title="Chat Section" aria-describedby="popover650856">
+                                                            <i class="fa-regular fa-comment"></i>
+                                                        </button>
+                                                        <div popover="" id="my-popover" style="position: absolute;inset: auto auto 0px 0px;margin: 0px;transform: translate(288px, -133px);border: 0;padding: 0;">
+                                                            <div class="box-cont" style="border: 1px solid #283891;box-shadow: 0px 4px 16px -3px rgba(90, 103, 113, 0.25);">
+                                                                <div class="chat-section">
+                                                                    <header>
+                                                                        <i class="fa-solid fa-comment-dots"></i>   Communication
+                                                                    </header>
+                                                                    <div class="scrollbar chat-body" id="style-1">
+                                                                        <div class="chat-body-height force-overflow">
+                                                                            <div class="chat-box other-chat">
+                                                                                <div class="chat">Give me screenshot of Woman Empowerment Centers</div>
+                                                                                <div class="msg-info-name">Mahesh Navani</div>
+                                                                            </div>
+                                                                            <div class="chat-box my-chat">
+                                                                                <div class="chat">I have sent you an eMail with a Link which contains all the screenshots for Women Empowerment Centers</div>
+                                                                                <div class="msg-info-name">Bhaskar</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <input type="text" class="form-control login-field" placeholder="Type Here" autocomplete="off">
+                                                                    <i class="fa-solid fa-paper-plane"></i>
+
+                                                                </div>
+                                                            </div></div>
+                                                        <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
+                                                            <i class="fa-regular fa-file"></i>
+                                                        </button>
+                                                        <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn" title="Organization Structure" style="" id="viewFind" data-l10n-id="findbar" aria-expanded="true" aria-controls="findbar" autocomplete="off">
+                                                            <i class="fa fa-sitemap" aria-hidden="true"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ivd-details-box">
+                                                <div class="ivd-img-section">
+                                                    <img src="public/img/arogya.png">
+                                                </div>
+                                                <div class="col-sm-12 p-0 ivd-body-section">
+                                                    <div class="col-sm-12 p-0 ivd-details-header">Arogya</div>
+                                                    <div class="col-sm-12 p-0 ivd-details-imgs">
+                                                        <button type="button" class="btn btn-green btn-img sml_btn" data-bs-content="" style="" id="chatSection" aria-label="Chat Section" data-bs-original-title="Chat Section" aria-describedby="popover650856">
+                                                            <i class="fa-regular fa-comment"></i>
+                                                        </button>
+                                                        <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
+                                                            <i class="fa-regular fa-file"></i>
+                                                        </button>
+                                                        <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn" title="Organization Structure" style="">
+                                                            <i class="fa fa-sitemap" aria-hidden="true"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ivd-details-box">
+                                                <div class="ivd-img-section">
+                                                    <img src="public/img/women_empowerment_center.png">
+                                                </div>
+                                                <div class="col-sm-12 p-0 ivd-body-section">
+                                                    <div class="col-sm-12 p-0 ivd-details-header">Women Empowerment Centers</div>
+                                                    <div class="col-sm-12 p-0 ivd-details-imgs">
+                                                        <button type="button" class="btn btn-green btn-img sml_btn" data-bs-content="" style="" id="chatSection" aria-label="Chat Section" data-bs-original-title="Chat Section" aria-describedby="popover650856">
+                                                            <i class="fa-regular fa-comment"></i>
+                                                        </button>
+                                                        <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
+                                                            <i class="fa-regular fa-file"></i>
+                                                        </button>
+                                                        <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn" title="Organization Structure" style="">
+                                                            <i class="fa fa-sitemap" aria-hidden="true"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group clearfix">
+                                             <button onclick="Admin.showIvdDetails()" class="btn btn-main">Previous</button>
+                                            <button onclick="Admin.showStaffDetails()" class="btn btn-main">Next</button>
+                                        </div>
+                                    </div>
+                                    <div class=" theHide" id="divStaffDetails">
+                                        <div class="col-sm-12" style="/* overflow: auto; *//* height: 358px; *//* margin: 0 15px; */">
+                                            <div class="panel panel-default" style="">
+
+                                                <div class="" style="
+    float: right;
+    margin-bottom: 20px;
+"><button type="button" href="https://www.ekal.org/in/donation" target="_self" class="btn btn-main sml_btn" style=""><i class="fa fa-plus" aria-hidden="true"></i>  Add
+                                                </button></div><table class="table table-responsive table-hover" s="" tyle="">
+                                                <thead>
+                                                <tr>
+                                                    <th style="">First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Mobile #</th>
+                                                    <th>Email</th>
+
+
+                                                    <th>Action</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>Namrata</td>
+                                                    <td>Goradiya</td>
+                                                    <td>5648522585</td>
+                                                    <td>abc@gmail.com</td>
+                                                    <td><div class="icon-set"><i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></div></td>
+
+                                                </tr>
+
+
+
+                                                </tbody>
+                                            </table>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group clearfix">
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="modal fade show" id="newTask" tabindex="-1" aria-labelledby="newTaskLabel" style="display: block;padding-left: 0px;display: none;" aria-modal="true" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-between" style="">
+                        <h5 class="modal-title" id="newTaskLabel">Search User</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" autocomplete="off" style="background: none;border: 0;">
+                            <i class="fa-regular fa-circle-xmark" style="color: #fff;font-size: 20px;"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="" id="">
+                            <div class="col-12 p-0 filter-section">
+
+                                <div style="display: flex;">
+                                    <div class="col-sm-3 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 44.666667%;">First Name
+                                            :</label>
+                                        <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                            <input type="text" class="form-control login-field" placeholder="Search By" autocomplete="off" style="
+    /* width: 100% !important; */">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 44.666667%;">Last Name
+                                            :</label>
+                                        <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                            <input type="text" class="form-control login-field" placeholder="Search By" autocomplete="off" style="
+    /* width: 100% !important; */">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 44.666667%;">Mobile
+                                            :</label>
+                                        <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                            <input type="text" class="form-control login-field" placeholder="Search By" autocomplete="off" style="
+    /* width: 100% !important; */">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 44.666667%;">Role :</label>
+                                        <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                            <div class="dropdown">
+                                                <butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Role</butoon>
+                                                <ul class="dropdown-menu" style="">
+                                                    <li><a class="dropdown-item" href="#">0</a></li>
+                                                    <li><a class="dropdown-item" href="#">1</a></li>
+                                                    <li><a class="dropdown-item" href="#">2</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display: flex;">
+
+
+
+                                    <div class="col-sm-12 mask-header" style="
+    justify-content: end;
+">
+                                        <button type="button" href="" target="_self" class="btn btn-main sml_btn" style="">Search
+                                        </button>
+                                    </div>
+                                </div></div>
+                            <div class="col-12 p-0 tab-section" style="
+    padding: 15px !important;
+">
+                                <div class="panel panel-default" style="">
+
+                                    <table class="table table-responsive table-hover" s="" tyle="">
+                                        <thead>
+                                        <tr>
+                                            <th style=""></th>
+                                            <th style="">First Name</th><th>Last Name</th>
+                                            <th>Mobile #</th>
+                                            <th>Email</th>
+
+
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><input class="form-check-input" type="chekbox"></td>
+                                            <td>Goradiya</td>
+                                            <td>5648522585</td>
+                                            <td>abc@gmail.com</td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+ var Admin = ()=>{
+
+ }
+ Admin.showProgramDetails=()=>{
+     $('#divProgramDetails').removeClass('theHide');
+     $('#divIvdDetails').addClass('theHide');
+     $('#divStaffDetails').addClass('theHide');
+ }
+ Admin.showStaffDetails=()=>{
+     $('#divProgramDetails').addClass('theHide');
+     $('#divIvdDetails').addClass('theHide');
+     $('#divStaffDetails').removeClass('theHide');
+ }
+ Admin.showIvdDetails=()=>{
+     $('#divProgramDetails').addClass('theHide');
+     $('#divIvdDetails').removeClass('theHide');
+     $('#divStaffDetails').addClass('theHide');
+ }
+</script>
+</body>
+</html>
