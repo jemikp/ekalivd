@@ -1347,7 +1347,8 @@
         box-shadow: 0px 3px 5px -5px rgba(0, 0, 0, 0.25);
     }
 </style>
-<div id="itemMasterDashboard" class="BlueDialog">
+<div id="itemMasterDashboard" class="BlueDialog row">
+    <div class="col-sm-6">
     <nav class="navbar navbar-expand-lg">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleNav"
                 aria-controls="toggleNav" aria-expanded="false" aria-label="Toggle navigation" style="display: none;">
@@ -1355,18 +1356,7 @@
         </button>
         <a class="navbar-brand p-0" href="https://www.ekal.org/in/" style="height: fit-content;">
             <img src="https://www.ekal.org/assets/images/ekal-logo.png" style="width: 60px;"></a>
-        <div class="btn-group">
-            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Action
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-        </div>
+
         <div class="collapse navbar-collapse" id="toggleNav" style="display: flex !important;">
             <ul class="navbar-nav nav-list p-0" style="display: none">
 
@@ -1440,6 +1430,23 @@
             </ul>
 
     </nav>
+    </div>
+    <div class="col-sm-6">
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Action
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./ivdMaster.html'">IVD Master</a></li>
+                <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./programMaster.html'">Program Master</a></li>
+                <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./user.html'">User Master</a></li>
+                <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./role.html'">Role Master</a></li>
+                <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./taskMaster.html'">Task Master</a></li>
+                <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./itemMaster.html'">Item Master</a></li>
+            </ul>
+        </div>
+
+    </div>
     <div class="homepagewrapper" style="padding: 0 15px;">
         <div class="row wrapper-homepage mx-auto" style="margin-left: auto;margin-right: auto;">
             <div class="bg-2"><img src="public/img/bg-img-2.png" style="width: 100%;"></div>
