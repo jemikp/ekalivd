@@ -233,6 +233,10 @@
         display: block;
         padding: 10px 15px;
     }
+    .fade{
+        background: rgba(40, 43, 49, .8);
+        -webkit-transition: all 0.3s;
+    }
 </style>
 <div id="loginPageDashboard" class="BlueDialog">
     <nav class="navbar navbar-expand-lg">
@@ -408,37 +412,40 @@
     }
 
     LoginPage.sendOTP = () => {
-        let url = `${LoginPage.controller}/sendOTP`;
-        let parmas = {
-            "whatsApp": $('#txtPhoneNumber').val()
-        }
-        $.post(url, parmas, function (resp) {
-            $("#getOtpDiv").hide();
-            $(".validateOTP").show();
-        }).done(function(resp) {
-            $("#getOtpDiv").hide();
-            $(".validateOTP").show();
-        }).fail(function(data) {
-            alert(data.responseJSON.message);
-        });
+        $("#getOtpDiv").hide();
+        $(".validateOTP").show();
+        // let url = `${LoginPage.controller}/sendOTP`;
+        // let parmas = {
+        //     "whatsApp": $('#txtPhoneNumber').val()
+        // }
+        // $.post(url, parmas, function (resp) {
+        //     $("#getOtpDiv").hide();
+        //     $(".validateOTP").show();
+        // }).done(function(resp) {
+        //     $("#getOtpDiv").hide();
+        //     $(".validateOTP").show();
+        // }).fail(function(data) {
+        //     alert(data.responseJSON.message);
+        // });
     }
 
     LoginPage.validateOTP = () => {
-        var val = $("#txtOTP").val();
-        let url = `${LoginPage.controller}/validateOTP`;
-        let parmas = {
-            "whatsApp": $('#txtPhoneNumber').val(),
-            "otp" : val
-        }
-        $.post(url, parmas, function (resp) {
-          //  window.location.href = "../home.html";
-        }).done(function(data) {
-            console.log(data);
-            localStorage.setItem("username",data.firstName+" "+data.lastName)
-            window.location.href = "../home.html";
-        }).fail(function(data) {
-            alert(data.responseJSON.message);
-        });
+        window.location.href = "../ivdMaster.html";
+        // var val = $("#txtOTP").val();
+        // let url = `${LoginPage.controller}/validateOTP`;
+        // let parmas = {
+        //     "whatsApp": $('#txtPhoneNumber').val(),
+        //     "otp" : val
+        // }
+        // $.post(url, parmas, function (resp) {
+        //   //  window.location.href = "../home.html";
+        // }).done(function(data) {
+        //     console.log(data);
+        //     localStorage.setItem("username",data.firstName+" "+data.lastName)
+        //     window.location.href = "../home.html";
+        // }).fail(function(data) {
+        //     alert(data.responseJSON.message);
+        // });
     }
 
     $(document).ready(() => {
