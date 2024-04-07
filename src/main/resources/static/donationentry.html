@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donation Entry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/css/bootstrap-multiselect.min.css" integrity="sha512-fZNmykQ6RlCyzGl9he+ScLrlU0LWeaR6MO/Kq9lelfXOw54O63gizFMSD5fVgZvU1YfDIc6mxom5n60qJ1nCrQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/js/bootstrap-multiselect.min.js" integrity="sha512-lxQ4VnKKW7foGFV6L9zlSe+6QppP9B2t+tMMaV4s4iqAv4iHIyXED7O+fke1VeLNaRdoVkVt8Hw/jmZ+XocsXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+</head>
+<body>
+<style>
+    body, html {
+        overflow: auto !important;
+    }
+
+    body {
+        font-family: 'Segoe UI', 'Segoe UI Light', 'Segoe UI Semibold', 'Segoe UI Semilight', 'Segoe UI Symbol', Arial;
+        font-size: 13px;
+        color: #696969;
+        margin: 0;
+        padding: 0;
+    }
+
+    #donationEntry .nav-list {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 5px;
+    }
+    #donationEntry .navbar-nav {
+        float: left;
+        margin: 0;
+    }
+    #donationEntry .navbar-brand, .navbar-nav>li>a {
+        text-shadow: 0 1px 0 rgba(255,255,255,.25);
+    }
+    #donationEntry .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    #donationEntry li.nav-item.top-navitembar {
+        border-right: 1px solid #437495;
+    }
+
+    #donationEntry .navbar-nav .nav-item .nav-link {
+        color: #444;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        cursor: pointer;
+        text-decoration: none;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #donationEntry a.nav-link.wcm-txt {
+        color: #41AB46 !important;
+    }
+
+    #donationEntry .navbar-expand-lg {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    #donationEntry .navbar-expand-lg {
+        padding: 0 20px;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #donationEntry .btn-main {
+        background: #F1592A;
+        border-color: #F1592A;
+        color: #fff;
+    }
+
+    #donationEntry .sml_btn {
+        color: #fff;
+        font-weight: 700;
+        border: none;
+        border-radius: 0;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    #donationEntry .navbar:before {
+        display: none !important;
+    }
+
+    #donationEntry .navbar:after {
+        display: none !important;
+    }
+
+    #donationEntry .main-page-header {
+        color: #283891;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 60px;
+    }
+
+    #donationEntry .main-page-body {
+        margin-top: 45px;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    #donationEntry .main-page-body .ivd-cont {
+        height: -webkit-fill-available;
+        border-radius: 10px;
+        border: 1px solid #EEE;
+        background: #FFF;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+        padding: 15px 20px;
+    }
+
+    #donationEntry .ivd-cont-header {
+        color: #BD5332;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        flex-direction: row;
+        gap: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    #donationEntry .ivd-cont .ivd-cont-body {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+    }
+
+    #donationEntry .ivd-cont-body .ivd-details-box {
+        width: 315px;
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        border-radius: 10px;
+        border: 1px solid #85D0FB;
+        background: #FFF;
+        box-shadow: 0px 3px 5px -5px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+    }
+
+    #donationEntry .ivd-details-box .ivd-details-header {
+        color: #444;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    #donationEntry .ivd-body-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex: auto !important;
+    }
+
+    #donationEntry .ivd-body-section .ivd-details-imgs {
+        align-items: center;
+        justify-content: flex-end;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    #donationEntry .btn.btn-img {
+        padding: 4px 8px;
+        color: #303030;
+        border-radius: 3.5px;
+        box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    #donationEntry .btn.btn-orng {
+        border: 1px solid #E9AA4F;
+        background: #FFE9C9;
+    }
+
+    #donationEntry .btn.btn-green {
+        border: 1px solid #41AB46;
+        background: #e9ffea;
+    }
+
+    #donationEntry .btn.btn-prpl {
+        border: 1px solid #9A72FF;
+        background: rgba(154, 114, 255, 0.25);
+    }
+
+    #donationEntry .bg-2 {
+        width: 100%;
+        margin-top: 20%;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        z-index: 0;
+    }
+
+    #donationEntry .navbar-collapse {
+        justify-content: flex-end !important;
+        display: flex !important;
+        gap: 190px !important;
+    }
+
+    #donationEntry .navbar-collapse:after {
+        display: none;
+    }
+
+    #donationEntry .navbar-collapse:before {
+        display: none;
+    }
+
+    #donationEntry .main-page-body .ivd-cont:hover {
+        background: #C3DEDC;
+        box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    #donationEntry .section-header {
+        color: #283891;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    #donationEntry .section-details {
+        margin-left: 25px;
+        margin-right: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #donationEntry .mask-header {
+        align-items: center;
+        display: flex;
+        /*justify-content: center;*/
+        gap: 10px;
+    }
+
+
+    /*organization structure css start*/
+    #donationEntry ol.organizational-chart,
+    #donationEntry ol.organizational-chart ol,
+    #donationEntry ol.organizational-chart li,
+    #donationEntry ol.organizational-chart li > div {
+        position: relative;
+    }
+
+    #donationEntry ol.organizational-chart,
+    #donationEntry ol.organizational-chart ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #donationEntry ol.organizational-chart {
+        text-align: center;
+    }
+
+    #donationEntry ol.organizational-chart ol {
+        padding-top: 1em;
+    }
+
+    #donationEntry ol.organizational-chart ol:before,
+    #donationEntry ol.organizational-chart ol:after,
+    #donationEntry ol.organizational-chart li:before,
+    #donationEntry ol.organizational-chart li:after,
+    #donationEntry ol.organizational-chart > li > div:before,
+    #donationEntry ol.organizational-chart > li > div:after {
+        background-color: #b7a6aa;
+        content: '';
+        position: absolute;
+    }
+
+    #donationEntry ol.organizational-chart ol > li {
+        padding: 1em 0 0 1em;
+    }
+
+    #donationEntry ol.organizational-chart > li ol:before {
+        height: 1em;
+        left: 50%;
+        top: 0;
+        width: 3px;
+    }
+
+    #donationEntry ol.organizational-chart > li ol:after {
+        height: 3px;
+        left: 3px;
+        top: 1em;
+        width: 50%;
+    }
+
+    #donationEntry ol.organizational-chart > li ol > li:not(:last-of-type):before {
+        height: 3px;
+        left: 0;
+        top: 2em;
+        width: 1em;
+    }
+
+    #donationEntry ol.organizational-chart > li ol > li:not(:last-of-type):after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 3px;
+    }
+
+    #donationEntry ol.organizational-chart > li ol > li:last-of-type:before {
+        height: 3px;
+        left: 0;
+        top: 2em;
+        width: 1em;
+    }
+
+    #donationEntry ol.organizational-chart > li ol > li:last-of-type:after {
+        height: 2em;
+        left: 0;
+        top: 0;
+        width: 3px;
+    }
+
+    #donationEntry ol.organizational-chart li > div {
+        background-color: #fff;
+        border-radius: 3px;
+        min-height: 2em;
+        padding: 0.5em;
+        border-radius: 10px;
+        border: 1px solid #9FA8DB;
+        background: #FFF;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #donationEntry ol.organizational-chart li > div:hover {
+        border: 1px solid #EEE;
+        background: #C3DEDC;
+        box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    /*** PRIMARY ***/
+    #donationEntry ol.organizational-chart > li > div {
+        margin-right: 1em;
+        border-radius: 10px;
+        border: 1px solid #9FA8DB;
+        background: #FFF;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #donationEntry ol.organizational-chart > li > div:hover {
+        border: 1px solid #EEE;
+        background: #C3DEDC;
+        box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    #donationEntry ol.organizational-chart .txt-1 {
+        color: #BD5332;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+    }
+
+    #donationEntry ol.organizational-chart .txt-2 {
+        color: #444;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: 0;
+    }
+
+    #donationEntry ol.organizational-chart > li > div:before {
+        bottom: 2em;
+        height: 3px;
+        right: -1em;
+        width: 1em;
+    }
+
+    #donationEntry ol.organizational-chart > li > div:first-of-type:after {
+        bottom: 0;
+        height: 2em;
+        right: -1em;
+        width: 3px;
+    }
+
+    #donationEntry ol.organizational-chart > li > div + div {
+        margin-top: 1em;
+    }
+
+    #donationEntry ol.organizational-chart > li > div + div:after {
+        height: calc(100% + 1em);
+        right: -1em;
+        top: -1em;
+        width: 3px;
+    }
+
+    /*** SECONDARY ***/
+    #donationEntry ol.organizational-chart > li > ol:before {
+        left: inherit;
+        right: 0;
+    }
+
+    #donationEntry ol.organizational-chart > li > ol:after {
+        left: 0;
+        width: 100%;
+    }
+
+
+    /*** TERTIARY ***/
+    #donationEntry ol.organizational-chart > li > ol > li > ol > li > div {
+        background-color: #fd6470;
+    }
+
+    /*** QUATERNARY ***/
+    #donationEntry ol.organizational-chart > li > ol > li > ol > li > ol > li > div {
+        background-color: #fca858;
+    }
+
+    /*** QUINARY ***/
+    #donationEntry ol.organizational-chart > li > ol > li > ol > li > ol > li > ol > li > div {
+        background-color: #fddc32;
+    }
+
+    /*** MEDIA QUERIES ***/
+    @media only screen and ( min-width: 64em ) {
+
+        #donationEntry ol.organizational-chart {
+            margin-left: -1em;
+            margin-right: -1em;
+        }
+
+        /* PRIMARY */
+        #donationEntry ol.organizational-chart > li > div {
+            display: inline-block;
+            float: none;
+            margin: 0 1em 1em 1em;
+            vertical-align: bottom;
+        }
+
+        #donationEntry ol.organizational-chart > li > div:only-of-type {
+            width: calc((100% / 1) - 2em - 4px);
+        }
+
+        #donationEntry ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2),
+        #donationEntry ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2) ~ div {
+            width: calc((100% / 2) - 2em - 4px);
+        }
+
+        #donationEntry ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3),
+        #donationEntry ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3) ~ div {
+            width: calc((100% / 3) - 2em - 4px);
+        }
+
+        #donationEntry ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4),
+        #donationEntry ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4) ~ div {
+            width: calc((100% / 4) - 2em - 4px);
+        }
+
+        #donationEntry ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5),
+        #donationEntry ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5) ~ div {
+            width: calc((100% / 5) - 2em - 4px);
+        }
+
+        #donationEntry ol.organizational-chart > li > div:before,
+        #donationEntry ol.organizational-chart > li > div:after {
+            bottom: -1em !important;
+            top: inherit !important;
+        }
+
+        #donationEntry ol.organizational-chart > li > div:before {
+            height: 1em !important;
+            left: 50% !important;
+            width: 3px !important;
+        }
+
+        #donationEntry ol.organizational-chart > li > div:only-of-type:after {
+            display: none;
+        }
+
+        #donationEntry ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after,
+        #donationEntry ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+            bottom: -1em;
+            height: 3px;
+            width: calc(50% + 1em + 3px);
+        }
+
+        #donationEntry ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after {
+            left: calc(50% + 3px);
+        }
+
+        #donationEntry ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+            left: calc(-1em - 3px);
+        }
+
+        #donationEntry ol.organizational-chart > li > div + div:not(:last-of-type):after {
+            height: 3px;
+            left: -2em;
+            width: calc(100% + 4em);
+        }
+
+        /* SECONDARY */
+        #donationEntry ol.organizational-chart > li > ol {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        #donationEntry ol.organizational-chart > li > ol:before,
+        #donationEntry ol.organizational-chart > li > ol > li:before {
+            height: 1em !important;
+            left: 50% !important;
+            top: 0 !important;
+            width: 3px !important;
+        }
+
+        #donationEntry ol.organizational-chart > li > ol:after {
+            display: none;
+        }
+
+        #donationEntry ol.organizational-chart > li > ol > li {
+            flex-grow: 1;
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-top: 1em;
+        }
+
+        #donationEntry ol.organizational-chart > li > ol > li:only-of-type {
+            padding-top: 0;
+        }
+
+        #donationEntry ol.organizational-chart > li > ol > li:only-of-type:before,
+        #donationEntry ol.organizational-chart > li > ol > li:only-of-type:after {
+            display: none;
+        }
+
+        #donationEntry ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after,
+        #donationEntry ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+            height: 3px;
+            top: 0;
+            width: 50%;
+        }
+
+        #donationEntry ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after {
+            left: 50%;
+        }
+
+        #donationEntry ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+            left: 0;
+        }
+
+        #donationEntry ol.organizational-chart > li > ol > li + li:not(:last-of-type):after {
+            height: 3px;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+    }
+
+    /*organization structure css end*/
+    #donationEntry .back-btn-icon {
+        color: #303030;
+        align-items: center;
+        display: flex;
+        margin-right: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #donationEntry .timeline-deatils {
+        color: #000;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    /*timeline css start */
+
+    #donationEntry .history-tl-container {
+        font-family: "Roboto", sans-serif;
+        margin: auto;
+        display: block;
+        position: relative;
+    }
+
+    #donationEntry .history-tl-container ul.tl {
+        margin: 20px 0;
+        padding: 0;
+        display: inline-block;
+
+    }
+
+    #donationEntry .history-tl-container ul.tl li {
+        list-style: none;
+        margin: auto;
+        margin-left: 50px;
+        margin-right: 50px;
+        min-height: 50px;
+        /* background: rgba(255, 255, 0, 0.1); */
+        border-left: 1px dashed #86D6FF;
+        padding: 0 0 30px 15px;
+        position: relative;
+    }
+
+    #donationEntry .history-tl-container ul.tl li:last-child {
+        border-left: 0;
+    }
+
+    #donationEntry .history-tl-container ul.tl li::before {
+        position: absolute;
+        left: -9px;
+        content: " ";
+        border: 8px solid #283891;
+        border-radius: 500%;
+    }
+
+    #donationEntry .history-tl-container ul.tl li:hover::before {
+        border-color: #258CC7;
+        transition: all 1000ms ease-in-out;
+    }
+
+    #donationEntry ul.tl li .item-title {
+        padding-top: 22px;
+        color: #303030;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    #donationEntry ul.tl li .item-detail {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 12px;
+    }
+
+    #donationEntry ul.tl li .timestamp {
+        position: absolute;
+        width: 100px;
+        color: #BD5332;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    /*timeline css end*/
+    #donationEntry label.form-label-custom {
+        color: #4C5268;
+        text-align: right;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        width: 20%;
+    }
+
+    #donationEntry label.form-label-custom.label-sub {
+        color: #1C8BCB;
+        font-family: "Segoe UI";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    #donationEntry .form-group.label-txt {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #donationEntry .lebel-section {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+
+    #donationEntry i.fa.fa-phone {
+        color: #15760D;
+    }
+
+    #donationEntry i.fa.fa-envelope {
+        color: #5E92C1;
+    }
+
+    #donationEntry .table > thead > tr > th {
+        background: #B9E7BC !important;
+        color: #163E58 !important;
+        font-size: 20px !important;
+        font-style: normal;
+        font-weight: 700 !important;
+        line-height: normal !important;
+        vertical-align: bottom;
+        text-transform: inherit !important;
+    }
+
+    #donationEntry .BlueDialog table td {
+        border: none;
+    }
+
+    #donationEntry .task-section .task-details {
+        color: #1C8BCB !important;
+        font-size: 18px !important;
+        font-style: normal !important;
+        font-weight: 700 !important;
+        line-height: normal !important;
+    }
+
+    #donationEntry .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        color: #101010;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #donationEntry .task-details {
+        text-align: left !important;
+    }
+
+    #donationEntry .icon-set {
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #donationEntry i.fa.fa-trash {
+        color: #EF080B;
+    }
+
+    #donationEntry i.fa.fa-edit {
+        color: #5E92C1;
+    }
+
+    #donationEntry .BlueDialog .form-control {
+        padding: 3px 10px;
+        height: 25px;
+        font-size: 12px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    #donationEntry select.input-sm {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    #donationEntry .form-group .form-control {
+        color: #303030 !important;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 5px;
+        border: 0.5px solid #A9A9A9;
+        background: #FFF;
+        box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.25);
+        height: 32px;
+    }
+
+    #donationEntry i.fa-solid.fa-envelope {
+        color: #5E92C1;
+    }
+
+    #donationEntry .table {
+        border: 1px solid rgba(0, 0, 0, 0.22);
+        background: #FFF;
+    }
+
+    #donationEntry .form-group .dropdown-toggle {
+        width: 100%;
+        color: #303030 !important;
+        text-align: left;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 5px;
+        border: 0.5px solid #A9A9A9;
+        background: #FFF;
+        box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.25);
+        height: 32px;
+    }
+
+    #donationEntry .form-group .dropdown-toggle:hover {
+        background-color: #eeeeee;
+    }
+
+    #donationEntry .dropdown-menu.show {
+        width: 100% !important;
+    }
+
+    #donationEntry tr th:nth-child(2) {
+        text-align: left !important;
+    }
+
+    #donationEntry tr td:nth-child(1) {
+        text-align: left !important;
+    }
+    #donationEntry tr th:nth-child(1) {
+        text-align: left !important;
+    }
+
+    #donationEntry tr td:nth-child(2) {
+        text-align: left !important;
+    }
+    /*Popup Css Start*/
+    #donationEntry .modal-header {
+        background-color: #F1592A;
+        color: #fff;
+        padding: 6px 12px;
+    }
+
+    #donationEntry .modal-dialog {
+        max-width: 700px !important;
+        width: 600px;
+    }
+
+    #donationEntry .filter-section {
+        background-color: #E9F8FF;
+        padding: 15px !important;
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    .fade{
+        background: rgba(40, 43, 49, .8);
+        -webkit-transition: all 0.3s;
+    }
+    #donationEntry .mask-header {
+        align-items: center;
+        display: flex;
+        /*justify-content: center;*/
+        gap: 10px;
+    }
+
+    #donationEntry .tab-section {
+        background-color: #fff;
+    }
+
+    #donationEntry .tabbable-line > .nav-tabs > li.active {
+        border-bottom: 4px solid #00498E;
+        position: relative;
+    }
+
+    #donationEntry .tabbable-line > .nav-tabs > li.active > a {
+        border: 0;
+        color: #333333;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    #donationEntry .tabbable-line > .nav-tabs > li > a {
+        border: 0;
+        margin-right: 0;
+        color: #737373;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        /* justify-content: center; */
+        gap: 5px;
+        /* width: 50px; */
+        text-decoration: none;
+    }
+
+    #donationEntry .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 6px 15px;
+    }
+
+    #donationEntry .box-cont {
+        border-radius: 10px;
+        border: 1px solid #B0B0B0;
+        background: #FFF;
+        width: -webkit-fill-available;
+    }
+
+    #donationEntry .text-section {
+        border-radius: 5px;
+        background: #FFF;
+        padding: 10px;
+        height: 110px;
+    }
+
+    #donationEntry .misc_questions {
+        margin-bottom: 10px;
+        display: flex;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.80);
+    }
+
+    #donationEntry .text-section label {
+        color: #111;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    #donationEntry .count-txt {
+        color: #1C8BCB;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .popover{
+        max-width: 750px;
+    }
+    .popover-body{
+        padding: 0 !important;
+    }
+    .popover-header{
+        color: #41AB46 !important;
+        font-size: 20px !important;
+        background-color: #fff;
+        border: 0;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        line-height: normal !important;
+        /* margin-bottom: 10px; */
+        padding: 15px !important;
+    }
+    .pophoverContainer header{
+        color: #41AB46 !important;
+        font-size: 20px !important;
+        background-color: #fff;
+        border: 0;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        line-height: normal !important;
+        /* margin-bottom: 10px; */
+        padding: 15px !important;
+    }
+    .pophoverContainer .chat-section .chat-body {
+        padding: 0 0 15px 15px;
+        height: 260px;
+    }
+    .pophoverContainer .chat-section .chat-body-height {
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .pophoverContainer .chat-section .chat-box.other-chat {
+        justify-content: flex-start;
+        border-radius: 0px 10px 10px 0px;
+        max-width: 450px;
+        width: fit-content;
+        align-items: flex-start;
+    }
+    .pophoverContainer .chat-section .chat-box {
+        display: flex;
+        /* align-items: center; */
+        gap: 5px;
+        flex-direction: column;
+    }
+    .pophoverContainer .chat-section .chat-box.my-chat {
+        justify-content: end;
+        align-items: end;
+    }
+    .pophoverContainer .chat-section .msg-info-name {
+        color: #1C8BCB;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .pophoverContainer .chat-section .chat {
+        max-width: 450px;
+        /* padding: 15px; */
+        border-radius: 15px;
+        background: #EEE;
+        border-radius: 10px 0px 0px 10px;
+        padding: 10px;
+        color: #444;
+        font-family: "Segoe UI";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .pophoverContainer .chat-section .msger-inputarea {
+        display: flex;
+        padding: 10px;
+        background: #C5E1F1;
+        gap: 5px;
+        align-items: center;
+    }
+    .pophoverContainer .modal-footer{
+        display: none;
+    }
+    .pophoverContainer i.fa-solid.fa-paper-plane {
+        color: #1C8BCB;
+        font-size: 18px;
+        padding: 0 5px;
+    }
+    /*overflow css start*/
+    .pophoverContainer .scrollbar {
+        width: 100%;
+        overflow-y: auto;
+    }
+    .pophoverContainer .force-overflow {
+        min-height: 100%;
+    }
+    .pophoverContainer #style-1::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+    .pophoverContainer #style-1::-webkit-scrollbar
+    {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+    .pophoverContainer #style-1::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #ccc;
+    }
+    .dropdown-menu[data-bs-popper]{
+        right: 0 !important;
+        left: auto;
+    }
+    .menu-dropdown .dropdown-toggle {
+        background-color: unset;
+        color: #283891;
+        border: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .menu-dropdown .dropdown-toggle:hover {
+        background-color: unset;
+        color: #303030;
+        border-color: unset;
+    }
+    .menu-dropdown .dropdown-toggle:active {
+        background-color: unset;
+        color: #303030;
+        border-color: unset;
+    }
+    .dropdown-menu[data-bs-popper]{
+        right: 0 !important;
+        left: auto;
+    }
+    .menu-dropdown .dropdown-toggle {
+        background-color: unset;
+        color: #283891;
+        border: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .menu-dropdown .dropdown-toggle:hover {
+        background-color: unset;
+        color: #303030;
+        border-color: unset;
+    }
+    .menu-dropdown .dropdown-toggle:active {
+        background-color: unset;
+        color: #303030;
+        border-color: unset;
+    }
+    /*overflow css end*/
+    /*Popup Css Start*/
+</style>
+<style>
+    body {
+        background-color: #ffffff;
+        color: #444444;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0;
+        padding: 0;
+    }
+    .wizard-content-left {
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.45);
+        background-image: url("https://i.ibb.co/X292hJF/form-wizard-bg-2.jpg");
+        background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        padding: 30px;
+    }
+
+    .wizard-content-left h1 {
+        color: #ffffff;
+        font-size: 38px;
+        font-weight: 600;
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    .form-wizard {
+        color: #888888;
+        padding: 30px;
+    }
+
+    .form-wizard .wizard-form-radio {
+        display: inline-block;
+        margin-left: 5px;
+        position: relative;
+    }
+
+    .form-wizard .wizard-form-radio input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        background-color: #dddddd;
+        height: 25px;
+        width: 25px;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .form-wizard .wizard-form-radio input[type="radio"]:focus {
+        outline: 0;
+    }
+
+    .form-wizard .wizard-form-radio input[type="radio"]:checked {
+        background-color: #fb1647;
+    }
+
+    .form-wizard .wizard-form-radio input[type="radio"]:checked::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        background-color: #ffffff;
+        border-radius: 50%;
+        left: 1px;
+        right: 0;
+        margin: 0 auto;
+        top: 8px;
+    }
+
+    .form-wizard .wizard-form-radio input[type="radio"]:checked::after {
+        content: "";
+        display: inline-block;
+        webkit-animation: click-radio-wave 0.65s;
+        -moz-animation: click-radio-wave 0.65s;
+        animation: click-radio-wave 0.65s;
+        background: #000000;
+        content: '';
+        display: block;
+        position: relative;
+        z-index: 100;
+        border-radius: 50%;
+    }
+
+    .form-wizard .wizard-form-radio input[type="radio"] ~ label {
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+    .form-wizard .form-wizard-header {
+        text-align: center;
+    }
+
+    .form-wizard .form-wizard-next-btn, .form-wizard .form-wizard-previous-btn, .form-wizard .form-wizard-submit {
+        background-color: #d65470;
+        color: #ffffff;
+        display: inline-block;
+        min-width: 100px;
+        min-width: 120px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .form-wizard .form-wizard-next-btn:hover, .form-wizard .form-wizard-next-btn:focus, .form-wizard .form-wizard-previous-btn:hover, .form-wizard .form-wizard-previous-btn:focus, .form-wizard .form-wizard-submit:hover, .form-wizard .form-wizard-submit:focus {
+        color: #ffffff;
+        opacity: 0.6;
+        text-decoration: none;
+    }
+
+    .form-wizard .wizard-fieldset {
+        display: none;
+    }
+
+    .form-wizard .wizard-fieldset.show {
+        display: block;
+    }
+
+    .form-wizard .wizard-form-error {
+        display: none;
+        background-color: #d70b0b;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+    }
+
+    .form-wizard .form-wizard-previous-btn {
+        background-color: #fb1647;
+    }
+
+    .form-wizard .form-control {
+        font-weight: 300;
+        height: auto !important;
+        padding: 10px 15px;
+        color: #888888;
+        background-color: #f1f1f1;
+        border: none;
+    }
+
+    .form-wizard .form-control:focus {
+        box-shadow: none;
+    }
+
+    .form-wizard .form-group {
+        position: relative;
+        margin: 10px 0;
+    }
+
+    .form-wizard .wizard-form-text-label {
+        position: absolute;
+        left: 10px;
+        top: 8px;
+        transition: 0.2s linear all;
+    }
+
+    .form-wizard .focus-input .wizard-form-text-label {
+        color: #d65470;
+        top: -18px;
+        transition: 0.2s linear all;
+        font-size: 12px;
+    }
+
+    .form-wizard .form-wizard-steps {
+        margin: 30px 0;
+    }
+
+    .form-wizard .form-wizard-steps li {
+        width: 25%;
+        float: left;
+        position: relative;
+    }
+
+    .form-wizard .form-wizard-steps li::after {
+        background-color: #f3f3f3;
+        content: "";
+        height: 5px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 30%;
+        transform: translateY(-50%);
+        width: 100%;
+        border-bottom: 1px solid #dddddd;
+        border-top: 1px solid #dddddd;
+    }
+
+    .form-wizard .form-wizard-steps li span {
+        background-color: #dddddd;
+        border-radius: 50%;
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+        text-align: center;
+        width: 40px;
+        z-index: 1;
+    }
+
+    .form-wizard .form-wizard-steps li:last-child::after {
+        width: 50%;
+    }
+
+    .form-wizard .form-wizard-steps li.active span, .form-wizard .form-wizard-steps li.activated span {
+        background-color: #d65470;
+        color: #ffffff;
+    }
+
+    .form-wizard .form-wizard-steps li.active::after, .form-wizard .form-wizard-steps li.activated::after {
+        background-color: #d65470;
+        left: 50%;
+        width: 50%;
+        border-color: #d65470;
+    }
+
+    .form-wizard .form-wizard-steps li.activated::after {
+        width: 100%;
+        border-color: #d65470;
+    }
+
+    .form-wizard .form-wizard-steps li:last-child::after {
+        left: 0;
+    }
+
+    .form-wizard .wizard-password-eye {
+        position: absolute;
+        right: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    @keyframes click-radio-wave {
+        0% {
+            width: 25px;
+            height: 25px;
+            opacity: 0.35;
+            position: relative;
+        }
+        100% {
+            width: 60px;
+            height: 60px;
+            margin-left: -15px;
+            margin-top: -15px;
+            opacity: 0.0;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .wizard-content-left {
+            height: auto;
+        }
+    }
+    .form-set {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: 1px solid #85D0FB;
+        background: #E9F7FF;
+        box-shadow: 0px 3px 5px -5px rgba(0, 0, 0, 0.25);
+    }
+</style>
+<div id="donationEntry" class="BlueDialog">
+    <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleNav" aria-controls="toggleNav" aria-expanded="false" aria-label="Toggle navigation" style="display: none;">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <a class="navbar-brand p-0" href="https://www.ekal.org/in/" style="height: fit-content;">
+            <img src="https://www.ekal.org/assets/images/ekal-logo.png" style="width: 60px;"></a>
+        <div class="collapse navbar-collapse" id="toggleNav" style="display: flex !important;">
+            <ul class="navbar-nav nav-list p-0">
+
+                <li class="nav-item" >
+                    <a class="nav-link" >HOME</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" >ABOUT</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CAUSES <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">0</a></li>
+                        <li><a href="#">1</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FUTURE PLAN <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">0</a></li>
+                        <li><a href="#">1</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" data-toggle="dropdown" aria-expanded="false">REPORTS</a>
+                </li>
+                <li class="nav-item top-navitembar" style="
+    padding-right: 10px;
+">
+                    <a class="nav-link" data-toggle="dropdown" aria-expanded="false">CONTACT</a>
+                </li>
+                <li class="nav-item" style="
+    margin-left: 10px;
+">
+                    <section class="center">
+                        <div hidden="">
+                            <div data-name="popover-content">
+                                <div class="input-group">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Search" name="search">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-danger" type="submit">
+                                            <i class="bi bi-search fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a id="example" tabindex="0" class="dropdown-toggle nav-link" role="button" data-bs-toggle="popover" title="Search Section"><i class="fa fa-search" aria-hidden="true"></i></a>
+
+                    </section>
+                </li>
+            </ul>
+            <ul class="navbar-nav nav-list p-0" >
+                <li class="nav-item top-navitembar" >
+                    <a class="nav-link wcm-txt" >Welcome Mahesh Navani !</a>
+                </li><li class="nav-item top-navitembar" >
+                <a class="nav-link"  onclick="window.location.href='./public/login.html'">Log Out</a>
+            </li><li class="nav-item top-navitembar" style="border: 0;">
+                <div class="menu-dropdown btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Menu</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./ivdMaster.html'">IVD Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./programMaster.html'">Program Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./user.html'">User Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./role.html'">Role Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./taskMaster.html'">Task Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./itemMaster.html'">Item Master</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            </ul>
+
+        </div></nav>
+    <div class="homepagewrapper" style="padding: 0 15px;">
+        <div class="row wrapper-homepage mx-auto" style="margin-left: auto;margin-right: auto;">
+            <div class="bg-2"><img src="public/img/bg-img-2.png" style="width: 100%;"></div>
+            <div class="col-sm-12" style="padding:0 15px; z-index: 10;position: relative;">
+                <div class="section-header" style="margin-top: 40px;">
+
+                    <img src="public/img/donate.png" style="width: 35px;">Donation</div>
+                <div class="col-sm-12" style="/* overflow: auto; *//* height: 358px; *//* margin: 0 15px; */">
+                    <div class="panel panel-default" >
+
+                        <div class="" style="
+    float: right;
+    margin-bottom: 20px;
+"><button type="button" id="btnAddIVD" href="https://www.ekal.org/in/donation" target="_self" class="btn btn-main sml_btn" ><i class="fa fa-plus" aria-hidden="true"></i> Add
+                        </button></div><table class="table table-responsive table-hover" s="" tyle="">
+                        <thead>
+                        <tr>
+                            <th >Donation ID</th>
+                            <th >Date</th>
+                            <th>Name of Donor</th>
+                            <th>Type of Fund</th>
+                            <th>Place</th>
+                            <th>Currency</th>
+                            <th>Remittance Amount</th>
+                            <th>Amount Received in INR</th>
+                    		<th>Banking Charges</th>
+                            <th>Settled Amount</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>02-Mar-2024</td>
+                            <td>Janki Foundation</td>
+                            <td></td>
+                            <td>USA</td>
+                            <td>USD</td>
+                            <td>$ 10000</td>
+                            <td>₹ 830000</td>
+                            <td>₹ 43</td>
+                            <td>₹ 829957</td>
+                            <td><div class="icon-set">
+                                <i class="fa fa-edit" aria-hidden="true"></i>
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </div></td>
+                        </tr>
+
+
+
+                        </tbody>
+                    </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+       <div class="modal fade show" id="donation" tabindex="-1" aria-labelledby="newTaskLabel" style="display: block;padding-left: 0px;display: none;" aria-modal="true" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-between" style="">
+                        <h5 class="modal-title" id="newTaskLabel">Search User</h5>
+                        <button type="button" id="dialogClose" class="close" data-dismiss="modal" aria-label="Close" autocomplete="off" style="background: none;border: 0;">
+                            <i class="fa-regular fa-circle-xmark" style="color: #fff;font-size: 20px;"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="" id="">
+                            <div class="col-12 p-0 filter-section">
+
+                                <div style="display: flex;flex-direction: column;gap: 15px;">
+                                    <div class="col-sm-12 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 26.666667%;">Date
+                                            :</label>
+                                        <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                            <input type="text" class="form-control login-field" id="donationDate" autocomplete="off" >
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 26.666667%;">Name of Donor                                           :</label>
+                                        <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                            <div class="dropdown">
+                                                <butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Donor Name</butoon>
+                                                <ul class="dropdown-menu" style="">
+                                                    <li><a class="dropdown-item" href="#">Janki Foundation</a></li>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 26.666667%;">Type of Fund                                          :</label>
+                                        <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                            <div class="dropdown">
+                                                <butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Fund Type</butoon>
+                                                <ul class="dropdown-menu" style="">
+                                                    <li><a class="dropdown-item" href="#"></a></li>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                     <div class="col-sm-12 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 26.666667%;">Place                                          :</label>
+                                        <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                            <div class="dropdown">
+                                                <butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Place</butoon>
+                                                <ul class="dropdown-menu" style="">
+                                                    <li><a class="dropdown-item" href="#">USA</a></li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 26.666667%;">Currency
+                                            :</label>
+                                        <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                            <input type="text" class="form-control login-field" placeholder="" autocomplete="off" id="currencyTxt">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 26.666667%;">Remittance Amount
+                                            :</label>
+                                        <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                            <input type="number" class="form-control login-field" placeholder="" autocomplete="off" id="currencyTxt">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 26.666667%;">Amount Received in INR
+                                            :</label>
+                                        <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                            <input type="number" class="form-control login-field" placeholder="" autocomplete="off" id="currencyTxt">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 26.666667%;">Banking Charges
+                                            :</label>
+                                        <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                            <input type="number" class="form-control login-field" placeholder="" autocomplete="off" id="currencyTxt">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 26.666667%;">Settled Amount
+                                            :</label>
+                                        <div class="form-group m-0 p-0" style="width: 62.333333%;">
+                                            <input type="number" class="form-control login-field" placeholder="" autocomplete="off" id="currencyTxt">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-sml btn-main">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+	 $('#donationDate').datepicker({
+            uiLibrary: 'bootstrap5'
+        });
+    function openPopup(){
+        $("#donation").removeClass('hide').addClass('show');
+        $("#donation").css('display','block');
+    }
+    $("#ivdTask").addClass('hide').removeClass('show');
+    $("#ivdTask").css('display','none');
+    $("#dialogClose").on("click",function (e){
+        $("#donation").addClass('hide').removeClass('show');
+        $("#donation").css('display','none');
+    });
+    $("#btnAddIVD").on("click",function (e){
+		 $("#donation").removeClass('hide').addClass('show');
+        $("#donation").css('display','block');
+       //window.location.href = "./admin.html";
+    });
+</script>
+</html>
