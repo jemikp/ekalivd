@@ -1094,6 +1094,56 @@
 
     /*overflow css end*/
     /*Popup Css Start*/
+    .fade{
+        background: rgba(40, 43, 49, .8);
+        -webkit-transition: all 0.3s;
+    }
+    .dropdown-menu[data-bs-popper]{
+        right: 0 !important;
+        left: auto;
+    }
+    .menu-dropdown .dropdown-toggle {
+        background-color: unset;
+        color: #283891;
+        border: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .menu-dropdown .dropdown-toggle:hover {
+        background-color: unset;
+        color: #303030;
+        border-color: unset;
+    }
+    .menu-dropdown .dropdown-toggle:active {
+        background-color: unset;
+        color: #303030;
+        border-color: unset;
+    }
+    .dropdown-menu[data-bs-popper]{
+        right: 0 !important;
+        left: auto;
+    }
+    .menu-dropdown .dropdown-toggle {
+        background-color: unset;
+        color: #283891;
+        border: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .menu-dropdown .dropdown-toggle:hover {
+        background-color: unset;
+        color: #303030;
+        border-color: unset;
+    }
+    .menu-dropdown .dropdown-toggle:active {
+        background-color: unset;
+        color: #303030;
+        border-color: unset;
+    }
 </style>
 <!--wizard css start-->
 <style>
@@ -1439,14 +1489,14 @@
 <!--wizard css end-->
 <div id="adminDashboard" class="BlueDialog">
     <nav class="navbar navbar-expand-lg">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleNav"
-                aria-controls="toggleNav" aria-expanded="false" aria-label="Toggle navigation" style="display: none;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleNav" aria-controls="toggleNav" aria-expanded="false" aria-label="Toggle navigation" style="display: none;">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
         <a class="navbar-brand p-0" href="https://www.ekal.org/in/" style="height: fit-content;">
             <img src="https://www.ekal.org/assets/images/ekal-logo.png" style="width: 60px;"></a>
         <div class="collapse navbar-collapse" id="toggleNav" style="display: flex !important;">
-            <ul class="navbar-nav nav-list p-0">
+            <ul class="navbar-nav nav-list p-0" style="
+">
 
                 <li class="nav-item" style="">
                     <a class="nav-link" style="">HOME</a>
@@ -1455,16 +1505,14 @@
                     <a class="nav-link" style="">ABOUT</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
-                       aria-haspopup="true" aria-expanded="false">CAUSES <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CAUSES <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">0</a></li>
                         <li><a href="#">1</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
-                       aria-haspopup="true" aria-expanded="false">FUTURE PLAN <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FUTURE PLAN <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">0</a></li>
                         <li><a href="#">1</a></li>
@@ -1485,8 +1533,7 @@
                         <div hidden="">
                             <div data-name="popover-content">
                                 <div class="input-group">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Search"
-                                           name="search">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Search" name="search">
                                     <div class="input-group-btn">
                                         <button class="btn btn-danger" type="submit">
                                             <i class="bi bi-search fa fa-search"></i>
@@ -1496,9 +1543,7 @@
                             </div>
                         </div>
 
-                        <a id="example" tabindex="0" class="dropdown-toggle nav-link" role="button"
-                           data-bs-toggle="popover" title="Search Section"><i class="fa fa-search"
-                                                                              aria-hidden="true"></i></a>
+                        <a id="example" tabindex="0" class="dropdown-toggle nav-link" role="button" data-bs-toggle="popover" title="Search Section"><i class="fa fa-search" aria-hidden="true"></i></a>
 
                     </section>
                 </li>
@@ -1506,17 +1551,26 @@
             <ul class="navbar-nav nav-list p-0" style="">
                 <li class="nav-item top-navitembar" style="">
                     <a class="nav-link wcm-txt" style="">Welcome Mahesh Navani !</a>
-                </li>
-                <li class="nav-item top-navitembar" style="">
-                    <a class="nav-link" style="" onclick="window.location.href='./public/login.html'">Log Out</a>
-                </li>
-                <li class="nav-item top-navitembar" style="border: 0;margin-left: 10px;">
-                    <button type="button" href="https://www.ekal.org/in/donation" target="_self"
-                            class="btn btn-main sml_btn" style="">Donate
-                    </button>
-                </li>
+                </li><li class="nav-item top-navitembar" style="">
+                <a class="nav-link" style="" onclick="window.location.href='./public/login.html'">Log Out</a>
+            </li><li class="nav-item top-navitembar" style="border: 0;">
+                <div class="menu-dropdown btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Menu</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./ivdMaster.html'">IVD Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./programMaster.html'">Program Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./user.html'">User Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./role.html'">Role Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./taskMaster.html'">Task Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./itemMaster.html'">Item Master</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
             </ul>
-    </nav>
+
+        </div></nav>
     <div class="homepagewrapper" style="padding: 0 15px;">
         <div class="row wrapper-homepage mx-auto" style="margin-left: auto;margin-right: auto;">
             <div class="bg-2"><img src="public/img/bg-img-2.png" style="width: 100%;"></div>
@@ -1819,9 +1873,7 @@
                                     <div class=" theHide" id="divStaffDetails">
                                         <div class="col-sm-12" style="/* overflow: auto; *//* height: 358px; *//* margin: 0 15px; */">
                                             <div class="wiz-outer panel panel-default" style="">
-
-                                                
-                                                <table class="table table-responsive table-hover" s="" tyle="">
+                                                <table class="table table-responsive table-hover" style="">
                                                     <thead>
                                                     <tr>
                                                         <th style="">First Name</th>
@@ -1835,10 +1887,10 @@
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>Namrata</td>
-                                                        <td>Goradiya</td>
-                                                        <td>5648522585</td>
-                                                        <td>abc@gmail.com</td>
+                                                        <td>Krushna</td>
+                                                        <td>Lokhande</td>
+                                                        <td>9370533194</td>
+                                                        <td>ivdjogmodi32@gmail.com</td>
                                                         <td>
                                                             <div class="icon-set"><i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></div>
                                                         </td>
@@ -1860,7 +1912,7 @@
                                         </div>
                                         <div style="display:flex;align-items: center;justify-content: flex-end">
                                             <button onclick="Admin.showProgramDetails();" style="margin-right: 1ch" class="btn btn-main">Previous</button>
-                                            <button type="button" data-bs-toggle="modal" data-bs-target="#newTask" class="btn btn-main sml_btn" style="padding: 10px 14px;" autocomplete="off">
+                                            <button type="button" data-bs-toggle="modal" onclick="window.location.href='./ivdMaster.html'" data-bs-target="#newTask" class="btn btn-main sml_btn" style="padding: 10px 14px;" autocomplete="off">
                                                 <i class="fa-regular fa-floppy-disk"></i>
                                                 Save IVD
                                             </button>
@@ -1891,7 +1943,7 @@
                                         <label class="form-label-custom" style="width: 44.666667%;">First Name
                                             :</label>
                                         <div class="form-group m-0 p-0" style="width: 62.333333%;">
-                                            <input type="text" class="form-control login-field" placeholder="Search By" autocomplete="off" style="
+                                            <input type="text" class="form-control login-field" placeholder="First Name" autocomplete="off" style="
     /* width: 100% !important; */">
                                         </div>
                                     </div>
@@ -1899,7 +1951,7 @@
                                         <label class="form-label-custom" style="width: 44.666667%;">Last Name
                                             :</label>
                                         <div class="form-group m-0 p-0" style="width: 62.333333%;">
-                                            <input type="text" class="form-control login-field" placeholder="Search By" autocomplete="off" style="
+                                            <input type="text" class="form-control login-field" placeholder="Last Name" autocomplete="off" style="
     /* width: 100% !important; */">
                                         </div>
                                     </div>
@@ -1907,7 +1959,7 @@
                                         <label class="form-label-custom" style="width: 44.666667%;">Mobile
                                             :</label>
                                         <div class="form-group m-0 p-0" style="width: 62.333333%;">
-                                            <input type="text" class="form-control login-field" placeholder="Search By" autocomplete="off" style="
+                                            <input type="text" class="form-control login-field" placeholder="Mobile" autocomplete="off" style="
     /* width: 100% !important; */">
                                         </div>
                                     </div>
@@ -1935,11 +1987,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 p-0 tab-section" style="
-    padding: 15px !important;
-">
+                            <div class="col-12 p-0 tab-section" style="padding: 15px !important;">
                                 <div class="panel panel-default" style="">
-
                                     <table class="table table-responsive table-hover" style="">
                                         <thead>
                                         <tr>
@@ -1954,11 +2003,11 @@
                                         <tbody>
                                         <tr>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td>Goradiya</td>
-                                            <td>5648522585</td>
-                                            <td>abc@gmail.com</td>
+                                            <td>Krushna</td>
+                                            <td>Lokhande</td>
+                                            <td>9370533194</td>
+                                            <td>ivdjogmodi32@gmail.com</td>
                                         </tr>
-                                        1
                                         </tbody>
                                     </table>
                                 </div>
