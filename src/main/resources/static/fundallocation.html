@@ -1531,7 +1531,7 @@
                 </div>
             </div>
         </div>
-       <div class="modal fade show" id="fundallocation" tabindex="-1" aria-labelledby="newTaskLabel" style="display: block;padding-left: 0px;display: none;" aria-modal="true" role="dialog">
+       <div class="modal fade show" id="fundallocationPopup" tabindex="-1" aria-labelledby="newTaskLabel" style="display: block;padding-left: 0px;display: none;" aria-modal="true" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header justify-content-between" style="">
@@ -1603,15 +1603,15 @@
 </body>
 <script>
 	
-    $("#fundallocation").addClass('hide').removeClass('show');
-    $("#fundallocation").css('display','none');
+    $("#fundallocationPopup").addClass('hide').removeClass('show');
+    $("#fundallocationPopup").css('display','none');
     $("#dialogClose").on("click",function (e){
-        $("#fundallocation").addClass('hide').removeClass('show');
-        $("#fundallocation").css('display','none');
+        $("#fundallocationPopup").addClass('hide').removeClass('show');
+        $("#fundallocationPopup").css('display','none');
     });
     $("#btnAddIVD").on("click",function (e){
-		 $("#fundallocation").removeClass('hide').addClass('show');
-        $("#fundallocation").css('display','block');
+		 $("#fundallocationPopup").removeClass('hide').addClass('show');
+        $("#fundallocationPopup").css('display','block');
        //window.location.href = "./admin.html";
     });
     let dataJson = {
