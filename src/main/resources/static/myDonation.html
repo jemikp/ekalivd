@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Home Page</title>
+    <title>My Donation Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -21,7 +21,7 @@
         padding: 0;
     }
 
-    #homeDashboard .nav-list {
+    #myDonationDashboard .nav-list {
         justify-content: center;
         display: flex;
         align-items: center;
@@ -29,11 +29,11 @@
         gap: 5px;
     }
 
-    #homeDashboard li.nav-item.top-navitembar {
+    #myDonationDashboard li.nav-item.top-navitembar {
         border-right: 1px solid #437495;
     }
 
-    #homeDashboard .navbar-nav .nav-item .nav-link {
+    #myDonationDashboard .navbar-nav .nav-item .nav-link {
         color: #444;
         font-size: 16px;
         font-style: normal;
@@ -45,11 +45,11 @@
         padding-bottom: 0;
     }
 
-    #homeDashboard a.nav-link.wcm-txt {
+    #myDonationDashboard a.nav-link.wcm-txt {
         color: #41AB46 !important;
     }
 
-    #homeDashboard .navbar-expand-lg {
+    #myDonationDashboard .navbar-expand-lg {
         position: relative;
         display: -ms-flexbox;
         display: flex;
@@ -61,19 +61,19 @@
         justify-content: space-between;
     }
 
-    #homeDashboard .navbar-expand-lg {
+    #myDonationDashboard .navbar-expand-lg {
         padding: 0 20px;
         color: #fff;
         margin-top: 10px;
         margin-bottom: 10px;
     }
 
-    #homeDashboard .btn-main {
+    #myDonationDashboard .btn-main {
         background: #F1592A;
         border-color: #F1592A;
         color: #fff;
     }
-    #homeDashboard .sml_btn {
+    #myDonationDashboard .sml_btn {
         color: #fff;
         font-weight: 700;
         border: none;
@@ -82,15 +82,15 @@
         line-height: 20px;
     }
 
-    #homeDashboard .navbar:before {
+    #myDonationDashboard .navbar:before {
         display: none !important;
     }
 
-    #homeDashboard .navbar:after {
+    #myDonationDashboard .navbar:after {
         display: none !important;
     }
 
-    #homeDashboard .main-page-header {
+    #myDonationDashboard .main-page-header {
         color: #283891;
         font-size: 50px;
         font-style: normal;
@@ -103,11 +103,11 @@
         margin-top: 60px;
     }
 
-    #homeDashboard .main-page-total-donation {
+    #myDonationDashboard .main-page-total-donation {
         justify-content: end;
         display: flex;
     }
-    #homeDashboard .main-page-total-donation label {
+    #myDonationDashboard .main-page-total-donation label {
         background-color: #B9E7BC;
         width: fit-content;
         color: #163E58;
@@ -121,52 +121,52 @@
         border-radius: 5px;
 
     }
-    #homeDashboard .main-page-body {
+    #myDonationDashboard .main-page-body {
         margin-top: 20px;
         display: flex;
         flex-direction: row;
         gap: 25px;
     }
 
-    #homeDashboard .main-page-body .ivd-cont {
-        border-radius: 10px;
-        border: 1px solid #EEE;
-        background: #FFF;
-        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    #myDonationDashboard .main-page-body .ivd-donation-cont {
+        width: 80%;
+        margin: 0 auto;
         padding: 15px 20px;
+        border-radius: 5px;
+        border: 1px solid #B4C2D5;
+        background: #FFF;
+        box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.25);
     }
 
-    #homeDashboard .ivd-cont .ivd-cont-header {
+    #myDonationDashboard .ivd-donation-cont .donation-cont-header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        color: #BD5332;
-        font-size: 30px;
+        color: #303030;
+        font-size: 24px;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 500;
         line-height: normal;
     }
 
-    #homeDashboard .ivd-cont .cont-header {
+    #myDonationDashboard .ivd-donation-cont .cont-header {
         display: flex;
         gap: 10px;
         flex-direction: row;
         align-items: center;
     }
 
-    #homeDashboard .ivd-cont .ivd-cont-body {
+    #myDonationDashboard .ivd-donation-cont .donation-cont-body {
         margin-top: 20px;
-        display: flex;
-        gap: 20px;
     }
-    #homeDashboard .ivd-cont-merge{
+    #myDonationDashboard .ivd-donation-cont-merge{
         display: flex;
         flex-direction: column;
         gap: 25px;
         height: -webkit-fill-available;
     }
 
-    #homeDashboard .ivd-cont-body .ivd-details-box {
+    #myDonationDashboard .donation-cont-body .ivd-details-box {
         width: 315px;
         padding: 15px;
         display: flex;
@@ -179,7 +179,7 @@
         cursor: pointer;
     }
 
-    #homeDashboard .ivd-details-box .ivd-details-header {
+    #myDonationDashboard .ivd-details-box .ivd-details-header {
         color: #444;
         font-size: 18px;
         font-style: normal;
@@ -187,7 +187,7 @@
         line-height: normal;
     }
 
-    #homeDashboard .ivd-body-section {
+    #myDonationDashboard .ivd-body-section {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -195,7 +195,7 @@
         flex: auto !important;
     }
 
-    #homeDashboard .ivd-body-section .ivd-details-imgs {
+    #myDonationDashboard .ivd-body-section .ivd-details-imgs {
         align-items: center;
         justify-content: flex-end;
         display: flex;
@@ -203,7 +203,7 @@
         gap: 8px;
     }
 
-    #homeDashboard .btn.btn-img {
+    #myDonationDashboard .btn.btn-img {
         height: 30px;
         width: 30px;
         align-items: center;
@@ -214,28 +214,22 @@
         box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.25);
     }
 
-    #homeDashboard .btn.btn-orng {
+    #myDonationDashboard .btn.btn-orng {
         border: 1px solid #E9AA4F;
         background: #FFE9C9;
     }
 
-    #homeDashboard .btn.btn-dark-green {
-        border: 1px solid #32972a;
-        background: #32972a;
-        color: #fff;
-    }
-
-    #homeDashboard .btn.btn-green {
+    #myDonationDashboard .btn.btn-green {
         border: 1px solid #41AB46;
         background: #e9ffea;
     }
 
-    #homeDashboard .btn.btn-prpl {
+    #myDonationDashboard .btn.btn-prpl {
         border: 1px solid #9A72FF;
         background: rgba(154, 114, 255, 0.25);
     }
 
-    #homeDashboard .bg-2 {
+    #myDonationDashboard .bg-2 {
         width: 100%;
         margin-top: 20%;
         background-position: center top;
@@ -246,25 +240,21 @@
         z-index: 0;
     }
 
-    #homeDashboard .navbar-collapse {
+    #myDonationDashboard .navbar-collapse {
         justify-content: flex-end !important;
         display: flex !important;
         gap: 190px !important;
     }
 
-    #homeDashboard .navbar-collapse:after {
+    #myDonationDashboard .navbar-collapse:after {
         display: none;
     }
 
-    #homeDashboard .navbar-collapse:before {
+    #myDonationDashboard .navbar-collapse:before {
         display: none;
     }
 
-    #homeDashboard .main-page-body .ivd-cont:hover {
-        background: #C3DEDC;
-        box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
-    }
-    #homeDashboard .section-header {
+    #myDonationDashboard .section-header {
         color: #283891;
         font-size: 32px;
         font-style: normal;
@@ -275,92 +265,92 @@
         gap: 8px;
         margin-bottom: 30px;
     }
-    #homeDashboard .section-details {
+    #myDonationDashboard .section-details {
         margin-left: 25px;
         margin-right: 25px;
     }
 
     /*organization structure css start*/
-    #homeDashboard ol.organizational-chart,
-    #homeDashboard ol.organizational-chart ol,
-    #homeDashboard ol.organizational-chart li,
-    #homeDashboard ol.organizational-chart li > div {
+    #myDonationDashboard ol.organizational-chart,
+    #myDonationDashboard ol.organizational-chart ol,
+    #myDonationDashboard ol.organizational-chart li,
+    #myDonationDashboard ol.organizational-chart li > div {
         position: relative;
     }
 
-    #homeDashboard ol.organizational-chart,
-    #homeDashboard ol.organizational-chart ol {
+    #myDonationDashboard ol.organizational-chart,
+    #myDonationDashboard ol.organizational-chart ol {
         list-style: none;
         margin: 0;
         padding: 0;
     }
 
-    #homeDashboard ol.organizational-chart {
+    #myDonationDashboard ol.organizational-chart {
         text-align: center;
     }
 
-    #homeDashboard ol.organizational-chart ol {
+    #myDonationDashboard ol.organizational-chart ol {
         padding-top: 1em;
     }
 
-    #homeDashboard ol.organizational-chart ol:before,
-    #homeDashboard ol.organizational-chart ol:after,
-    #homeDashboard ol.organizational-chart li:before,
-    #homeDashboard ol.organizational-chart li:after,
-    #homeDashboard ol.organizational-chart > li > div:before,
-    #homeDashboard ol.organizational-chart > li > div:after {
+    #myDonationDashboard ol.organizational-chart ol:before,
+    #myDonationDashboard ol.organizational-chart ol:after,
+    #myDonationDashboard ol.organizational-chart li:before,
+    #myDonationDashboard ol.organizational-chart li:after,
+    #myDonationDashboard ol.organizational-chart > li > div:before,
+    #myDonationDashboard ol.organizational-chart > li > div:after {
         background-color: #b7a6aa;
         content: '';
         position: absolute;
     }
 
-    #homeDashboard ol.organizational-chart ol > li {
+    #myDonationDashboard ol.organizational-chart ol > li {
         padding: 1em 0 0 1em;
     }
 
-    #homeDashboard ol.organizational-chart > li ol:before {
+    #myDonationDashboard ol.organizational-chart > li ol:before {
         height: 1em;
         left: 50%;
         top: 0;
         width: 3px;
     }
 
-    #homeDashboard ol.organizational-chart > li ol:after {
+    #myDonationDashboard ol.organizational-chart > li ol:after {
         height: 3px;
         left: 3px;
         top: 1em;
         width: 50%;
     }
 
-    #homeDashboard ol.organizational-chart > li ol > li:not(:last-of-type):before {
+    #myDonationDashboard ol.organizational-chart > li ol > li:not(:last-of-type):before {
         height: 3px;
         left: 0;
         top: 2em;
         width: 1em;
     }
 
-    #homeDashboard ol.organizational-chart > li ol > li:not(:last-of-type):after {
+    #myDonationDashboard ol.organizational-chart > li ol > li:not(:last-of-type):after {
         height: 100%;
         left: 0;
         top: 0;
         width: 3px;
     }
 
-    #homeDashboard ol.organizational-chart > li ol > li:last-of-type:before {
+    #myDonationDashboard ol.organizational-chart > li ol > li:last-of-type:before {
         height: 3px;
         left: 0;
         top: 2em;
         width: 1em;
     }
 
-    #homeDashboard ol.organizational-chart > li ol > li:last-of-type:after {
+    #myDonationDashboard ol.organizational-chart > li ol > li:last-of-type:after {
         height: 2em;
         left: 0;
         top: 0;
         width: 3px;
     }
 
-    #homeDashboard ol.organizational-chart li > div {
+    #myDonationDashboard ol.organizational-chart li > div {
         background-color: #fff;
         border-radius: 3px;
         min-height: 2em;
@@ -370,26 +360,26 @@
         background: #FFF;
         box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
     }
-    #homeDashboard ol.organizational-chart li > div:hover {
+    #myDonationDashboard ol.organizational-chart li > div:hover {
         border: 1px solid #EEE;
         background: #C3DEDC;
         box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
     }
 
     /*** PRIMARY ***/
-    #homeDashboard ol.organizational-chart > li > div {
+    #myDonationDashboard ol.organizational-chart > li > div {
         margin-right: 1em;
         border-radius: 10px;
         border: 1px solid #9FA8DB;
         background: #FFF;
         box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
     }
-    #homeDashboard ol.organizational-chart > li > div:hover {
+    #myDonationDashboard ol.organizational-chart > li > div:hover {
         border: 1px solid #EEE;
         background: #C3DEDC;
         box-shadow: 0px 10px 13px -2px rgba(0, 0, 0, 0.25);
     }
-    #homeDashboard ol.organizational-chart .txt-1{
+    #myDonationDashboard ol.organizational-chart .txt-1{
         color: #BD5332;
         margin-bottom: 10px;
         text-align: center;
@@ -399,7 +389,7 @@
         line-height: normal;
         margin-top: 0;
     }
-    #homeDashboard ol.organizational-chart .txt-2{
+    #myDonationDashboard ol.organizational-chart .txt-2{
         color: #444;
         text-align: center;
         font-size: 16px;
@@ -409,25 +399,25 @@
         margin-top: 0;
     }
 
-    #homeDashboard ol.organizational-chart > li > div:before {
+    #myDonationDashboard ol.organizational-chart > li > div:before {
         bottom: 2em;
         height: 3px;
         right: -1em;
         width: 1em;
     }
 
-    #homeDashboard ol.organizational-chart > li > div:first-of-type:after {
+    #myDonationDashboard ol.organizational-chart > li > div:first-of-type:after {
         bottom: 0;
         height: 2em;
         right: -1em;
         width: 3px;
     }
 
-    #homeDashboard ol.organizational-chart > li > div + div {
+    #myDonationDashboard ol.organizational-chart > li > div + div {
         margin-top: 1em;
     }
 
-    #homeDashboard ol.organizational-chart > li > div + div:after {
+    #myDonationDashboard ol.organizational-chart > li > div + div:after {
         height: calc(100% + 1em);
         right: -1em;
         top: -1em;
@@ -435,159 +425,159 @@
     }
 
     /*** SECONDARY ***/
-    #homeDashboard ol.organizational-chart > li > ol:before {
+    #myDonationDashboard ol.organizational-chart > li > ol:before {
         left: inherit;
         right: 0;
     }
 
-    #homeDashboard ol.organizational-chart > li > ol:after {
+    #myDonationDashboard ol.organizational-chart > li > ol:after {
         left: 0;
         width: 100%;
     }
 
 
     /*** TERTIARY ***/
-    #homeDashboard ol.organizational-chart > li > ol > li > ol > li > div {
+    #myDonationDashboard ol.organizational-chart > li > ol > li > ol > li > div {
         background-color: #fd6470;
     }
 
     /*** QUATERNARY ***/
-    #homeDashboard ol.organizational-chart > li > ol > li > ol > li > ol > li > div {
+    #myDonationDashboard ol.organizational-chart > li > ol > li > ol > li > ol > li > div {
         background-color: #fca858;
     }
 
     /*** QUINARY ***/
-    #homeDashboard ol.organizational-chart > li > ol > li > ol > li > ol > li > ol > li > div {
+    #myDonationDashboard ol.organizational-chart > li > ol > li > ol > li > ol > li > ol > li > div {
         background-color: #fddc32;
     }
 
     /*** MEDIA QUERIES ***/
     @media only screen and ( min-width: 64em ) {
 
-        #homeDashboard ol.organizational-chart {
+        #myDonationDashboard ol.organizational-chart {
             margin-left: -1em;
             margin-right: -1em;
         }
 
         /* PRIMARY */
-        #homeDashboard ol.organizational-chart > li > div {
+        #myDonationDashboard ol.organizational-chart > li > div {
             display: inline-block;
             float: none;
             margin: 0 1em 1em 1em;
             vertical-align: bottom;
         }
 
-        #homeDashboard ol.organizational-chart > li > div:only-of-type {
+        #myDonationDashboard ol.organizational-chart > li > div:only-of-type {
             width: calc((100% / 1) - 2em - 4px);
         }
 
-        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2),
-        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2) ~ div {
+        #myDonationDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2),
+        #myDonationDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2) ~ div {
             width: calc((100% / 2) - 2em - 4px);
         }
 
-        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3),
-        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3) ~ div {
+        #myDonationDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3),
+        #myDonationDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3) ~ div {
             width: calc((100% / 3) - 2em - 4px);
         }
 
-        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4),
-        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4) ~ div {
+        #myDonationDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4),
+        #myDonationDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4) ~ div {
             width: calc((100% / 4) - 2em - 4px);
         }
 
-        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5),
-        #homeDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5) ~ div {
+        #myDonationDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5),
+        #myDonationDashboard ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5) ~ div {
             width: calc((100% / 5) - 2em - 4px);
         }
 
-        #homeDashboard ol.organizational-chart > li > div:before,
-        #homeDashboard ol.organizational-chart > li > div:after {
+        #myDonationDashboard ol.organizational-chart > li > div:before,
+        #myDonationDashboard ol.organizational-chart > li > div:after {
             bottom: -1em!important;
             top: inherit!important;
         }
 
-        #homeDashboard ol.organizational-chart > li > div:before {
+        #myDonationDashboard ol.organizational-chart > li > div:before {
             height: 1em!important;
             left: 50%!important;
             width: 3px!important;
         }
 
-        #homeDashboard ol.organizational-chart > li > div:only-of-type:after {
+        #myDonationDashboard ol.organizational-chart > li > div:only-of-type:after {
             display: none;
         }
 
-        #homeDashboard ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after,
-        #homeDashboard ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+        #myDonationDashboard ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after,
+        #myDonationDashboard ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
             bottom: -1em;
             height: 3px;
             width: calc(50% + 1em + 3px);
         }
 
-        #homeDashboard ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after {
+        #myDonationDashboard ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after {
             left: calc(50% + 3px);
         }
 
-        #homeDashboard ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+        #myDonationDashboard ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
             left: calc(-1em - 3px);
         }
 
-        #homeDashboard ol.organizational-chart > li > div + div:not(:last-of-type):after {
+        #myDonationDashboard ol.organizational-chart > li > div + div:not(:last-of-type):after {
             height: 3px;
             left: -2em;
             width: calc(100% + 4em);
         }
 
         /* SECONDARY */
-        #homeDashboard ol.organizational-chart > li > ol {
+        #myDonationDashboard ol.organizational-chart > li > ol {
             display: flex;
             flex-wrap: nowrap;
         }
 
-        #homeDashboard ol.organizational-chart > li > ol:before,
-        #homeDashboard ol.organizational-chart > li > ol > li:before {
+        #myDonationDashboard ol.organizational-chart > li > ol:before,
+        #myDonationDashboard ol.organizational-chart > li > ol > li:before {
             height: 1em!important;
             left: 50%!important;
             top: 0!important;
             width: 3px!important;
         }
 
-        #homeDashboard ol.organizational-chart > li > ol:after {
+        #myDonationDashboard ol.organizational-chart > li > ol:after {
             display: none;
         }
 
-        #homeDashboard ol.organizational-chart > li > ol > li {
+        #myDonationDashboard ol.organizational-chart > li > ol > li {
             flex-grow: 1;
             padding-left: 1em;
             padding-right: 1em;
             padding-top: 1em;
         }
 
-        #homeDashboard ol.organizational-chart > li > ol > li:only-of-type {
+        #myDonationDashboard ol.organizational-chart > li > ol > li:only-of-type {
             padding-top: 0;
         }
 
-        #homeDashboard ol.organizational-chart > li > ol > li:only-of-type:before,
-        #homeDashboard ol.organizational-chart > li > ol > li:only-of-type:after {
+        #myDonationDashboard ol.organizational-chart > li > ol > li:only-of-type:before,
+        #myDonationDashboard ol.organizational-chart > li > ol > li:only-of-type:after {
             display: none;
         }
 
-        #homeDashboard ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after,
-        #homeDashboard ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+        #myDonationDashboard ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after,
+        #myDonationDashboard ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
             height: 3px;
             top: 0;
             width: 50%;
         }
 
-        #homeDashboard ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after {
+        #myDonationDashboard ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after {
             left: 50%;
         }
 
-        #homeDashboard ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+        #myDonationDashboard ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
             left: 0;
         }
 
-        #homeDashboard ol.organizational-chart > li > ol > li + li:not(:last-of-type):after {
+        #myDonationDashboard ol.organizational-chart > li > ol > li + li:not(:last-of-type):after {
             height: 3px;
             left: 0;
             top: 0;
@@ -596,7 +586,7 @@
 
     }
     /*organization structure css end*/
-    #homeDashboard .back-btn-icon{
+    #myDonationDashboard .back-btn-icon{
         color: #303030;
         align-items: center;
         display: flex;
@@ -604,7 +594,7 @@
         cursor: pointer;
         text-decoration: none;
     }
-    #homeDashboard .timeline-deatils {
+    #myDonationDashboard .timeline-deatils {
         color: #000;
         font-size: 15px;
         font-style: normal;
@@ -613,19 +603,19 @@
     }
     /*timeline css start */
 
-    #homeDashboard .history-tl-container{
+    #myDonationDashboard .history-tl-container{
         font-family: "Roboto",sans-serif;
         margin:auto;
         display:block;
         position:relative;
     }
-    #homeDashboard .history-tl-container ul.tl{
+    #myDonationDashboard .history-tl-container ul.tl{
         margin:20px 0;
         padding:0;
         display:inline-block;
 
     }
-    #homeDashboard .history-tl-container ul.tl li{
+    #myDonationDashboard .history-tl-container ul.tl li{
         list-style: none;
         margin: auto;
         margin-left: 50px;
@@ -636,19 +626,19 @@
         padding: 0 0 30px 15px;
         position: relative;
     }
-    #homeDashboard .history-tl-container ul.tl li:last-child{ border-left:0;}
-    #homeDashboard .history-tl-container ul.tl li::before{
+    #myDonationDashboard .history-tl-container ul.tl li:last-child{ border-left:0;}
+    #myDonationDashboard .history-tl-container ul.tl li::before{
         position: absolute;
         left: -9px;
         content: " ";
         border: 8px solid #283891;
         border-radius: 500%;
     }
-    #homeDashboard .history-tl-container ul.tl li:hover::before{
+    #myDonationDashboard .history-tl-container ul.tl li:hover::before{
         border-color:  #258CC7;
         transition: all 1000ms ease-in-out;
     }
-    #homeDashboard ul.tl li .item-title{
+    #myDonationDashboard ul.tl li .item-title{
         padding-top: 22px;
         color: #303030;
         font-size: 18px;
@@ -656,11 +646,11 @@
         font-weight: 500;
         line-height: normal;
     }
-    #homeDashboard ul.tl li .item-detail{
+    #myDonationDashboard ul.tl li .item-detail{
         color:rgba(0,0,0,0.5);
         font-size:12px;
     }
-    #homeDashboard ul.tl li .timestamp{
+    #myDonationDashboard ul.tl li .timestamp{
         position: absolute;
         width: 100px;
         color: #BD5332;
@@ -670,7 +660,7 @@
         line-height: normal;
     }
     /*timeline css end*/
-    #homeDashboard .sub-cont {
+    #myDonationDashboard .sub-cont {
         border-left: 1px solid #C3DEDC;
         transition: all 0.3s;
         padding-left: 15px;
@@ -784,8 +774,31 @@
         background-color: #ccc;
     }
     /*overflow css end*/
+    #myDonationDashboard .donation-cont-body .table > thead > tr > th {
+        color: #283891 !important;
+        font-size: 20px !important;
+        font-style: normal;
+        font-weight: 700 !important;
+        line-height: normal !important;
+        vertical-align: bottom;
+        text-transform: inherit !important;
+        text-align: center;
+        border: 0;
+        width: 20%;
+    }
+    #myDonationDashboard .donation-cont-body tr td:nth-child(1) {
+        text-align: left !important;
+    }
+    #myDonationDashboard .donation-cont-body tr th:nth-child(1) {
+        text-align: left !important;
+    }
+    #myDonationDashboard .donation-cont-body .table > tbody > tr > td {
+        font-weight: 500;
+        text-align: center;
+        border: 0;
+    }
 </style>
-<div id="homeDashboard" class="BlueDialog">
+<div id="myDonationDashboard" class="BlueDialog">
     <nav class="navbar navbar-expand-lg">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleNav" aria-controls="toggleNav" aria-expanded="false" aria-label="Toggle navigation" style="display: none;">
             <i class="fa fa-bars" aria-hidden="true"></i>
@@ -862,109 +875,59 @@
             <div class="bg-2"><img src="public/img/bg-img-2.png" style="width: 100%;"></div>
             <div class="col-sm-12" style="padding:0 15px; z-index: 10;position: relative;">
                 <div class="col-sm-12 main-page-header">
-                    <img src="public/img/ivd_icon.png"> IVD Details
-                </div>
+                    <img src="public/img/ivd_donation.png"> My Donations</div>
                 <div class="main-page-total-donation">
                     <label>My Total Donation : $10000</label>
                 </div>
                 <div class="col-sm-12 main-page-body" id="mainViewerDiv">
-                    <div class="col-sm-12 ivd-cont-merge" id="viewerContainer">
-                        <div class="col-sm-12 ivd-cont">
-                            <div class="col-sm-12 ivd-cont-header">
-                                <div class="cont-header">Maharashtra (Jogmodi)<i class="fa fa-info-circle" type="button" href="" target="_self" title="Info" style="" id="infoFind" data-l10n-id="findbar" aria-expanded="true" aria-controls="findbar" autocomplete="off" aria-hidden="true"></i></div>
-                                <label>$10000</label>
+                    <div class="col-sm-12 ivd-donation-cont-merge" id="viewerContainer">
+                        <div class="col-sm-12 ivd-donation-cont">
+                            <div class="col-sm-12 donation-cont-header">
+                                <div class="cont-header">DONATION - 12</div>
+                                <div class="cont-header">Receipt<img src="public/img/download.png"></div>
                             </div>
-                            <div class="col-sm-12 ivd-cont-body">
-                                <div class="ivd-details-box">
-                                    <div class="ivd-img-section">
-                                        <img src="public/img/education.png">
-                                    </div>
-                                    <div class="col-sm-12 p-0 ivd-body-section">
-                                        <div class="col-sm-12 p-0 ivd-details-header">Education</div>
-                                        <div class="col-sm-12 p-0 ivd-details-imgs">
-
-                                            <button type="button" href="" target="_self" class="btn btn-dark-green btn-img sml_btn" title="Donation" style="">
-                                                <i class="fa-solid fa-dollar-sign"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-green btn-img sml_btn" data-bs-content="" style="" id="chatSection" aria-label="Chat Section" data-bs-original-title="Chat Section" aria-describedby="popover650856">
-                                                <i class="fa-regular fa-comment"></i>
-                                            </button>
-                                            <div popover="" id="my-popover" style="position: absolute;inset: auto auto 0px 0px;margin: 0px;transform: translate(288px, -133px);border: 0;padding: 0;">
-                                                <div class="box-cont" style="border: 1px solid #283891;box-shadow: 0px 4px 16px -3px rgba(90, 103, 113, 0.25);">
-                                                    <div class="chat-section">
-                                                        <header>
-                                                            <i class="fa-solid fa-comment-dots"></i>   Communication
-                                                        </header>
-                                                        <div class="scrollbar chat-body" id="style-1">
-                                                            <div class="chat-body-height force-overflow">
-                                                                <div class="chat-box other-chat">
-                                                                    <div class="chat">Give me screenshot of Woman Empowerment Centers</div>
-                                                                    <div class="msg-info-name">Mahesh Navani</div>
-                                                                </div>
-                                                                <div class="chat-box my-chat">
-                                                                    <div class="chat">I have sent you an eMail with a Link which contains all the screenshots for Women Empowerment Centers</div>
-                                                                    <div class="msg-info-name">Bhaskar</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <form class="msger-inputarea">
-                                                            <input type="text" class="form-control login-field" placeholder="Type Here" autocomplete="off">
-                                                            <i class="fa-solid fa-paper-plane"></i>
-                                                        </form>
-                                                    </div>
-                                                </div></div>
-                                            <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
-                                                <i class="fa-regular fa-file"></i>
-                                            </button>
-                                            <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn" title="Organization Structure" style="" id="viewFind" data-l10n-id="findbar" aria-expanded="true" aria-controls="findbar" autocomplete="off">
-                                                <i class="fa fa-sitemap" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                    </div>
+                            <div class="col-sm-12 donation-cont-body">
+                                <div class="panel panel-default" style="">
+                                    <table class="table table-responsive table-hover mb-0" style="">
+                                        <thead>
+                                        <tr>
+                                            <th>Donation Date</th>
+                                            <th>Amount</th><th>Type</th>
+                                            <th>Allocation Satus</th><th>Allocated in Project(s)</th></tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Jan 10, 2023</td>
+                                            <td>$6000.00</td>
+                                            <td>Check</td>
+                                            <td>Fully Allocated</td><td>2</td></tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="ivd-details-box">
-                                    <div class="ivd-img-section">
-                                        <img src="public/img/arogya.png">
-                                    </div>
-                                    <div class="col-sm-12 p-0 ivd-body-section">
-                                        <div class="col-sm-12 p-0 ivd-details-header">Arogya</div>
-                                        <div class="col-sm-12 p-0 ivd-details-imgs">
-                                            <button type="button" href="" target="_self" class="btn btn-dark-green btn-img sml_btn" title="Donation" style="">
-                                                <i class="fa-solid fa-dollar-sign"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-green btn-img sml_btn" data-bs-content="" style="" id="chatSection" aria-label="Chat Section" data-bs-original-title="Chat Section" aria-describedby="popover650856">
-                                                <i class="fa-regular fa-comment"></i>
-                                            </button>
-                                            <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
-                                                <i class="fa-regular fa-file"></i>
-                                            </button>
-                                            <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn" title="Organization Structure" style="">
-                                                <i class="fa fa-sitemap" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ivd-details-box">
-                                    <div class="ivd-img-section">
-                                        <img src="public/img/women_empowerment_center.png">
-                                    </div>
-                                    <div class="col-sm-12 p-0 ivd-body-section">
-                                        <div class="col-sm-12 p-0 ivd-details-header">Women Empowerment Centers</div>
-                                        <div class="col-sm-12 p-0 ivd-details-imgs">
-                                            <button type="button" href="" target="_self" class="btn btn-dark-green btn-img sml_btn" title="Donation" style="">
-                                                <i class="fa-solid fa-dollar-sign"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-green btn-img sml_btn" data-bs-content="" style="" id="chatSection" aria-label="Chat Section" data-bs-original-title="Chat Section" aria-describedby="popover650856">
-                                                <i class="fa-regular fa-comment"></i>
-                                            </button>
-                                            <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="">
-                                                <i class="fa-regular fa-file"></i>
-                                            </button>
-                                            <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn" title="Organization Structure" style="">
-                                                <i class="fa fa-sitemap" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 ivd-donation-cont">
+                            <div class="col-sm-12 donation-cont-header">
+                                <div class="cont-header">DONATION - 11</div>
+                                <div class="cont-header">Receipt<img src="public/img/download.png"></div>
+                            </div>
+                            <div class="col-sm-12 donation-cont-body">
+                                <div class="panel panel-default" style="">
+                                    <table class="table table-responsive table-hover mb-0" style="">
+                                        <thead>
+                                        <tr>
+                                            <th>Donation Date</th>
+                                            <th>Amount</th><th>Type</th>
+                                            <th>Allocation Satus</th><th>Allocated in Project(s)</th></tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Jan 05, 2022</td>
+                                            <td>$4000.00</td>
+                                            <td>Check</td>
+                                            <td>Partially Allocated</td><td>1</td></tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -1037,9 +1000,9 @@
 
     var Home = () => {
     }
-    
+
     Home.init=()=>{
-        
+
     }
 
     $(document).ready(function () {
