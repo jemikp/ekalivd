@@ -783,6 +783,30 @@
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
         background-color: #ccc;
     }
+
+    .dropdown-menu[data-bs-popper]{
+        right: 0 !important;
+        left: auto;
+    }
+    .menu-dropdown .dropdown-toggle {
+        background-color: unset;
+        color: #283891;
+        border: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .menu-dropdown .dropdown-toggle:hover {
+        background-color: unset;
+        color: #303030;
+        border-color: unset;
+    }
+    .menu-dropdown .dropdown-toggle:active {
+        background-color: unset;
+        color: #303030;
+        border-color: unset;
+    }
     /*overflow css end*/
 </style>
 <div id="homeDashboard" class="BlueDialog">
@@ -793,7 +817,8 @@
         <a class="navbar-brand p-0" href="https://www.ekal.org/in/" style="height: fit-content;">
             <img src="https://www.ekal.org/assets/images/ekal-logo.png" style="width: 60px;"></a>
         <div class="collapse navbar-collapse" id="toggleNav" style="display: flex !important;">
-            <ul class="navbar-nav nav-list p-0">
+            <ul class="navbar-nav nav-list p-0" style="
+">
 
                 <li class="nav-item" style="">
                     <a class="nav-link" style="">HOME</a>
@@ -848,16 +873,27 @@
             <ul class="navbar-nav nav-list p-0" style="">
                 <li class="nav-item top-navitembar" style="">
                     <a class="nav-link wcm-txt" style="">Welcome Mahesh Navani !</a>
-                </li>
-                <li class="nav-item top-navitembar" style="">
-                    <a class="nav-link" style="" onclick="window.location.href='./public/login.html'">Log Out</a>
-                </li>
-                <li class="nav-item top-navitembar" style="border: 0;margin-left: 10px;">
-                    <button type="button" href="https://www.ekal.org/in/donation" target="_self" class="btn btn-main sml_btn" style="">Donate</button>
-                </li>
+                </li><li class="nav-item top-navitembar" style="">
+                <a class="nav-link" style="" onclick="window.location.href='./public/login.html'">Log Out</a>
+            </li><li class="nav-item top-navitembar" style="border: 0;">
+                <div class="menu-dropdown btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Menu</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./ivdMaster.html'">IVD Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./programMaster.html'">Program Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./user.html'">User Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./role.html'">Role Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./taskMaster.html'">Task Master</a></li>
+                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./itemMaster.html'">Item Master</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
             </ul>
-    </nav>
-    <div class="homepagewrapper" style="padding: 0 15px;">
+
+        </div></nav>
+        <div class="homepagewrapper" style="padding: 0 15px;">
         <div class="row wrapper-homepage mx-auto" style="margin-left: auto;margin-right: auto;">
             <div class="bg-2"><img src="public/img/bg-img-2.png" style="width: 100%;"></div>
             <div class="col-sm-12" style="padding:0 15px; z-index: 10;position: relative;">
