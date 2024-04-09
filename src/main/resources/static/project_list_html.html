@@ -1,0 +1,3056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGF Project List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--         
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/css/bootstrap-multiselect.min.css"
+        integrity="sha512-fZNmykQ6RlCyzGl9he+ScLrlU0LWeaR6MO/Kq9lelfXOw54O63gizFMSD5fVgZvU1YfDIc6mxom5n60qJ1nCrQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/js/bootstrap-multiselect.min.js"
+        integrity="sha512-lxQ4VnKKW7foGFV6L9zlSe+6QppP9B2t+tMMaV4s4iqAv4iHIyXED7O+fke1VeLNaRdoVkVt8Hw/jmZ+XocsXQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet"
+        type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"
+        integrity="sha512-yDlE7vpGDP7o2eftkCiPZ+yuUyEcaBwoJoIhdXv71KZWugFqEphIS3PU60lEkFaz8RxaVsMpSvQxMBaKVwA5xg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css"
+        integrity="sha512-ARJR74swou2y0Q2V9k0GbzQ/5vJ2RBSoCWokg4zkfM29Fb3vZEQyv0iWBMW/yvKgyHSR/7D64pFMmU8nYmbRkg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+    .nunito-font-family {
+        font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    #projectsMainBody {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        background-color: #eeeeee;
+    }
+
+    .custom_scroll::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    .custom_scroll::-webkit-scrollbar-track {
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+        background: #E7E7E7;
+    }
+
+    /* Handle */
+    .custom_scroll::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        background-color: #a9a9a9;
+    }
+
+    .titleDiv {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 98.9%;
+        font-size: 1.5em;
+        padding: 10px;
+        background-color: white;
+        border: 1px solid #dadce0
+    }
+
+    .titleElem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30ch;
+    }
+
+    .contentArea {
+        
+        min-height: 80vh;
+        background-color: white;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .26);
+        /* border: 1px solid #dadce0; */
+        margin: 1ch;
+        padding: 1ch;
+    }
+
+    .contentUpperSection {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        /* height: 40ch; */
+        overflow: auto;
+        margin-bottom: 1ch;
+    }
+
+    .fisrtTable {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 25ch;
+        overflow: auto;
+        flex-grow: 1;
+    }
+
+    .secondTable {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 25ch;
+        overflow: auto;
+        flex-grow: 1;
+    }
+
+    .filters {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+
+
+    .myTable th {
+        background-color: #bdbdbd;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        text-align: center;
+        font-weight: 800;
+    }
+
+    .myTable tr {
+        border-bottom: 1px solid #d1d1d1;
+
+        background-color: white;
+        text-align: left;
+    }
+
+
+    .myTable td {
+        padding: 8px;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    .myTable {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.8rem;
+    }
+
+    .filtersRow {
+        display: flex;
+    }
+
+    .mySel {
+        width: 20ch;
+        margin: 0.5ch;
+        border-radius: 2px;
+        box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+    }
+
+    .opexSearchContainer .lbl {
+        width: 88%;
+    }
+
+    .opexSearchContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0.5ch;
+        box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+    }
+
+    .filterGroup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #searchBy {
+        width: 12ch;
+        border-radius: 0;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid #0000004d;
+        margin: 0 0.5ch;
+    }
+
+    #txtSearch {
+        width: 28ch;
+        border-radius: 0;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid #0000004d;
+        margin: 0 0.5ch;
+    }
+</style>
+
+<body class="nunito-font-family" id="projectsMainBody">
+    <div class="titleDiv">
+        <div class="titleElem">EGF Project List</div>
+    </div>
+
+    <div class="contentArea">
+        <div class="contentUpperSection">
+            <div class="fisrtTable custom_scroll">
+                <table class="myTable">
+                    <thead>
+                        <tr>
+                            <th> </th>
+                            <th>Zone</th>
+                            <th>WEC</th>
+                            <th>IVD</th>
+                            <th>SDC</th>
+                            <th>EOW</th>
+                            <th>CTL</th>
+                            <th>GRC</th>
+                            <th>Other</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>P1</td>
+                            <td>5</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>P10</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>P2</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>P3</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>1</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td>P4</td>
+                            <td>5</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td>P5</td>
+                            <td>7</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>7</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>7.</td>
+                            <td>P6</td>
+                            <td>4</td>
+                            <td>8</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>8.</td>
+                            <td>P7A</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>9.</td>
+                            <td>P7B</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>10.</td>
+                            <td>P8</td>
+                            <td>14</td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>8</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>11.</td>
+                            <td>P9</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>12.</td>
+                            <td>Pan India</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="filters">
+                <div class="filtersRow">
+                    <select class="mySel form-control" id="selProjectLoc" onchange="filterData()">
+                        <option value="-1">- Project Location-</option>
+                        <option value="Tinsukia">Tinsukia</option>
+                        <option value="Gajraula">Gajraula</option>
+                        <option value="Songarh">Songarh</option>
+                        <option value="Jarangloi">Jarangloi</option>
+                        <option value="Naimisharanya">Naimisharanya</option>
+                        <option value="Karanjo">Karanjo</option>
+                        <option value="Parasnath">Parasnath</option>
+                        <option value="Dediapada">Dediapada</option>
+                    </select>
+                    <select class="mySel form-control" id="selProjectCode" onchange="filterData()">
+                        <option value="-1">- Project Code -</option>
+                        <option value="KBEOWJHA">KBEOWJHA</option>
+                        <option value="JMEOWVID">JMEOWVID</option>
+                        <option value="ASEOWSIR">ASEOWSIR</option>
+                        <option value="SSEOWPAN">SSEOWPAN</option>
+                        <option value="MWEOWWAD">MWEOWWAD</option>
+                        <option value="MPEOWJAG">MPEOWJAG</option>
+                        <option value="APEOWMIR">APEOWMIR</option>
+                        <option value="AUEOWBAR">AUEOWBAR</option>
+                        <option value="SHEOWHOS">SHEOWHOS</option>
+                        <option value="DGEOWNAI">DGEOWNAI</option>
+                        <option value="SGEOWDHA">SGEOWDHA</option>
+                        <option value="JREOWBID">JREOWBID</option>
+                        <option value="HJEOWSHA">HJEOWSHA</option>
+                        <option value="AVEOWDAH">AVEOWDAH</option>
+                    </select>
+                </div>
+                <div class="filtersRow">
+                    <select class="mySel form-control" id="selOPStatus" onchange="filterData()">
+                        <option value="-1">- Operational Status-</option>
+                        <option value="Operational">Operational</option>
+                        <option value="New Project">New Project</option>
+                        <option value="Not in Operation">Not in Operation</option>
+                        <option value="Running Directly By Donar">Running Directly By Donar</option>
+                    </select>
+                    <select class="mySel form-control" id="selState" onchange="filterData()">
+                        <option value="-1">- State -</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="National Capital Territory of Delhi">National Capital Territory of Delhi</option>
+                        <option value="Puducherry">Puducherry</option>
+                    </select>
+                </div>
+                <div class="filtersRow" style="width: 75%;">
+                    <div class="opexSearchContainer">
+                        <span class="lbl">Opex Donor</span>
+                        <div class="filterGroup">
+                            <select class="form-control" id="searchBy">
+                                <option value="0">Equals</option>
+                                <option value="1">Contains</option>
+                                <option value="2">Starts With</option>
+                                <option value="3">Regex</option>
+                                <option value="4">IN</option>
+                            </select>
+                            <input class="form-control" id="txtSearch" type="text" placeholder="Enter a Value">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="secondTable custom_scroll">
+
+                <table class="myTable">
+                    <thead>
+                        <tr>
+                            <th> </th>
+                            <th>Project Type</th>
+                            <th>U.S.A Report</th>
+                            <th>India Project</th>
+                            <th>Canada Report</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>WEC</td>
+                            <td>55</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>SDC</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>Other</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>IVD</td>
+                            <td>32</td>
+                            <td>7</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td>GRC</td>
+                            <td>1</td>
+                            <td>13</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td>EOW</td>
+                            <td>20</td>
+                            <td>26</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>7.</td>
+                            <td>CTL</td>
+                            <td>14</td>
+                            <td>3</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="contentLowerSection">
+            <div class="maingrid custom_scroll" style="height: 50vh; overflow: auto;">
+                <table class="myTable ">
+                    <thead>
+                        <tr>
+                            <th> </th>
+                            <th>Start Date</th>
+                            <th>Zone</th>
+                            <th>Project Type</th>
+                            <th>State</th>
+                            <th>Project Location</th>
+                            <th>Capex Donor</th>
+                            <th>Opex Donor</th>
+                            <th>Project Code</th>
+                            <th>Opex Funded Under</th>
+                            <th>Operational Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>30-Sep-23</td>
+                            <td>P1</td>
+                            <td>WEC</td>
+                            <td>Assam</td>
+                            <td>Golaghat-1</td>
+                            <td>Dr. Yash and Chander Lakra & Ashish Desai and Grishma Patel & Umang and Paragi Patel
+                            </td>
+                            <td>Dr. Yash and Chander Lakra and Ashish Desai and Grishma Patel and Umang and Paragi Patel
+                            </td>
+                            <td>YCWECGOL</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>1-Jun-23</td>
+                            <td>P2</td>
+                            <td>IVD</td>
+                            <td>Odisha</td>
+                            <td>Angul</td>
+                            <td>BC Jindial Group </td>
+                            <td>BC Jindal Group</td>
+                            <td>BJIVDANG</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>1-Apr-23</td>
+                            <td>P5</td>
+                            <td>EOW</td>
+                            <td>Brajmandal</td>
+                            <td>Gajraula</td>
+                            <td>SBI Cards </td>
+                            <td>Tagros Foundation</td>
+                            <td>TFEOWGAJ</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>1-Apr-23</td>
+                            <td>P10</td>
+                            <td>EOW</td>
+                            <td>Karnataka</td>
+                            <td>Gangavathi</td>
+                            <td>SBI Cards </td>
+                            <td>Tagros Foundation</td>
+                            <td>TFEOWGAN</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td>1-Apr-23</td>
+                            <td>P10</td>
+                            <td>EOW</td>
+                            <td>Tamil Nadu</td>
+                            <td>Namakkal</td>
+                            <td>SBI Cards </td>
+                            <td>Crystal Crop Protection Limited</td>
+                            <td>CCEOWNAM</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td>1-Apr-23</td>
+                            <td>P3</td>
+                            <td>EOW</td>
+                            <td>Bihar</td>
+                            <td>Aurangabad</td>
+                            <td>National Insurance Limited </td>
+                            <td>Self Funded By Local Samiti/EGF Delhi</td>
+                            <td>SFEOWAUR</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>7.</td>
+                            <td>1-Apr-23</td>
+                            <td>P5</td>
+                            <td>EOW</td>
+                            <td>Western U.P</td>
+                            <td>Moradabad</td>
+                            <td>Mitsubishi Pvt. Ltd. & Metal One India Ltd</td>
+                            <td>Self Funded By Local Samiti/EGF Delhi</td>
+                            <td>SFEOWMOR</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>8.</td>
+                            <td>1-Apr-23</td>
+                            <td>P5</td>
+                            <td>EOW</td>
+                            <td>Brajmandal</td>
+                            <td>Mathura</td>
+                            <td>SBI Cards </td>
+                            <td>Tagros Foundation</td>
+                            <td>TFEOWMAT</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>9.</td>
+                            <td>1-Apr-23</td>
+                            <td>P4</td>
+                            <td>EOW</td>
+                            <td>Central U.P</td>
+                            <td>Naimisharanya</td>
+                            <td>Delton Group</td>
+                            <td>Delton Group</td>
+                            <td>DGEOWNAI</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>10.</td>
+                            <td>1-Apr-23</td>
+                            <td>P4</td>
+                            <td>WEC</td>
+                            <td>Southern U.P</td>
+                            <td>Bharatkoop Sanch</td>
+                            <td>Perfection Of Man Foundation - Satish Mallick</td>
+                            <td>Perfection Of Man Foundation - Satish Mallick</td>
+                            <td>POWECBHA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>11.</td>
+                            <td>1-Apr-23</td>
+                            <td>P3</td>
+                            <td>EOW</td>
+                            <td>Jharkhand</td>
+                            <td>Khandoli</td>
+                            <td>Himanshu Shah</td>
+                            <td>Himanshu Shah</td>
+                            <td>HSEOWKHA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>12.</td>
+                            <td>1-Apr-23</td>
+                            <td>P6</td>
+                            <td>CTL</td>
+                            <td>Jammu And Kashmir</td>
+                            <td>Doda</td>
+                            <td>Om & Sudha Dhingra</td>
+                            <td>Om and Sudha Dingra</td>
+                            <td>OSCTLDOD</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>13.</td>
+                            <td>1-Apr-23</td>
+                            <td>P9</td>
+                            <td>EOW</td>
+                            <td>Telangana</td>
+                            <td>Amrabad</td>
+                            <td>SBI Cards </td>
+                            <td>Tagros Foundation</td>
+                            <td>TFEOWAMR</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>14.</td>
+                            <td>1-Apr-23</td>
+                            <td>P9</td>
+                            <td>EOW</td>
+                            <td>Telangana</td>
+                            <td>Mahabubnagar</td>
+                            <td>SBI Cards </td>
+                            <td>Tagros Foundation</td>
+                            <td>TFEOWMAH</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>15.</td>
+                            <td>20-Mar-23</td>
+                            <td>P7B</td>
+                            <td>IVD</td>
+                            <td>Rajasthan</td>
+                            <td>Baran Kota</td>
+                            <td>Nath Foundation </td>
+                            <td>Nath Foundation</td>
+                            <td>NFIVDBAR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>16.</td>
+                            <td>18-Mar-23</td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Gujarat</td>
+                            <td>Dhamni Sanch</td>
+                            <td>Ramesh And Santosh Khatri</td>
+                            <td>Ramesh and Santosh Khatri</td>
+                            <td>RSWECDHA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>17.</td>
+                            <td>17-Mar-23</td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Gujarat</td>
+                            <td>Umarpada Sanch</td>
+                            <td>Samita Suresh Shah##### Bhasker And Nitaben Patel##### Harshavadan And Ila Vyas</td>
+                            <td>Samita Suresh Shah##### Bhasker and Nitaben Patel##### Harshavadan and Ila Vyas</td>
+                            <td>SSWECUMA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>18.</td>
+                            <td>17-Mar-23</td>
+                            <td>P6</td>
+                            <td>WEC</td>
+                            <td>Himachal Pradesh</td>
+                            <td>Jwalamukhi Tehsil</td>
+                            <td>Harbans L. Singla And Malti Singla</td>
+                            <td>Harbans L. Singla and Malti Singla</td>
+                            <td>HLWECJWA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>19.</td>
+                            <td>16-Mar-23</td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Gujarat</td>
+                            <td>Sabara Sanch</td>
+                            <td>Dr. Arun And Vandana Shah</td>
+                            <td>Dr. Arun and Vandana Shah</td>
+                            <td>AVWECSAB</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>20.</td>
+                            <td>6-Mar-23</td>
+                            <td>P8</td>
+                            <td>SDC</td>
+                            <td>Gujarat</td>
+                            <td>Jespore</td>
+                            <td>M/s Payal Polyplast Pvt. Ltd.</td>
+                            <td>M/S Payal Polyplast Pvt. Ltd.</td>
+                            <td>PPSDCJES</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>21.</td>
+                            <td>6-Mar-23</td>
+                            <td>P8</td>
+                            <td>SDC</td>
+                            <td>Gujarat</td>
+                            <td>Bharuch</td>
+                            <td>M/s Beniprasad Goenka Foundation</td>
+                            <td>M/S Beniprasad Goenka Foundation</td>
+                            <td>BGSDCBHA</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>22.</td>
+                            <td>1-Mar-23</td>
+                            <td>P5</td>
+                            <td>WEC</td>
+                            <td>Uttarakhand</td>
+                            <td>Rudarprayag</td>
+                            <td>Uday P. Gandy (Huf)</td>
+                            <td>Uday P. Gandy (Huf)</td>
+                            <td>UPWECRUD</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>23.</td>
+                            <td>22-Feb-23</td>
+                            <td>P1</td>
+                            <td>WEC</td>
+                            <td>Assam</td>
+                            <td>Naharkatiya</td>
+                            <td>Sanjay And Uma Jajoo</td>
+                            <td>Sanjay and Uma Jajoo</td>
+                            <td>SUWECNAH</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>24.</td>
+                            <td>6-Feb-23</td>
+                            <td>P3</td>
+                            <td>WEC</td>
+                            <td>Bihar</td>
+                            <td>Bodh Gaya</td>
+                            <td>Gemini Waghmare</td>
+                            <td>Gemini Waghmare</td>
+                            <td>GWWECBOD</td>
+                            <td>E.V.F Canada Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>25.</td>
+                            <td>1-Feb-23</td>
+                            <td>P3</td>
+                            <td>WEC</td>
+                            <td>Jharkhand</td>
+                            <td>Bhandra Block</td>
+                            <td>Rasik And Pushpaben Patel</td>
+                            <td>Rasik and Pushpaben Patel</td>
+                            <td>RPWECBHA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>26.</td>
+                            <td>16-Jan-23</td>
+                            <td>P7B</td>
+                            <td>IVD</td>
+                            <td>Rajasthan</td>
+                            <td>Jhadol</td>
+                            <td>Asha and Sajjan Agarwal Foundation</td>
+                            <td>Asha and Sajjan Agarwal Foundation</td>
+                            <td>ASIVDJHA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>27.</td>
+                            <td>5-Jan-23</td>
+                            <td>P4</td>
+                            <td>WEC</td>
+                            <td>Central U.P</td>
+                            <td>Babaganj#####Bahraich</td>
+                            <td>Arunima Misra And Dv Lyenger Sreenath</td>
+                            <td>Arunima Misra and Dv Lyenger Sreenath</td>
+                            <td>AMWECBAB</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>28.</td>
+                            <td>4-Jan-23</td>
+                            <td>P8</td>
+                            <td>IVD</td>
+                            <td>Gujarat</td>
+                            <td>Shamala Ji</td>
+                            <td>Kamlesh and Dina Shah</td>
+                            <td>Kamlesh and Dina Shah</td>
+                            <td>KDIVDSHA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>29.</td>
+                            <td>2-Jan-23</td>
+                            <td>P2</td>
+                            <td>WEC</td>
+                            <td>West Bengal</td>
+                            <td>Purliya</td>
+                            <td>Arun And Depak Kumar Shah</td>
+                            <td>Arun and Depak Kumar Shah</td>
+                            <td>ADWECPUR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>30.</td>
+                            <td>1-Jan-23</td>
+                            <td>P5</td>
+                            <td>WEC</td>
+                            <td>Brajmandal</td>
+                            <td>Gajraula</td>
+                            <td>Dr. Chandna And Family</td>
+                            <td>Dr. Chandna And Family</td>
+                            <td>CAWECGAJ</td>
+                            <td>E.V.F Canada Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>31.</td>
+                            <td>1-Jan-23</td>
+                            <td>P1</td>
+                            <td>WEC</td>
+                            <td>Assam</td>
+                            <td>Golaghat</td>
+                            <td>Dinesh Shah</td>
+                            <td>Dinesh Shah</td>
+                            <td>DSWECGOL</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>32.</td>
+                            <td>1-Jan-23</td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Gujarat</td>
+                            <td>Fatepura</td>
+                            <td>Ami Parekh</td>
+                            <td>Ami Parekh</td>
+                            <td>APWECFAT</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>33.</td>
+                            <td>1-Jan-23</td>
+                            <td>P9</td>
+                            <td>WEC</td>
+                            <td>Telangana</td>
+                            <td>Mahboobnagar</td>
+                            <td>Raj Gajula And Shushila</td>
+                            <td>Raj Gajula and Shushila</td>
+                            <td>RGWECMAH</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>34.</td>
+                            <td>20-Dec-22</td>
+                            <td>P3</td>
+                            <td>EOW</td>
+                            <td>Jharkhand</td>
+                            <td>Gumla</td>
+                            <td>Local MLA - LAD Fund</td>
+                            <td>S.L.Dugar Charitable Trust</td>
+                            <td>SLEOWGUM</td>
+                            <td>80G</td>
+                            <td>Not in Operation</td>
+                        </tr>
+                        <tr>
+                            <td>35.</td>
+                            <td>20-Dec-22</td>
+                            <td>P3</td>
+                            <td>EOW</td>
+                            <td>Jharkhand</td>
+                            <td>Karanjo</td>
+                            <td>Tarsadia Foundation </td>
+                            <td>Khivraj Foundation</td>
+                            <td>KFEOWKAR</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>36.</td>
+                            <td>14-Dec-22</td>
+                            <td>P8</td>
+                            <td>IVD</td>
+                            <td>Maharashtra</td>
+                            <td>Jogmodi</td>
+                            <td>Janki Foundation(Choate Hall and Stewart)</td>
+                            <td>Janki Foundation(Choate Hall and Stewart)</td>
+                            <td>JFIVDJOG</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>37.</td>
+                            <td>20-Nov-22</td>
+                            <td>P3</td>
+                            <td>WEC</td>
+                            <td>Bihar</td>
+                            <td>Sitamarhi</td>
+                            <td>Dinesh Shah</td>
+                            <td>Dinesh Shah</td>
+                            <td>DSWECSIT</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>38.</td>
+                            <td>1-Nov-22</td>
+                            <td>P4</td>
+                            <td>EOW</td>
+                            <td>Southern U.P</td>
+                            <td>Kanpur Dehat</td>
+                            <td>Frontier Alloy steels ltd </td>
+                            <td>Frontier Alloy Steels Ltd</td>
+                            <td>FAEOWKAN</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>39.</td>
+                            <td>1-Nov-22</td>
+                            <td>P10</td>
+                            <td>IVD</td>
+                            <td>Karnataka</td>
+                            <td>Mysore</td>
+                            <td>Deepak & Seema Abbhi</td>
+                            <td>Deepak and Seema Abbhi</td>
+                            <td>DSIVDMYS</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>40.</td>
+                            <td>1-Oct-22</td>
+                            <td>P2</td>
+                            <td>EOW</td>
+                            <td>Odisha</td>
+                            <td>Jharsuguda</td>
+                            <td>Ken Bahl</td>
+                            <td>Ken Bahl</td>
+                            <td>KBEOWJHA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>41.</td>
+                            <td>1-Oct-22</td>
+                            <td>P4</td>
+                            <td>WEC</td>
+                            <td>Central U.P</td>
+                            <td>Lakhimpur Khiri</td>
+                            <td>Ajay And Susie Bhatt</td>
+                            <td>Ajay and Susie Bhatt</td>
+                            <td>ASWECLAK</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>42.</td>
+                            <td>1-Oct-22</td>
+                            <td>P7B</td>
+                            <td>EOW</td>
+                            <td>Rajasthan</td>
+                            <td>Khatu</td>
+                            <td>Swapnil Aggarwal</td>
+                            <td>Shree S.N. Bansal C/O Khatu Shayam Mandir Samity</td>
+                            <td>SNEOWKHA</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>43.</td>
+                            <td>1-Oct-22</td>
+                            <td>P2</td>
+                            <td>SDC</td>
+                            <td>Odisha</td>
+                            <td>Jharsuguda</td>
+                            <td>Tagros Chemicals India Pvt Ltd (DK Jhavar)</td>
+                            <td>Tagros Chemicals India Pvt Ltd (Dk Jhavar)</td>
+                            <td>TCSDCJHA</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>44.</td>
+                            <td>1-Oct-22</td>
+                            <td>P8</td>
+                            <td>EOW</td>
+                            <td>Maharashtra</td>
+                            <td>Vidharbha</td>
+                            <td>Jugal Malani</td>
+                            <td>Jugal Malani</td>
+                            <td>JMEOWVID</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>45.</td>
+                            <td>1-Oct-22</td>
+                            <td>P5</td>
+                            <td>EOW</td>
+                            <td>Haryana</td>
+                            <td>SUI</td>
+                            <td>Ircon International Ltd </td>
+                            <td>Jindal Group</td>
+                            <td>JGEOWSUI</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>46.</td>
+                            <td>1-Oct-22</td>
+                            <td>P7A</td>
+                            <td>EOW</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Hoshangabad</td>
+                            <td>Satish And Hemlata Kumar</td>
+                            <td>Satish and Hemlata Kumar</td>
+                            <td>SHEOWHOS</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>47.</td>
+                            <td>1-Oct-22</td>
+                            <td>P3</td>
+                            <td>CTL</td>
+                            <td>Jharkhand</td>
+                            <td>Karanjo</td>
+                            <td>Bhuwalaka and sons private limited</td>
+                            <td>Bhuwalaka and Sons Private Limited</td>
+                            <td>BSCTLKAR</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>48.</td>
+                            <td>1-Oct-22</td>
+                            <td>P8</td>
+                            <td>EOW</td>
+                            <td>Maharashtra</td>
+                            <td>Wada</td>
+                            <td>Mohan Wanchoo</td>
+                            <td>Mohan Wanchoo</td>
+                            <td>MWEOWWAD</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>49.</td>
+                            <td>1-Oct-22</td>
+                            <td>P2</td>
+                            <td>EOW</td>
+                            <td>Odisha</td>
+                            <td>Jarangloi</td>
+                            <td>Niswarth Foundation</td>
+                            <td>RR Kabel</td>
+                            <td>RKEOWJAR</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>50.</td>
+                            <td>28-Aug-22</td>
+                            <td>P10</td>
+                            <td>IVD</td>
+                            <td>Tamil Nadu</td>
+                            <td>Dindigul</td>
+                            <td>Deepak & Seema Abbhi</td>
+                            <td>Deepak and Seema Abbhi</td>
+                            <td>DSIVDDIN</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>51.</td>
+                            <td>1-Aug-22</td>
+                            <td>P7B</td>
+                            <td>CTL</td>
+                            <td>Rajasthan</td>
+                            <td>Jhadol</td>
+                            <td>Sh Deepak/ Sapna Champaneria</td>
+                            <td>Shree Deepak and Sapna Champaneria</td>
+                            <td>DSCTLJHA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>52.</td>
+                            <td>12-Jul-22</td>
+                            <td>P6</td>
+                            <td>IVD</td>
+                            <td>Jammu And Kashmir</td>
+                            <td>Gandoh</td>
+                            <td>Narendra Chavda</td>
+                            <td>Narendra Chavda</td>
+                            <td>NCIVDGAN</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>53.</td>
+                            <td>1-Jul-22</td>
+                            <td>P3</td>
+                            <td>CTL</td>
+                            <td>Bihar</td>
+                            <td>Raffiganj</td>
+                            <td>Parveen & Anil Minocha #####Latha Krishnan##### Mukesh Batt</td>
+                            <td>Parveen and Anil Minocha #####Latha Krishnan##### Mukesh Batt</td>
+                            <td>PACTLRAF</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>54.</td>
+                            <td>1-Apr-22</td>
+                            <td>P7B</td>
+                            <td>EOW</td>
+                            <td>Rajasthan</td>
+                            <td>Sirohi</td>
+                            <td>The Asha And Sajjan Agarwal Foundation##### Hari & Kalpana Nath Ragni Murarka</td>
+                            <td>The Asha and Sajjan Agarwal Foundation##### Hari and Kalpana Nath Ragni Murarka</td>
+                            <td>ASEOWSIR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>55.</td>
+                            <td>1-Apr-22</td>
+                            <td>P8</td>
+                            <td>EOW</td>
+                            <td>Gujarat</td>
+                            <td>Bharuch </td>
+                            <td>Petronet LNG Limited</td>
+                            <td>Petronet Lng Limited</td>
+                            <td>PLEOWBHA</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>56.</td>
+                            <td>1-Apr-22</td>
+                            <td>P10</td>
+                            <td>EOW</td>
+                            <td>Karnataka</td>
+                            <td>Mysore</td>
+                            <td>SBI Cards </td>
+                            <td>Seth Parmanand Khemka Charitable Trust</td>
+                            <td>SPEOWMYS</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>57.</td>
+                            <td>6-Mar-22</td>
+                            <td>P9</td>
+                            <td>IVD</td>
+                            <td>Telangana</td>
+                            <td>Haliya</td>
+                            <td>Prashanth and Anuradha Palakurthi</td>
+                            <td>Prashanth and Anuradha Palakurthi</td>
+                            <td>PAIVDHAL</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>58.</td>
+                            <td>1-Mar-22</td>
+                            <td>P8</td>
+                            <td>EOW</td>
+                            <td>Gujarat</td>
+                            <td>Panchmahal</td>
+                            <td>Surekha Shah</td>
+                            <td>Surekha Shah</td>
+                            <td>SSEOWPAN</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>59.</td>
+                            <td>1-Mar-22</td>
+                            <td>P4</td>
+                            <td>CTL</td>
+                            <td>Eastern U.P</td>
+                            <td>Mohansarai Sarnath</td>
+                            <td>Mr. Jitendra and Pragna Vakil</td>
+                            <td>Shree Jitendra and Pragna Vakil</td>
+                            <td>JPCTLMOH</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>60.</td>
+                            <td>1-Mar-22</td>
+                            <td>P9</td>
+                            <td>SDC</td>
+                            <td>Telangana</td>
+                            <td>Vikarabad</td>
+                            <td>Shekar & Shylaja Reddy</td>
+                            <td>Shekar and Shylaja Reddy</td>
+                            <td>SSSDCVIK</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>61.</td>
+                            <td>22-Feb-22</td>
+                            <td>P9</td>
+                            <td>IVD</td>
+                            <td>Telangana</td>
+                            <td>Amrabad</td>
+                            <td>Guru Krupa Foundation</td>
+                            <td>Guru Krupa Foundation</td>
+                            <td>GKIVDAMR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>62.</td>
+                            <td>1-Feb-22</td>
+                            <td>P6</td>
+                            <td>CTL</td>
+                            <td>Himachal Pradesh</td>
+                            <td>Ludrai</td>
+                            <td>Bharat & Uma Agarwal</td>
+                            <td>Bharat and Uma Agarwal</td>
+                            <td>BUCTLLUD</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>63.</td>
+                            <td>10-Jan-22</td>
+                            <td>P3</td>
+                            <td>WEC</td>
+                            <td>Jharkhand</td>
+                            <td>Bengabad</td>
+                            <td>Shreeniwas Shah</td>
+                            <td>Shreeniwas Shah</td>
+                            <td>SSWECBEN</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>64.</td>
+                            <td>2-Jan-22</td>
+                            <td>P6</td>
+                            <td>WEC</td>
+                            <td>Himachal Pradesh</td>
+                            <td>Ludrai##### Mandi</td>
+                            <td>Bharat & Uma Agarwal</td>
+                            <td>Bharat and Uma Agarwal</td>
+                            <td>BUWECLUD</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>65.</td>
+                            <td>1-Jan-22</td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Gujarat</td>
+                            <td>Dahod##### Antela</td>
+                            <td>Prof. Kishor And Kalpana Trivedi</td>
+                            <td>Prof. Kishor and Kalpana Trivedi</td>
+                            <td>KKWECDAH</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>66.</td>
+                            <td>1-Jan-22</td>
+                            <td>P5</td>
+                            <td>WEC</td>
+                            <td>Uttarakhand</td>
+                            <td>Khatima</td>
+                            <td>Ajay Keshap</td>
+                            <td>Ajay Keshap</td>
+                            <td>AKWECKHA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>67.</td>
+                            <td>1-Oct-21</td>
+                            <td>P7A</td>
+                            <td>EOW</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Khargone</td>
+                            <td>Amit Bhandri </td>
+                            <td>Shree Laxmi Metal Udyog Ltd. (Apl)</td>
+                            <td>LMEOWKHA</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>68.</td>
+                            <td>1-Oct-21</td>
+                            <td>P6</td>
+                            <td>EOW</td>
+                            <td>Himachal Pradesh</td>
+                            <td>Palampur</td>
+                            <td>Ekal vehicle received from shri Hari Katha</td>
+                            <td>CP Plus</td>
+                            <td>CPEOWPAL</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>69.</td>
+                            <td>18-Sep-21</td>
+                            <td>P8</td>
+                            <td>IVD</td>
+                            <td>Gujarat</td>
+                            <td>Chhota Udepur</td>
+                            <td>Anil & Preeti Shah</td>
+                            <td>Anil and Preeti Shah</td>
+                            <td>APIVDCHH</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>70.</td>
+                            <td>1-Sep-21</td>
+                            <td>P2</td>
+                            <td>EOW</td>
+                            <td>West Bengal</td>
+                            <td>Malda </td>
+                            <td>Niswarth Foundation</td>
+                            <td>Apollo Tricoat Tubes Ltd. (Apl)</td>
+                            <td>ATEOWMAL</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>71.</td>
+                            <td>1-Sep-21</td>
+                            <td>P5</td>
+                            <td>CTL</td>
+                            <td>Haryana</td>
+                            <td>Machhgar</td>
+                            <td>Smt. Sneh & Lt. Anil Gupta</td>
+                            <td>Shrimati Sneh and Lt. Anil Gupta</td>
+                            <td>SGCTLMAC</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>72.</td>
+                            <td>1-Sep-21</td>
+                            <td>P7A</td>
+                            <td>CTL</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Parasia</td>
+                            <td>Sunil & Aparna Kolhekar</td>
+                            <td>Sunil and Aparna Kolhekar</td>
+                            <td>SACTLPAR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>73.</td>
+                            <td>1-Apr-21</td>
+                            <td>P1</td>
+                            <td>IVD</td>
+                            <td>Assam</td>
+                            <td>Tinsukia</td>
+                            <td>Tarsadia Foundation</td>
+                            <td>Tarsadia Foundation</td>
+                            <td>TFIVDTIN</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>74.</td>
+                            <td>1-Apr-21</td>
+                            <td>P4</td>
+                            <td>IVD</td>
+                            <td>Southern U.P</td>
+                            <td>Prayagraj</td>
+                            <td>Sajan Agarwal</td>
+                            <td>Sajan Agarwal</td>
+                            <td>SAIVDPRA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>75.</td>
+                            <td>4-Jan-21</td>
+                            <td>P3</td>
+                            <td>WEC</td>
+                            <td>Bihar</td>
+                            <td>Sultanganj##### Bhagalpur</td>
+                            <td>Nanakram And Manju Agarwal</td>
+                            <td>Nanakram and Manju Agarwal</td>
+                            <td>NMWECSUL</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>76.</td>
+                            <td>3-Jan-21</td>
+                            <td>P7A</td>
+                            <td>WEC</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Patalkot##### Chhindwara</td>
+                            <td>Vanitha And Vishal Khera</td>
+                            <td>Vanitha and Vishal Khera</td>
+                            <td>VVWECPAT</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>77.</td>
+                            <td>1-Sep-20</td>
+                            <td>P5</td>
+                            <td>EOW</td>
+                            <td>Haryana</td>
+                            <td>Dhakla </td>
+                            <td>Satish Gupta</td>
+                            <td>Satish Gupta</td>
+                            <td>SGEOWDHA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>78.</td>
+                            <td>1-Sep-20</td>
+                            <td>P1</td>
+                            <td>EOW</td>
+                            <td>Assam</td>
+                            <td>Tinsukia</td>
+                            <td>Gateway Distriparks Limited</td>
+                            <td>Gateway Distriparks Limited</td>
+                            <td>GDEOWTIN</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>79.</td>
+                            <td>1-Sep-20</td>
+                            <td>P5</td>
+                            <td>EOW</td>
+                            <td>Brajmandal</td>
+                            <td>Bareilly</td>
+                            <td>Avadhesh And Uma Agarwal</td>
+                            <td>Avadhesh and Uma Agarwal</td>
+                            <td>AUEOWBAR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>80.</td>
+                            <td>1-Sep-20</td>
+                            <td>P1</td>
+                            <td>EOW</td>
+                            <td>Barakghati</td>
+                            <td></td>
+                            <td>Alok Lathi</td>
+                            <td>Alok Lathi</td>
+                            <td>ALEOW</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Not in Operation</td>
+                        </tr>
+                        <tr>
+                            <td>81.</td>
+                            <td>1-Mar-20</td>
+                            <td>P3</td>
+                            <td>EOW</td>
+                            <td>Jharkhand</td>
+                            <td>Parasnath</td>
+                            <td>Adish And Asha Jain</td>
+                            <td>Adish and Asha Jain</td>
+                            <td>AAEOWPAR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>82.</td>
+                            <td>9-Jan-20</td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Gujarat</td>
+                            <td>Chhotaudepur</td>
+                            <td>Vipin And Tara Amin</td>
+                            <td>Vipin and Tara Amin</td>
+                            <td>VTWECCHH</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>83.</td>
+                            <td>9-Jan-20</td>
+                            <td>P3</td>
+                            <td>WEC</td>
+                            <td>Bihar</td>
+                            <td>Jakhim##### Aurangabad</td>
+                            <td>Anand And Bela Jain</td>
+                            <td>Anand and Bela Jain</td>
+                            <td>ABWECJAK</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>84.</td>
+                            <td>9-Jan-20</td>
+                            <td>P7B</td>
+                            <td>WEC</td>
+                            <td>Rajasthan</td>
+                            <td>Sirohi</td>
+                            <td>Raghunath Lathi</td>
+                            <td>Raghunath Lathi</td>
+                            <td>RLWECSIR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>85.</td>
+                            <td>9-Jan-20</td>
+                            <td>P4</td>
+                            <td>WEC</td>
+                            <td>Central U.P</td>
+                            <td>Naimisharanaya</td>
+                            <td>Anish Chavda</td>
+                            <td>Anish Chavda</td>
+                            <td>ACWECNAI</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>86.</td>
+                            <td>9-Jan-20</td>
+                            <td>P6</td>
+                            <td>WEC</td>
+                            <td>Himachal Pradesh</td>
+                            <td>Nainidhar (Shillai)</td>
+                            <td>Raj And Hinal Parikh</td>
+                            <td>Raj and Hinal Parikh</td>
+                            <td>RHWECNAI</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>87.</td>
+                            <td>8-Jan-20</td>
+                            <td>P7B</td>
+                            <td>WEC</td>
+                            <td>Rajasthan</td>
+                            <td>Jaisalmer</td>
+                            <td>Hari And Kalpana Nath</td>
+                            <td>Hari and Kalpana Nath</td>
+                            <td>HKWECJAI</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>88.</td>
+                            <td>8-Jan-20</td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Maharashtra</td>
+                            <td>Gondia</td>
+                            <td>Ramesh And Kiran Bhutada</td>
+                            <td>Ramesh and Kiran Bhutada</td>
+                            <td>RKWECGON</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>89.</td>
+                            <td>8-Jan-20</td>
+                            <td>P2</td>
+                            <td>WEC</td>
+                            <td>Chhattisgarh</td>
+                            <td>Raigadh (Kotrimal)</td>
+                            <td>Ranjani And Anil Saigal</td>
+                            <td>Ranjani and Anil Saigal</td>
+                            <td>RAWECRAI</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>90.</td>
+                            <td>3-Jan-20</td>
+                            <td>P6</td>
+                            <td>WEC</td>
+                            <td>Jammu And Kashmir</td>
+                            <td>Mogla#####Rajouri</td>
+                            <td>Ramesh And Kokila Shah</td>
+                            <td>Ramesh and Kokila Shah</td>
+                            <td>RKWECMOG</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>91.</td>
+                            <td>1-Dec-19</td>
+                            <td>P4</td>
+                            <td>EOW</td>
+                            <td>Eastern U.P</td>
+                            <td>Mirzapur</td>
+                            <td>Alok Pandey</td>
+                            <td>Alok Pandey</td>
+                            <td>APEOWMIR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>92.</td>
+                            <td>1-Oct-19</td>
+                            <td>P8</td>
+                            <td>EOW</td>
+                            <td>Gujarat</td>
+                            <td>Chhotaudepur</td>
+                            <td>Newtronics India</td>
+                            <td>Newtronics India</td>
+                            <td>NIEOWCHH</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>93.</td>
+                            <td>11-Sep-19</td>
+                            <td>P7A</td>
+                            <td>IVD</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Karahi</td>
+                            <td>Amit and Arpita Bhandari</td>
+                            <td>Amit and Arpita Bhandari</td>
+                            <td>AAIVDKAR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>94.</td>
+                            <td>11-Sep-19</td>
+                            <td>P3</td>
+                            <td>SDC</td>
+                            <td>Jharkhand</td>
+                            <td>Dumka</td>
+                            <td>Ashok and Ami Parekh</td>
+                            <td>Ashok and Ami Parekh</td>
+                            <td>AASDCDUM</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>95.</td>
+                            <td>11-Sep-19</td>
+                            <td>P4</td>
+                            <td>CTL</td>
+                            <td>Central U.P</td>
+                            <td>Naimisharanya</td>
+                            <td>Sudershan and Sitla Reddy</td>
+                            <td>Sudershan and Sitla Reddy</td>
+                            <td>SSCTLNAI</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>96.</td>
+                            <td>1-Sep-19</td>
+                            <td>P6</td>
+                            <td>CTL</td>
+                            <td>Jammu And Kashmir</td>
+                            <td>Galigarh</td>
+                            <td>Raj and Hinal Parikh</td>
+                            <td>Raj and Hinal Parikh</td>
+                            <td>RHCTLGAL</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>97.</td>
+                            <td>1-Sep-19</td>
+                            <td>P6</td>
+                            <td>EOW</td>
+                            <td>Jammu And Kashmir</td>
+                            <td>Rajouri</td>
+                            <td>Murgesh And Pallavi Parikh</td>
+                            <td>Murgesh and Pallavi Parikh</td>
+                            <td>MPEOWRAJ</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>98.</td>
+                            <td>3-Jul-19</td>
+                            <td>P8</td>
+                            <td>IVD</td>
+                            <td>Gujarat</td>
+                            <td>Dediapada</td>
+                            <td>Hasmukh & Jyotsna Shah##### Tej Gupta##### Arun & Vandana Shah</td>
+                            <td>Hasmukh and Jyotsna Shah##### Tej Gupta##### Arun and Vandana Shah</td>
+                            <td>HJIVDDED</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>99.</td>
+                            <td>17-Apr-19</td>
+                            <td>P8</td>
+                            <td>IVD</td>
+                            <td>Gujarat</td>
+                            <td>Dang</td>
+                            <td>Palace in Management LLC</td>
+                            <td>Palace In Management LLC</td>
+                            <td>PIIVDDAN</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>100.</td>
+                            <td>17-Apr-19</td>
+                            <td>P8</td>
+                            <td>IVD</td>
+                            <td>Gujarat</td>
+                            <td>Dahod</td>
+                            <td>Asha - Vijay Foundation Inc (Morgan Stanley)</td>
+                            <td>Asha-Vijay Foundation Inc.</td>
+                            <td>AVIVDDAH</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>101.</td>
+                            <td>1-Mar-19</td>
+                            <td>P4</td>
+                            <td>SDC</td>
+                            <td>Central U.P</td>
+                            <td>Ayodhya</td>
+                            <td>Bhasker Agarwal & Salra Bhasker</td>
+                            <td>Bhasker Agarwal and Salra Bhasker</td>
+                            <td>BASDCAYO</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>102.</td>
+                            <td>1-Jan-19</td>
+                            <td>P5</td>
+                            <td>EOW</td>
+                            <td>Western U.P</td>
+                            <td>Titron </td>
+                            <td>Sanjay Jain </td>
+                            <td>Sanjay Jain</td>
+                            <td>SJEOWTIT</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>103.</td>
+                            <td>1-Jan-19</td>
+                            <td>P2</td>
+                            <td>EOW</td>
+                            <td>Chhattisgarh</td>
+                            <td>Jagdalpur</td>
+                            <td>Murgesh And Pallavi Parikh</td>
+                            <td>Murgesh and Pallavi Parikh</td>
+                            <td>MPEOWJAG</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>104.</td>
+                            <td>1-Aug-18</td>
+                            <td>P8</td>
+                            <td>EOW</td>
+                            <td>Gujarat</td>
+                            <td>Songarh</td>
+                            <td>Gateway Distriparks Limited</td>
+                            <td>Gateway Distriparks Limited</td>
+                            <td>GDEOWSON</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>105.</td>
+                            <td>1-Jun-18</td>
+                            <td>P9</td>
+                            <td>EOW</td>
+                            <td>Telangana</td>
+                            <td>Nizamabad</td>
+                            <td>Bostan Group</td>
+                            <td>Bostan Group</td>
+                            <td>BGEOWNIZ</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>106.</td>
+                            <td>1-Apr-18</td>
+                            <td>P3</td>
+                            <td>IVD</td>
+                            <td>Jharkhand</td>
+                            <td>Shikhar Ji</td>
+                            <td>Adish & Asha Jain</td>
+                            <td>Adish and Asha Jain</td>
+                            <td>AAIVDSHI</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>107.</td>
+                            <td>1-Apr-18</td>
+                            <td>P3</td>
+                            <td>IVD</td>
+                            <td>Jharkhand</td>
+                            <td>Parasnath</td>
+                            <td>Adish & Asha Jain</td>
+                            <td>Adish and Asha Jain</td>
+                            <td>AAIVDPAR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>108.</td>
+                            <td>12-Mar-18</td>
+                            <td>P9</td>
+                            <td>CTL</td>
+                            <td>Andhra Pradesh</td>
+                            <td>Anantpur</td>
+                            <td>Anupama and Rommel Patel (Mulpuri Rao) Rambabu Yadlapali (+multiple donors)</td>
+                            <td>Anupama and Rommel Patel (Mulpuri Rao) Rambabu Yadlapali (+Multiple Donors)</td>
+                            <td>ARCTLANA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Not in Operation</td>
+                        </tr>
+                        <tr>
+                            <td>109.</td>
+                            <td>12-Mar-18</td>
+                            <td>P2</td>
+                            <td>CTL</td>
+                            <td>West Bengal</td>
+                            <td>Malda</td>
+                            <td>New York Life Insurance</td>
+                            <td>New York Life Insurance</td>
+                            <td>NYCTLMAL</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>110.</td>
+                            <td>5-Jan-18</td>
+                            <td>P3</td>
+                            <td>EOW</td>
+                            <td>Jharkhand</td>
+                            <td>Dumma</td>
+                            <td>Skippers Ltd. (FTS)</td>
+                            <td>Skippers Ltd. (Fts)</td>
+                            <td>SLEOWDUM</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>111.</td>
+                            <td>3-Jan-18</td>
+                            <td>P5</td>
+                            <td>WEC</td>
+                            <td>Uttarakhand</td>
+                            <td>Mahal Chori</td>
+                            <td>Kishan Gupta</td>
+                            <td>Kishan Gupta</td>
+                            <td>KGWECMAH</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>112.</td>
+                            <td>3-Jan-18</td>
+                            <td>P2</td>
+                            <td>WEC</td>
+                            <td>West Bengal</td>
+                            <td>Balukbona#####Malda</td>
+                            <td>Dr. Yash And Chander Lakra</td>
+                            <td>Dr. Yash and Chander Lakra</td>
+                            <td>YCWECBAL</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>113.</td>
+                            <td>8-Jan-17</td>
+                            <td>P7B</td>
+                            <td>WEC</td>
+                            <td>Rajasthan</td>
+                            <td>Beawar</td>
+                            <td>Rakesh And Sneh Gupta</td>
+                            <td>Rakesh and Sneh Gupta</td>
+                            <td>RSWECBEA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>114.</td>
+                            <td>8-Jan-17</td>
+                            <td>P5</td>
+                            <td>WEC</td>
+                            <td>Western U.P</td>
+                            <td>Titron</td>
+                            <td>Harish Verma</td>
+                            <td>Harish Verma</td>
+                            <td>HVWECTIT</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>115.</td>
+                            <td>8-Jan-17</td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Gujarat</td>
+                            <td>Songarh</td>
+                            <td>Asha Master</td>
+                            <td>Asha Master</td>
+                            <td>AMWECSON</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>116.</td>
+                            <td></td>
+                            <td>P2</td>
+                            <td>WEC</td>
+                            <td>Odisha</td>
+                            <td>Jarangloi</td>
+                            <td>R R Kabel</td>
+                            <td>R R Kabel</td>
+                            <td>RRWECJAR</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>117.</td>
+                            <td></td>
+                            <td>P7B</td>
+                            <td>WEC</td>
+                            <td>Rajasthan</td>
+                            <td>Nayna (Bharatpur)</td>
+                            <td>Vivek Sharma And Vandana Sharma</td>
+                            <td>Vivek Sharma and Vandana Sharma</td>
+                            <td>VSWECNAY</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Running Directly By Donar</td>
+                        </tr>
+                        <tr>
+                            <td>118.</td>
+                            <td></td>
+                            <td>P7A</td>
+                            <td>CTL</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Midhli</td>
+                            <td>Narinder N. Sehgal</td>
+                            <td>Narinder N. Sehgal</td>
+                            <td>NNCTLMID</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>119.</td>
+                            <td></td>
+                            <td>P3</td>
+                            <td>CTL</td>
+                            <td>Jharkhand</td>
+                            <td>Govindpur</td>
+                            <td>Satpal and Sudha Rathie</td>
+                            <td>Satpal and Sudha Rathie</td>
+                            <td>SSCTLGOV</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>120.</td>
+                            <td></td>
+                            <td>P7A</td>
+                            <td>CTL</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Jamanya</td>
+                            <td>Kamala Kant and Girija Vijai</td>
+                            <td>Kamala Kant and Girija Vijai</td>
+                            <td>KKCTLJAM</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>121.</td>
+                            <td></td>
+                            <td>P1</td>
+                            <td>CTL</td>
+                            <td>Assam</td>
+                            <td>Golaghat</td>
+                            <td>Late Shree Ajit Parsad Jain (Brother Naresh Jain)</td>
+                            <td>Late Shree Ajit Parsad Jain (Brother Naresh Jain)</td>
+                            <td>LSCTLGOL</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>122.</td>
+                            <td></td>
+                            <td>P5</td>
+                            <td>CTL</td>
+                            <td>Western U.P</td>
+                            <td>Titron</td>
+                            <td>EGF</td>
+                            <td>Self Funded By Local Samiti/EGF Delhi</td>
+                            <td>SFCTLTIT</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>123.</td>
+                            <td></td>
+                            <td>P2</td>
+                            <td>Other</td>
+                            <td>West Bengal</td>
+                            <td>Purulia</td>
+                            <td>C/O Himanshu Shah</td>
+                            <td>C/O Himanshu Shah</td>
+                            <td>COOTHPUR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>124.</td>
+                            <td></td>
+                            <td>P3</td>
+                            <td>Other</td>
+                            <td>Jharkhand</td>
+                            <td>Parasnath</td>
+                            <td>Sh. Adish Jain </td>
+                            <td>Adish and Asha Jain</td>
+                            <td>AAOTHPAR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>125.</td>
+                            <td></td>
+                            <td>P8</td>
+                            <td>GRC</td>
+                            <td>Gujarat</td>
+                            <td>Dediapada</td>
+                            <td>Kamlesh Shah </td>
+                            <td>Kamlesh Shah</td>
+                            <td>KSGRCDED</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>126.</td>
+                            <td></td>
+                            <td>P3</td>
+                            <td>EOW</td>
+                            <td>Bihar</td>
+                            <td>BodhGaya</td>
+                            <td>Haldiram's</td>
+                            <td>Haldiram's</td>
+                            <td>HSEOWBOD</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>127.</td>
+                            <td></td>
+                            <td>P4</td>
+                            <td>GRC</td>
+                            <td>Central U.P</td>
+                            <td>Naimisharanya</td>
+                            <td>India Funded</td>
+                            <td>APL Apollo</td>
+                            <td>AAGRCNAI</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>128.</td>
+                            <td></td>
+                            <td>P2</td>
+                            <td>GRC</td>
+                            <td>West Bengal</td>
+                            <td>Balukbona#####Malda</td>
+                            <td>India Funded</td>
+                            <td>Self Funded By Local Samiti/EGF Delhi</td>
+                            <td>SFGRCBAL</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>129.</td>
+                            <td></td>
+                            <td>P1</td>
+                            <td>GRC</td>
+                            <td>Assam</td>
+                            <td>Tinsukia</td>
+                            <td>India Funded</td>
+                            <td>Self Funded By Local Samiti/EGF Delhi</td>
+                            <td>SFGRCTIN</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>130.</td>
+                            <td></td>
+                            <td>P8</td>
+                            <td>GRC</td>
+                            <td>Maharashtra</td>
+                            <td>Gargaon#####Wada</td>
+                            <td>San Diego Group (USA) & Land by Indian Donor</td>
+                            <td>Self Funded By Local Samiti/EGF Delhi</td>
+                            <td>SFGRCGAR</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>131.</td>
+                            <td></td>
+                            <td>P2</td>
+                            <td>GRC</td>
+                            <td>Odisha</td>
+                            <td>Jarangloi</td>
+                            <td>India Funded</td>
+                            <td>R R Kabel</td>
+                            <td>RRGRCJAR</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>132.</td>
+                            <td></td>
+                            <td>P7A</td>
+                            <td>GRC</td>
+                            <td>Madhya Pradesh</td>
+                            <td>"Mahendrabadi#####</td>
+                        </tr>
+                        <tr>
+                            <td>133.</td>
+                            <td> Hoshangabad"</td>
+                            <td>Ajay Poddar/Artech Information System LLC (USA) & Land by Indian Donor </td>
+                            <td>Self Funded By Local Samiti/EGF Delhi</td>
+                            <td>SFGRCMAH</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>134.</td>
+                            <td></td>
+                            <td>P3</td>
+                            <td>EOW</td>
+                            <td>Bihar</td>
+                            <td>Sitamarhi</td>
+                            <td>Gateway Distriparks Limited</td>
+                            <td>Gateway Distriparks Limited</td>
+                            <td>GDEOWSIT</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>135.</td>
+                            <td></td>
+                            <td>P4</td>
+                            <td>EOW</td>
+                            <td>Eastern U.P</td>
+                            <td>Sonbhadra</td>
+                            <td>Petronet LNG Limited</td>
+                            <td>Petronet Lng Limited</td>
+                            <td>PLEOWSON</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>136.</td>
+                            <td></td>
+                            <td>P5</td>
+                            <td>GRC</td>
+                            <td>Brajmandal</td>
+                            <td>Gajraula</td>
+                            <td>Smt. Prabha Jhunjhunwala (USA) & Land by Indian Donor</td>
+                            <td>Shree Naresh Jain and Shree Sanjeev Goel</td>
+                            <td>NJGRCGAJ</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>137.</td>
+                            <td></td>
+                            <td>P8</td>
+                            <td>GRC</td>
+                            <td>Gujarat</td>
+                            <td>Songarh</td>
+                            <td>Tarsadia Foundation (USA) & Land by Indian Donor</td>
+                            <td>Self Funded By Local Samiti/EGF Delhi</td>
+                            <td>SFGRCSON</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>138.</td>
+                            <td></td>
+                            <td>P3</td>
+                            <td>GRC</td>
+                            <td>Jharkhand</td>
+                            <td>Khandoli##### Madhwadih#####Giridih</td>
+                            <td>SHAH Capital Management INC (USA) & Land by Indian Donor</td>
+                            <td>E-City Groups</td>
+                            <td>ECGRCKHA</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>139.</td>
+                            <td></td>
+                            <td>P5</td>
+                            <td>SDC</td>
+                            <td>Haryana</td>
+                            <td>Dhakla</td>
+                            <td>Satish Gupta</td>
+                            <td>Satish Gupta</td>
+                            <td>SGSDCDHA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>140.</td>
+                            <td></td>
+                            <td>P7B</td>
+                            <td>SDC</td>
+                            <td>Rajasthan</td>
+                            <td>Tbd</td>
+                            <td>Nandlal Todi</td>
+                            <td>Nandlal Todi</td>
+                            <td>NTSDCTBD</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>141.</td>
+                            <td></td>
+                            <td>P3</td>
+                            <td>IVD</td>
+                            <td>Jharkhand</td>
+                            <td>Tundi</td>
+                            <td>Saurabh Aggarwal</td>
+                            <td>Saurabh Aggarwal</td>
+                            <td>SAIVDTUN</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>142.</td>
+                            <td></td>
+                            <td>P3</td>
+                            <td>IVD</td>
+                            <td>Bihar</td>
+                            <td>Choraut</td>
+                            <td>Saurabh Aggarwal</td>
+                            <td>Saurabh Aggarwal</td>
+                            <td>SAIVDCHO</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>143.</td>
+                            <td></td>
+                            <td>P7A</td>
+                            <td>IVD</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Dindori</td>
+                            <td>Ranjani Saigal##### Sudha Subbaraman##### Anu Chitrapu##### Latha Krishna##### Meena
+                                Subramanyam </td>
+                            <td>Ranjani Saigal##### Sudha Subbaraman##### Anu Chitrapu##### Latha Krishna##### Meena
+                                Subramanyam</td>
+                            <td>RSIVDDIN</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>144.</td>
+                            <td></td>
+                            <td>P5</td>
+                            <td>IVD</td>
+                            <td>Uttarakhand</td>
+                            <td>Sitarganj</td>
+                            <td>Jainco Buildcon Pvt. Ltd</td>
+                            <td>Jainco Buildcon Pvt. Ltd</td>
+                            <td>JBIVDSIT</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>145.</td>
+                            <td></td>
+                            <td>P1</td>
+                            <td>WEC</td>
+                            <td>Assam</td>
+                            <td>Kokrajhar</td>
+                            <td>Saurabh Aggarwal</td>
+                            <td>Saurabh Aggarwal</td>
+                            <td>SAWECKOK</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>146.</td>
+                            <td></td>
+                            <td>P7A</td>
+                            <td>WEC</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Bothia Pura</td>
+                            <td>Saurabh Aggarwal</td>
+                            <td>Saurabh Aggarwal</td>
+                            <td>SAWECBOT</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>147.</td>
+                            <td></td>
+                            <td>P7A</td>
+                            <td>WEC</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Midhli</td>
+                            <td>Narinder N. Sehgal</td>
+                            <td>Narinder N. Sehgal</td>
+                            <td>NNWECMID</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>148.</td>
+                            <td></td>
+                            <td>P5</td>
+                            <td>IVD</td>
+                            <td>Uttarakhand</td>
+                            <td>Nanakmatta</td>
+                            <td>Perfection of Man Foundation</td>
+                            <td>Perfection Of Man Foundation</td>
+                            <td>POIVDNAN</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>149.</td>
+                            <td></td>
+                            <td>P6</td>
+                            <td>IVD</td>
+                            <td>Punjab</td>
+                            <td>Lodwan</td>
+                            <td>Sierra Circuits</td>
+                            <td>Sierra Circuits</td>
+                            <td>SCIVDLOD</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>150.</td>
+                            <td></td>
+                            <td>P8</td>
+                            <td>EOW</td>
+                            <td>Gujarat</td>
+                            <td>Dahod</td>
+                            <td>Asha - Vijay Foundation Inc</td>
+                            <td>Asha-Vijay Foundation Inc.</td>
+                            <td>AVEOWDAH</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>151.</td>
+                            <td></td>
+                            <td>P2</td>
+                            <td>IVD</td>
+                            <td>Odisha</td>
+                            <td>Bisra</td>
+                            <td>Bakersfield Group</td>
+                            <td>Bakersfield Group</td>
+                            <td>BGIVDBIS</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>152.</td>
+                            <td></td>
+                            <td>P3</td>
+                            <td>WEC</td>
+                            <td>Jharkhand</td>
+                            <td>Simdega </td>
+                            <td>GEP Finance</td>
+                            <td>GEP Finance</td>
+                            <td>GFWECSIM</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>153.</td>
+                            <td></td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Maharashtra</td>
+                            <td>Vinval </td>
+                            <td>Ranjani and Anil Saigal</td>
+                            <td>Ranjani and Anil Saigal</td>
+                            <td>RAWECVIN</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>154.</td>
+                            <td></td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Gujarat</td>
+                            <td>Utar Sarsva##### Mahisagar</td>
+                            <td>Surekha Shah</td>
+                            <td>Surekha Shah</td>
+                            <td>SSWECUTA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>155.</td>
+                            <td></td>
+                            <td>P7A</td>
+                            <td>WEC</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Jamnya</td>
+                            <td>Dental Associates of Marlborough & Anonymous & Dr. Sanjiv Nehra and Mrs. Manpreet Nehra
+                            </td>
+                            <td>Dental Associates of Marlborough and Anonymous and Dr. Sanjiv Nehra and Shrimati
+                                Manpreet Nehra</td>
+                            <td>DAWECJAM</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>156.</td>
+                            <td></td>
+                            <td>P4</td>
+                            <td>IVD</td>
+                            <td>Central U.P</td>
+                            <td>Mayorepore</td>
+                            <td>Sarva Mangal Family Trust</td>
+                            <td>Sarva Mangal Family Trust</td>
+                            <td>SMIVDMAY</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>157.</td>
+                            <td></td>
+                            <td>P10</td>
+                            <td>WEC</td>
+                            <td>Tamil Nadu</td>
+                            <td>Pandalur</td>
+                            <td>Meenakshi Sreeraman & Viswanathan Sivaramakrishnan</td>
+                            <td>Meenakshi Sreeraman and Viswanathan Sivaramakrishnan</td>
+                            <td>MSWECPAN</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>158.</td>
+                            <td></td>
+                            <td>P3</td>
+                            <td>WEC</td>
+                            <td>Bihar</td>
+                            <td>Pavapuri or Girik</td>
+                            <td>Mukesh and Nimi Turakhia</td>
+                            <td>Mukesh and Nimi Turakhia</td>
+                            <td>MNWECPAV</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>159.</td>
+                            <td></td>
+                            <td>P9</td>
+                            <td>WEC</td>
+                            <td>Andhra Pradesh</td>
+                            <td>Kowthalan</td>
+                            <td>Ashok and Praveena Danda &16 Multiple Donor</td>
+                            <td>Ashok and Praveena Danda and16 Multiple Donor</td>
+                            <td>APWECKOW</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>160.</td>
+                            <td></td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Maharashtra</td>
+                            <td>Javhar</td>
+                            <td>Dinesh Shah</td>
+                            <td>Dinesh Shah</td>
+                            <td>DSWECJAV</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>161.</td>
+                            <td></td>
+                            <td>P6</td>
+                            <td>IVD</td>
+                            <td>Jammu And Kashmir</td>
+                            <td>Naushera</td>
+                            <td>Sarva Mangal Family Trust</td>
+                            <td>Sarva Mangal Family Trust</td>
+                            <td>SMIVDNAU</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>162.</td>
+                            <td></td>
+                            <td>P7B</td>
+                            <td>IVD</td>
+                            <td>Rajasthan</td>
+                            <td>Viratnagar</td>
+                            <td>Sarva Mangal Family Trust</td>
+                            <td>Sarva Mangal Family Trust</td>
+                            <td>SMIVDVIR</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>163.</td>
+                            <td></td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Gujarat</td>
+                            <td>Gothib##### Mahisagar</td>
+                            <td>Narayan and Kalpana Doshi & Jayendra and Shaku Parikh</td>
+                            <td>Narayan and Kalpana Doshi and Jayendra and Shaku Parikh</td>
+                            <td>NKWECGOT</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>164.</td>
+                            <td></td>
+                            <td>P7A</td>
+                            <td>IVD</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Bajna</td>
+                            <td>Sarva Mangal Family Trust</td>
+                            <td>Sarva Mangal Family Trust</td>
+                            <td>SMIVDBAJ</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>165.</td>
+                            <td></td>
+                            <td>P3</td>
+                            <td>GRC</td>
+                            <td>Jharkhand</td>
+                            <td>Karanjo</td>
+                            <td>Ajay Poddar/Artech (USA) & Land by Indian Donor </td>
+                            <td>E-City Groups</td>
+                            <td>ECGRCKAR</td>
+                            <td>CSR</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>166.</td>
+                            <td></td>
+                            <td>P3</td>
+                            <td>WEC</td>
+                            <td>Jharkhand</td>
+                            <td>Gandey</td>
+                            <td>Bhalchandra and Minaxi Shah Charity Fund</td>
+                            <td>Bhalchandra and Minaxi Shah Charity Fund</td>
+                            <td>BMWECGAN</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>167.</td>
+                            <td></td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Maharashtra</td>
+                            <td>Katkoobh</td>
+                            <td>Gunjan Sinha</td>
+                            <td>Gunjan Sinha</td>
+                            <td>GSWECKAT</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>168.</td>
+                            <td></td>
+                            <td>P7A</td>
+                            <td>IVD</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Jhirnia</td>
+                            <td>Sarva Mangal Family Trust</td>
+                            <td>Sarva Mangal Family Trust</td>
+                            <td>SMIVDJHI</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>169.</td>
+                            <td></td>
+                            <td>P7A</td>
+                            <td>GRC</td>
+                            <td>Madhya Pradesh</td>
+                            <td>Khargone</td>
+                            <td>Chirag & Chintu Patel (USA) & Land by Indian Donor</td>
+                            <td>Self Funded By Local Samiti/EGF Delhi</td>
+                            <td>SFGRCKHA</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>170.</td>
+                            <td></td>
+                            <td>P5</td>
+                            <td>WEC</td>
+                            <td>Western U.P</td>
+                            <td>Meerut</td>
+                            <td>Mayank And Manisha</td>
+                            <td>Mayank and Manisha</td>
+                            <td>MMWECMEE</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>171.</td>
+                            <td></td>
+                            <td>P8</td>
+                            <td>WEC</td>
+                            <td>Gujarat</td>
+                            <td>Shamla ji</td>
+                            <td>Smt. Surekha Shah Ref. Kamlesh Shah</td>
+                            <td>Shrimati Surekha Shah Ref. Kamlesh Shah</td>
+                            <td>SSWECSHA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>172.</td>
+                            <td></td>
+                            <td>P5</td>
+                            <td>WEC</td>
+                            <td>Haryana</td>
+                            <td>Machhgarh</td>
+                            <td>Dr. Chandna And Family</td>
+                            <td>Dr. Chandna And Family</td>
+                            <td>CAWECMAC</td>
+                            <td>E.V.F Canada Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>173.</td>
+                            <td></td>
+                            <td>P3</td>
+                            <td>IVD</td>
+                            <td>Bihar</td>
+                            <td>Deoroad</td>
+                            <td>Mrugesh and Pallavi Parikh</td>
+                            <td>Mrugesh and Pallavi Parikh</td>
+                            <td>MPIVDDEO</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>174.</td>
+                            <td></td>
+                            <td>P7B</td>
+                            <td>IVD</td>
+                            <td>Rajasthan</td>
+                            <td>Puskar </td>
+                            <td>Drs.Jawahar&vijay Taunk</td>
+                            <td>Dr. Jawahar and Vijay Taunk</td>
+                            <td>JVIVDPUS</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>175.</td>
+                            <td></td>
+                            <td>P2</td>
+                            <td>GRC</td>
+                            <td>Odisha</td>
+                            <td>Siriapali##### Jharsuguda</td>
+                            <td>India Funded</td>
+                            <td>Self Funded By Local Samiti/EGF Delhi</td>
+                            <td>SFGRCSIR</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>176.</td>
+                            <td></td>
+                            <td>P6</td>
+                            <td>IVD</td>
+                            <td>Jammu And Kashmir</td>
+                            <td>Saaol</td>
+                            <td>Jainco Buildcon Pvt. Ltd</td>
+                            <td>Jainco Buildcon Pvt. Ltd</td>
+                            <td>JBIVDSAA</td>
+                            <td>80G</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>177.</td>
+                            <td></td>
+                            <td>P5</td>
+                            <td>GRC</td>
+                            <td>Haryana</td>
+                            <td>Sui</td>
+                            <td>M/s Jindal Group</td>
+                            <td>M/S Jindal Group</td>
+                            <td>JGGRCSUI</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>178.</td>
+                            <td></td>
+                            <td>P4</td>
+                            <td>WEC</td>
+                            <td>Eastern U.P</td>
+                            <td>Mohansarai</td>
+                            <td>Perfection Of Man Foundation - Satish Mallick</td>
+                            <td>Perfection Of Man Foundation - Satish Mallick</td>
+                            <td>POWECMOH</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>179.</td>
+                            <td></td>
+                            <td>P6</td>
+                            <td>IVD</td>
+                            <td>Himachal Pradesh</td>
+                            <td>Sihunta#####Nurpur</td>
+                            <td>Jainco Buildcon Pvt. Ltd</td>
+                            <td>Jainco Buildcon Pvt. Ltd</td>
+                            <td>JBIVDSIH</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>180.</td>
+                            <td></td>
+                            <td>P6</td>
+                            <td>IVD</td>
+                            <td>Himachal Pradesh</td>
+                            <td>Nagbhai##### Manali</td>
+                            <td>Jainco Buildcon Pvt. Ltd</td>
+                            <td>Jainco Buildcon Pvt. Ltd</td>
+                            <td>JBIVDNAG</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>181.</td>
+                            <td></td>
+                            <td>P6</td>
+                            <td>IVD</td>
+                            <td>Himachal Pradesh</td>
+                            <td>Rohru##### Shimla</td>
+                            <td>Jainco Buildcon Pvt. Ltd</td>
+                            <td>Jainco Buildcon Pvt. Ltd</td>
+                            <td>JBIVDROH</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>182.</td>
+                            <td></td>
+                            <td>Pan India</td>
+                            <td>Other</td>
+                            <td>Pan India</td>
+                            <td>Pan India</td>
+                            <td>Satish Mallick- Perfection of Man Foundation</td>
+                            <td>Perfection of Man Foundation - Satish Mallick</td>
+                            <td>POOTHPAN</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>183.</td>
+                            <td></td>
+                            <td>P3</td>
+                            <td>WEC</td>
+                            <td>Jharkhand</td>
+                            <td>Dev Pahari</td>
+                            <td>Monu Shah</td>
+                            <td>Monu Shah</td>
+                            <td>MSWECDEV</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>184.</td>
+                            <td></td>
+                            <td>P1</td>
+                            <td>WEC</td>
+                            <td>Assam</td>
+                            <td>Tinsukia</td>
+                            <td>Self Funded By Local Samiti/EGF Delhi</td>
+                            <td>Self Funded By Local Samiti/EGF Delhi</td>
+                            <td>SFWECTIN</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>185.</td>
+                            <td></td>
+                            <td>P6</td>
+                            <td>IVD</td>
+                            <td>Himachal Pradesh</td>
+                            <td>Timbi##### Shillai</td>
+                            <td>Jainco Buildcon Pvt. Ltd</td>
+                            <td>Jainco Buildcon Pvt. Ltd</td>
+                            <td>JBIVDTIM</td>
+                            <td>80G</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>186.</td>
+                            <td></td>
+                            <td>P9</td>
+                            <td>IVD</td>
+                            <td>Andhra Pradesh</td>
+                            <td>ODC##### Anantapur</td>
+                            <td>Subra Dravida</td>
+                            <td>Subra Dravida</td>
+                            <td>SDIVDODC</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+                        <tr>
+                            <td>187.</td>
+                            <td></td>
+                            <td>P8</td>
+                            <td>EOW</td>
+                            <td>Gujarat</td>
+                            <td>Shamlaji</td>
+                            <td>Haren Joshi And Pratima Tolat</td>
+                            <td>Haren Joshi and Pratima Tolat</td>
+                            <td>HJEOWSHA</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>New Project</td>
+                        </tr>
+                        <tr>
+                            <td>187.</td>
+                            <td></td>
+                            <td>P10</td>
+                            <td>EOW</td>
+                            <td>Karnataka</td>
+                            <td>Bidar</td>
+                            <td>Jugal And Raj Malani</td>
+                            <td>Jugal and Raj Malani</td>
+                            <td>JREOWBID</td>
+                            <td>E.V.F USA Reported</td>
+                            <td>Operational</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+		function filterData(tempVal){
+			$(".contentLowerSection").find('table tbody tr').each(function(){
+		          $(this).show();
+		    })	
+			
+				var val = $("#selProjectLoc").val();
+				if(val !== "-1"){
+					$(".contentLowerSection").find('table tbody tr').each(function(){
+				      if($(this).find('td:eq(5)').text() != val){
+				          $(this).hide();
+				      }
+				    })	
+				}
+			
+			
+				val = $("#selProjectCode").val();
+				if(val !== "-1"){
+					$(".contentLowerSection").find('table tbody tr').each(function(){
+				      if($(this).find('td:eq(8)').text() != val){
+				          $(this).hide();
+				      }
+				    })	
+				}
+				
+				val = $("#selOPStatus").val();
+				if(val !== "-1"){
+					$(".contentLowerSection").find('table tbody tr').each(function(){
+				      if($(this).find('td:eq(10)').text() != val){
+				          $(this).hide();
+				      }
+				    })	
+				}
+				val = $("#selState").val();
+				if(val !== "-1"){
+					$(".contentLowerSection").find('table tbody tr').each(function(){
+				      if($(this).find('td:eq(4)').text() != val){
+				          $(this).hide();
+				      }
+				    })	
+				}
+			
+		}
+    </script>
+</body>
+
+</html>
