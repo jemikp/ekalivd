@@ -13,9 +13,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/css/bootstrap-multiselect.min.css" integrity="sha512-fZNmykQ6RlCyzGl9he+ScLrlU0LWeaR6MO/Kq9lelfXOw54O63gizFMSD5fVgZvU1YfDIc6mxom5n60qJ1nCrQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/js/bootstrap-multiselect.min.js" integrity="sha512-lxQ4VnKKW7foGFV6L9zlSe+6QppP9B2t+tMMaV4s4iqAv4iHIyXED7O+fke1VeLNaRdoVkVt8Hw/jmZ+XocsXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/css/bootstrap-multiselect.min.css"
+          integrity="sha512-fZNmykQ6RlCyzGl9he+ScLrlU0LWeaR6MO/Kq9lelfXOw54O63gizFMSD5fVgZvU1YfDIc6mxom5n60qJ1nCrQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/js/bootstrap-multiselect.min.js"
+            integrity="sha512-lxQ4VnKKW7foGFV6L9zlSe+6QppP9B2t+tMMaV4s4iqAv4iHIyXED7O+fke1VeLNaRdoVkVt8Hw/jmZ+XocsXQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet"
+          type="text/css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
 </head>
 <body>
@@ -39,14 +45,17 @@
         flex-direction: row;
         gap: 5px;
     }
+
     #fundAllocation .navbar-nav {
         float: left;
         margin: 0;
     }
-    #fundAllocation .navbar-brand, .navbar-nav>li>a {
-        text-shadow: 0 1px 0 rgba(255,255,255,.25);
+
+    #fundAllocation .navbar-brand, .navbar-nav > li > a {
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
     }
-    #fundAllocation .navbar-nav>li>a {
+
+    #fundAllocation .navbar-nav > li > a {
         padding-top: 15px;
         padding-bottom: 15px;
     }
@@ -65,6 +74,8 @@
         text-decoration: none;
         padding-top: 0;
         padding-bottom: 0;
+        border: 0;
+        box-shadow: none;
     }
 
     #fundAllocation a.nav-link.wcm-txt {
@@ -100,7 +111,7 @@
         color: #fff;
         font-weight: 700;
         border: none;
-        border-radius: 0;
+        border-radius: 5px;
         font-size: 16px;
         line-height: 20px;
     }
@@ -781,6 +792,10 @@
         color: #5E92C1;
     }
 
+    #fundAllocation i.fa-solid.fa-arrows-split-up-and-left {
+        color: #E9AA4F;
+    }
+
     #fundAllocation .BlueDialog .form-control {
         padding: 3px 10px;
         height: 25px;
@@ -794,7 +809,7 @@
         line-height: 30px;
     }
 
-    #fundAllocation .form-group .form-control {
+    #fundAllocation .form-control {
         color: #303030 !important;
         font-size: 16px;
         font-style: normal;
@@ -816,7 +831,7 @@
         background: #FFF;
     }
 
-    #fundAllocation .form-group .dropdown-toggle {
+    #fundAllocation .form-control .dropdown-toggle {
         width: 100%;
         color: #303030 !important;
         text-align: left;
@@ -832,6 +847,39 @@
         height: 32px;
     }
 
+    #fundAllocation .dropdown-toggle {
+        width: 100%;
+        color: #303030 !important;
+        text-align: left;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 5px;
+        border: 0.5px solid #A9A9A9;
+        background: #FFF;
+        box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.25);
+        height: 32px;
+    }
+
+    #fundAllocation .menu-dropdown .dropdown-toggle {
+        width: 100%;
+        border: 0!important;
+        box-shadow: none!important;
+        color: #303030 !important;
+        text-align: left;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 5px;
+        border: 0.5px solid #A9A9A9;
+        background: #FFF;
+        box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.25);
+        height: 32px;
+    }
     #fundAllocation .form-group .dropdown-toggle:hover {
         background-color: #eeeeee;
     }
@@ -847,6 +895,7 @@
     #fundAllocation tr td:nth-child(1) {
         text-align: left !important;
     }
+
     #fundAllocation tr th:nth-child(1) {
         text-align: left !important;
     }
@@ -854,6 +903,7 @@
     #fundAllocation tr td:nth-child(2) {
         text-align: left !important;
     }
+
     /*Popup Css Start*/
     #fundAllocation .modal-header {
         background-color: #F1592A;
@@ -866,6 +916,11 @@
         width: 600px;
     }
 
+    #fundAllocation #fundBifurcationPopup .modal-dialog {
+        max-width: 1400px !important;
+        width: 1400px;
+    }
+
     #fundAllocation .filter-section {
         background-color: #E9F8FF;
         padding: 15px !important;
@@ -873,10 +928,12 @@
         display: flex;
         flex-direction: column;
     }
-    .fade{
+
+    .fade {
         background: rgba(40, 43, 49, .8);
         -webkit-transition: all 0.3s;
     }
+
     #fundAllocation .mask-header {
         align-items: center;
         display: flex;
@@ -954,13 +1011,16 @@
         font-weight: 600;
         line-height: normal;
     }
-    .popover{
+
+    .popover {
         max-width: 750px;
     }
-    .popover-body{
+
+    .popover-body {
         padding: 0 !important;
     }
-    .popover-header{
+
+    .popover-header {
         color: #41AB46 !important;
         font-size: 20px !important;
         background-color: #fff;
@@ -971,7 +1031,8 @@
         /* margin-bottom: 10px; */
         padding: 15px !important;
     }
-    .pophoverContainer header{
+
+    .pophoverContainer header {
         color: #41AB46 !important;
         font-size: 20px !important;
         background-color: #fff;
@@ -982,10 +1043,12 @@
         /* margin-bottom: 10px; */
         padding: 15px !important;
     }
+
     .pophoverContainer .chat-section .chat-body {
         padding: 0 0 15px 15px;
         height: 260px;
     }
+
     .pophoverContainer .chat-section .chat-body-height {
         padding-right: 10px;
         display: flex;
@@ -993,6 +1056,7 @@
         justify-content: flex-end;
         gap: 10px;
     }
+
     .pophoverContainer .chat-section .chat-box.other-chat {
         justify-content: flex-start;
         border-radius: 0px 10px 10px 0px;
@@ -1000,16 +1064,19 @@
         width: fit-content;
         align-items: flex-start;
     }
+
     .pophoverContainer .chat-section .chat-box {
         display: flex;
         /* align-items: center; */
         gap: 5px;
         flex-direction: column;
     }
+
     .pophoverContainer .chat-section .chat-box.my-chat {
         justify-content: end;
         align-items: end;
     }
+
     .pophoverContainer .chat-section .msg-info-name {
         color: #1C8BCB;
         font-size: 14px;
@@ -1017,6 +1084,7 @@
         font-weight: 600;
         line-height: normal;
     }
+
     .pophoverContainer .chat-section .chat {
         max-width: 450px;
         /* padding: 15px; */
@@ -1031,6 +1099,7 @@
         font-weight: 600;
         line-height: normal;
     }
+
     .pophoverContainer .chat-section .msger-inputarea {
         display: flex;
         padding: 10px;
@@ -1038,43 +1107,49 @@
         gap: 5px;
         align-items: center;
     }
-    .pophoverContainer .modal-footer{
+
+    .pophoverContainer .modal-footer {
         display: none;
     }
+
     .pophoverContainer i.fa-solid.fa-paper-plane {
         color: #1C8BCB;
         font-size: 18px;
         padding: 0 5px;
     }
+
     /*overflow css start*/
     .pophoverContainer .scrollbar {
         width: 100%;
         overflow-y: auto;
     }
+
     .pophoverContainer .force-overflow {
         min-height: 100%;
     }
-    .pophoverContainer #style-1::-webkit-scrollbar-track
-    {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+
+    .pophoverContainer #style-1::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
         background-color: #F5F5F5;
     }
-    .pophoverContainer #style-1::-webkit-scrollbar
-    {
+
+    .pophoverContainer #style-1::-webkit-scrollbar {
         width: 12px;
         background-color: #F5F5F5;
     }
-    .pophoverContainer #style-1::-webkit-scrollbar-thumb
-    {
+
+    .pophoverContainer #style-1::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
         background-color: #ccc;
     }
-    .dropdown-menu[data-bs-popper]{
+
+    .dropdown-menu[data-bs-popper] {
         right: 0 !important;
         left: auto;
     }
+
     .menu-dropdown .dropdown-toggle {
         background-color: unset;
         color: #283891;
@@ -1084,20 +1159,24 @@
         font-weight: 600;
         line-height: normal;
     }
+
     .menu-dropdown .dropdown-toggle:hover {
         background-color: unset;
         color: #303030;
         border-color: unset;
     }
+
     .menu-dropdown .dropdown-toggle:active {
         background-color: unset;
         color: #303030;
         border-color: unset;
     }
-    .dropdown-menu[data-bs-popper]{
+
+    .dropdown-menu[data-bs-popper] {
         right: 0 !important;
         left: auto;
     }
+
     .menu-dropdown .dropdown-toggle {
         background-color: unset;
         color: #283891;
@@ -1107,16 +1186,19 @@
         font-weight: 600;
         line-height: normal;
     }
+
     .menu-dropdown .dropdown-toggle:hover {
         background-color: unset;
         color: #303030;
         border-color: unset;
     }
+
     .menu-dropdown .dropdown-toggle:active {
         background-color: unset;
         color: #303030;
         border-color: unset;
     }
+
     /*overflow css end*/
     /*Popup Css Start*/
 </style>
@@ -1130,6 +1212,7 @@
         margin: 0;
         padding: 0;
     }
+
     .wizard-content-left {
         background-blend-mode: darken;
         background-color: rgba(0, 0, 0, 0.45);
@@ -1381,6 +1464,7 @@
             height: auto;
         }
     }
+
     .form-set {
         display: flex;
         flex-direction: column;
@@ -1392,10 +1476,22 @@
         background: #E9F7FF;
         box-shadow: 0px 3px 5px -5px rgba(0, 0, 0, 0.25);
     }
+
+    #fundAllocation .btn-blue {
+        background: #17a2b8;
+        border-color: #17a2b8;
+        color: #fff;
+    }
+    #fundAllocation .btn-red {
+        background: #41AB46;
+        border-color: #41AB46;
+        color: #fff;
+    }
 </style>
 <div id="fundAllocation" class="BlueDialog">
     <nav class="navbar navbar-expand-lg">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleNav" aria-controls="toggleNav" aria-expanded="false" aria-label="Toggle navigation" style="display: none;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleNav"
+                aria-controls="toggleNav" aria-expanded="false" aria-label="Toggle navigation" style="display: none;">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
         <a class="navbar-brand p-0" href="https://www.ekal.org/in/" style="height: fit-content;">
@@ -1403,27 +1499,29 @@
         <div class="collapse navbar-collapse" id="toggleNav" style="display: flex !important;">
             <ul class="navbar-nav nav-list p-0">
 
-                <li class="nav-item" >
-                    <a class="nav-link" >HOME</a>
+                <li class="nav-item">
+                    <a class="nav-link">HOME</a>
                 </li>
-                <li class="nav-item" >
-                    <a class="nav-link" >ABOUT</a>
+                <li class="nav-item">
+                    <a class="nav-link">ABOUT</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CAUSES <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">CAUSES <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">0</a></li>
                         <li><a href="#">1</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FUTURE PLAN <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">FUTURE PLAN <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">0</a></li>
                         <li><a href="#">1</a></li>
                     </ul>
                 </li>
-                <li class="nav-item" >
+                <li class="nav-item">
                     <a class="nav-link" data-toggle="dropdown" aria-expanded="false">REPORTS</a>
                 </li>
                 <li class="nav-item top-navitembar" style="
@@ -1438,7 +1536,8 @@
                         <div hidden="">
                             <div data-name="popover-content">
                                 <div class="input-group">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Search" name="search">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Search"
+                                           name="search">
                                     <div class="input-group-btn">
                                         <button class="btn btn-danger" type="submit">
                                             <i class="bi bi-search fa fa-search"></i>
@@ -1448,95 +1547,117 @@
                             </div>
                         </div>
 
-                        <a id="example" tabindex="0" class="dropdown-toggle nav-link" role="button" data-bs-toggle="popover" title="Search Section"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        <a id="example" tabindex="0" class="dropdown-toggle nav-link" role="button"
+                           data-bs-toggle="popover" title="Search Section"><i class="fa fa-search"
+                                                                              aria-hidden="true"></i></a>
 
                     </section>
                 </li>
             </ul>
-            <ul class="navbar-nav nav-list p-0" >
-                <li class="nav-item top-navitembar" >
-                    <a class="nav-link wcm-txt" >Welcome Mahesh Navani !</a>
-                </li><li class="nav-item top-navitembar" >
-                <a class="nav-link"  onclick="window.location.href='./public/login.html'">Log Out</a>
-            </li><li class="nav-item top-navitembar" style="border: 0;">
-                <div class="menu-dropdown btn-group">
-                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Menu</button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./ivdMaster.html'">IVD Master</a></li>
-                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./programMaster.html'">Program Master</a></li>
-                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./user.html'">User Master</a></li>
-                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./role.html'">Role Master</a></li>
-                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./taskMaster.html'">Task Master</a></li>
-                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./itemMaster.html'">Item Master</a></li>
-                    </ul>
-                </div>
-            </li>
+            <ul class="navbar-nav nav-list p-0">
+                <li class="nav-item top-navitembar">
+                    <a class="nav-link wcm-txt">Welcome Mahesh Navani !</a>
+                </li>
+                <li class="nav-item top-navitembar">
+                    <a class="nav-link" onclick="window.location.href='./public/login.html'">Log Out</a>
+                </li>
+                <li class="nav-item top-navitembar" style="border: 0;">
+                    <div class="menu-dropdown btn-group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">Menu
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="javascript:;"
+                                   onclick="window.location.href='./ivdMaster.html'">IVD Master</a></li>
+                            <li><a class="dropdown-item" href="javascript:;"
+                                   onclick="window.location.href='./programMaster.html'">Program Master</a></li>
+                            <li><a class="dropdown-item" href="javascript:;"
+                                   onclick="window.location.href='./user.html'">User Master</a></li>
+                            <li><a class="dropdown-item" href="javascript:;"
+                                   onclick="window.location.href='./role.html'">Role Master</a></li>
+                            <li><a class="dropdown-item" href="javascript:;"
+                                   onclick="window.location.href='./taskMaster.html'">Task Master</a></li>
+                            <li><a class="dropdown-item" href="javascript:;"
+                                   onclick="window.location.href='./itemMaster.html'">Item Master</a></li>
+                        </ul>
+                    </div>
+                </li>
 
 
             </ul>
 
-        </div></nav>
+        </div>
+    </nav>
     <div class="homepagewrapper" style="padding: 0 15px;">
         <div class="row wrapper-homepage mx-auto" style="margin-left: auto;margin-right: auto;">
             <div class="bg-2"><img src="public/img/bg-img-2.png" style="width: 100%;"></div>
             <div class="col-sm-12" style="padding:0 15px; z-index: 10;position: relative;">
                 <div class="section-header" style="margin-top: 40px;">
 
-                    <img src="public/img/donate.png" style="width: 35px;">Fund Allocation</div>
+                    <img src="public/img/donate.png" style="width: 35px;">Fund Allocation
+                </div>
                 <div class="col-sm-12" style="/* overflow: auto; *//* height: 358px; *//* margin: 0 15px; */">
-                    <div class="panel panel-default" >
+                    <div class="panel panel-default">
 
                         <div class="" style="
     float: right;
     margin-bottom: 20px;
-"><button type="button" id="btnAddIVD" href="https://www.ekal.org/in/donation" target="_self" class="btn btn-main sml_btn" ><i class="fa fa-plus" aria-hidden="true"></i> Add
-                        </button></div><table class="table table-responsive table-hover" s="" tyle="">
-                        <thead>
-                        <tr>
-                            <th>Fund Bifurcation ID</th>
-                            <th>Date</th>
-                            <th>Name of Donor</th>
-                            <th>Received Amount</th>
-                            <th>Balance</th>
-                            <th>Fund Allocated</th>
-                            <th>What</th>
-                            <th>Who ?</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>EGFFB - 1</td>
-                            <td>17-Oct-2023</td>
-                            <td>EVFUSA</td>
-                            <td>₹ 1000000</td>
-                            <td>₹ 500000</td>
-                            <td>₹ 500000</td>
-                            <td>Fund Bifurcation</td>
-                            <td>Project Team/EVFUSA</td>
-                            <td>Not Bifurcated</td>
-                            <td><div class="icon-set">
-                                <i class="fa fa-edit" aria-hidden="true"></i>
-                                <i class="fa fa-trash" aria-hidden="true"></i>
-                            </div></td>
-                        </tr>
+">
+                            <button type="button" id="btnAddIVD" href="https://www.ekal.org/in/donation" target="_self"
+                                    class="btn btn-main sml_btn"><i class="fa fa-plus" aria-hidden="true"></i> Add
+                            </button>
+                        </div>
+                        <table class="table table-responsive table-hover" s="" tyle="">
+                            <thead>
+                            <tr>
+                                <th>Fund Bifurcation ID</th>
+                                <th>Date</th>
+                                <th>Name of Donor</th>
+                                <th>Received Amount</th>
+                                <th>Balance</th>
+                                <th>Fund Allocated</th>
+                                <th>What</th>
+                                <th>Who ?</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>EGFFB - 1</td>
+                                <td>17-Oct-2023</td>
+                                <td>EVFUSA</td>
+                                <td>₹ 1000000</td>
+                                <td>₹ 500000</td>
+                                <td>₹ 500000</td>
+                                <td>Fund Bifurcation</td>
+                                <td>Project Team/EVFUSA</td>
+                                <td>Not Bifurcated</td>
+                                <td>
+                                    <div class="icon-set">
+                                        <i id="fundBifurcation" class="fa-solid fa-arrows-split-up-and-left"></i>
+                                        <i class="fa fa-edit" aria-hidden="true"></i>
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </div>
+                                </td>
+                            </tr>
 
 
-
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
                     </div>
 
                 </div>
             </div>
         </div>
-       <div class="modal fade show" id="fundallocationPopup" tabindex="-1" aria-labelledby="newTaskLabel" style="display: block;padding-left: 0px;display: none;" aria-modal="true" role="dialog">
+        <div class="modal fade show" id="fundallocationPopup" tabindex="-1" aria-labelledby="newTaskLabel"
+             style="display: block;padding-left: 0px;display: none;" aria-modal="true" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header justify-content-between" style="">
                         <h5 class="modal-title" id="newTaskLabel">Fund Allocation</h5>
-                        <button type="button" id="dialogClose" class="close" data-dismiss="modal" aria-label="Close" autocomplete="off" style="background: none;border: 0;">
+                        <button type="button" id="dialogClose" class="close" data-dismiss="modal" aria-label="Close"
+                                autocomplete="off" style="background: none;border: 0;">
                             <i class="fa-regular fa-circle-xmark" style="color: #fff;font-size: 20px;"></i>
                         </button>
                     </div>
@@ -1545,13 +1666,18 @@
                             <div class="col-12 p-0 filter-section">
 
                                 <div style="display: flex;flex-direction: column;gap: 15px;">
-                                     <div class="col-sm-12 mask-header" style="">
-                                        <label class="form-label-custom" style="width: 26.666667%;">Donation ID                                           :</label>
+                                    <div class="col-sm-12 mask-header" style="">
+                                        <label class="form-label-custom" style="width: 26.666667%;">Donation ID
+                                            :</label>
                                         <div class="form-group m-0 p-0" style="width: 62.333333%;">
                                             <div class="dropdown">
-                                                <butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Donation ID</butoon>
+                                                <butoon class="form-control btn btn-secondary dropdown-toggle"
+                                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Select Donation ID
+                                                </butoon>
                                                 <ul class="dropdown-menu" style="">
-                                                    <li><a class="dropdown-item" href="#" onclick="selectDonation()">1 (Janki Foundation)</a></li>
+                                                    <li><a class="dropdown-item" href="#" onclick="selectDonation()">1
+                                                        (Janki Foundation)</a></li>
                                             </div>
 
                                         </div>
@@ -1560,29 +1686,35 @@
                                         <label class="form-label-custom" style="width: 26.666667%;">Donor
                                             :</label>
                                         <div class="form-group m-0 p-0" style="width: 62.333333%;">
-                                            <input type="text" class="form-control login-field" readonly autocomplete="off" id="donorName">
+                                            <input type="text" class="form-control login-field" readonly
+                                                   autocomplete="off" id="donorName">
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-sm-12 mask-header" style="">
-                                        <label class="form-label-custom" style="width: 26.666667%;">Amount Received in INR
+                                        <label class="form-label-custom" style="width: 26.666667%;">Amount Received in
+                                            INR
                                             :</label>
                                         <div class="form-group m-0 p-0" style="width: 62.333333%;">
-                                            <input type="number" class="form-control login-field" placeholder="" readonly autocomplete="off" id="amtReceived">
+                                            <input type="number" class="form-control login-field" placeholder=""
+                                                   readonly autocomplete="off" id="amtReceived">
                                         </div>
                                     </div>
                                     <div class="col-sm-12 mask-header" style="">
                                         <label class="form-label-custom" style="width: 26.666667%;">Balance
                                             :</label>
                                         <div class="form-group m-0 p-0" style="width: 62.333333%;">
-                                            <input type="number" class="form-control login-field" placeholder="" readonly autocomplete="off" id="balance">
+                                            <input type="number" class="form-control login-field" placeholder=""
+                                                   readonly autocomplete="off" id="balance">
                                         </div>
                                     </div>
                                     <div class="col-sm-12 mask-header" style="">
-                                        <label class="form-label-custom" style="width: 26.666667%;">Amount to be allocated
+                                        <label class="form-label-custom" style="width: 26.666667%;">Amount to be
+                                            allocated
                                             :</label>
                                         <div class="form-group m-0 p-0" style="width: 62.333333%;">
-                                            <input type="number" class="form-control login-field" autocomplete="off" id="currencyTxt">
+                                            <input type="number" class="form-control login-field" autocomplete="off"
+                                                   id="currencyTxt">
                                         </div>
                                     </div>
 
@@ -1598,31 +1730,198 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade show" id="fundBifurcationPopup" tabindex="-1" aria-labelledby="newTaskLabel"
+             style="padding-left: 0px;/* display: none; */" aria-modal="true" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-between" style="">
+                        <h5 class="modal-title" id="newTaskLabel">Fund Bifurcation</h5>
+                        <button type="button" id="dialogClose" class="close" data-dismiss="modal" aria-label="Close"
+                                autocomplete="off" style="background: none;border: 0;">
+                            <i class="fa-regular fa-circle-xmark" style="color: #fff;font-size: 20px;"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="" id="">
+                            <div class="col-12 p-0 filter-section">
+
+                                <div style="display: flex;flex-direction: column;gap: 15px;">
+                                    <div class="col-sm-12 mask-header" style="">
+                                        <label class="form-label-custom" style="width: fit-content;">Fund Bifurcation Id
+                                            :</label>
+                                        <div class="form-group m-0 p-0" style="width: 23.333333%;">
+                                            <div class="dropdown">
+                                                <butoon class="form-control btn btn-secondary dropdown-toggle"
+                                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Select Fund Bifurcation ID
+                                                </butoon>
+                                                <ul class="dropdown-menu" style="">
+                                                    <li><a class="dropdown-item" href="#">EGFFB - 1</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn sml_btn btn-blue">Search</button>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+
+                                    <table class="table table-responsive table-hover" style="">
+                                        <thead>
+                                        <tr>
+                                            <th>Fund Bifurcation Id</th>
+                                            <th>Date</th>
+                                            <th>Name of Donor</th>
+                                            <th>Type of Fund</th>
+                                            <th>Place</th>
+                                            <th>Remittance Amount</th>
+                                            <th>Currency Type</th>
+                                            <th>Amount Receive in INR Currency</th>
+                                            <th>Banking Charges for Transaction</th>
+                                            <th>Settled Amount</th>
+                                            <th>Fund Allocated</th>
+                                            <th>Bifurcation Balance</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>EGFFB - 1</td>
+                                            <td>'Tue Oct 17 2023 00:00:00 GMT+0530 (India Standard Time)'</td>
+                                            <td>EVFUSA</td>
+                                            <td>FCRA</td>
+                                            <td>USA</td>
+                                            <td>120000</td>
+                                            <td>USD</td>
+                                            <td>9945347</td>
+                                            <td>42</td>
+                                            <td>119968</td>
+                                            <td>45900</td>
+                                            <td>74100</td>
+                                            <td>Not Completed</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-sm-12 mask-header" style="justify-content: center;">
+                                    <button type="button" class="btn sml_btn btn-red">Balance : 0</button>
+                                </div>
+                                <div class="panel panel-default">
+
+                                    <table class="table table-responsive table-hover mb-0" id="add_table" style="">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                Donation Type
+                                            </th>
+                                            <th>Donor Name</th>
+                                            <th> Project Type</th>
+
+                                            <th>Project Location</th>
+                                            <th>State</th>
+                                            <th>Donation Receiving Date</th>
+                                            <th>Donor Address</th>
+                                            <th>Donor Email Id</th>
+                                            <th>Amount</th>
+                                            <th><button class="btn btn-outline-success" id="add_row"> add
+                                            </button></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th>
+                                                <div class="dropdown">
+                                                    <butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Donation Type
+                                                    </butoon>
+                                                    <ul class="dropdown-menu" style="">
+                                                        <li><a class="dropdown-item" href="#">Donation Type</a></li>
+                                                        <li><a class="dropdown-item" href="#">New Project</a></li><li><a class="dropdown-item" href="#">Existing Project</a></li><li><a class="dropdown-item" href="#">Other Project</a></li></ul>
+                                                </div>
+                                            </th>
+                                            <th><input type="text" class="form-control login-field" placeholder="Donor Name" autocomplete="off" id="currencyTxt"></th>
+                                            <th>
+                                                <div class="dropdown">
+                                                    <butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Project Type
+                                                    </butoon>
+                                                    <ul class="dropdown-menu" style="">
+                                                        <li><a class="dropdown-item" href="#">EOW</a></li>
+                                                        <li><a class="dropdown-item" href="#">IVD</a></li><li><a class="dropdown-item" href="#">SDC</a></li><li><a class="dropdown-item" href="#">USA</a></li><li><a class="dropdown-item" href="#">WEC</a></li><li><a class="dropdown-item" href="#">GRC</a></li><li><a class="dropdown-item" href="#">CTL</a></li><li><a class="dropdown-item" href="#">Other</a></li></ul>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <input type="text" class="form-control login-field" placeholder="Project Location" autocomplete="off" id="currencyTxt">
+                                            </th><th><div class="dropdown"><butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Region</butoon> <ul class="dropdown-menu" style=""> <li><a class="dropdown-item" href="#">Andhra Pradesh</a></li><li><a class="dropdown-item" href="#">Gujarat</a></li><li><a class="dropdown-item"href="#">Maharastra</a></li><li><a class="dropdown-item" href="#">Goa</a></li></ul></div></th><th><input type="text" class="form-control login-field" placeholder="Start Date" autocomplete="off"></th> <th><input type="text" class="form-control login-field" placeholder="Address" autocomplete="off"></th><th><input type="text" class="form-control login-field" placeholder="Email ID" autocomplete="off"></th><th><input type="text" class="form-control login-field" placeholder="USD" autocomplete="off"></th>
+                                            <th> <button class="btn btn-outline-danger delete_row">remove</button></th>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-sml btn-main">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
 <script>
-	
-    $("#fundallocationPopup").addClass('hide').removeClass('show');
-    $("#fundallocationPopup").css('display','none');
-    $("#dialogClose").on("click",function (e){
-        $("#fundallocationPopup").addClass('hide').removeClass('show');
-        $("#fundallocationPopup").css('display','none');
+    $(document).ready(function() {
+
+        $('#add_row').click(function() {
+            //Add row
+            row = '';
+            row += '<tr><td><div class="dropdown"><butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Donation Type </butoon><ul class="dropdown-menu" style=""><li><a class="dropdown-item" href="#">Donation Type</a></li><li><a class="dropdown-item" href="#">New Project</a></li><li><a class="dropdown-item" href="#">Existing Project</a></li><li><a class="dropdown-item" href="#">Other Project</a></li></ul></div></td><td><input type="text" class="form-control login-field" placeholder="Donor Name" autocomplete="off" id="currencyTxt"></td><td><div class="dropdown"><butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Project Type </butoon><ul class="dropdown-menu" style=""><li><a class="dropdown-item" href="#">EOW</a></li><li><a class="dropdown-item" href="#">IVD</a></li><li><a class="dropdown-item" href="#">SDC</a></li><li><a class="dropdown-item" href="#">USA</a></li><li><a class="dropdown-item" href="#">WEC</a></li><li><a class="dropdown-item" href="#">GRC</a></li><li><a class="dropdown-item" href="#">CTL</a></li><li><a class="dropdown-item" href="#">Other</a></li></ul></div></td><td><input type="text" class="form-control login-field" placeholder="Project Location" autocomplete="off" id="currencyTxt"></td><td><div class="dropdown"><butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Region</butoon><ul class="dropdown-menu" style=""><li><a class="dropdown-item" href="#">Andhra Pradesh</a></li><li><a class="dropdown-item" href="#">Gujarat</a></li><li><a class="dropdown-item" href="#">Maharastra</a></li><li><a class="dropdown-item" href="#">Goa</a></li></ul></div></td><td><input type="text" class="form-control login-field" placeholder="Start Date" autocomplete="off"></td><td><input type="text" class="form-control login-field" placeholder="Address" autocomplete="off"></td><th><input type="text" class="form-control login-field" placeholder="Email ID" autocomplete="off"></td><td><input type="text" class="form-control login-field" placeholder="USD" autocomplete="off"></td>';
+
+            row += '<td> <button class="btn btn-outline-danger delete_row">remove</button></td></tr>';
+            $("#add_table tbody").append(row);
+        })
+
+        $("#add_table").on('click', '.delete_row', function() {
+            $(this).closest('tr').remove();
+        });
+
     });
-    $("#btnAddIVD").on("click",function (e){
-		 $("#fundallocationPopup").removeClass('hide').addClass('show');
-        $("#fundallocationPopup").css('display','block');
-       //window.location.href = "./admin.html";
+</script>
+<script>
+
+    $("#fundallocationPopup").addClass('hide').removeClass('show');
+    $("#fundallocationPopup").css('display', 'none');
+    $("#dialogClose").on("click", function (e) {
+        $("#fundallocationPopup").addClass('hide').removeClass('show');
+        $("#fundallocationPopup").css('display', 'none');
+    });
+    $("#btnAddIVD").on("click", function (e) {
+        $("#fundallocationPopup").removeClass('hide').addClass('show');
+        $("#fundallocationPopup").css('display', 'block');
+        //window.location.href = "./admin.html";
+    });
+    $("#fundBifurcationPopup").addClass('hide').removeClass('show');
+    $("#fundBifurcationPopup").css('display', 'none');
+    $("#dialogClose").on("click", function (e) {
+        $("#fundBifurcationPopup").addClass('hide').removeClass('show');
+        $("#fundBifurcationPopup").css('display', 'none');
+    });
+    $("#fundBifurcation").on("click", function (e) {
+        $("#fundBifurcationPopup").removeClass('hide').addClass('show');
+        $("#fundBifurcationPopup").css('display', 'block');
+        //window.location.href = "./admin.html";
     });
     let dataJson = {
-		"donor" : "Janki Foundation",
-		"amountReceived" : 830000,
-		"balance" : 830000
-	};
-	function selectDonation(){
-		$("#balance").val(dataJson["balance"]);
-		$("#amtReceived").val(dataJson["amountReceived"]);
-		$("#donorName").val(dataJson["donor"]);
-	}
+        "donor": "Janki Foundation",
+        "amountReceived": 830000,
+        "balance": 830000
+    };
+
+    function selectDonation() {
+        $("#balance").val(dataJson["balance"]);
+        $("#amtReceived").val(dataJson["amountReceived"]);
+        $("#donorName").val(dataJson["donor"]);
+    }
 </script>
 </html>
