@@ -917,8 +917,8 @@
     }
 
     #fundAllocation #fundBifurcationPopup .modal-dialog {
-        max-width: 1400px !important;
-        width: 1400px;
+        max-width: 90% !important;
+        width: 90%;
     }
 
     #fundAllocation .filter-section {
@@ -1736,7 +1736,7 @@
                 <div class="modal-content">
                     <div class="modal-header justify-content-between" style="">
                         <h5 class="modal-title" id="newTaskLabel">Fund Bifurcation</h5>
-                        <button type="button" id="dialogClose" class="close" data-dismiss="modal" aria-label="Close"
+                        <button type="button" id="dialogClose1" class="close" data-dismiss="modal" aria-label="Close"
                                 autocomplete="off" style="background: none;border: 0;">
                             <i class="fa-regular fa-circle-xmark" style="color: #fff;font-size: 20px;"></i>
                         </button>
@@ -1745,24 +1745,24 @@
                         <div class="" id="">
                             <div class="col-12 p-0 filter-section">
 
-                                <div style="display: flex;flex-direction: column;gap: 15px;">
-                                    <div class="col-sm-12 mask-header" style="">
-                                        <label class="form-label-custom" style="width: fit-content;">Fund Bifurcation Id
-                                            :</label>
-                                        <div class="form-group m-0 p-0" style="width: 23.333333%;">
-                                            <div class="dropdown">
-                                                <butoon class="form-control btn btn-secondary dropdown-toggle"
-                                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Select Fund Bifurcation ID
-                                                </butoon>
-                                                <ul class="dropdown-menu" style="">
-                                                    <li><a class="dropdown-item" href="#">EGFFB - 1</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <button type="button" class="btn sml_btn btn-blue">Search</button>
-                                    </div>
-                                </div>
+<!--                                <div style="display: flex;flex-direction: column;gap: 15px;">-->
+<!--                                    <div class="col-sm-12 mask-header" style="">-->
+<!--                                        <label class="form-label-custom" style="width: fit-content;">Fund Bifurcation Id-->
+<!--                                            :</label>-->
+<!--                                        <div class="form-group m-0 p-0" style="width: 23.333333%;">-->
+<!--                                            <div class="dropdown">-->
+<!--                                                <butoon class="form-control btn btn-secondary dropdown-toggle"-->
+<!--                                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                                                    Select Fund Bifurcation ID-->
+<!--                                                </butoon>-->
+<!--                                                <ul class="dropdown-menu" style="">-->
+<!--                                                    <li><a class="dropdown-item" href="#">EGFFB - 1</a></li>-->
+<!--                                                </ul>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <button type="button" class="btn sml_btn btn-blue">Search</button>-->
+<!--                                    </div>-->
+<!--                                </div>-->
                                 <div class="panel panel-default">
 
                                     <table class="table table-responsive table-hover" style="">
@@ -1803,7 +1803,7 @@
                                     </table>
                                 </div>
                                 <div class="col-sm-12 mask-header" style="justify-content: center;">
-                                    <button type="button" class="btn sml_btn btn-red">Balance : 0</button>
+                                    <button type="button" class="btn sml_btn btn-red" id="blnceBtn">Balance : 74100</button>
                                 </div>
                                 <div class="panel panel-default">
 
@@ -1849,7 +1849,7 @@
                                             </th>
                                             <th>
                                                 <input type="text" class="form-control login-field" placeholder="Project Location" autocomplete="off" id="currencyTxt">
-                                            </th><th><div class="dropdown"><butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Region</butoon> <ul class="dropdown-menu" style=""> <li><a class="dropdown-item" href="#">Andhra Pradesh</a></li><li><a class="dropdown-item" href="#">Gujarat</a></li><li><a class="dropdown-item"href="#">Maharastra</a></li><li><a class="dropdown-item" href="#">Goa</a></li></ul></div></th><th><input type="text" class="form-control login-field" placeholder="Start Date" autocomplete="off"></th> <th><input type="text" class="form-control login-field" placeholder="Address" autocomplete="off"></th><th><input type="text" class="form-control login-field" placeholder="Email ID" autocomplete="off"></th><th><input type="text" class="form-control login-field" placeholder="USD" autocomplete="off"></th>
+                                            </th><th><div class="dropdown"><butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Region</butoon> <ul class="dropdown-menu" style=""> <li><a class="dropdown-item" href="#">Andhra Pradesh</a></li><li><a class="dropdown-item" href="#">Gujarat</a></li><li><a class="dropdown-item"href="#">Maharastra</a></li><li><a class="dropdown-item" href="#">Goa</a></li></ul></div></th><th><input type="text" class="form-control login-field" placeholder="Start Date" autocomplete="off"></th> <th><input type="text" class="form-control login-field" placeholder="Address" autocomplete="off"></th><th><input type="text" class="form-control login-field" placeholder="Email ID" autocomplete="off"></th><th><input type="text" class="form-control login-field amtField" placeholder="" autocomplete="off"></th>
                                             <th> <button class="btn btn-outline-danger delete_row">remove</button></th>
                                         </tr>
                                         </tbody>
@@ -1876,14 +1876,17 @@
         $('#add_row').click(function() {
             //Add row
             row = '';
-            row += '<tr><td><div class="dropdown"><butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Donation Type </butoon><ul class="dropdown-menu" style=""><li><a class="dropdown-item" href="#">Donation Type</a></li><li><a class="dropdown-item" href="#">New Project</a></li><li><a class="dropdown-item" href="#">Existing Project</a></li><li><a class="dropdown-item" href="#">Other Project</a></li></ul></div></td><td><input type="text" class="form-control login-field" placeholder="Donor Name" autocomplete="off" id="currencyTxt"></td><td><div class="dropdown"><butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Project Type </butoon><ul class="dropdown-menu" style=""><li><a class="dropdown-item" href="#">EOW</a></li><li><a class="dropdown-item" href="#">IVD</a></li><li><a class="dropdown-item" href="#">SDC</a></li><li><a class="dropdown-item" href="#">USA</a></li><li><a class="dropdown-item" href="#">WEC</a></li><li><a class="dropdown-item" href="#">GRC</a></li><li><a class="dropdown-item" href="#">CTL</a></li><li><a class="dropdown-item" href="#">Other</a></li></ul></div></td><td><input type="text" class="form-control login-field" placeholder="Project Location" autocomplete="off" id="currencyTxt"></td><td><div class="dropdown"><butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Region</butoon><ul class="dropdown-menu" style=""><li><a class="dropdown-item" href="#">Andhra Pradesh</a></li><li><a class="dropdown-item" href="#">Gujarat</a></li><li><a class="dropdown-item" href="#">Maharastra</a></li><li><a class="dropdown-item" href="#">Goa</a></li></ul></div></td><td><input type="text" class="form-control login-field" placeholder="Start Date" autocomplete="off"></td><td><input type="text" class="form-control login-field" placeholder="Address" autocomplete="off"></td><th><input type="text" class="form-control login-field" placeholder="Email ID" autocomplete="off"></td><td><input type="text" class="form-control login-field" placeholder="USD" autocomplete="off"></td>';
+            row += '<tr><td><div class="dropdown"><butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Donation Type </butoon><ul class="dropdown-menu" style=""><li><a class="dropdown-item" href="#">Donation Type</a></li><li><a class="dropdown-item" href="#">New Project</a></li><li><a class="dropdown-item" href="#">Existing Project</a></li><li><a class="dropdown-item" href="#">Other Project</a></li></ul></div></td><td><input type="text" class="form-control login-field" placeholder="Donor Name" autocomplete="off" id="currencyTxt"></td><td><div class="dropdown"><butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Project Type </butoon><ul class="dropdown-menu" style=""><li><a class="dropdown-item" href="#">EOW</a></li><li><a class="dropdown-item" href="#">IVD</a></li><li><a class="dropdown-item" href="#">SDC</a></li><li><a class="dropdown-item" href="#">USA</a></li><li><a class="dropdown-item" href="#">WEC</a></li><li><a class="dropdown-item" href="#">GRC</a></li><li><a class="dropdown-item" href="#">CTL</a></li><li><a class="dropdown-item" href="#">Other</a></li></ul></div></td><td><input type="text" class="form-control login-field" placeholder="Project Location" autocomplete="off" id="currencyTxt"></td><td><div class="dropdown"><butoon class="form-control btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Region</butoon><ul class="dropdown-menu" style=""><li><a class="dropdown-item" href="#">Andhra Pradesh</a></li><li><a class="dropdown-item" href="#">Gujarat</a></li><li><a class="dropdown-item" href="#">Maharastra</a></li><li><a class="dropdown-item" href="#">Goa</a></li></ul></div></td><td><input type="text" class="form-control login-field" placeholder="Start Date" autocomplete="off"></td><td><input type="text" class="form-control login-field" placeholder="Address" autocomplete="off"></td><th><input type="text" class="form-control login-field" placeholder="Email ID" autocomplete="off"></td><td><input type="text" class="form-control login-field amtField" placeholder="" autocomplete="off"></td>';
 
             row += '<td> <button class="btn btn-outline-danger delete_row">remove</button></td></tr>';
             $("#add_table tbody").append(row);
+
+            bindEvent();
         })
 
         $("#add_table").on('click', '.delete_row', function() {
             $(this).closest('tr').remove();
+            setBalance();
         });
 
     });
@@ -1896,11 +1899,17 @@
         $("#fundallocationPopup").addClass('hide').removeClass('show');
         $("#fundallocationPopup").css('display', 'none');
     });
+    $("#dialogClose1").on("click", function (e) {
+        $("#fundBifurcationPopup").addClass('hide').removeClass('show');
+        $("#fundBifurcationPopup").css('display', 'none');
+    });
     $("#btnAddIVD").on("click", function (e) {
         $("#fundallocationPopup").removeClass('hide').addClass('show');
         $("#fundallocationPopup").css('display', 'block');
         //window.location.href = "./admin.html";
     });
+    $("#fundBifurcationPopup").addClass('hide').removeClass('show');
+    $("#fundBifurcationPopup").css('display', 'none');
     $("#fundBifurcationPopup").addClass('hide').removeClass('show');
     $("#fundBifurcationPopup").css('display', 'none');
     $("#dialogClose").on("click", function (e) {
@@ -1922,6 +1931,22 @@
         $("#balance").val(dataJson["balance"]);
         $("#amtReceived").val(dataJson["amountReceived"]);
         $("#donorName").val(dataJson["donor"]);
+    }
+    bindEvent();
+    function bindEvent(){
+        $(".amtField").on('blur',function(){
+            setBalance();
+        })
+    }
+    function setBalance(){
+        let total = 0;
+        $(".amtField").each(function(){
+
+            if(!isNaN($(this).val())){
+                total += parseInt($(this).val());
+            }
+        });
+        $("#blnceBtn").html("Balance : "+(74100-total));
     }
 </script>
 </html>
