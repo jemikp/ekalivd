@@ -1,0 +1,1000 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ekal Vidhyalaya Foundation</title>
+    <link rel="icon" href="image/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/animation/animate.min.css">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/animation/custom-animation.css">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/swiper/swiper.min.css">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/nice-select/nice-select.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&amp;family=Oswald:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css">
+    <link rel="stylesheet" href="https://rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.css" rel="stylesheet">
+  
+   <style>
+    .container--custom,
+    .container {
+      max-width: 90%;
+    }
+    body, td, th, input {
+    font-size: 13px !important;
+}
+    .mainMenu > ul > li.active > a {
+    color: #eb9309;
+}
+.mainMenu > ul > li.active> a::before {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: all 0.8s cubic-bezier(0.52, 1.64, 0.37, 0.66) 0s;
+}
+    #gridContainer {
+      height: 440px;
+    }
+  
+    .options {
+      padding: 20px;
+      margin-top: 20px;
+      background-color: rgba(191, 191, 191, 0.15);
+    }
+  
+    .caption {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  
+    .option {
+      margin-top: 10px;
+    }
+  
+    .option>span {
+      margin-right: 10px;
+    }
+  
+    .option>.dx-selectbox {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .donnerAreaContent__bigTitle__text {
+    color: #323b86;
+  }
+  .bg_drop {
+      display: none;
+  }
+  .donnerAreaContent__bigTitle__number {
+    -webkit-text-stroke: 0;
+    -webkit-text-fill-color: #2e3a88;
+  }
+  .btn--black .it-btn__inner,.sliderNav--style1 .sliderNav__btn.btn-prev {
+    background-color: #2e3a88;
+  }
+  .sliderNav--style1 .sliderNav__btn.btn-next {
+    background: #e75a31;
+  }
+  .footer--bg {
+    background: #f2f2f2;
+  }
+  .itSocial ul li a {
+  
+    color: #e75a31;
+  
+  }
+  .footer__social,.footer__logo {
+    margin-bottom: 0;
+  }
+  .sectionTitle__small {
+    color: #e75a31;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 18px;
+  }
+  .bootstrap-table .fixed-table-container .table tfoot th, .bootstrap-table .fixed-table-container .table thead th {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+  .fht-cell {
+    padding: 10px;
+  }
+  .featureBlock__heading {
+      font-size: 1rem;
+     
+  }
+  .sectionTitle__big {
+    line-height: 1.19;
+    text-transform: capitalize;
+    color: #323b86;
+  }
+  button.close-call {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .featureBlock__donation__line .skill-bars::before,.featureBlock__donation__line .skill-bars__line::before{
+  left: 0;
+  }
+  .nice-select{
+    padding: 8px;
+      border: 1px solid rgb(204, 204, 204);
+      border-radius: 4px;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      color: inherit;
+      line-height: 24px;
+      font-size: inherit;
+  }
+  div#wrap {
+    position: fixed;
+    left: 33%;
+    top: calc(9vh + 20px);
+    display: none;
+    width: 30%;
+    background: #fff;
+    z-index: 100;
+    box-shadow: 0 0 7px 1px #3333335c;
+    border-radius: 8px;
+    height: 420px;
+    width: 36%;
+    overflow-y: auto;
+    background: #ffffff;
+}
+
+
+  .content {
+    padding: 25px;
+    overflow-y: auto;
+    /* height: calc(90vh - 40px); */
+  }
+  button.close-call {
+    position: absolute;
+    left: 93%;
+    top: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  #msform {
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+    height: fit-content;
+  }
+  
+  #msform fieldset {
+    /* background: white; */
+    /* border: 0 none; */
+    border-radius: 8px;
+    /* box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); */
+    padding: 20px 30px;
+    box-sizing: border-box;
+    /* width: 80%; */
+    /* margin: 0 10%; */
+    position: relative;
+    height: 100%;
+  }
+  /*Hide all except first fieldset*/
+  #msform fieldset:not(:first-of-type) {
+    display: none;
+  }
+  
+  /*inputs*/
+  #msform input, #msform textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #msform input:focus, #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #2098ce;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+  }
+  
+  /*buttons*/
+  #msform .action-button {
+    width: 100px;
+    /* background: #2098ce; */
+    /* font-weight: bold; */
+    color: white;
+    /* border: 0 none; */
+    /* border-radius: 25px; */
+    /* cursor: pointer; */
+    /* padding: 10px 5px; */
+    margin: 10px 5px;
+    visibility: visible;
+    animation-duration: 1200ms;
+    animation-delay: 400ms;
+    animation-name: fadeInUp;
+    background: rgb(46, 58, 136);
+  }
+  
+  #msform .action-button:hover, #msform .action-button:focus {
+  transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    color: #fff;
+    background-color: #eb9309;
+  }
+  
+  #msform .action-button-previous {
+    width: 100px;
+    color: white;
+    margin: 10px 5px;
+    visibility: visible;
+    animation-duration: 1200ms;
+    animation-delay: 400ms;
+    animation-name: fadeInUp;
+    background: #eb9309;
+  }
+  
+  #msform .action-button-previous:hover, #msform .action-button-previous:focus {
+  transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    color: #fff;
+    background-color: rgb(46, 58, 136);}
+  
+  /*headings*/
+  /* .fs-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  
+  .fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+  } */
+  
+  /*progressbar*/
+  #progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+  }
+  
+  #progressbar li {
+    list-style-type: none;
+    /* color: #666; */
+    /* text-transform: uppercase; */
+    font-size: 15px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;
+  }
+  
+  #progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 2;
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    background: #f15a2c;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+  }
+  
+  /*progressbar connectors*/
+  #progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #e1e1e1;
+    position: absolute;
+    left: -50%;
+    top: 11px;
+    z-index: -1;
+  }
+  
+  
+  #progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+  }
+  
+  /*marking active/completed steps blue*/
+  /*The number of the step and the connector before it = blue*/
+  #progressbar li.active:before, #progressbar li.active:after {
+    background: #2a398a;
+    color: white;
+  }
+  
+  
+    @media (min-width: 1200px) {
+      .donnerAreaContent__bigTitle {
+        font-size: 5rem;
+      }
+    }
+    </style>
+  
+    <!-- DevExtreme libraries (reference only one of them) -->
+  
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/23.2.5/js/dx.web.js"></script> -->
+  
+  
+  </head>
+  
+  <body>
+    <!-- Preloader -->
+  
+    <!-- Preloader End -->
+    <!-- Main -->
+    <main class="main">
+      <!-- Header Style One -->
+      <!-- header -->
+      <header class="header header--styleOne sticky-on sticky">
+        <div id="sticky-placeholder" style="height: 0px;"></div>
+        <div class="container container--custom">
+          <div class="row">
+            <div class="col-12">
+              <div class="header__wrapper">
+                <!-- logo start -->
+                <div class="header__logo">
+                  <a href="index.html" class="header__logo__link">
+                    <img src="https://www.ekal.org/assets/images/ekal-logo.png" alt="Gainioz" class="header__logo__image">
+                  </a>
+                </div>
+                <!-- logo end -->
+                <!-- Main Menu Start -->
+                <div class="header__menu" style="
+                justify-content: center;
+                display: flex;
+            ">
+                    <nav class="mainMenu">
+                      <ul>
+                        <li><a href="new_project_list.html" style="
+        /* text-transform: capitalize; */
+    ">Home</a>
+                          
+                        </li>
+                        <li><a href="new_ivd_master.html">IVD</a></li>
+                        <li><a href="new_program_management.html">Programs</a></li>
+                        <li  class="active dropdown"><a href="new_donation_entry.html">Donations</a>
+                            <ul class="dropdown_menu dropdown_menu-2">
+      
+      
+      
+      
+                              <li class="dropdown_item-5"><a href="new_donation_entry.html">Donations</a></li>
+                            <li class="dropdown_item-5"><a href="#">Donors</a></li>                            <li class="dropdown_item-5"><a href="new_funds_allocation.html">Funds Allocation</a></li></ul>
+
+                          </li>
+                        <li class="dropdown"><a href="new_project_plan.html">Projects</a>
+                                        <ul class="dropdown_menu dropdown_menu-2">
+                  
+                  
+                  
+                  
+                                          <li class="dropdown_item-5"><a href="new_project_plan.html">Projects</a></li>
+                                                <li class="dropdown_item-5"><a href="new_task_master.html">Tasks</a></li>
+                                          <li class="dropdown_item-5"><a href="new_item_master.html">Task Items</a></li></ul>
+                                      </li>
+                        <li class="dropdown"><a href="new_user.html">Users</a>
+                          <ul class="dropdown_menu dropdown_menu-2">
+    
+    
+    
+    
+                            <li class="dropdown_item-5"><a href="new_user.html">Users</a></li>
+                          <li class="dropdown_item-5"><a href="new_role_master.html">User Roles</a></li></ul>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                <!-- Main Menu End -->
+                <!-- Header Right Buttons Search Cart -->
+                <div class="header__right">
+  
+                  <nav class="header__actions mainMenu">
+                    <ul>
+  
+                      <li class="dropdown">
+                        <p style="
+      margin: 0;
+      font-weight: 500;
+  ">Welcome <span style="
+      color: #e75a31;
+  ">Admin!</span></p>
+                        <ul class="dropdown_menu dropdown_menu-2" style="display: block;">
+  
+  
+  
+  
+                          <li class="dropdown_item-5"><a href="volunteers.html">Profile Settings</a></li>
+                          <li class="dropdown_item-5"><a href="volunteers.html">Logout</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#template-search">
+                          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="
+  ">
+                            <path d="M21.8281 21.4609L16.2852 15.918C16.1992 15.832 16.0703 15.7891 15.9414 15.7891H15.4688C16.9727 14.1562 17.875 12.0508 17.875 9.6875C17.875 4.78906 13.8359 0.75 8.9375 0.75C3.99609 0.75 0 4.78906 0 9.6875C0 14.6289 3.99609 18.625 8.9375 18.625C11.2578 18.625 13.4062 17.7227 14.9961 16.2617V16.6914C14.9961 16.8633 15.0391 16.9922 15.125 17.0781L20.668 22.6211C20.8828 22.8359 21.1836 22.8359 21.3984 22.6211L21.8281 22.1914C22.043 21.9766 22.043 21.6758 21.8281 21.4609ZM8.9375 17.25C4.72656 17.25 1.375 13.8984 1.375 9.6875C1.375 5.51953 4.72656 2.125 8.9375 2.125C13.1055 2.125 16.5 5.51953 16.5 9.6875C16.5 13.8984 13.1055 17.25 8.9375 17.25Z" fill="#7FB432"></path>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <!-- Header Right Buttons Search Cart -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- Mobile Menu Button Start -->
+      <div class="header header--mobile cc-header-menu mean-container position-relative sticky" id="meanmenu">
+        <div class="mean-bar headerBurgerMenu">
+          <a href="index.html">
+            <img class="mean-bar__logo" alt="Techkit" src="https://www.ekal.org/assets/images/ekal-logo.png">
+          </a>
+          <!-- Header Right Buttons Search Cart -->
+          <div class="header__right">
+            <div class="header__actions">
+              <ul>
+                <li>
+                  
+                </li>
+                <li>
+                  <a href="#template-search">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.8281 21.4609L16.2852 15.918C16.1992 15.832 16.0703 15.7891 15.9414 15.7891H15.4688C16.9727 14.1562 17.875 12.0508 17.875 9.6875C17.875 4.78906 13.8359 0.75 8.9375 0.75C3.99609 0.75 0 4.78906 0 9.6875C0 14.6289 3.99609 18.625 8.9375 18.625C11.2578 18.625 13.4062 17.7227 14.9961 16.2617V16.6914C14.9961 16.8633 15.0391 16.9922 15.125 17.0781L20.668 22.6211C20.8828 22.8359 21.1836 22.8359 21.3984 22.6211L21.8281 22.1914C22.043 21.9766 22.043 21.6758 21.8281 21.4609ZM8.9375 17.25C4.72656 17.25 1.375 13.8984 1.375 9.6875C1.375 5.51953 4.72656 2.125 8.9375 2.125C13.1055 2.125 16.5 5.51953 16.5 9.6875C16.5 13.8984 13.1055 17.25 8.9375 17.25Z" fill="#7FB432"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <button class="headerBurgerMenu__button sidebarBtn" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                    <svg width="50" height="50" viewBox="0 0 100 100">
+                      <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058">
+                      </path>
+                      <path class="line line2" d="M 20,50 H 80"></path>
+                      <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942">
+                      </path>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Header Right Buttons Search Cart -->
+        </div>
+      </div>
+      <!-- Mobile Menu Button End -->
+      <!-- Mobile Menu Navbar -->
+      <div class="cc cc--slideNav">
+        <div class="cc__logo mb-40">
+          <a href="index.html">
+            <img class="mean-bar__logo" alt="Techkit" src="https://www.ekal.org/assets/images/ekal-logo.png">
+          </a>
+        </div>
+        <div class="offscreen-navigation mb-40">
+          <nav class="menu-main-primary-container">
+            <ul class="menu">
+              <li class="list menu-item-parent menu-item-has-children">
+                <a class="animation" href="index.html">Home</a>
+                <ul class="main-menu__dropdown sub-menu">
+                  <li><a href="index.html">Home One</a></li>
+                  <li>
+                    <a href="index-2.html">Home Two</a>
+                  </li>
+                  <li><a href="index-3.html">Home Three</a></li>
+                  <li>
+                    <a href="index-4.html">Home Four</a>
+                  </li>
+                  <!-- <li class="list menu-item-has-children">
+                              <a href="vertical-slider.html">Home Dummy</a>
+                              <ul class="main-menu__dropdown sub-menu">
+                                  <li><a href="single-post1.html">Home Demo 1</a></li>
+                                  <li><a href="single-post2.html">Home Demo 2</a></li>
+                                  <li><a href="single-post3.html">Home Demo 3</a></li>
+                              </ul>
+                          </li> -->
+                </ul>
+              </li>
+              <li class="list menu-item-parent">
+                <a class="animation" href="about.html">About</a>
+              </li>
+              <li class="list menu-item-parent">
+                <a class="animation" href="donation-listing.html">Donations</a>
+              </li>
+              <li class="list menu-item-parent">
+                <a class="animation" href="blog.html">Blog</a>
+              </li>
+              <li class="list menu-item-parent menu-item-has-children">
+                <a class="animation" href="index.html">Pages</a>
+                <ul class="main-menu__dropdown sub-menu">
+                  <li><a href="events.html">Events</a></li>
+                  <li>
+                    <a href="faq.html">Faq</a>
+                  </li>
+                  <li><a href="products.html">Shop</a></li>
+                  <li>
+                    <a href="service.html">Service</a>
+                  </li>
+                  <li>
+                    <a href="volunteers.html">Volunteers</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="list menu-item-parent">
+                <a class="animation" href="contact.html">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="itSocial itSocial--sidebar mb-40">
+          <ul>
+            <li>
+              <a class="facebook" href="https://codercredit.com/" rel="nofollow">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a class="twitter" href="https://codercredit.com/" rel="nofollow">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a class="instagram" href="https://codercredit.com/" rel="nofollow">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="cc__button">
+          <div class="header__button">
+            <a class="btn btn--styleOne btn--secondary it-btn" href="donation-listing.html">
+              <span class="btn__text">Contact Us</span>
+              <i class="fa-solid fa-heart btn__icon"></i>
+              <span class="it-btn__inner">
+                <span class="it-btn__blobs">
+                  <span class="it-btn__blob"></span>
+                  <span class="it-btn__blob"></span>
+                  <span class="it-btn__blob"></span>
+                  <span class="it-btn__blob"></span>
+                </span>
+              </span>
+              <svg class="it-btn__animation" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10">
+                    </feGaussianBlur>
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
+                    </feColorMatrix>
+                    <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                  </filter>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu Navbar End -->
+      <!-- Header Style One End -->
+      <!-- Hero/Welcome Section Start -->
+      <section class="hero hero--style1 overflow-hidden">
+  
+        <img src="https://codercredit.com/tf/gainioz/image/shapes/love-shape1.svg" alt="Gainioz" class="hero__shape hero__shape--one">
+  
+  
+      </section>
+      <!-- Hero/Welcome Section End -->
+      <!-- About && Features && Donner Section -->
+      <section class="about">
+  
+  
+        <img class="about__shape about__shape--three" src="https://codercredit.com/tf/gainioz/image/shapes/love-shape5.svg" alt="Gainioz Shape">
+  
+        <div class="featureArea pt-70" style="
+      padding-top: 0;
+  ">
+          <div class="featureArea__map">
+            <img src="https://codercredit.com/tf/gainioz/image/shapes/map.png" alt="Gainioz Map" style="
+            height: 82vh;
+        ">          </div>
+  
+          <div class="donnerArea pt-70 pb-95" style="
+      padding-top: 0;
+      padding-bottom: 37px;
+  ">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="donnerAreaContent mb-30" style="
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  ">
+                    <div style="
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* margin-bottom: 38px; */
+  ">
+                      <h2 class="donnerAreaContent__bigTitle wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated " data-wow-duration="1200ms" data-wow-delay="200ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 200ms; animation-name: fadeInUp; margin: 0px; display: flex; gap: 7px; font-size: 2rem;">
+                        <span class="donnerAreaContent__bigTitle__text" style="
+      text-transform: capitalize;
+  ">Donors Management</span> 
+  
+                      </h2>
+                      <h3 class="donnerAreaContent__heading text-uppercase wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated " data-wow-duration="1200ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 300ms; animation-name: fadeInUp; margin: 0px; color: rgb(46, 58, 136); display: none;">
+                        Donated so far</h3>
+                    </div>
+                    <a class="btn btn--styleOne btn--black it-btn wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated " data-wow-duration="1200ms" data-wow-delay="400ms" href="donation-listing.html" style="visibility: visible; animation-duration: 1200ms; animation-delay: 400ms; animation-name: fadeInUp; background: rgb(46, 58, 136);">
+                      <span class="btn__text" style="
+      text-transform: capitalize;
+  ">Add New Donor</span>
+  
+                      <span class="it-btn__inner">
+                        <span class="it-btn__blobs">
+                          <span class="it-btn__blob"></span>
+                          <span class="it-btn__blob"></span>
+                          <span class="it-btn__blob"></span>
+                          <span class="it-btn__blob"></span>
+                        </span>
+                      </span>
+                      <svg class="it-btn__animation" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <defs>
+                          <filter>
+                            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
+                            </feColorMatrix>
+                            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                          </filter>
+                        </defs>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="donnerArea pt-70 pb-95" style="
+      padding-top: 0;
+      padding-bottom: 150px;
+  ">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                    <table
+                    id="table" data-filter-control="true"  data-show-search-clear-button="false">
+                    <thead>
+                      <tr>
+                        <th data-field="id" data-filter-control="input" data-filter-control-placeholder="Search">Donor Trust</th>                        </th>
+                        <th data-field="id2" data-filter-control="input" data-filter-control-placeholder="Search">Donor Name</th>
+                        <th data-field="price1" data-filter-control="input" data-filter-control-placeholder="Search">Mobile Number</th>
+                        <th data-field="price2" data-filter-control="input" data-filter-control-placeholder="Search">Email ID</th>
+                        <th data-field="price5" data-filter-control="input" data-filter-control-placeholder="Search">Location</th>
+                        <th data-field="price7">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>Janki Foundation</td>
+                          <td>John Doe</td>
+                          <td>91213 32323</td>
+                          <td>johndoe@gmail.com</td>
+                          <td>USA</td>
+                       
+                      <td><div style="
+                        display: flex;
+                        gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                        <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></td></div>
+                      </tr>
+                    </tbody>
+                  </table>
+              
+           </div>
+           <div class="bg_drop" style="
+           width: 100%;
+           height: 100vh;
+           position: fixed;
+           top: 0;
+           left: 0;
+           background: #0000002e;
+           z-index: 1111;
+       "><div id="wrap">
+                 <div class="content">
+                   <button class="close-call">❌</button>
+                   <form id="msform" style="
+           margin: 0;
+       ">
+                     <!-- progressbar -->
+                     
+                     <!-- fieldsets -->
+                     <fieldset>
+                       <h2 style="
+           text-align: left;
+           font-size: 28px;
+           margin-bottom: 20px;
+           color: #2a398a;
+       ">Donation Entry</h2>  
+               
+       <input type="text" name="fname" placeholder="Donor Trust">
+       <input type="text" name="fname" placeholder="Donor Name">
+       <input type="number" name="fname" placeholder="Mobile Number">
+       <input type="email" name="fname" placeholder="Email ID">
+       <input type="text" name="fname" placeholder="Location">
+
+       <input type="button" name="next" class="next action-button" value="Submit">
+                       </fieldset>  </form></div>
+               </div></div>
+         </div>
+         </div>
+           
+          </div>
+      </section>
+      <!-- About && Features && Doner End -->
+      <!-- Testimonials -->
+  
+      <!-- Testimonials End -->
+      <!-- Portfolio -->
+  
+      <!-- Portfolio End -->
+      <!-- Blog -->
+  
+      <!-- Blog End -->
+      <!-- Sponsors -->
+  
+      <!-- Sponsors End -->
+    </main>
+    <!-- Main End -->
+    <!-- footer -->
+  
+    
+    <footer class="footer footer--bg footer--styleOne pt-70 pb-40" style="
+      /* margin-top: 113px; */
+  ">
+      <img src="https://codercredit.com/tf/gainioz/image/shapes/footerShape2.png" alt="Gainioz Shape" class="footer__shape" style="
+      /* display: none; */
+  ">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+            <div class="footer__logo">
+              <img src="https://www.ekal.org/assets/images/ekal-logo.png" alt="Gainioz Logo" class="footer__logo__image">
+            </div>
+          </div>
+          <div class="col">
+            <div class="footer__social itSocial">
+              <ul>
+                <li>
+                  <a class="facebook" href="https://codercredit.com/" rel="nofollow">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="twitter" href="https://codercredit.com/" rel="nofollow">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="instagram" href="https://codercredit.com/" rel="nofollow">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="pinterest" href="https://codercredit.com/" rel="nofollow">
+                    <i class="fab fa-pinterest-p"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+        
+  
+      </div>
+    </footer>
+    <!-- CURSOR -->
+    <div class="mouseCursor cursor-outer" style="visibility: visible; transform: translate(125px, 49px);"></div>
+    <div class="mouseCursor cursor-inner" style="visibility: visible; transform: translate(125px, 49px);"></div>
+    <!-- /CURSOR -->
+    <div class="progress-wrap active-progress">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: -28496.5;">
+        </path>
+      </svg>
+    </div>
+    <!-- Template Search -->
+    <div id="template-search" class="template-search">
+      <button type="button" class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <form class="search-form">
+        <input type="search" value="" placeholder="Type your search">
+        <button type="submit" class="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </div>
+    <!-- Template Search End -->
+    <script src="https://codercredit.com/tf/gainioz/assets/jquery/jquery.min.js"></script>
+    <script src="https://codercredit.com/tf/gainioz/assets/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://codercredit.com/tf/gainioz/assets/swiper/swiper.min.js"></script>
+    <script src="https://codercredit.com/tf/gainioz/assets/nice-select/jquery.nice-select.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'><script>
+  
+    <script src="https://codercredit.com/tf/gainioz/assets/validator.min.js"></script>
+    <script src="https://codercredit.com/tf/gainioz/assets/animation/wow.min.js"></script>
+    <script src="https://codercredit.com/tf/gainioz/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+  
+  <script>
+    $(function() {
+      $('#table').bootstrapTable()
+    });
+    $(function() {
+      $('#table2').bootstrapTable()
+    });
+  
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 4
+  });
+    </script>
+  <script>
+  // $( document ).ready(function() {
+  //     console.log( "ready!" );
+  // });
+  
+  $("a.btn.btn--styleOne").click(function(e){
+    console.log( "ready!" );
+  
+    e.preventDefault();
+      $("#wrap").animate({ width: "toggle" }, 700);
+      $(".bg_drop").animate({ width: "toggle" }, 700);
+      $(".open-call").toggleClass("opened closed");
+    });
+  
+   $(".close-call").click(function () {
+      $("#wrap").hide({ width: "toggle" }, 700);
+      $(".bg_drop").hide({ width: "toggle" }, 700);
+  
+    });
+  
+  
+  
+  
+  
+  
+  //jQuery time
+  var current_fs, next_fs, previous_fs; //fieldsets
+  var left, opacity, scale; //fieldset properties which we will animate
+  var animating; //flag to prevent quick multi-click glitches
+  
+  $(".next").click(function(){
+      if(animating) return false;
+      animating = true;
+      
+      current_fs = $(this).parent();
+      next_fs = $(this).parent().next();
+      
+      //activate next step on progressbar using the index of next_fs
+      $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+      
+      //show the next fieldset
+      next_fs.show(); 
+      //hide the current fieldset with style
+      current_fs.animate({opacity: 0}, {
+          step: function(now, mx) {
+              //as the opacity of current_fs reduces to 0 - stored in "now"
+              //1. scale current_fs down to 80%
+              scale = 1 - (1 - now) * 0.2;
+              //2. bring next_fs from the right(50%)
+              left = (now * 50)+"%";
+              //3. increase opacity of next_fs to 1 as it moves in
+              opacity = 1 - now;
+              current_fs.css({
+          'transform': 'scale('+scale+')',
+        });
+              next_fs.css({'left': left, 'opacity': opacity});
+          }, 
+          duration: 800, 
+          complete: function(){
+              current_fs.hide();
+              animating = false;
+          }, 
+          //this comes from the custom easing plugin
+          easing: 'easeInOutBack'
+      });
+  });
+  
+  $(".previous").click(function(){
+      if(animating) return false;
+      animating = true;
+      
+      current_fs = $(this).parent();
+      previous_fs = $(this).parent().prev();
+      
+      //de-activate current step on progressbar
+      $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+      
+      //show the previous fieldset
+      previous_fs.show(); 
+      //hide the current fieldset with style
+      current_fs.animate({opacity: 0}, {
+          step: function(now, mx) {
+              //as the opacity of current_fs reduces to 0 - stored in "now"
+              //1. scale previous_fs from 80% to 100%
+              scale = 0.8 + (1 - now) * 0.2;
+              //2. take current_fs to the right(50%) - from 0%
+              left = ((1-now) * 50)+"%";
+              //3. increase opacity of previous_fs to 1 as it moves in
+              opacity = 1 - now;
+              current_fs.css({'left': left});
+              previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+          }, 
+          duration: 800, 
+          complete: function(){
+              current_fs.hide();
+              animating = false;
+          }, 
+          //this comes from the custom easing plugin
+          easing: 'easeInOutBack'
+      });
+  });
+  
+  $(".submit").click(function(){
+      return false;
+  })
+  </script>
+  
+  
+  </body></html>
