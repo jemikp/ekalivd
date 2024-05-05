@@ -43,17 +43,18 @@ public class User extends BaseEntity{
 	@Column(name = "mobile",columnDefinition = "varchar(20)")
 	String mobile;
 	
-	@Column(name = "whatsapp",columnDefinition = "varchar(20)")
-	String whatsApp;
-
-	@Column(name = "whatsapp_verified",columnDefinition = "varchar(1) default 'N'")
-	String whatsAppVerified;
-
 	@Column(name = "otp",columnDefinition = "varchar(6)")
 	String otp;
 
 	@Column(name = "otp_time",columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP" )
 	LocalDateTime otp_time;
+	
+	@Column(name = "reporting_to")
+	Integer reportingTo;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "reporting_to", referencedColumnName = "id", insertable = false, updatable = false)
+	User userReporting;
 
 	public User(UserDTO userDTO) {
 
@@ -61,8 +62,11 @@ public class User extends BaseEntity{
 			this.firstName = u.getFirstName();
 			this.lastName = u.getLastName();
 			this.mobile = u.getMobile();
-			this.whatsApp = u.getWhatsApp();
+			this.roleId = u.getRoleId();
+			this.reportingTo = u.getReportingTo();
+			this.delflag = 0;
 		});
+		
 	}
 
 }

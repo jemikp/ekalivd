@@ -37,9 +37,6 @@ public class Tasks extends BaseEntity {
     @Column(name = "status", columnDefinition = "INT DEFAULT 0")
     Integer taskStatus;
 
-    @Column(name = "delflag", columnDefinition = "INT DEFAULT 0")
-    Integer delflag;
-
     @Column(name = "end_date")
     LocalDate endDate;
 

@@ -44,9 +44,6 @@ public class ItemValue extends BaseEntity {
     @JoinColumn(name = "item_id", referencedColumnName = "id", insertable = false, updatable = false)
     ItemMaster item;
 
-    @Column(name = "delflag", columnDefinition = "INT DEFAULT 0")
-    Integer delflag;
-
     @Column(name = "created_by")
     Integer createdBy;
     @ManyToOne(fetch = FetchType.LAZY)

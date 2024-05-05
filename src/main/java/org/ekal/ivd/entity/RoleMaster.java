@@ -23,7 +23,4 @@ public class RoleMaster extends BaseEntity{
 	@Column(name = "role_name",columnDefinition = "VARCHAR(50)")
 	String roleName;
 
-	@Column(name = "delflag",columnDefinition = "INT DEFAULT 0")
-	int delflag = 0;
-
 }
