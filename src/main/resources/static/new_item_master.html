@@ -753,15 +753,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                      <td>No. Of Schools</td>
-                      <td>Nuemeric</td>
-                      
-                      <td><div style="
-                        display: flex;
-                        gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
-                        <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div></td>
-                      </tr>
+                   
                     </tbody>
                   </table>
               
@@ -879,40 +871,60 @@
     $(function() {
       $('#table').bootstrapTable()
     });
-    $(function() {
-      $('#table2').bootstrapTable()
-    });
   
-    const swiper = new Swiper('.swiper', {
-      slidesPerView: 4
-  });
+
    
   var $table2 = $('#table')
   var $button = $('#button')
 
   $(function() {
+	  	  getItem();
     $button.click(function (e) {
-        e.preventDefault();
-    
-      $table2.bootstrapTable('insertRow', {
-        index: 1,
-        row: {
-         
-          itemname: $('#itemname').val(),
-          itemtype: $('#itemtype').val(),
-        action: "<div style='display: flex;gap: 3px;'> <i class='fa fa-edit' aria-hidden='true' style=' color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px;'></i> <i class='fa fa-trash' aria-hidden='true' style='color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px;'></i></div>"
-        }
-      })
+	    createItem();
+	  });
+	});	  
+  
+  function createItem(){
+	  var settings = {
+		  "url": "/ekalivd/item",
+		  "method": "POST",
+		  "timeout": 0,
+		  "headers": {
+		    "Content-Type": "application/json"
+		  },
+		  "data": JSON.stringify({
+		     "itemName" : $('#itemname').val(),
+		  	"itemType" : $('#itemtype').val()
+		  }),
+		};
+		
+		$.ajax(settings).done(function (response) {
+		   getItem();
+		});
+  }
 
-      $('#itemname').val('')
-      $('#itemtype').remove()
+function getItem(){
+	
+	$.get("/ekalivd/item",function(resp){
+		var rows = [];
+		for(var i=0;i<resp.length;i++){
+			rows.push({
+		        itemname: resp[i]["itemName"],
+	         	itemtype: resp[i]["itemType"],
+	        	action: "<div style='display: flex;gap: 3px;'> <i class='fa fa-edit' aria-hidden='true' style=' color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px;' data-id='"+resp[i]["id"]+"' onclick='editItem("+resp[i]["id"]+")'></i> "
+	        	 		+"<i class='fa fa-trash' aria-hidden='true' style='color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px;' data-id='"+resp[i]["id"]+"' onclick='deleteItem("+resp[i]["id"]+")'></i></div>"
+		      })
+		}
+		$table2.bootstrapTable('load', rows);
+	});
+}
 
-    })
-  })
-
-
-
-
+function editItem(itemId){
+	$.get("/ekalivd/item/"+itemId,function(resp){
+		$('#itemname').val(resp["itemName"]);
+	  	$('#itemtype').val(resp["itemType"]);
+	});
+}
   </script>
   
   

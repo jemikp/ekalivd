@@ -1,7 +1,5 @@
 package org.ekal.ivd.entity;
 
-import java.time.LocalDateTime;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,6 +17,9 @@ public class BaseEntity {
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Integer id;
+	
+	@Column(name = "delflag",columnDefinition = "INT DEFAULT 0")
+	int delflag = 0;
 
 //	@Column(name = "create_timestamp")
 //	LocalDateTime createTimestamp;

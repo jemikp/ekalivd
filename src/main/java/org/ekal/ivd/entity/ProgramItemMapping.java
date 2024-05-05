@@ -33,9 +33,6 @@ public class ProgramItemMapping extends BaseEntity {
     @Column(name = "displaysequence", columnDefinition = "INT DEFAULT 0")
     Integer display_sequence;
     
-    @Column(name = "delflag", columnDefinition = "INT DEFAULT 0")
-    Integer delflag;
-
     @Column(name = "created_by")
     Integer createdBy;
     @ManyToOne(fetch = FetchType.LAZY)

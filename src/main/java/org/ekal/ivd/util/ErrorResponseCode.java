@@ -19,7 +19,9 @@ public enum ErrorResponseCode {
 	IVD_ALREADY_EXIST(1006,"IVD Already Exist with the name"),
 	PROGRAM_ALREADY_EXIST(1007,"Program Already Exist with the name"),
 	PROGRAM_NOT_FOUND(1008,"Program not found."),
-	DUPLICATE_PROJECT(1009,"Project already created with the same name ");
+	DUPLICATE_PROJECT(1009,"Project already created with the same name "),
+	ITEM_EXIST(1010,"Item already exist"),
+	ITEM_NOT_EXIST(1011,"Item not exist");
 
 	private int code;
 

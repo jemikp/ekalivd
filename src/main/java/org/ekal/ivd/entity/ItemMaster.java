@@ -1,5 +1,9 @@
 package org.ekal.ivd.entity;
 
+import java.util.Optional;
+
+import org.ekal.ivd.dto.ItemMasterDTO;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -25,16 +29,15 @@ public class ItemMaster extends BaseEntity {
     @Column(name = "item_name", columnDefinition = "VARCHAR(255)")
     String itemName;
 
-    @Column(name = "item_type")
-    Integer itemType;
+    @Column(name = "item_type", columnDefinition = "VARCHAR(50)")
+    String itemType;
 
-    @Column(name = "delflag", columnDefinition = "INT DEFAULT 0")
-    Integer delflag;
-    
-    @Column(name = "created_by", columnDefinition = "INT DEFAULT 0")
-    Integer createdBy;
-    
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "created_by", referencedColumnName = "id", insertable = false, updatable = false)
-    User createdByUser;
+	public ItemMaster(ItemMasterDTO itemMaster) {
+
+		Optional.ofNullable(itemMaster).ifPresent(i -> {
+			this.itemName = i.getItemName();
+			this.itemType = i.getItemType();
+			
+		});
+	}
 }

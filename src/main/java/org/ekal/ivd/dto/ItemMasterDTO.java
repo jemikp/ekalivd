@@ -8,6 +8,8 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
+
+import org.ekal.ivd.entity.ItemMaster;
 import org.ekal.ivd.entity.User;
 
 import java.util.Optional;
@@ -18,38 +20,20 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @NoArgsConstructor
-public class UserDTO {
+public class ItemMasterDTO {
 	Integer id;
 
 	@NotNull
-	String firstName;
+	String itemName;
 	
-	Integer roleId;
+	String itemType;
+	
+	public ItemMasterDTO(ItemMaster itemMaster) {
 
-	String lastName;
-	
-	String mobile;
-	
-	@NotNull
-	String whatsApp;
-	
-	String whatsAppVerified;
-
-	RoleMasterDTO role;
-	
-	UserDTO reporting;
-	
-	Integer reportingTo;
-	
-	public UserDTO(User user) {
-
-		Optional.ofNullable(user).ifPresent(u -> {
-			this.id = u.getId();
-			this.firstName = u.getFirstName();
-			this.lastName = u.getLastName();
-			this.mobile = u.getMobile();
-			this.role = new RoleMasterDTO(u.getRole());
-			this.reporting = new UserDTO(u.getUserReporting());
+		Optional.ofNullable(itemMaster).ifPresent(i -> {
+			this.id = i.getId();
+			this.itemName = i.getItemName();
+			this.itemType = i.getItemType();
 		});
 	}
 

@@ -26,9 +26,6 @@ public class ProgramMaster extends BaseEntity{
 	@Column(name = "name",columnDefinition = "varchar(50)",nullable = false)
 	String name;
 
-	@Column(name = "delflag",columnDefinition = "INT DEFAULT 0")
-	int delflag = 0;
-
 	public ProgramMaster(ProgramMasterDTO programMasterDTO) {
 
 		Optional.ofNullable(programMasterDTO).ifPresent(p -> {

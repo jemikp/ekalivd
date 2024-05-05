@@ -894,9 +894,9 @@
   });
     </script>
   <script>
-  // $( document ).ready(function() {
-  //     console.log( "ready!" );
-  // });
+   $( document ).ready(function() {
+       console.log( "ready!" );
+   });
   
   $("a.btn.btn--styleOne").click(function(e){
     console.log( "ready!" );
@@ -997,8 +997,11 @@
   
   $(".submit").click(function(){
       return false;
-  })
-  </script>
+  });
   
+  $.get("/ekalivd/user",function(resp){
+	  alert(resp.length);
+  });
+  </script>
   
   </body></html>

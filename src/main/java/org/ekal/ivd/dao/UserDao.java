@@ -36,7 +36,7 @@ public class UserDao {
     UserRepository userRepository;
 
     public void createUser(@Valid UserDTO userDTO) {
-        Optional<User> optUser = userRepository.getByWhatsApp(userDTO.getWhatsApp());
+        Optional<User> optUser = userRepository.getByMobile(userDTO.getWhatsApp());
         if(optUser.isPresent()){
             throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_AVAILABLE), HttpStatus.BAD_REQUEST, userDTO.getWhatsApp());
         }
@@ -46,7 +46,7 @@ public class UserDao {
     }
 
     public void updateUser(int userId, @Valid UserDTO userDTO) {
-        List<User> listUser = userRepository.findByIdOrWhatsApp(userId, userDTO.getWhatsApp());
+        List<User> listUser = userRepository.findByIdOrMobile(userId, userDTO.getWhatsApp());
         if (CollectionUtils.isEmpty(listUser)) {
             throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.MISSING_USER), HttpStatus.BAD_REQUEST, userId + "");
         } else if (listUser.size() > 1) {
@@ -60,7 +60,6 @@ public class UserDao {
         existingData.setFirstName(userDTO.getFirstName());
         existingData.setLastName(userDTO.getLastName());
         existingData.setMobile(userDTO.getMobile());
-        existingData.setWhatsApp(userDTO.getWhatsApp());
 
         userRepository.save(existingData);
     }
@@ -110,14 +109,11 @@ public class UserDao {
     }
 
     public User validateWhatsApp(String whatsAppNo){
-        Optional<User> optUser = userRepository.getByWhatsApp(whatsAppNo);
+        Optional<User> optUser = userRepository.getByMobile(whatsAppNo);
         if(optUser.isEmpty()){
             throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_INVALID), HttpStatus.BAD_REQUEST, whatsAppNo);
         }
         User user = optUser.get();
-        if("N".equalsIgnoreCase(user.getWhatsAppVerified())){
-            throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.WHATSAPP_NOT_VERIFIED), HttpStatus.BAD_REQUEST, whatsAppNo);
-        }
         return user;
     }
 

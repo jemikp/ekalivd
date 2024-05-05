@@ -1,0 +1,494 @@
+<html><head>
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+<style>
+    body {
+        font-family: 'Segoe UI', 'Segoe UI Light', 'Segoe UI Semibold', 'Segoe UI Semilight', 'Segoe UI Symbol', Arial;
+        font-size: 13px;
+        color: #696969;
+        margin: 0;
+        padding: 0;
+    }
+
+    #loginPageDashboard .navbar-expand-lg {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    #loginPageDashboard label {
+        font-weight: 550;
+        font-size: 12px;
+        color: #312f2f;
+    }
+    #loginPageDashboard .navbar-expand-lg {
+        padding: 0 20px;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #loginPageDashboard .btn-main {
+        background: #F1592A;
+        border-color: #F1592A;
+    }
+
+    #loginPageDashboard .sml_btn {
+        padding: 0.7rem 1.875rem;
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    #loginPageDashboard .navbar:before {
+        display: none !important;
+    }
+
+    #loginPageDashboard .navbar:after {
+        display: none !important;
+    }
+
+    #loginPageDashboard .bg-1 {
+        width: 100%;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        z-index: 6;
+    }
+
+    #loginPageDashboard .img-txt {
+        width: 173px;
+        display: inline-block;
+        border-radius: 10px;
+        background: #BD5332;
+        padding: 10px;
+        color: #FFF;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-left: -45px;
+    }
+
+    #loginPageDashboard .img-section {
+        position: relative;
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    #loginPageDashboard .box-section {
+        z-index: 10;
+        padding: 10px 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 1px solid #D9D9D9;
+        /*height: 440px;*/
+        height: auto;
+        width: 460px;
+    }
+
+    #loginPageDashboard .login-container {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 85px;
+        margin-top: 70px;
+    }
+
+    #loginPageDashboard .login-header {
+        color: #000;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+
+    /*nav-tabs start*/
+    #loginPageDashboard .tabbable-line > .nav-tabs {
+        border: none;
+        margin: 0px;
+        padding-bottom: 15px;
+        padding-top: 25px;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li {
+        margin-right: 2px;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li > a {
+        border: 0;
+        margin-right: 0;
+        color: #737373;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li > a > i {
+        color: #a6a6a6;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+        border-bottom: 4px solid #00498E;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+        border: 0;
+        background: none !important;
+        color: #333333;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
+        color: #a6a6a6;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
+        margin-top: 0px;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.active {
+        border-bottom: 4px solid #00498E;
+        position: relative;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.active > a {
+        border: 0;
+        color: #333333;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    #loginPageDashboard .tabbable-line > .nav-tabs > li.active > a > i {
+        color: #404040;
+    }
+
+    #loginPageDashboard .tabbable-line > .tab-content {
+        margin-top: 15px;
+        background-color: #fff;
+        border: 0;
+        padding: 15px 0;
+    }
+
+    #loginPageDashboard .portlet .tabbable-line > .tab-content {
+        padding-bottom: 0;
+    }
+
+    /*nav-tabs end*/
+
+    #loginPageDashboard .row-eq-height {
+        flex-direction: column;
+        display: flex;
+        gap: 25px;
+    }
+
+    #loginPageDashboard .form-control.login-field {
+        height: 36px;
+        border-radius: 5px;
+    }
+
+    #loginPageDashboard .btn.btn-login {
+        background-color: #00498E;
+        border-radius: 5px;
+        color: #fff;
+        padding: 4px 8px;
+        width: 140px;
+        height: 42px;
+        font-weight: 600;
+    }
+
+    #loginPageDashboard a.link-txt {
+        color: #00498E;
+        font-weight: 600;
+        padding: 0 5px;
+        cursor: pointer;
+
+    }
+    #loginPageDashboard .nav>li>a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+    }
+    .fade{
+        background: rgba(40, 43, 49, .8);
+        -webkit-transition: all 0.3s;
+    }
+</style>
+<div id="loginPageDashboard" class="BlueDialog">
+    <nav class="navbar navbar-expand-lg" style="
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+">
+        <a class="navbar-brand p-0" href="https://www.ekal.org/in/" style="height: fit-content;"><img src="https://www.ekal.org/assets/images/ekal-logo.png" style="width: 83px;"></a>
+        <ul class="navbar-nav nav-list p-0" style="
+    right: 0;
+">
+            <li class="nav-item top-navitembar">
+                <button type="button" href="https://www.ekal.org/in/donation" target="_self" class="btn btn-main sml_btn">Donate
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <div class="bg-1"></div>
+    <div class="login-container" style="
+    background: url(img/69416landing_bg.jpg);
+    background-size: cover;
+    background-position: top;
+    margin: 0;
+    justify-content: left;
+    border-radius: 0;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-left: 121px;
+    height: 100vh;
+">
+        
+        <div class="box-section" id="tab_default_1" style="
+    border-radius: 0;
+    border: navajowhite;
+">
+<!--            <div class="login-header">Login</div>-->
+            <div class="col-md-12">
+                <div class="tabbable-panel">
+                    <div class="tabbable-line">
+                        <ul class="nav nav-tabs ">
+                            <li class="active" style="width: 100%">
+                                <a href="" data-toggle="tab">
+                                    <i class="fa fa-phone" aria-hidden="true"></i> Login with Email ID</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <div class="row row-eq-height">
+                                    <div class="" style="/* justify-content: center; *//* display: flex; */">
+                                        <div style="
+    margin-bottom: 20px;
+">
+                                            <label>Email ID</label>
+                                            <input type="text" class="form-control login-field" id="txtPhoneNumber" placeholder="Enter Email ID" autocomplete="off">
+                                            <div class="errmsgdiv" style="display: none;"><span style="display: none; align-items: center;justify-content: center;color: red;">Invalid Phone Number</span></div>
+                                        </div>
+                                    <div class="">
+                                            <label>Password</label>
+                                            <input type="password" class="form-control login-field" id="txtPhoneNumber" placeholder="Enter Password" autocomplete="off">
+                                            <div class="errmsgdiv" style="display: none;"><span style="display: none; align-items: center;justify-content: center;color: red;">Invalid Phone Number</span></div>
+                                        </div></div>
+
+                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 15px;" id="getOtpDiv">
+                                        <button class="btn btn-primary btn-login btn-sm" onclick="window.location='../donor_view/new_home.html'" style="">Login</button>
+                                    </div>
+                                    <div class="col-sm-12 p-0 validateOTP" style="justify-content: center; display: none; margin-top: 15px;">
+                                        <div class="col-sm-6">
+                                            <label>OTP</label>
+                                            <input type="password" class="form-control login-field" id="txtOTP" placeholder="Enter OTP" maxlength="6" minlength="6" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 validateOTP" style="justify-content: center; display: none; margin-top: 15px;" id="validateOtpDiv">
+                                        <button class="btn btn-primary btn-login btn-sm" onclick="LoginPage.validateOTP()" style="">Validate OTP</button>
+                                    </div>
+                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 0;">
+                                        Kindly <a class="link-txt" id="newUser" style=""> Sign Up </a> if you are a new user.
+                                    </div>
+                                    <div class="col-sm-12" style="justify-content: center;display: flex;">
+                                        <a class="link-txt" style="">Create</a> / <a class="link-txt" style="">Get User ID</a> If you have existing account details.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-section" id="tab_default_2" style="display: none;">
+<!--            <div class="login-header">Create Account</div>-->
+            <div class="col-md-12">
+                <div class="tabbable-panel">
+                    <div class="tabbable-line">
+                        <ul class="nav nav-tabs ">
+                            <li class="active" style="width: 100%">
+                                <a href="" data-toggle="tab">
+                                    <i class="fa fa-phone" aria-hidden="true"></i> Create Account </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <div class="row row-eq-height">
+                                    <div class="col-sm-12 p-0" style="justify-content: center;display: flex;">
+                                        <div class="col-sm-6" style="padding: 0 15px;">
+                                            <label>First Name</label>
+                                            <input type="text" class="form-control login-field" id="u_firstName" placeholder="Enter First Name" autocomplete="off">
+                                        </div>
+                                        <div class="col-sm-6" style="padding: 0 15px;">
+                                            <label>Last Name</label>
+                                            <input type="text" class="form-control login-field" id="u_lastName" placeholder="Enter Last Name" autocomplete="off">
+                                        </div></div>
+                                    <div class="col-sm-12 p-0" style="justify-content: center;display: flex;">
+                                        <div class="col-sm-6" style="padding: 0 15px;">
+                                            <label>Mobile Number</label>
+                                            <input type="text" class="form-control login-field" id="u_mobile" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" placeholder="Enter Mobile Number" autocomplete="off">
+                                        </div>
+                                        <div class="col-sm-6" style="padding: 0 15px;">
+                                            <label>Whatsapp Number</label>
+                                            <input type="text" class="form-control login-field" id="u_whatsapp" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" placeholder="Enter Whatsapp Number" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 15px;">
+
+                                        <button class="btn btn-primary btn-login btn-sm" onclick="LoginPage.createUser()" style="">Create Account</button>
+                                    </div>
+
+                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 30px;">Already have an account? <a class="link-txt" id="loginUser" style="padding: 0 5px;cursor: pointer;">Login</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script defer="">
+    var LoginPage = () => {
+    }
+    LoginPage.controller = '/ekalivd/LoginController'
+
+    LoginPage.createUser = () => {
+        let firstName = $.trim($("#u_firstName").val());
+        let lastName = $.trim($("#u_lastName").val());
+        let mobile = $.trim($("#u_mobile").val());
+        let whatsapp = $.trim($("#u_whatsapp").val());
+        if(firstName === ""){
+            alert("First Name missing");
+            $("#u_firstName").focus();
+            return true;
+        }
+        if(lastName === ""){
+            alert("Last Name missing");
+            $("#u_lastName").focus();
+            return true;
+        }
+        if(whatsapp === ""){
+            alert("Whatsapp Number missing");
+            $("#u_whatsapp").focus();
+            return true;
+        }
+        if(whatsapp.length !== 10){
+            alert("Invalid whatsapp number");
+            $("#u_whatsapp").focus();
+            return true;
+        }
+        let settings = {
+            "url": "/ekalivd/user",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "data": JSON.stringify({
+                "firstName" : firstName,
+                "lastName" : lastName,
+                "mobile" : mobile,
+                "whatsApp" : whatsapp
+            }),
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+        // let url = '/ekalivd/user';
+        // $.post(url, { data : JSON.stringify(params)}, function (resp) {
+        //     // $("#getOtpDiv").hide();
+        //     // $(".validateOTP").show();
+        // }).done(function(resp) {
+        //     // $("#getOtpDiv").hide();
+        //     // $(".validateOTP").show();
+        // }).fail(function(data) {
+        //     alert(data.responseJSON.message);
+        // });
+    }
+
+    LoginPage.sendOTP = () => {
+        $("#getOtpDiv").hide();
+        $(".validateOTP").show();
+        // let url = `${LoginPage.controller}/sendOTP`;
+        // let parmas = {
+        //     "whatsApp": $('#txtPhoneNumber').val()
+        // }
+        // $.post(url, parmas, function (resp) {
+        //     $("#getOtpDiv").hide();
+        //     $(".validateOTP").show();
+        // }).done(function(resp) {
+        //     $("#getOtpDiv").hide();
+        //     $(".validateOTP").show();
+        // }).fail(function(data) {
+        //     alert(data.responseJSON.message);
+        // });
+    }
+
+    LoginPage.validateOTP = () => {
+        window.location.href = "../donor_view/new_home.html";
+        // var val = $("#txtOTP").val();
+        // let url = `${LoginPage.controller}/validateOTP`;
+        // let parmas = {
+        //     "whatsApp": $('#txtPhoneNumber').val(),
+        //     "otp" : val
+        // }
+        // $.post(url, parmas, function (resp) {
+        //   //  window.location.href = "../home.html";
+        // }).done(function(data) {
+        //     console.log(data);
+        //     localStorage.setItem("username",data.firstName+" "+data.lastName)
+        //     window.location.href = "../home.html";
+        // }).fail(function(data) {
+        //     alert(data.responseJSON.message);
+        // });
+    }
+
+    $(document).ready(() => {
+        $(".validateOTP").hide();
+    })
+    $("#newUser").click(function () {
+        $('#tab_default_1').hide();
+        if($("#tab_default_2").is(':visible')){
+            $('#tab_default_1').hide(300);
+        }else{
+            $('#tab_default_2').show(300);
+        }
+    });
+    $("#loginUser").click(function () {
+        $('#tab_default_2').hide();
+        if($("#tab_default_1").is(':visible')){
+            $('#tab_default_2').hide(300);
+        }else{
+            $('#tab_default_1').show(300);
+        }
+    });
+</script>
+
+
+</body></html>

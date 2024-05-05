@@ -35,9 +35,6 @@ public class Project extends BaseEntity {
     @Column(name = "status", columnDefinition = "INT DEFAULT 0")
     Integer projectStatus;
 
-    @Column(name = "delflag", columnDefinition = "INT DEFAULT 0")
-    Integer delflag;
-
     @Column(name = "start_date")
     LocalDate startDate;
 
