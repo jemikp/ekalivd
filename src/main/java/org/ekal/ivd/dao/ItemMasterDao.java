@@ -1,13 +1,10 @@
 package org.ekal.ivd.dao;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
+import jakarta.validation.Valid;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
 import org.ekal.ivd.dto.ErrorResponseDTO;
-import org.ekal.ivd.dto.IVDMasterDTO;
 import org.ekal.ivd.dto.ItemMasterDTO;
-import org.ekal.ivd.entity.IVDMaster;
 import org.ekal.ivd.entity.ItemMaster;
 import org.ekal.ivd.exception.DynamicException;
 import org.ekal.ivd.repository.ItemMasterRepository;
@@ -19,9 +16,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import jakarta.validation.Valid;
-import lombok.AccessLevel;
-import lombok.experimental.FieldDefaults;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -42,7 +39,7 @@ public class ItemMasterDao {
     }
 
     public List<ItemMasterDTO> getItem(){
-        List<ItemMaster> itemMasters = itemMasterRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
+        List<ItemMaster> itemMasters = itemMasterRepository.findByDelflag(0,Sort.by(Sort.Direction.DESC, "id"));
         return itemMasters.stream().map(i -> new ItemMasterDTO(i)).collect(Collectors.toList());
     }
     
@@ -67,5 +64,16 @@ public class ItemMasterDao {
         itemMaster.setItemName(itemMasterDTO.getItemName());
         itemMaster.setItemType(itemMasterDTO.getItemType());
         itemMasterRepository.save(itemMaster);
+    }
+
+    public ItemMasterDTO deleteById(int itemId){
+        Optional<ItemMaster> itemMasterOpt = itemMasterRepository.findById(itemId);
+        if(itemMasterOpt.isEmpty()){
+            throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.ITEM_NOT_EXIST), HttpStatus.BAD_REQUEST, itemId+"");
+        }
+        ItemMaster itemMaster = itemMasterOpt.get();
+        itemMaster.setDelflag(1);
+        itemMasterRepository.save(itemMaster);
+        return new ItemMasterDTO(itemMaster);
     }
 }

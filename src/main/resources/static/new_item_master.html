@@ -726,12 +726,12 @@
                     color: inherit;
                 ">
               <select name="cars" id="itemtype" style="padding: 8px; border: 1px solid rgb(204, 204, 204); border-radius: 4px; margin-bottom: 10px; width: 100%; box-sizing: border-box; color: inherit; display: none;">
-                <option value="volvo">Select Item Type</option>
+                <option value="-1">Select Item Type</option>
                 <option value="text">Text</option>
                 <option value="numeric">Numeric</option>
                 <option value="list">List</option>
             </select>
-                <button id="button" class="btn btn-secondary" style="
+                <button id="addButton" class="btn btn-secondary" style="
                     width: 35%;
                     /* margin: 10px 5px; */
                     visibility: visible;
@@ -743,6 +743,19 @@
                     height: 42px;
                     line-height: 1;
                 ">Add Item</button>
+                      <button id="updateButton" class="btn btn-secondary hide"  style="
+                    width: 35%;
+                    /* margin: 10px 5px; */
+                    visibility: visible;
+                    animation-duration: 1200ms;
+                    animation-delay: 400ms;
+                    animation-name: fadeInUp;
+                    background: rgb(46, 58, 136);
+                    padding: 6px 5px;
+                    height: 42px;
+                    line-height: 1;
+                    display: none;
+                ">Update Item</button>
                 </div>
                     <table id="table" data-filter-control="true"  data-toolbar="#toolbar"  data-show-search-clear-button="false">
                     <thead>
@@ -875,13 +888,16 @@
 
    
   var $table2 = $('#table')
-  var $button = $('#button')
-
+  var $button = $('#addButton')
+  var $buttonUpdate = $('#updateButton')
   $(function() {
 	  	  getItem();
     $button.click(function (e) {
 	    createItem();
 	  });
+    $buttonUpdate.click(function (e) {
+      updateItem();
+    });
 	});	  
   
   function createItem(){
@@ -900,8 +916,35 @@
 		
 		$.ajax(settings).done(function (response) {
 		   getItem();
+          $('#itemname').val('')
+          resetType()
+          itemId = 0;
 		});
   }
+
+    function updateItem(){
+      var settings = {
+        "url": "/ekalivd/item/"+itemId,
+        "method": "PUT",
+        "timeout": 0,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "data": JSON.stringify({
+          "itemName" : $('#itemname').val(),
+          "itemType" : $('#itemtype').val()
+        }),
+      };
+
+      $.ajax(settings).done(function (response) {
+        getItem();
+        $('#itemname').val('')
+        resetType();
+        itemId = 0;
+        $button.css('display','block');
+        $buttonUpdate.css('display','none');
+      });
+    }
 
 function getItem(){
 	
@@ -918,12 +961,50 @@ function getItem(){
 		$table2.bootstrapTable('load', rows);
 	});
 }
-
+var itemId = 0;
 function editItem(itemId){
+  this.itemId = itemId;
 	$.get("/ekalivd/item/"+itemId,function(resp){
 		$('#itemname').val(resp["itemName"]);
 	  	$('#itemtype').val(resp["itemType"]);
+      $('.nice-select').find('li').removeClass('selected focus');
+      $('.nice-select').find('li').each(function(v,a){
+        if($(this).attr('data-value') === resp["itemType"]){
+          $(this).addClass('selected focus');
+        }
+      });
+      $('.nice-select').find('span.current').html($('#itemtype option:selected').text());
+      $button.css('display','none');
+      $buttonUpdate.css('display','block');
 	});
+}
+
+function resetType(){
+  $("#itemtype").val(-1);
+  $('.nice-select').find('li').removeClass('selected focus');
+  $('.nice-select').find('li').each(function(v,a){
+    if($(this).attr('data-value') === "-1"){
+      $(this).addClass('selected focus');
+    }
+  });
+  $('.nice-select').find('span.current').html($('#itemtype option:selected').text());
+}
+
+function deleteItem(itemId){
+  if(confirm("Are you sure, you want to delete?")){
+    var settings = {
+      "url": "/ekalivd/item/"+itemId,
+      "method": "DELETE",
+      "timeout": 0,
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    };
+
+    $.ajax(settings).done(function (response) {
+      getItem();
+    });
+  }
 }
   </script>
   
