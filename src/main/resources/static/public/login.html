@@ -28,11 +28,13 @@
         -ms-flex-pack: justify;
         justify-content: space-between;
     }
+
     #loginPageDashboard label {
         font-weight: 550;
         font-size: 12px;
         color: #312f2f;
     }
+
     #loginPageDashboard .navbar-expand-lg {
         padding: 0 20px;
         color: #fff;
@@ -228,14 +230,20 @@
         cursor: pointer;
 
     }
-    #loginPageDashboard .nav>li>a {
+
+    #loginPageDashboard .nav > li > a {
         position: relative;
         display: block;
         padding: 10px 15px;
     }
-    .fade{
+
+    .fade {
         background: rgba(40, 43, 49, .8);
         -webkit-transition: all 0.3s;
+    }
+
+    .theHide {
+        display: none !important;
     }
 </style>
 <div id="loginPageDashboard" class="BlueDialog">
@@ -255,7 +263,7 @@
             <span class="img-txt">Fundraising organization for helpless people</span>
         </div>
         <div class="box-section" id="tab_default_1">
-<!--            <div class="login-header">Login</div>-->
+            <!--            <div class="login-header">Login</div>-->
             <div class="col-md-12">
                 <div class="tabbable-panel">
                     <div class="tabbable-line">
@@ -283,11 +291,13 @@
                                         <div class="col-sm-6">
                                             <label>OTP</label>
                                             <input type="password" class="form-control login-field" id="txtOTP" placeholder="Enter OTP" maxlength="6" minlength="6" autocomplete="off">
+                                            
                                         </div>
                                     </div>
                                     <div class="col-sm-12 validateOTP" style="justify-content: center;display: flex;margin-top: 15px;" id="validateOtpDiv">
                                         <button class="btn btn-primary btn-login btn-sm" onclick="LoginPage.validateOTP()" style="">Validate OTP</button>
                                     </div>
+                                    <span class="theHide" id="errdiv" style="width: 100%;display: flex;align-items: center;justify-content: center;color: red;"></span>
                                     <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 40px;">
                                         Kindly <a class="link-txt" id="newUser" style=""> Sign Up </a> if you are a new user.
                                     </div>
@@ -302,7 +312,7 @@
             </div>
         </div>
         <div class="box-section" id="tab_default_2" style="display: none;">
-<!--            <div class="login-header">Create Account</div>-->
+            <!--            <div class="login-header">Create Account</div>-->
             <div class="col-md-12">
                 <div class="tabbable-panel">
                     <div class="tabbable-line">
@@ -323,15 +333,18 @@
                                         <div class="col-sm-6" style="padding: 0 15px;">
                                             <label>Last Name</label>
                                             <input type="text" class="form-control login-field" id="u_lastName" placeholder="Enter Last Name" autocomplete="off">
-                                        </div></div>
+                                        </div>
+                                    </div>
                                     <div class="col-sm-12 p-0" style="justify-content: center;display: flex;">
                                         <div class="col-sm-6" style="padding: 0 15px;">
                                             <label>Mobile Number</label>
-                                            <input type="text" class="form-control login-field" id="u_mobile" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Enter Mobile Number" autocomplete="off">
+                                            <input type="text" class="form-control login-field" id="u_mobile" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Enter Mobile Number"
+                                                   autocomplete="off">
                                         </div>
                                         <div class="col-sm-6" style="padding: 0 15px;">
                                             <label>Whatsapp Number</label>
-                                            <input type="text" class="form-control login-field" id="u_whatsapp" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Enter Whatsapp Number" autocomplete="off">
+                                            <input type="text" class="form-control login-field" id="u_whatsapp" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Enter Whatsapp Number"
+                                                   autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 15px;">
@@ -339,7 +352,8 @@
                                         <button class="btn btn-primary btn-login btn-sm" onclick="LoginPage.createUser()" style="">Create Account</button>
                                     </div>
 
-                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 30px;">Already have an account? <a class="link-txt" id="loginUser" style="padding: 0 5px;cursor: pointer;">Login</a>
+                                    <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 30px;">Already have an account? <a class="link-txt" id="loginUser"
+                                                                                                                                                       style="padding: 0 5px;cursor: pointer;">Login</a>
                                     </div>
                                 </div>
                             </div>
@@ -361,22 +375,22 @@
         let lastName = $.trim($("#u_lastName").val());
         let mobile = $.trim($("#u_mobile").val());
         let whatsapp = $.trim($("#u_whatsapp").val());
-        if(firstName === ""){
+        if (firstName === "") {
             alert("First Name missing");
             $("#u_firstName").focus();
             return true;
         }
-        if(lastName === ""){
+        if (lastName === "") {
             alert("Last Name missing");
             $("#u_lastName").focus();
             return true;
         }
-        if(whatsapp === ""){
+        if (whatsapp === "") {
             alert("Whatsapp Number missing");
             $("#u_whatsapp").focus();
             return true;
         }
-        if(whatsapp.length !== 10){
+        if (whatsapp.length !== 10) {
             alert("Invalid whatsapp number");
             $("#u_whatsapp").focus();
             return true;
@@ -389,10 +403,10 @@
                 "Content-Type": "application/json"
             },
             "data": JSON.stringify({
-                "firstName" : firstName,
-                "lastName" : lastName,
-                "mobile" : mobile,
-                "whatsApp" : whatsapp
+                "firstName": firstName,
+                "lastName": lastName,
+                "mobile": mobile,
+                "whatsApp": whatsapp
             }),
         };
 
@@ -413,39 +427,35 @@
 
     LoginPage.sendOTP = () => {
         $("#getOtpDiv").hide();
-        $(".validateOTP").show();
-        // let url = `${LoginPage.controller}/sendOTP`;
-        // let parmas = {
-        //     "whatsApp": $('#txtPhoneNumber').val()
-        // }
-        // $.post(url, parmas, function (resp) {
-        //     $("#getOtpDiv").hide();
-        //     $(".validateOTP").show();
-        // }).done(function(resp) {
-        //     $("#getOtpDiv").hide();
-        //     $(".validateOTP").show();
-        // }).fail(function(data) {
-        //     alert(data.responseJSON.message);
-        // });
+        $('#errdiv').addClass("theHide");
+        let url = `${LoginPage.controller}/sendOTP`;
+        let parmas = {
+            "whatsApp": $('#txtPhoneNumber').val()
+        }
+        $.post(url, parmas, function (resp) {
+            $("#getOtpDiv").hide();
+            $(".validateOTP").show();
+        }).fail(function (data) {
+            $("#getOtpDiv").show();
+            $('#errdiv').html(data.responseJSON.message).removeClass('theHide')
+        });
     }
 
     LoginPage.validateOTP = () => {
-        window.location.href = "../ivdMaster.html";
-        // var val = $("#txtOTP").val();
-        // let url = `${LoginPage.controller}/validateOTP`;
-        // let parmas = {
-        //     "whatsApp": $('#txtPhoneNumber').val(),
-        //     "otp" : val
-        // }
-        // $.post(url, parmas, function (resp) {
-        //   //  window.location.href = "../home.html";
-        // }).done(function(data) {
-        //     console.log(data);
-        //     localStorage.setItem("username",data.firstName+" "+data.lastName)
-        //     window.location.href = "../home.html";
-        // }).fail(function(data) {
-        //     alert(data.responseJSON.message);
-        // });
+        $('#errdiv').addClass("theHide");
+        // window.location.href = "../ivdMaster.html";
+        var val = $("#txtOTP").val();
+        let url = `${LoginPage.controller}/validateOTP`;
+        let parmas = {
+            "whatsApp": $('#txtPhoneNumber').val(),
+            "otp": val
+        }
+        $.post(url, parmas, function (resp) {
+            localStorage.setItem("username", resp.firstName + " " + resp.lastName);
+            window.location.href = "../ivdMaster.html";
+        }).fail(function (data) {
+            $('#errdiv').html(data.responseJSON.message).removeClass('theHide')
+        });
     }
 
     $(document).ready(() => {
@@ -453,17 +463,17 @@
     })
     $("#newUser").click(function () {
         $('#tab_default_1').hide();
-        if($("#tab_default_2").is(':visible')){
+        if ($("#tab_default_2").is(':visible')) {
             $('#tab_default_1').hide(300);
-        }else{
+        } else {
             $('#tab_default_2').show(300);
         }
     });
     $("#loginUser").click(function () {
         $('#tab_default_2').hide();
-        if($("#tab_default_1").is(':visible')){
+        if ($("#tab_default_1").is(':visible')) {
             $('#tab_default_2').hide(300);
-        }else{
+        } else {
             $('#tab_default_1').show(300);
         }
     });
