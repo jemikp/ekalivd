@@ -188,8 +188,27 @@ div#wrap2 {
     overflow-y: auto;
     OVERFLOW-X: hidden;
 }
+div#wrap_student {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: none;
+  width: 30%;
+  background: #fff;
+  z-index: 100;
+  box-shadow: 0 0 7px 1px #3333335c;
+  height: 100vh;
+  width: 20%;
+  overflow-y: auto;
+  background: #ffffff;
+}
+.sidebarCategories ul li a span:nth-child(2) {
+    text-align: right;
+}
 
-
+.sidebarCategories ul li a span:nth-child(1) {
+    text-align: left;
+}
     
     
     .content {
@@ -358,7 +377,85 @@ div.searchDonationDiv li.tl-item:last-child {
       color: #666;
       margin-bottom: 20px;
     } */
-    
+  
+  
+    .tile.tile-4 {
+  border: 1px solid #1285d7;
+}
+
+.tile.tile-4::before {
+  border: 3px solid #1285d7;
+}
+
+.tile.tile-4 .at_value{
+  background: #1285d72b;
+  padding: 3px 18px;
+  color: #1285d7;
+  font-weight: 600;
+  border: 1px solid #1285d7;
+  border-radius: 5px;
+}
+  
+    .tile {
+  display: flex;
+  gap: 33px;
+  background: #fff;
+  padding: 14px 20px;
+  border: 1px solid #d77b12;
+  border-radius: 9px;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tile:before {
+  content: "";
+  display: block;
+  width: 2px;
+  border: 3px solid #d77b12;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.tile.tile-2 {
+  border: 1px solid #34a734;
+}
+
+.tile.tile-2:before {
+  border: 3px solid #34a734;
+}
+
+.tile.tile-2 {}
+
+.tile.tile-2 .at_value {
+  background: #34a73421;
+  padding: 3px 18px;
+  color: #34a734;
+  font-weight: 600;
+  border: 1px solid #34a734;
+  border-radius: 5px;
+}
+
+.tile.tile-3 {
+  border: 1px solid #e55d47;
+}
+
+.tile.tile-3::before {
+  border: 3px solid #e55d47;
+}
+
+.tile.tile-3 .at_value {
+  background: #e55d4729;
+  padding: 3px 18px;
+  color: #e55d47;
+  font-weight: 600;
+  border: 1px solid #e55d47;
+  border-radius: 5px;
+}
     /*progressbar*/
     #progressbar {
       margin-bottom: 30px;
@@ -720,7 +817,12 @@ div.searchDonationDiv li.tl-item:last-child {
           top: 0;
           width: 3px;
       }
-    
+      .fixed-table-container {
+  border: none;
+}
+.bootstrap-table .table {
+  border: 1px solid #ccc;
+}
        ol.organizational-chart li > div {
           background-color: #fff;
           border-radius: 3px;
@@ -1296,6 +1398,9 @@ div.searchDonationDiv li.tl-item:last-child {
         font-size: 16px;
       
     }
+    body, td, th, input {
+    font-size: 13px;
+}
     .future-activity ul.tl li .item-title {
         padding-top: 0;
         font-size: 16px;
@@ -1585,6 +1690,8 @@ div.searchDonationDiv li.tl-item:last-child {
     <!-- Mobile Menu Navbar End -->
     <!-- Header Style One End -->
     <!-- Hero/Welcome Section Start -->
+
+   
     <section class="hero hero--style1 overflow-hidden" style="
   padding-top: 167px;
 ">
@@ -1626,224 +1733,152 @@ div.searchDonationDiv li.tl-item:last-child {
                     
 <div class="">
   <div class="row gx-3">
-    <div class="col-lg-8 mb-30">
-      <div class="featureBlock">
-        <div class="featureBlock__wrap">
-<div class="section-header" style="
-margin-bottom: 13px;
-">Computer Training Center</div><div class="ivd-details-imgs">
+    <div class="col-lg-9 mb-30">
+ 
+      <div style="
+      text-align: left;
+      margin-right: 0;
+      margin-bottom: 26px;
+      display: flex;
+      gap: 33px;
+      "><div class="tile" style="
+  width: 25%;
+"><div class="title" style="
+  color: #444;
+  font-weight: 600;
+">Date</div><div class="at_value"><input type="date" style="
+  width: 100%;
+  padding: 5px 2px;
+"></div></div><div class="tile tile-2"><div class="title" style="
+  color: #444;
+  font-weight: 600;
+">Present Students</div><div class="at_value">2</div></div><div class="tile tile-3"><div class="title" style="
+  color: #444;
+  font-weight: 600;
+">Absent Students</div><div class="at_value">1</div></div><div class="tile tile-4"><div class="title" style="
+  color: #444;
+  font-weight: 600;
+">Total Students</div><div class="at_value">3</div></div></div>
 
-                              <button type="button" href="" target="_self" class="btn btn-dark-green btn-img sml_btn donation_timeline" title="Donation" style="" id="">
-                                  ₹3,143,790</button>
-                              
-                              
-                              
-                              
-                          </div>
-<figure class="featureBlock__thumb">
-            <div class="ivd-details-imgs2">
 
-                              
-                              <button type="button" class="btn btn-green btn-img sml_btn" data-bs-content="" style="" id="chatSection" aria-label="Chat Section" data-toggle="popover" data-bs-original-title="Chat Section" data-original-title="" title="">
-                                  <i class="fa-regular fa-comment"></i>
-                              </button>
-                              <div popover="" id="my-popover" style="position: absolute;inset: auto auto 0px 0px;margin: 0px;transform: translate(288px, -133px);border: 0;padding: 0;">
-                                  <div class="box-cont" style="border: 1px solid #283891;box-shadow: 0px 4px 16px -3px rgba(90, 103, 113, 0.25);">
-                                      <div class="chat-section">
-                                          <header>
-                                              <i class="fa-solid fa-comment-dots"></i>   Communication
-                                          </header>
-                                          <div class="scrollbar chat-body" id="style-1">
-                                              <div class="chat-body-height force-overflow">
-                                                  <div class="chat-box other-chat">
-                                                      <div class="chat">Give me screenshot of Woman Empowerment Centers</div>
-                                                      <div class="msg-info-name">Mahesh Navani</div>
-                                                  </div>
-                                                  <div class="chat-box my-chat">
-                                                      <div class="chat">I have sent you an eMail with a Link which contains all the screenshots for Women Empowerment Centers</div>
-                                                      <div class="msg-info-name">Bhaskar</div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <form class="msger-inputarea">
-                                              <input type="text" class="form-control login-field" placeholder="Type Here" autocomplete="off">
-                                              <i class="fa-solid fa-paper-plane"></i>
-                                          </form>
-                                      </div>
-                                  </div></div>
-                              <!-- <button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="" id="daily_report_program">
-                                  <i class="fa-regular fa-file"></i>
-                              </button> -->
-                              <button type="button" href="" target="_self" class="btn btn-prpl btn-img sml_btn viewFind" title="Organization Structure" style="" id="" data-l10n-id="findbar" aria-expanded="true" aria-controls="findbar" autocomplete="off">
-                                  <i class="fa fa-sitemap" aria-hidden="true"></i>
-                              </button>
-                          </div><a class="featureBlock__thumb__link" href="new_project_plan.html">
-              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+<table id="table" data-filter-control="true"  data-show-search-clear-button="false">
+  <thead>
+    <tr>
+      <th data-field="id" data-filter-control="input" data-filter-control-placeholder="Search">Entrollment Number</th>                        
+      <th data-field="name" data-filter-control="input" data-filter-control-placeholder="Search">Student Name</th>                        
+      <th data-field="price5" data-filter-control="input" data-filter-control-placeholder="Search">Batch Number</th>
+      <th data-field="price7">Action</th>
+      <th data-field="reason" data-filter-control="input" data-filter-control-placeholder="Search">Reason</th>
 
-<div class="carousel-inner">
-<div class="carousel-item carousel-item-next carousel-item-start">
-<img alt="..." class="d-block w-100" src="../ekal/public/img/ctl-2.jpg">
-</div>
-<div class="carousel-item active carousel-item-start">
-<img src="../ekal/public/ekal-img/CTL  (1).jpg" class="d-block w-100" alt="...">
-</div>
-
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Next</span>
-</button>
-</div>
-            </a>
-            
-          </figure>
-          <div class="featureBlock__content">
-            
-<div class="sub-cont timelineDiv" id="" style="">
-  
-  <div class="future-activity" style="
-/* margin-bottom: 25px; */
-"><div class="section-sub-header">Upcoming Activities - 22nd to 27th April, 2024</div><div class="section-details" style="margin-left: 0;margin-right: 0;">
-      
-      <div class="history-tl-container">
-          <ul class="tl">
-              
-              
-              
-          <li class="tl-item" ng-repeat="item in retailer_history">
-                  <div class="timestamp">2nd June, 2024</div>
-                  <div class="item-title">Visit to alumni Students (Vivekanand Youth club)</div>
-              </li><li class="tl-item" ng-repeat="item in retailer_history">
-                  <div class="timestamp">4th June, 2024</div>
-                  <div class="item-title">Class Test for Enrolled beneficial</div>
-              </li><li class="tl-item" ng-repeat="item in retailer_history">
-                  <div class="timestamp">6th June, 2024</div>
-                  <div class="item-title">Awareness about Government benefits policy</div>
-              </li></ul>
-      </div>
-  </div></div>
-<div class="past-activity"><div class="section-sub-header" style="
-/* color: #cc5000; */
-">Completed Activities</div><div class="section-details" style="margin-left: 0;margin-right: 0;">
-      
-      <div class="history-tl-container">
-          <ul class="tl" style="
-width: 100%;
-">
-              <li class="tl-item" ng-repeat="item in retailer_history" style="
-/* display: flex; */
-">
-                  <div class="item-title" style="
-padding: 0;
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ENR001</td>
+      <td>Ram Patel</td>
+        <td>BATCH1233</td>
+     
+    <td><div style="
+      display: flex;
+      gap: 10px;
+      ">                 <div style="
 display: flex;
-justify-content: space-between;
-width: 100%;
 align-items: center;
-"><p style="
-margin: 0;
-line-height: 1.3;
-">Social Media Awareness Class</p> <i class="fa fa-play" style="
-background: #9973fb;
-padding: 5px 11px;
-border-radius: 5px;
-color: #fff;
-font-size: 10px;
-line-height: 17px;
-cursor: pointer;
-" id="play_video"></i></div><div class="timestamp" style="
-color: #2d398f;
-/* font-weight: 500; */
-font-size: 12px;
-">22/04/2024</div>
-                  
-              </li>
-              
-              
-          <li class="tl-item" ng-repeat="item in retailer_history">
-                  <div style="
+gap: 5px;
+color: #444;
+font-weight: 500;
+"><input type="radio"><label style="
+color: #444;
+font-weight: 500;
+">Present</label></div>    <div style="
 display: flex;
-gap: 10px;
 align-items: center;
-justify-content: space-between;
-"><div class="item-title" style="
-padding: 0;
-">Student Mobilization for next batch</div><button type="button" href="" target="_self" class="btn btn-orng btn-img sml_btn" title="Report" style="
-/* margin-top: 17px; */
-" id="open_report" data-target="#exampleModal" data-toggle="modal">
-                                  <i class="fa-regular fa-file"></i>
-                              </button></div><div class="timestamp" style="
-color: #2d398f;
-/* font-weight: 500; */
-font-size: 12px;
-">24/04/2024</div>
-                  
-              </li><li class="tl-item" ng-repeat="item in retailer_history">
-                  
-                  <div class="item-title" style="
-padding: 0;
-">Certificate Distribution Program</div>
-              <div class="timestamp" style="
-color: #2d398f;
-/* font-weight: 500; */
-font-size: 12px;
-">25/04/2024</div></li></ul><h3 class="featureBlock__heading" style="
-margin-top: 10px;
-margin-left: 22px;
-text-align: right;
-padding: 0;
-text-decoration: underline;
-">
-          <a class="featureBlock__heading__link" href="new_project_plan.html" style="
-text-transform: none;
-color: #333;
-">Show More...</a>
-        </h3>
-      </div>
-  </div></div></div>            
-          </div>
-        </div>
-        
-      </div>
-    </div><div class="col-lg-4 mb-30">
+gap: 5px;
+"><input type="radio"><label style="
+color: #444;
+font-weight: 500;
+">Absent</label></div>  
+    </div></td><td style="
+    text-align: center;
+"><select style="
+    border: 1px solid #ccc;
+    padding: 5px 22px 5px 5px;
+    border-radius: 4px;
+"><option>Medical Reason</option></select></td>
+    </tr>
+    <tr>
+      <td>ENR002</td>
+      <td>Vidhya Patel</td>
+     
+      <td>BATCH1233</td>
+   
+ <td><div style="
+      display: flex;
+      gap: 10px;
+      ">                 <div style="
+display: flex;
+align-items: center;
+gap: 5px;
+color: #444;
+font-weight: 500;
+"><input type="radio"><label style="
+color: #444;
+font-weight: 500;
+">Present</label></div>    <div style="
+display: flex;
+align-items: center;
+gap: 5px;
+"><input type="radio"><label style="
+color: #444;
+font-weight: 500;
+">Absent</label></div>  
+    </div></td>  <td style="
+    text-align: center;
+"><select style="
+    border: 1px solid #ccc;
+    padding: 5px 22px 5px 5px;
+    border-radius: 4px;
+"><option>Medical Reason</option></select></td>
+  </tr>
+  <tr>                        
+    <td>ENR003</td>
+    <td>Shruti Rathod</td>
+   
+    <td>BATCH1233</td>
+ 
+<td><div style="
+  display: flex;
+  gap: 10px;
+  ">                 <div style="
+display: flex;
+align-items: center;
+gap: 5px;
+color: #444;
+font-weight: 500;
+"><input type="radio"><label style="
+color: #444;
+font-weight: 500;
+">Present</label></div>    <div style="
+display: flex;
+align-items: center;
+gap: 5px;
+"><input type="radio"><label style="
+color: #444;
+font-weight: 500;
+">Absent</label></div>  
+</div></td>  <td style="
+text-align: center;
+"><select style="
+border: 1px solid #ccc;
+padding: 5px 22px 5px 5px;
+border-radius: 4px;
+"><option>Medical Reason</option></select></td>
+</tr>
+  </tbody>
+</table>
+    </div><div class="col-lg-3 mb-30">
 <div class="sidebarLayout">
-<div style="
-text-align: right;
-margin-right: 0;
-margin-bottom: 26px;
-"><a class="btn btn--styleOne btn--secondary it-btn" href="new_student_registration.html" style="
-/* display: block; */
-width: 36%;
-margin-;:
-right;
-/* justify-content: right; */
-/* display: flex; */
-">
-      <span class="btn__text">Student Registration</span>
-      <i class="fa-solid fa-heart btn__icon"></i>
-      <span class="it-btn__inner">
-      <span class="it-btn__blobs">
-        <span class="it-btn__blob"></span>
-      <span class="it-btn__blob"></span>
-      <span class="it-btn__blob"></span>
-      <span class="it-btn__blob"></span>
-      </span>
-      </span>
-      <svg class="it-btn__animation" xmlns="http://www.w3.org/2000/svg" version="1.1">
-        <defs>
-          <filter>
-            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10">
-            </feGaussianBlur>
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
-            </feColorMatrix>
-            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-          </filter>
-        </defs>
-      </svg>
-    </a></div><div class="innerWrapperSidebar mb-30">
+<div class="innerWrapperSidebar mb-30">
 <div class="sidebarWidget">
   <div class="sidebarTitle">
     <h5 class="sidebarTitle__heading text-uppercase mb-30" style="
@@ -1856,53 +1891,53 @@ right;
     align-items: center;
     gap: 8px;
     text-transform: none !important;
-">Program Detail</h5>
+">Project Detail</h5>
   </div>
   <div class="sidebarCategories">
-    <ul>
-      <li>
-        <a href="#">
-          <span>Project Type</span>
-          <span>IVD</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>Location</span>
-          <span>Jogmodi</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>Program</span>
-          <span>Computer Training Center</span>
-        </a>
-      </li> 
-      <li>
-        <a href="#">
-          <span>Category</span>
-          <span>Ekal Gramothan Foundation</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>Trainer</span>
-          <span>Ashok Gavli</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>Trainer Email</span>
-          <span>ashok.gavli@ekal.org</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span>Student Regsitered</span>
-          <span>03</span>
-        </a>
-      </li>
-    </ul>
+  <ul>
+    <li>
+      <a href="#">
+        <span>Project Type</span>
+        <span>IVD</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span>Location</span>
+        <span>Jogmodi</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span>Program</span>
+        <span>Computer Training Center</span>
+      </a>
+    </li> 
+    <li>
+      <a href="#">
+        <span>Category</span>
+        <span>Ekal Gramothan Foundation</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span>Trainer</span>
+        <span>Ashok Gavli</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span>Trainer Email</span>
+        <span>ashok.gavli@ekal.org</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span>Student Regsitered</span>
+        <span>03</span>
+      </a>
+    </li>
+  </ul>
 </div>
 </div>
 </div>
@@ -2121,11 +2156,71 @@ right;
       <img src="../ekal/public/img/daily_report.png">
       </div>
   </div>
+<div id="wrap_student">
+  <div class="content">
+    <button class="close-call">❌</button>
+    <form id="msform" style="
+margin: 0;
+">
+      <!-- progressbar -->
+      
+      <!-- fieldsets -->
+      <fieldset>
+        <h2 style="
+text-align: left;
+font-size: 28px;
+margin-bottom: 20px;
+color: #2a398a;
+">New Student</h2>  
+
+<select style="width: 100%; padding: 11px 3px; border: 1px solid rgb(204, 204, 204); color: rgb(102, 102, 102); margin-bottom: 12px; border-radius: 3px; display: none;"><option selected="">Batch Number</option></select><div class="nice-select" tabindex="0"><span class="current">Batch Number</span><ul class="list"><li data-value="Batch Number" class="option selected">Batch Number</li></ul></div>
+<input type="text" name="fname" placeholder="Student Name">
+<p style="
+text-align: left;
+margin-bottom: 2px;
+font-weight: 500;
+">Attach Photo:</p><input type="file" name="fname" placeholder="Phone">
+<select style="width: 100%; padding: 11px 3px; border: 1px solid rgb(204, 204, 204); color: rgb(102, 102, 102); margin-bottom: 12px; border-radius: 3px; display: none;"><option selected="">Education Qualification</option></select><div class="nice-select" tabindex="0"><span class="current">Education Qualification</span><ul class="list"><li data-value="Education Qualification" class="option selected">Education Qualification</li></ul></div><input type="number" name="fname" placeholder="Father's Name"><input type="email" name="fname" placeholder="Father's Occupation">
+<input type="text" name="fname" placeholder="Mother's Name">
+
+<input type="text" name="fname" placeholder="Mother's Occupation"><input type="text" name="fname" placeholder="Aadhar Number"><p style="
+text-align: left;
+margin-bottom: 2px;
+font-weight: 500;
+">Date of Birth:</p><input type="date" name="fname" placeholder="Date of Birth"><select style="width: 100%; padding: 11px 3px; border: 1px solid rgb(204, 204, 204); color: rgb(102, 102, 102); margin-bottom: 12px; border-radius: 3px; display: none;"><option selected="">Gender</option></select><div class="nice-select" tabindex="0"><span class="current">Gender</span><ul class="list"><li data-value="Gender" class="option selected">Gender</li></ul></div><select style="width: 100%; padding: 11px 3px; border: 1px solid rgb(204, 204, 204); color: rgb(102, 102, 102); margin-bottom: 12px; border-radius: 3px; display: none;"><option selected="">Religion</option></select><div class="nice-select" tabindex="0"><span class="current">Religion</span><ul class="list"><li data-value="Religion" class="option selected">Religion</li></ul></div><select style="width: 100%; padding: 11px 3px; border: 1px solid rgb(204, 204, 204); color: rgb(102, 102, 102); margin-bottom: 12px; border-radius: 3px; display: none;"><option selected="">Category</option></select><div class="nice-select" tabindex="0"><span class="current">Category</span><ul class="list"><li data-value="Category" class="option selected">Category</li></ul></div><select style="width: 100%; padding: 11px 3px; border: 1px solid rgb(204, 204, 204); color: rgb(102, 102, 102); margin-bottom: 12px; border-radius: 3px; display: none;"><option selected="">Financial Category</option></select><div class="nice-select" tabindex="0"><span class="current">Financial Category</span><ul class="list"><li data-value="Financial Category" class="option selected">Financial Category</li></ul></div><input type="text" name="fname" placeholder="Email ID"><input type="text" name="fname" placeholder="Contact Number"><div style="
+border: 1px solid #ccc;
+padding: 20px;
+border-radius: 3px;
+margin-bottom: 12px;
+"><p style="
+text-align: left;
+margin-bottom: 2px;
+font-weight: 500;
+">Primary Address: </p><input type="text" name="fname" placeholder="Address 1"><input type="text" name="fname" placeholder="Address 2"><input type="text" name="fname" placeholder="Zip code"><input type="text" name="fname" placeholder="State"><input type="text" name="fname" placeholder="Country"></div><div style="
+border: 1px solid #ccc;
+padding: 20px;
+border-radius: 3px;
+"><p style="
+text-align: left;
+margin-bottom: 2px;
+font-weight: 500;
+">Postal  Address: </p><input type="text" name="fname" placeholder="Address 1"><input type="text" name="fname" placeholder="Address 2"><input type="text" name="fname" placeholder="Zip code"><input type="text" name="fname" placeholder="State"><input type="text" name="fname" placeholder="Country"></div><input type="button" name="next" class="next action-button" value="Submit">
+        </fieldset> </form></div>
+      </div>
 </div>
 
 
 
- 
+  <!-- CURSOR -->
+  <div class="mouseCursor cursor-outer" style="visibility: visible; transform: translate(440px, 161px);"></div>
+  <div class="mouseCursor cursor-inner" style="visibility: visible; transform: translate(440px, 161px);"></div>
+  <!-- /CURSOR -->
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+      </path>
+    </svg>
+  </div>
   <!-- Template Search -->
   <div id="template-search" class="template-search">
     <button type="button" class="close">
@@ -2139,19 +2234,17 @@ right;
     </form>
   </div>
   <!-- Template Search End -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <!-- <script src="./new_home1_files/bootstrap.bundle.js.download"></script>
-  <script src="./new_home1_files/swiper.min.js.download"></script>
-  <script src="./new_home1_files/jquery.nice-select.min.js.download"></script>
-  <script src="./new_home1_files/jquery-ui.min.js.download"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://codercredit.com/tf/gainioz/assets/jquery/jquery.min.js"></script>
+  <script src="https://codercredit.com/tf/gainioz/assets/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="https://codercredit.com/tf/gainioz/assets/swiper/swiper.min.js"></script>
+  <script src="https://codercredit.com/tf/gainioz/assets/nice-select/jquery.nice-select.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 
   <script src="https://codercredit.com/tf/gainioz/assets/validator.min.js"></script>
-  <!-- <script src="./new_home1_files/wow.min.js.download"></script>
-  <script src="./new_home1_files/app.js.download"></script>
-  <script src="./new_home1_files/bootstrap-table.min.js.download"></script>
-<script src="./new_home1_files/bootstrap-table-filter-control.min.js.download"></script> -->
+  <script src="https://codercredit.com/tf/gainioz/assets/animation/wow.min.js"></script>
+  <script src="https://codercredit.com/tf/gainioz/js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
 
 <script>
   $(".viewFind").click(function () {
@@ -2242,10 +2335,27 @@ right;
 </script>
 
 <script>
+
+$("#button").click(function(e){
+  console.log( "ready!" );
+
+  e.preventDefault();
+    $("#wrap_student").animate({ width: "toggle" }, 700);
+    $(".bg_drop").animate({ width: "toggle" }, 700);
+    $(".open-call").toggleClass("opened closed");
+  });
+
+ $(".close-call").click(function () {
+    $("#wrap_student").hide({ width: "toggle" }, 700);
+    $(".bg_drop").hide({ width: "toggle" }, 700);
+
+  });
 // $( document ).ready(function() {
 //     console.log( "ready!" );
 // });
-
+$(function() {
+    $('#table').bootstrapTable()
+  });
 $("#open_report").click(function(e){
   console.log( "ready!" );
 

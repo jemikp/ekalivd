@@ -3,13 +3,11 @@ package org.ekal.ivd.dto;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.ekal.ivd.entity.RoleMaster;
-import org.ekal.ivd.entity.User;
 
 import java.util.Optional;
 
@@ -31,5 +29,7 @@ public class RoleMasterDTO {
 			this.roleName = r.getRoleName();
 		});
 	}
+
+
 
 }

@@ -21,7 +21,11 @@ public enum ErrorResponseCode {
 	PROGRAM_NOT_FOUND(1008,"Program not found."),
 	DUPLICATE_PROJECT(1009,"Project already created with the same name "),
 	ITEM_EXIST(1010,"Item already exist"),
-	ITEM_NOT_EXIST(1011,"Item not exist");
+	ITEM_NOT_EXIST(1011,"Item not exist"),
+
+	INVALID_EMAIL_OR_PASSWORD(1012,"Invalid email or password."),
+
+	ROLE_ALREADY_EXIST(1013,"Role is already created with the given name.");
 
 	private int code;
 

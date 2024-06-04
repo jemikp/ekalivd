@@ -77,6 +77,9 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    implementation group: 'org.json', name: 'json', version: '20240303'
+
 }
 
 tasks.named('test') {
