@@ -1,684 +1,701 @@
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>Ekal Vidhyalaya Foundation</title>
-  <link rel="icon" href="image/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/animation/animate.min.css">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/animation/custom-animation.css">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/swiper/swiper.min.css">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/nice-select/nice-select.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&amp;family=Oswald:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css">
-  <link rel="stylesheet" href="https://rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ekal Vidhyalaya Foundation</title>
+    <link rel="icon" href="image/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/animation/animate.min.css">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/animation/custom-animation.css">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/swiper/swiper.min.css">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/nice-select/nice-select.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&amp;family=Oswald:wght@400;500;600;700&amp;display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css">
+    <link rel="stylesheet"
+          href="https://rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.css" rel="stylesheet">
 
-  <style>
-    .container--custom,
-    .container {
-      max-width: 90%;
+    <style>
+        .container--custom,
+        .container {
+          max-width: 90%;
+        }
+        body, td, th, input {
+      font-size: 13px !important;
     }
-    body, td, th, input {
-  font-size: 13px !important;
-}
-    #gridContainer {
-      height: 440px;
+        #gridContainer {
+          height: 440px;
+        }
+        .fixed-table-container, .fixed-table-footer {
+        border: none !important;
     }
-    .fixed-table-container, .fixed-table-footer {
-    border: none !important;
-}
-table#table {
-    border: 1px solid #ddd;
-}
-.mainMenu > ul > li.active > a{
-  color: #eb9309;
-}
-.mainMenu > ul > li.active> a::before {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-    transition: all 0.8s cubic-bezier(0.52, 1.64, 0.37, 0.66) 0s;
-}
-
-    .options {
-      padding: 20px;
-      margin-top: 20px;
-      background-color: rgba(191, 191, 191, 0.15);
+    table#table {
+        border: 1px solid #ddd;
+    }
+    .mainMenu > ul > li.active > a{
+      color: #eb9309;
+    }
+    .mainMenu > ul > li.active> a::before {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        transition: all 0.8s cubic-bezier(0.52, 1.64, 0.37, 0.66) 0s;
     }
 
-    .caption {
-      font-size: 18px;
-      font-weight: 500;
-    }
+        .options {
+          padding: 20px;
+          margin-top: 20px;
+          background-color: rgba(191, 191, 191, 0.15);
+        }
+
+        .caption {
+          font-size: 18px;
+          font-weight: 500;
+        }
 
 
-    .bg_drop {
-      display: none;
-  }
-  p.featureBlock__text {
-    font-size: 16px;
-}
-.featureBlock__content {
-    padding: 0 10px 5px 10px;
-}
-.featureBlock.featureBlock {
-    height: 100%;
-}
-.featureBlock__content {
-    height: 80px;
-}
-.program-selection .featureBlock__content {
-    height: auto;
-}
-.sidebarCategories span {
-    color: #333;
-    font-size: 14px;
-}
-    .option {
-      margin-top: 10px;
-    }
-
-    .option>span {
-      margin-right: 10px;
-    }
-
-    .option>.dx-selectbox {
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .donnerAreaContent__bigTitle__text {
-    color: #323b86;
-}
-.donnerAreaContent__bigTitle__number {
-    -webkit-text-stroke: 0;
-    -webkit-text-fill-color: #2e3a88;
-}
-.btn--black .it-btn__inner,.sliderNav--style1 .sliderNav__btn.btn-prev {
-    background-color: #2e3a88;
-}
-.sliderNav--style1 .sliderNav__btn.btn-next {
-    background: #e75a31;
-}
-.footer--bg {
-    background: #f2f2f2;
-}
-.itSocial ul li a {
-  
-    color: #e75a31;
-  
-}
-.nice-select, .nice-select ul {
-    width: 270px;
-}
-.footer__social,.footer__logo {
-    margin-bottom: 0;
-}
-.sectionTitle__small {
-    color: #e75a31;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 18px;
-}
-.bootstrap-table .fixed-table-container .table tfoot th, .bootstrap-table .fixed-table-container .table thead th {
-    vertical-align: top;
-    padding: 0;
-    margin: 0;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-}
-.bootstrap-table.bootstrap5{
-  border: 1px solid #eee;
-    padding: 28px;
-}
-.fht-cell {
-    padding: 10px;
-}
-.featureBlock__heading {
-  font-size: 1rem;
-  padding: 0;
-}
-
-.bs-bars.float-left {
-    width: 100%;
-}
-.sectionTitle__big {
-    line-height: 1.19;
-    text-transform: capitalize;
-    color: #323b86;
-}
-button.close-call {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 1000
-}
-.featureBlock__donation__line .skill-bars::before,.featureBlock__donation__line .skill-bars__line::before{
-  left: 0;
-}
-.sidebarCategories ul li a span:nth-child(2) {
-    text-align: right;
-}
-
-.sidebarCategories ul li a span:nth-child(1) {
-    text-align: left;
-}
-/* div#wrap {
-    position: fixed;
-    left: 5%;
-    top: 20px;
-    display: none;
-    width: 30%;
-    background: #fff;
-    z-index: 100;
-    box-shadow: 0 0 7px 1px #3333333b;
-    border-radius: 8px;
-    height: calc(100vh - 40px);
-    width: 90%;
-} */
-
-
-.content {
-    overflow-y: auto;
-    /* height: calc(90vh - 40px); */
-}
-.hero {
-    position: relative;
-    padding-top: 165px;
-}
-button.close-call {
-    position: absolute;
-    left: 93%;
-    top: 10px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-div#wrap2 {
-    position: fixed;
-    right: 0;
-    top: 0;
-    display: none;
-    width: 30%;
-    background: #fff;
-    z-index: 100;
-    box-shadow: 0 0 7px 1px #3333335c;
-    height: 100vh;
-    overflow-y: auto;
-    background: #ffffff;
-}
-#msform {
-    text-align: center;
-    position: relative;
-    margin-top: 30px;
-    height: fit-content;
-}
-
-#msform fieldset {
-    /* background: white; */
-    /* border: 0 none; */
-    border-radius: 8px;
-    /* box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); */
-    padding: 20px 30px;
-    box-sizing: border-box;
-    /* width: 80%; */
-    /* margin: 0 10%; */
-    position: relative;
-    height: 100%;
-}
-/*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type) {
-    display: none;
-}
-
-/*inputs*/
-#msform input, #msform textarea {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-#msform input:focus, #msform textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border: 1px solid #2098ce;
-    outline-width: 0;
-    transition: All 0.5s ease-in;
-    -webkit-transition: All 0.5s ease-in;
-    -moz-transition: All 0.5s ease-in;
-    -o-transition: All 0.5s ease-in;
-}
-.nice-select {
-    width: 270px;
-}
-
-.row.gx-3 .featureBlock {
-    border: 1px solid #eb9309;
-    border-radius: 5px;
-}
-
-.featureBlock__wrap {
-    margin: 0;
-}
-
-.row.gx-3 .featureBlock .featureBlock__wrap:hover {
-    background: #eb93091c;
-}
-
-h3.featureBlock__heading {
-    line-height: 1;
-    text-transform: capitalize;
-    font-weight: 600;
-    color: #444 !important;
-    font-family: inherit;
-}
-li.option {
-    color: #333 !important;
-    font-weight: 500 !important;
-    font-family: inherit;
-}
-/*buttons*/
-#msform .action-button {
-    width: 100px;
-    /* background: #2098ce; */
-    /* font-weight: bold; */
-    color: white;
-    /* border: 0 none; */
-    /* border-radius: 25px; */
-    /* cursor: pointer; */
-    /* padding: 10px 5px; */
-    margin: 10px 5px;
-    visibility: visible;
-    animation-duration: 1200ms;
-    animation-delay: 400ms;
-    animation-name: fadeInUp;
-    background: rgb(46, 58, 136);
-}
-
-#msform .action-button:hover, #msform .action-button:focus {
-  transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    color: #fff;
-    background-color: #eb9309;
-}
-
-#msform .action-button-previous {
-    width: 100px;
-    color: white;
-    margin: 10px 5px;
-    visibility: visible;
-    animation-duration: 1200ms;
-    animation-delay: 400ms;
-    animation-name: fadeInUp;
-    background: #eb9309;
-}
-
-#msform .action-button-previous:hover, #msform .action-button-previous:focus {
-  transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    color: #fff;
-    background-color: rgb(46, 58, 136);}
-    .bootstrap-table .fixed-table-container .fixed-table-body{
-      height:auto
-    }
-/*headings*/
-/* .fs-title {
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #2C3E50;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.fs-subtitle {
-    font-weight: normal;
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 20px;
-} */
-
-/*progressbar*/
-#progressbar {
-    margin-bottom: 30px;
-    overflow: hidden;
-    /*CSS counters to number the steps*/
-    counter-reset: step;
-}
-#progressbar li {
-    list-style-type: none;
-    /* color: #666; */
-    /* text-transform: uppercase; */
-    font-size: 16px;
-    width: 33.33%;
-    float: left;
-    position: relative;
-    letter-spacing: 1px;
-    font-weight: 500;
-}
-
-#progressbar li:before {
-    content: counter(step);
-    counter-increment: step;
-    width: 24px;
-    height: 24px;
-    line-height: 2;
-    display: block;
-    font-size: 12px;
-    color: #fff;
-    background: #f15a2c;
-    border-radius: 25px;
-    margin: 0 auto 10px auto;
-}
-
-/*progressbar connectors*/
-#progressbar li:after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: #e1e1e1;
-    position: absolute;
-    left: -50%;
-    top: 11px;
-    z-index: -1;
-}
-
-
-#progressbar li:first-child:after {
-    /*connector not needed before the first step*/
-    content: none;
-}
-
-/*marking active/completed steps blue*/
-/*The number of the step and the connector before it = blue*/
-#progressbar li.active:before, #progressbar li.active:after {
-    background: #2a398a;
-    color: white;
-}
-
-@media only screen and (max-width:1600px) {
-  .container--custom,
-    .container {
-      max-width: 100%;
-    }
-}
-    @media (min-width: 1200px) {
-      .donnerAreaContent__bigTitle {
-        font-size: 5rem;
+        .bg_drop {
+          display: none;
       }
+      p.featureBlock__text {
+        font-size: 16px;
     }
-  </style>
+    .featureBlock__content {
+        padding: 0 10px 5px 10px;
+    }
+    .featureBlock.featureBlock {
+        height: 100%;
+    }
+    .featureBlock__content {
+        height: 80px;
+    }
+    .program-selection .featureBlock__content {
+        height: auto;
+    }
+    .sidebarCategories span {
+        color: #333;
+        font-size: 14px;
+    }
+        .option {
+          margin-top: 10px;
+        }
 
-  <!-- DevExtreme libraries (reference only one of them) -->
+        .option>span {
+          margin-right: 10px;
+        }
 
-  <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/23.2.5/js/dx.web.js"></script> -->
+        .option>.dx-selectbox {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .donnerAreaContent__bigTitle__text {
+        color: #323b86;
+    }
+    .donnerAreaContent__bigTitle__number {
+        -webkit-text-stroke: 0;
+        -webkit-text-fill-color: #2e3a88;
+    }
+    .btn--black .it-btn__inner,.sliderNav--style1 .sliderNav__btn.btn-prev {
+        background-color: #2e3a88;
+    }
+    .sliderNav--style1 .sliderNav__btn.btn-next {
+        background: #e75a31;
+    }
+    .footer--bg {
+        background: #f2f2f2;
+    }
+    .itSocial ul li a {
+
+        color: #e75a31;
+
+    }
+    .nice-select, .nice-select ul {
+        width: 270px;
+    }
+    .footer__social,.footer__logo {
+        margin-bottom: 0;
+    }
+    .sectionTitle__small {
+        color: #e75a31;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 18px;
+    }
+    .bootstrap-table .fixed-table-container .table tfoot th, .bootstrap-table .fixed-table-container .table thead th {
+        vertical-align: top;
+        padding: 0;
+        margin: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    .bootstrap-table.bootstrap5{
+      border: 1px solid #eee;
+        padding: 28px;
+    }
+    .fht-cell {
+        padding: 10px;
+    }
+    .featureBlock__heading {
+      font-size: 1rem;
+      padding: 0;
+    }
+
+    .bs-bars.float-left {
+        width: 100%;
+    }
+    .sectionTitle__big {
+        line-height: 1.19;
+        text-transform: capitalize;
+        color: #323b86;
+    }
+    button.close-call {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1000
+    }
+    .featureBlock__donation__line .skill-bars::before,.featureBlock__donation__line .skill-bars__line::before{
+      left: 0;
+    }
+    .sidebarCategories ul li a span:nth-child(2) {
+        text-align: right;
+    }
+
+    .sidebarCategories ul li a span:nth-child(1) {
+        text-align: left;
+    }
+    /* div#wrap {
+        position: fixed;
+        left: 5%;
+        top: 20px;
+        display: none;
+        width: 30%;
+        background: #fff;
+        z-index: 100;
+        box-shadow: 0 0 7px 1px #3333333b;
+        border-radius: 8px;
+        height: calc(100vh - 40px);
+        width: 90%;
+    } */
+
+
+    .content {
+        overflow-y: auto;
+        /* height: calc(90vh - 40px); */
+    }
+    .hero {
+        position: relative;
+        padding-top: 165px;
+    }
+    button.close-call {
+        position: absolute;
+        left: 93%;
+        top: 10px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    div#wrap2 {
+        position: fixed;
+        right: 0;
+        top: 0;
+        display: none;
+        width: 30%;
+        background: #fff;
+        z-index: 100;
+        box-shadow: 0 0 7px 1px #3333335c;
+        height: 100vh;
+        overflow-y: auto;
+        background: #ffffff;
+    }
+    #msform {
+        text-align: center;
+        position: relative;
+        margin-top: 30px;
+        height: fit-content;
+    }
+
+    #msform fieldset {
+        /* background: white; */
+        /* border: 0 none; */
+        border-radius: 8px;
+        /* box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); */
+        padding: 20px 30px;
+        box-sizing: border-box;
+        /* width: 80%; */
+        /* margin: 0 10%; */
+        position: relative;
+        height: 100%;
+    }
+    /*Hide all except first fieldset*/
+    #msform fieldset:not(:first-of-type) {
+        display: none;
+    }
+
+    /*inputs*/
+    #msform input, #msform textarea {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #msform input:focus, #msform textarea:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        border: 1px solid #2098ce;
+        outline-width: 0;
+        transition: All 0.5s ease-in;
+        -webkit-transition: All 0.5s ease-in;
+        -moz-transition: All 0.5s ease-in;
+        -o-transition: All 0.5s ease-in;
+    }
+    .nice-select {
+        width: 270px;
+    }
+
+    .row.gx-3 .featureBlock {
+        border: 1px solid #eb9309;
+        border-radius: 5px;
+    }
+
+    .featureBlock__wrap {
+        margin: 0;
+    }
+
+    .row.gx-3 .featureBlock .featureBlock__wrap:hover {
+        background: #eb93091c;
+    }
+
+    h3.featureBlock__heading {
+        line-height: 1;
+        text-transform: capitalize;
+        font-weight: 600;
+        color: #444 !important;
+        font-family: inherit;
+    }
+    li.option {
+        color: #333 !important;
+        font-weight: 500 !important;
+        font-family: inherit;
+    }
+    /*buttons*/
+    #msform .action-button {
+        width: 100px;
+        /* background: #2098ce; */
+        /* font-weight: bold; */
+        color: white;
+        /* border: 0 none; */
+        /* border-radius: 25px; */
+        /* cursor: pointer; */
+        /* padding: 10px 5px; */
+        margin: 10px 5px;
+        visibility: visible;
+        animation-duration: 1200ms;
+        animation-delay: 400ms;
+        animation-name: fadeInUp;
+        background: rgb(46, 58, 136);
+    }
+
+    #msform .action-button:hover, #msform .action-button:focus {
+      transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        color: #fff;
+        background-color: #eb9309;
+    }
+
+    #msform .action-button-previous {
+        width: 100px;
+        color: white;
+        margin: 10px 5px;
+        visibility: visible;
+        animation-duration: 1200ms;
+        animation-delay: 400ms;
+        animation-name: fadeInUp;
+        background: #eb9309;
+    }
+
+    #msform .action-button-previous:hover, #msform .action-button-previous:focus {
+      transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        color: #fff;
+        background-color: rgb(46, 58, 136);}
+        .bootstrap-table .fixed-table-container .fixed-table-body{
+          height:auto
+        }
+    /*headings*/
+    /* .fs-title {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #2C3E50;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+
+    .fs-subtitle {
+        font-weight: normal;
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 20px;
+    } */
+
+    /*progressbar*/
+    #progressbar {
+        margin-bottom: 30px;
+        overflow: hidden;
+        /*CSS counters to number the steps*/
+        counter-reset: step;
+    }
+    #progressbar li {
+        list-style-type: none;
+        /* color: #666; */
+        /* text-transform: uppercase; */
+        font-size: 16px;
+        width: 33.33%;
+        float: left;
+        position: relative;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+
+    #progressbar li:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 24px;
+        height: 24px;
+        line-height: 2;
+        display: block;
+        font-size: 12px;
+        color: #fff;
+        background: #f15a2c;
+        border-radius: 25px;
+        margin: 0 auto 10px auto;
+    }
+
+    /*progressbar connectors*/
+    #progressbar li:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #e1e1e1;
+        position: absolute;
+        left: -50%;
+        top: 11px;
+        z-index: -1;
+    }
+
+
+    #progressbar li:first-child:after {
+        /*connector not needed before the first step*/
+        content: none;
+    }
+
+    /*marking active/completed steps blue*/
+    /*The number of the step and the connector before it = blue*/
+    #progressbar li.active:before, #progressbar li.active:after {
+        background: #2a398a;
+        color: white;
+    }
+
+    @media only screen and (max-width:1600px) {
+      .container--custom,
+        .container {
+          max-width: 100%;
+        }
+    }
+        @media (min-width: 1200px) {
+          .donnerAreaContent__bigTitle {
+            font-size: 5rem;
+          }
+        }
+    </style>
+
+    <!-- DevExtreme libraries (reference only one of them) -->
+
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/23.2.5/js/dx.web.js"></script> -->
 
 
 </head>
 
 <body>
-  <!-- Preloader -->
+<!-- Preloader -->
 
-  <!-- Preloader End -->
-  <!-- Main -->
-  <main class="main">
+<!-- Preloader End -->
+<!-- Main -->
+<main class="main">
     <!-- Header Style One -->
     <!-- header -->
     <header class="header header--styleOne sticky-on">
-      <div id="sticky-placeholder" style="height: 0px;"></div>
-      <div class="container container--custom">
-        <div class="row">
-          <div class="col-12">
-            <div class="header__wrapper">
-              <!-- logo start -->
-              <div class="header__logo">
-                <a href="index.html" class="header__logo__link">
-                  <img src="https://www.ekal.org/assets/images/ekal-logo.png" alt="Gainioz" class="header__logo__image">
-                </a>
-              </div>
-              <!-- logo end -->
-              <!-- Main Menu Start -->
-              <div class="header__menu" style="
+        <div id="sticky-placeholder" style="height: 0px;"></div>
+        <div class="container container--custom">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header__wrapper">
+                        <!-- logo start -->
+                        <div class="header__logo">
+                            <a href="index.html" class="header__logo__link">
+                                <img src="https://www.ekal.org/assets/images/ekal-logo.png" alt="Gainioz"
+                                     class="header__logo__image">
+                            </a>
+                        </div>
+                        <!-- logo end -->
+                        <!-- Main Menu Start -->
+                        <div class="header__menu" style="
               justify-content: center;
               display: flex;
           ">
-                  <nav class="mainMenu">
-                    <ul>
-                      <li><a href="new_project_list.html" style="
+                            <nav class="mainMenu">
+                                <ul>
+                                    <li><a href="new_project_list.html" style="
       /* text-transform: capitalize; */
   ">Home</a>
-                        
-                      </li>
-                      <!--  -->
-                      <li><a href="new_program_management.html">Programs</a></li>
-                      <li class="dropdown"><a href="new_donation_entry.html">Donations</a>
-                          <ul class="dropdown_menu dropdown_menu-2">
-    
-    
-    
-    
-                            <li class="dropdown_item-5"><a href="new_donation_entry.html">Donations</a></li>
-                          <li class="dropdown_item-5"><a href="new_donor_entry.html">Donors</a></li>
-                          <li class="dropdown_item-5"><a href="new_funds_allocation.html">Funds Allocation</a></li>
 
-                        </ul>
-                        </li>
-                      <li class="dropdown active"><a href="new_project_plan.html">Projects</a>
-                                      <ul class="dropdown_menu dropdown_menu-2">
-                
-                               
-                                        <li class="dropdown_item-5"><a href="#">Add New Project</a></li><li class="dropdown_item-5"><a href="new_project_plan.html">Projects</a></li>
-                                              <li class="dropdown_item-5"><a href="new_task_master.html">Tasks</a></li>
-                                        <li class="dropdown_item-5"><a href="new_item_master.html">Task Items</a></li></ul>
                                     </li>
-                      <li class="dropdown"><a href="new_user.html">Users</a>
-                        <ul class="dropdown_menu dropdown_menu-2">
-  
-  
-  
-  
-                          <li class="dropdown_item-5"><a href="new_user.html">Users</a></li>
-                        <li class="dropdown_item-5"><a href="new_role_master.html">User Roles</a></li></ul>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              <!-- Main Menu End -->
-              <!-- Header Right Buttons Search Cart -->
-              <div class="header__right">
+                                    <!--  -->
+                                    <li><a href="new_program_management.html">Programs</a></li>
+                                    <li class="dropdown"><a href="new_donation_entry.html">Donations</a>
+                                        <ul class="dropdown_menu dropdown_menu-2">
 
-                <nav class="header__actions mainMenu">
-                  <ul>
 
-                    <li class="dropdown">
-                     <p style="
+                                            <li class="dropdown_item-5"><a href="new_donation_entry.html">Donations</a>
+                                            </li>
+                                            <li class="dropdown_item-5"><a href="new_donor_entry.html">Donors</a></li>
+                                            <li class="dropdown_item-5"><a href="new_funds_allocation.html">Funds
+                                                Allocation</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown active"><a href="new_project_plan.html">Projects</a>
+                                        <ul class="dropdown_menu dropdown_menu-2">
+
+
+                                            <li class="dropdown_item-5"><a href="#">Add New Project</a></li>
+                                            <li class="dropdown_item-5"><a href="new_project_plan.html">Projects</a>
+                                            </li>
+                                            <li class="dropdown_item-5"><a href="new_task_master.html">Tasks</a></li>
+                                            <li class="dropdown_item-5"><a href="new_item_master.html">Task Items</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="new_user.html">Users</a>
+                                        <ul class="dropdown_menu dropdown_menu-2">
+
+
+                                            <li class="dropdown_item-5"><a href="new_user.html">Users</a></li>
+                                            <li class="dropdown_item-5"><a href="new_role_master.html">User Roles</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Main Menu End -->
+                        <!-- Header Right Buttons Search Cart -->
+                        <div class="header__right">
+
+                            <nav class="header__actions mainMenu">
+                                <ul>
+
+                                    <li class="dropdown">
+                                        <p style="
     margin: 0;
     font-weight: 500;
     font-size: 15px;
 ">Welcome <span style="
     color: #e75a31;
 ">Admin!</span></p>
-                      <ul class="dropdown_menu dropdown_menu-2" style="display: block;">
+                                        <ul class="dropdown_menu dropdown_menu-2" style="display: block;">
 
 
-
-
-                        <li class="dropdown_item-5"><a href="volunteers.html">Profile Settings</a></li>
-                        <li class="dropdown_item-5"><a href="volunteers.html">Logout</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#template-search">
-                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="
+                                            <li class="dropdown_item-5"><a href="volunteers.html">Profile Settings</a>
+                                            </li>
+                                            <li class="dropdown_item-5"><a href="volunteers.html">Logout</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#template-search">
+                                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg" style="
 ">
-                          <path d="M21.8281 21.4609L16.2852 15.918C16.1992 15.832 16.0703 15.7891 15.9414 15.7891H15.4688C16.9727 14.1562 17.875 12.0508 17.875 9.6875C17.875 4.78906 13.8359 0.75 8.9375 0.75C3.99609 0.75 0 4.78906 0 9.6875C0 14.6289 3.99609 18.625 8.9375 18.625C11.2578 18.625 13.4062 17.7227 14.9961 16.2617V16.6914C14.9961 16.8633 15.0391 16.9922 15.125 17.0781L20.668 22.6211C20.8828 22.8359 21.1836 22.8359 21.3984 22.6211L21.8281 22.1914C22.043 21.9766 22.043 21.6758 21.8281 21.4609ZM8.9375 17.25C4.72656 17.25 1.375 13.8984 1.375 9.6875C1.375 5.51953 4.72656 2.125 8.9375 2.125C13.1055 2.125 16.5 5.51953 16.5 9.6875C16.5 13.8984 13.1055 17.25 8.9375 17.25Z" fill="#7FB432"></path>
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <!-- Header Right Buttons Search Cart -->
+                                                <path d="M21.8281 21.4609L16.2852 15.918C16.1992 15.832 16.0703 15.7891 15.9414 15.7891H15.4688C16.9727 14.1562 17.875 12.0508 17.875 9.6875C17.875 4.78906 13.8359 0.75 8.9375 0.75C3.99609 0.75 0 4.78906 0 9.6875C0 14.6289 3.99609 18.625 8.9375 18.625C11.2578 18.625 13.4062 17.7227 14.9961 16.2617V16.6914C14.9961 16.8633 15.0391 16.9922 15.125 17.0781L20.668 22.6211C20.8828 22.8359 21.1836 22.8359 21.3984 22.6211L21.8281 22.1914C22.043 21.9766 22.043 21.6758 21.8281 21.4609ZM8.9375 17.25C4.72656 17.25 1.375 13.8984 1.375 9.6875C1.375 5.51953 4.72656 2.125 8.9375 2.125C13.1055 2.125 16.5 5.51953 16.5 9.6875C16.5 13.8984 13.1055 17.25 8.9375 17.25Z"
+                                                      fill="#7FB432"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Header Right Buttons Search Cart -->
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </header>
     <!-- end header -->
     <!-- Mobile Menu Button Start -->
     <div class="header header--mobile cc-header-menu mean-container position-relative" id="meanmenu">
-      <div class="mean-bar headerBurgerMenu">
-        <a href="index.html">
-          <img class="mean-bar__logo" alt="Techkit" src="https://www.ekal.org/assets/images/ekal-logo.png">
-        </a>
-        <!-- Header Right Buttons Search Cart -->
-        <div class="header__right">
-          <div class="header__actions">
-            <ul>
-              <li>
-                
-              </li>
-              <li>
-                <a href="#template-search">
-                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21.8281 21.4609L16.2852 15.918C16.1992 15.832 16.0703 15.7891 15.9414 15.7891H15.4688C16.9727 14.1562 17.875 12.0508 17.875 9.6875C17.875 4.78906 13.8359 0.75 8.9375 0.75C3.99609 0.75 0 4.78906 0 9.6875C0 14.6289 3.99609 18.625 8.9375 18.625C11.2578 18.625 13.4062 17.7227 14.9961 16.2617V16.6914C14.9961 16.8633 15.0391 16.9922 15.125 17.0781L20.668 22.6211C20.8828 22.8359 21.1836 22.8359 21.3984 22.6211L21.8281 22.1914C22.043 21.9766 22.043 21.6758 21.8281 21.4609ZM8.9375 17.25C4.72656 17.25 1.375 13.8984 1.375 9.6875C1.375 5.51953 4.72656 2.125 8.9375 2.125C13.1055 2.125 16.5 5.51953 16.5 9.6875C16.5 13.8984 13.1055 17.25 8.9375 17.25Z" fill="#7FB432"></path>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <button class="headerBurgerMenu__button sidebarBtn" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
-                  <svg width="50" height="50" viewBox="0 0 100 100">
-                    <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058">
-                    </path>
-                    <path class="line line2" d="M 20,50 H 80"></path>
-                    <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942">
-                    </path>
-                  </svg>
-                </button>
-              </li>
-            </ul>
-          </div>
+        <div class="mean-bar headerBurgerMenu">
+            <a href="index.html">
+                <img class="mean-bar__logo" alt="Techkit" src="https://www.ekal.org/assets/images/ekal-logo.png">
+            </a>
+            <!-- Header Right Buttons Search Cart -->
+            <div class="header__right">
+                <div class="header__actions">
+                    <ul>
+                        <li>
+
+                        </li>
+                        <li>
+                            <a href="#template-search">
+                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.8281 21.4609L16.2852 15.918C16.1992 15.832 16.0703 15.7891 15.9414 15.7891H15.4688C16.9727 14.1562 17.875 12.0508 17.875 9.6875C17.875 4.78906 13.8359 0.75 8.9375 0.75C3.99609 0.75 0 4.78906 0 9.6875C0 14.6289 3.99609 18.625 8.9375 18.625C11.2578 18.625 13.4062 17.7227 14.9961 16.2617V16.6914C14.9961 16.8633 15.0391 16.9922 15.125 17.0781L20.668 22.6211C20.8828 22.8359 21.1836 22.8359 21.3984 22.6211L21.8281 22.1914C22.043 21.9766 22.043 21.6758 21.8281 21.4609ZM8.9375 17.25C4.72656 17.25 1.375 13.8984 1.375 9.6875C1.375 5.51953 4.72656 2.125 8.9375 2.125C13.1055 2.125 16.5 5.51953 16.5 9.6875C16.5 13.8984 13.1055 17.25 8.9375 17.25Z"
+                                          fill="#7FB432"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <button class="headerBurgerMenu__button sidebarBtn"
+                                    onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                                    aria-label="Main Menu">
+                                <svg width="50" height="50" viewBox="0 0 100 100">
+                                    <path class="line line1"
+                                          d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058">
+                                    </path>
+                                    <path class="line line2" d="M 20,50 H 80"></path>
+                                    <path class="line line3"
+                                          d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942">
+                                    </path>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Header Right Buttons Search Cart -->
         </div>
-        <!-- Header Right Buttons Search Cart -->
-      </div>
     </div>
     <!-- Mobile Menu Button End -->
     <!-- Mobile Menu Navbar -->
     <div class="cc cc--slideNav">
-      <div class="cc__logo mb-40">
-        <a href="index.html">
-          <img class="mean-bar__logo" alt="Techkit" src="https://www.ekal.org/assets/images/ekal-logo.png">
-        </a>
-      </div>
-      <div class="offscreen-navigation mb-40">
-        <nav class="menu-main-primary-container">
-          <ul class="menu">
-            <li class="list menu-item-parent menu-item-has-children">
-              <a class="animation" href="index.html">Home</a>
-              <ul class="main-menu__dropdown sub-menu">
-                <li><a href="index.html">Home One</a></li>
-                <li>
-                  <a href="index-2.html">Home Two</a>
-                </li>
-                <li><a href="index-3.html">Home Three</a></li>
-                <li>
-                  <a href="index-4.html">Home Four</a>
-                </li>
-                <!-- <li class="list menu-item-has-children">
-                            <a href="vertical-slider.html">Home Dummy</a>
-                            <ul class="main-menu__dropdown sub-menu">
-                                <li><a href="single-post1.html">Home Demo 1</a></li>
-                                <li><a href="single-post2.html">Home Demo 2</a></li>
-                                <li><a href="single-post3.html">Home Demo 3</a></li>
-                            </ul>
-                        </li> -->
-              </ul>
-            </li>
-            <li class="list menu-item-parent">
-              <a class="animation" href="about.html">About</a>
-            </li>
-            <li class="list menu-item-parent">
-              <a class="animation" href="donation-listing.html">Donations</a>
-            </li>
-            <li class="list menu-item-parent">
-              <a class="animation" href="blog.html">Blog</a>
-            </li>
-            <li class="list menu-item-parent menu-item-has-children">
-              <a class="animation" href="index.html">Pages</a>
-              <ul class="main-menu__dropdown sub-menu">
-                <li><a href="events.html">Events</a></li>
-                <li>
-                  <a href="faq.html">Faq</a>
-                </li>
-                <li><a href="products.html">Shop</a></li>
-                <li>
-                  <a href="service.html">Service</a>
-                </li>
-                <li>
-                  <a href="volunteers.html">Volunteers</a>
-                </li>
-              </ul>
-            </li>
-            <li class="list menu-item-parent">
-              <a class="animation" href="contact.html">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="itSocial itSocial--sidebar mb-40">
-        <ul>
-          <li>
-            <a class="facebook" href="https://codercredit.com/" rel="nofollow">
-              <i class="fab fa-facebook-f"></i>
+        <div class="cc__logo mb-40">
+            <a href="index.html">
+                <img class="mean-bar__logo" alt="Techkit" src="https://www.ekal.org/assets/images/ekal-logo.png">
             </a>
-          </li>
-          <li>
-            <a class="twitter" href="https://codercredit.com/" rel="nofollow">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a class="instagram" href="https://codercredit.com/" rel="nofollow">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-          <li>
-            <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="cc__button">
-        <div class="header__button">
-          <a class="btn btn--styleOne btn--secondary it-btn" href="donation-listing.html">
-            <span class="btn__text">Contact Us</span>
-            <i class="fa-solid fa-heart btn__icon"></i>
-            <span class="it-btn__inner">
+        </div>
+        <div class="offscreen-navigation mb-40">
+            <nav class="menu-main-primary-container">
+                <ul class="menu">
+                    <li class="list menu-item-parent menu-item-has-children">
+                        <a class="animation" href="index.html">Home</a>
+                        <ul class="main-menu__dropdown sub-menu">
+                            <li><a href="index.html">Home One</a></li>
+                            <li>
+                                <a href="index-2.html">Home Two</a>
+                            </li>
+                            <li><a href="index-3.html">Home Three</a></li>
+                            <li>
+                                <a href="index-4.html">Home Four</a>
+                            </li>
+                            <!-- <li class="list menu-item-has-children">
+                                        <a href="vertical-slider.html">Home Dummy</a>
+                                        <ul class="main-menu__dropdown sub-menu">
+                                            <li><a href="single-post1.html">Home Demo 1</a></li>
+                                            <li><a href="single-post2.html">Home Demo 2</a></li>
+                                            <li><a href="single-post3.html">Home Demo 3</a></li>
+                                        </ul>
+                                    </li> -->
+                        </ul>
+                    </li>
+                    <li class="list menu-item-parent">
+                        <a class="animation" href="about.html">About</a>
+                    </li>
+                    <li class="list menu-item-parent">
+                        <a class="animation" href="donation-listing.html">Donations</a>
+                    </li>
+                    <li class="list menu-item-parent">
+                        <a class="animation" href="blog.html">Blog</a>
+                    </li>
+                    <li class="list menu-item-parent menu-item-has-children">
+                        <a class="animation" href="index.html">Pages</a>
+                        <ul class="main-menu__dropdown sub-menu">
+                            <li><a href="events.html">Events</a></li>
+                            <li>
+                                <a href="faq.html">Faq</a>
+                            </li>
+                            <li><a href="products.html">Shop</a></li>
+                            <li>
+                                <a href="service.html">Service</a>
+                            </li>
+                            <li>
+                                <a href="volunteers.html">Volunteers</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list menu-item-parent">
+                        <a class="animation" href="contact.html">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="itSocial itSocial--sidebar mb-40">
+            <ul>
+                <li>
+                    <a class="facebook" href="https://codercredit.com/" rel="nofollow">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="twitter" href="https://codercredit.com/" rel="nofollow">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="instagram" href="https://codercredit.com/" rel="nofollow">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="cc__button">
+            <div class="header__button">
+                <a class="btn btn--styleOne btn--secondary it-btn" href="donation-listing.html">
+                    <span class="btn__text">Contact Us</span>
+                    <i class="fa-solid fa-heart btn__icon"></i>
+                    <span class="it-btn__inner">
               <span class="it-btn__blobs">
                 <span class="it-btn__blob"></span>
                 <span class="it-btn__blob"></span>
@@ -686,27 +703,29 @@ li.option {
                 <span class="it-btn__blob"></span>
               </span>
             </span>
-            <svg class="it-btn__animation" xmlns="http://www.w3.org/2000/svg" version="1.1">
-              <defs>
-                <filter id="goo">
-                  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10">
-                  </feGaussianBlur>
-                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
-                  </feColorMatrix>
-                  <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                </filter>
-              </defs>
-            </svg>
-          </a>
+                    <svg class="it-btn__animation" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <defs>
+                            <filter id="goo">
+                                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10">
+                                </feGaussianBlur>
+                                <feColorMatrix in="blur" mode="matrix"
+                                               values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
+                                </feColorMatrix>
+                                <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                            </filter>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
         </div>
-      </div>
     </div>
     <!-- Mobile Menu Navbar End -->
     <!-- Header Style One End -->
     <!-- Hero/Welcome Section Start -->
     <section class="hero hero--style1 overflow-hidden">
 
-      <img src="https://codercredit.com/tf/gainioz/image/shapes/love-shape1.svg" alt="Gainioz" class="hero__shape hero__shape--one">
+        <img src="https://codercredit.com/tf/gainioz/image/shapes/love-shape1.svg" alt="Gainioz"
+             class="hero__shape hero__shape--one">
 
 
     </section>
@@ -715,26 +734,27 @@ li.option {
     <section class="about">
 
 
-      <img class="about__shape about__shape--three" src="https://codercredit.com/tf/gainioz/image/shapes/love-shape5.svg" alt="Gainioz Shape">
+        <img class="about__shape about__shape--three"
+             src="https://codercredit.com/tf/gainioz/image/shapes/love-shape5.svg" alt="Gainioz Shape">
 
-      <div class="featureArea pt-70" style="
+        <div class="featureArea pt-70" style="
     padding-top: 0;
 ">
-      <div class="featureArea__map" style="
+            <div class="featureArea__map" style="
       ">
-                  <img src="https://codercredit.com/tf/gainioz/image/shapes/map.png" alt="Gainioz Map" style="
+                <img src="https://codercredit.com/tf/gainioz/image/shapes/map.png" alt="Gainioz Map" style="
           height: 82vh;
       ">
-                </div>
-        
-        <div class="donnerArea pt-70 pb-95" style="
+            </div>
+
+            <div class="donnerArea pt-70 pb-95" style="
     padding-top: 0;
     padding-bottom: 150px;
 ">
-          <div class="container">
-            <div class="row">
+                <div class="container">
+                    <div class="row">
 
-              <div class="bg_drop" style="
+                        <div class="bg_drop" style="
               width: 100%;
               height: 100vh;
               position: fixed;
@@ -742,79 +762,97 @@ li.option {
               left: 0;
               background: #0000002e;
               z-index: 1111;
-          "><div id="wrap2">
-                    <div class="content">
-                      <button class="close-call">❌</button>
-                      <form id="msform" style="
+          ">
+                            <div id="wrap2">
+                                <div class="content">
+                                    <button class="close-call">❌</button>
+                                    <form id="msform" style="
               margin: 0;
           ">
-                        <!-- progressbar -->
-                        
-                        <!-- fieldsets -->
-                        <fieldset>
-                          <h2 style="
+                                        <!-- progressbar -->
+
+                                        <!-- fieldsets -->
+                                        <fieldset>
+                                            <h2 style="
               text-align: left;
               font-size: 28px;
               margin-bottom: 20px;
               color: #2a398a;
-          ">New Donor</h2>  
-                  
-          <input type="text" name="fname" placeholder="Donor Trust">
-          <input type="text" name="fname" placeholder="Donor Name">
-          <input type="number" name="fname" placeholder="Phone">
-          <input type="number" name="fname" placeholder="Whatsapp Number"><input type="email" name="fname" placeholder="Email ID">
-          <!-- <input type="text" name="fname" placeholder="Location"> -->
-   
-          <input type="text" name="fname" placeholder="PAN Card Number"><input type="text" name="fname" placeholder="Address 1"><input type="text" name="fname" placeholder="Address 2"><input type="text" name="fname" placeholder="City"><input type="text" name="fname" placeholder="Zip code"><input type="text" name="fname" placeholder="State"><input type="text" name="fname" placeholder="Country"><input type="button" name="next" class="next action-button" value="Submit">
-                          </fieldset> </form></div>
-                  </div></div>
-              
-         <div id="wrap">
-          <div class="content">
-            
-            <form id="msform">
-              <!-- progressbar -->
-              <ul id="progressbar">
-                  <li class="active">Donor Selection</li>
-                  <li>Project Type</li>
-                  <li>Program</li>
-              </ul>
-              <!-- fieldsets -->
-              <fieldset>
-               
+          ">New Donor</h2>
 
-                <div class="donnerArea pt-70 pb-95" style="
+                                            <input type="text" id="donorTrust" name="fname" placeholder="Donor Trust">
+                                            <input type="text" name="fname" placeholder="Donor Name">
+                                            <input type="number" name="fname" placeholder="Phone">
+                                            <input type="number" name="fname" placeholder="Whatsapp Number"><input
+                                                type="email" name="fname" placeholder="Email ID">
+                                            <!-- <input type="text" name="fname" placeholder="Location"> -->
+
+                                            <input type="text" name="fname" placeholder="PAN Card Number"><input
+                                                type="text" name="fname" placeholder="Address 1"><input type="text"
+                                                                                                        name="fname"
+                                                                                                        placeholder="Address 2"><input
+                                                type="text" name="fname" placeholder="City"><input type="text"
+                                                                                                   name="fname"
+                                                                                                   placeholder="Zip code"><input
+                                                type="text" name="fname" placeholder="State"><input type="text"
+                                                                                                    name="fname"
+                                                                                                    placeholder="Country"><input
+                                                type="button" id="donor_save" name="next" class="next action-button"
+                                                value="Submit">
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="wrap">
+                            <div class="content">
+
+                                <form id="msform">
+                                    <!-- progressbar -->
+                                    <ul id="progressbar">
+                                        <li class="active">Donor Selection</li>
+                                        <li>Project Type</li>
+                                        <li>Program</li>
+                                    </ul>
+                                    <!-- fieldsets -->
+                                    <fieldset>
+
+
+                                        <div class="donnerArea pt-70 pb-95" style="
                 padding-top: 0;
                 padding-bottom: 20px;
             ">
-                      <div class="">
-                        <!-- <div style="
-                        text-align: right;
-                        margin-bottom: 20px;
-                        display: flex;
-                        gap: 15px;
-                        justify-content: end;
-                        align-items: center;
-                    "><label style="color: #444;font-weight: 500;font-size: 16px;">Total Donation:</label><input type="text" id="total" placeholder="₹ 30,00,000" style="
-                                                padding: 8px;
-                                                border: 1px solid rgb(204, 204, 204);
-                                                border-radius: 4px;
-                                                margin-bottom: 10px;
-                                                width: 208px;
-                                                box-sizing: border-box;
-                                                color: inherit;
-                                                margin: 0;
-                                            "></div> -->
-                        <div class="row">
+                                            <div class="">
+                                                <!-- <div style="
+                                                text-align: right;
+                                                margin-bottom: 20px;
+                                                display: flex;
+                                                gap: 15px;
+                                                justify-content: end;
+                                                align-items: center;
+                                            "><label style="color: #444;font-weight: 500;font-size: 16px;">Total Donation:</label><input type="text" id="total" placeholder="₹ 30,00,000" style="
+                                                                        padding: 8px;
+                                                                        border: 1px solid rgb(204, 204, 204);
+                                                                        border-radius: 4px;
+                                                                        margin-bottom: 10px;
+                                                                        width: 208px;
+                                                                        box-sizing: border-box;
+                                                                        color: inherit;
+                                                                        margin: 0;
+                                                                    "></div> -->
+                                                <div class="row">
 
-                          <div class="col-xxl-9 col-md-8">
-                            <div id="toolbar" style="
+                                                    <div class="col-xxl-9 col-md-8">
+                                                        <div id="toolbar" style="
                             width: 70%;
                             display: flex;
                             gap: 10px;
                         ">
-                        <div style="width: 100%;">
-                        <input type="text" id="search" name="search" onkeyup="changeInput(this.value)" placeholder="Search Donor" style="
+                                                            <div style="width: 100%;">
+                                                                <input type="text" id="search" name="search"
+                                                                       onkeyup="changeInput(this.value)"
+                                                                       placeholder="Search Donor" style="
                             /* width: 100%; */
                             padding: 8px;
                             border: 1px solid rgb(204, 204, 204);
@@ -825,31 +863,32 @@ li.option {
                             color: inherit;
                             margin: 0;
                         ">
-                         <div id="result" class="list-group"></div></div>
-                      <!-- <input type="text" id="itemtype" placeholder="Donation Amount" style="
-                            /* width: 100%; */
-                            padding: 8px;
-                            border: 1px solid rgb(204, 204, 204);
-                            border-radius: 4px;
-                            margin-bottom: 10px;
-                            width: 100%;
-                            box-sizing: border-box;
-                            color: inherit;
-                            margin: 0;
-                        ">
-                        <select id="itemtype" placeholder="Currency" style="
-                            /* width: 100%; */
-                            padding: 8px;
-                            border: 1px solid rgb(204, 204, 204);
-                            border-radius: 4px;
-                            margin-bottom: 10px;
-                            width: 20%;
-                            box-sizing: border-box;
-                            color: inherit;
-                            margin: 0;
-                        "><option selected="">Currency
-                        </option></select> -->
-                        <button id="button_add" class="btn btn-secondary" style="
+                                                                <div id="result" class="list-group"></div>
+                                                            </div>
+                                                            <!-- <input type="text" id="itemtype" placeholder="Donation Amount" style="
+                                                                  /* width: 100%; */
+                                                                  padding: 8px;
+                                                                  border: 1px solid rgb(204, 204, 204);
+                                                                  border-radius: 4px;
+                                                                  margin-bottom: 10px;
+                                                                  width: 100%;
+                                                                  box-sizing: border-box;
+                                                                  color: inherit;
+                                                                  margin: 0;
+                                                              ">
+                                                              <select id="itemtype" placeholder="Currency" style="
+                                                                  /* width: 100%; */
+                                                                  padding: 8px;
+                                                                  border: 1px solid rgb(204, 204, 204);
+                                                                  border-radius: 4px;
+                                                                  margin-bottom: 10px;
+                                                                  width: 20%;
+                                                                  box-sizing: border-box;
+                                                                  color: inherit;
+                                                                  margin: 0;
+                                                              "><option selected="">Currency
+                                                              </option></select> -->
+                                                            <button id="button_add" class="btn btn-secondary" style="
                             /* width: 35%; */
                             /* margin: 10px 5px; */
                             visibility: visible;
@@ -860,8 +899,9 @@ li.option {
                             padding: 6px 30px;
                             height: 42px;
                             line-height: 1;
-                        ">Select</button>
-                        <button id="button" class="btn btn-secondary" style="
+                        ">Select
+                                                            </button>
+                                                            <button id="button" class="btn btn-secondary" style="
                             /* width: 247px; */
                             /* margin: 10px 5px; */
                             visibility: visible;
@@ -874,56 +914,85 @@ li.option {
                             line-height: 1;
                             border: none;
                             flex: none;
-                        ">Add New Donor</button></div>
-                              <table id="table" data-filter-control="true"  data-toolbar="#toolbar"  data-show-search-clear-button="false">
-                              <thead>
-                                <tr>
-                                  <th data-field="itemname" data-filter-control="input" data-filter-control-placeholder="Search">Donor Name</th>
-                                  <th data-field="foundation" data-filter-control="input" data-filter-control-placeholder="Search">Donor Trust</th>
-                                  <th data-field="phone" data-filter-control="input" data-filter-control-placeholder="Search">Phone Number</th>
-                                  <th data-field="email" data-filter-control="input" data-filter-control-placeholder="Search">Email</th>
-                                  <th data-field="country" data-filter-control="input" data-filter-control-placeholder="Search">Country</th>
-                                  <th data-field="amount" data-filter-control="input" data-filter-control-placeholder="Search">Donation Amount</th>
-                                  <th data-field="action">Action</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                              <tr>
-                                <td>Mahesh Navani</td>
-                                <td>Janki Foundation</td>
-                                <td>548-245-4900</td>
-                                <td>maheshnavani@gmail.com</td>
-                                <td>United States</td>
-                                <td><input type="text" placeholder="$ 150,000"></td>
-                                
-                                <td><div style="
+                        ">Add New Donor
+                                                            </button>
+                                                        </div>
+                                                        <table id="table" data-filter-control="true"
+                                                               data-toolbar="#toolbar"
+                                                               data-show-search-clear-button="false">
+                                                            <thead>
+                                                            <tr>
+                                                                <th data-field="itemname" data-filter-control="input"
+                                                                    data-filter-control-placeholder="Search">Donor Name
+                                                                </th>
+                                                                <th data-field="foundation" data-filter-control="input"
+                                                                    data-filter-control-placeholder="Search">Donor Trust
+                                                                </th>
+                                                                <th data-field="phone" data-filter-control="input"
+                                                                    data-filter-control-placeholder="Search">Phone
+                                                                    Number
+                                                                </th>
+                                                                <th data-field="email" data-filter-control="input"
+                                                                    data-filter-control-placeholder="Search">Email
+                                                                </th>
+                                                                <th data-field="country" data-filter-control="input"
+                                                                    data-filter-control-placeholder="Search">Country
+                                                                </th>
+                                                                <th data-field="amount" data-filter-control="input"
+                                                                    data-filter-control-placeholder="Search">Donation
+                                                                    Amount
+                                                                </th>
+                                                                <th data-field="action">Action</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>Mahesh Navani</td>
+                                                                <td>Janki Foundation</td>
+                                                                <td>548-245-4900</td>
+                                                                <td>maheshnavani@gmail.com</td>
+                                                                <td>United States</td>
+                                                                <td><input type="text" placeholder="$ 150,000"></td>
+
+                                                                <td>
+                                                                    <div style="
                                   display: flex;
-                                  gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
-                                  <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div></td>
-                                </tr>
-                                <tr>
-                                  <td>Asha Navani</td>
-                                <td>Janki Foundation</td>
-                                <td>548-245-4888</td>
-                                <td>ashanavani@gmail.com</td>
-                                <td>United States</td>
-                                <td><input type="text" placeholder="$ 150,000"></td>
-                                  
-                                  <td><div style="
+                                  gap: 3px;"><i class="fa fa-edit" aria-hidden="true"
+                                                style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i>
+                                                                        <i class="fa fa-trash" aria-hidden="true"
+                                                                           style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Asha Navani</td>
+                                                                <td>Janki Foundation</td>
+                                                                <td>548-245-4888</td>
+                                                                <td>ashanavani@gmail.com</td>
+                                                                <td>United States</td>
+                                                                <td><input type="text" placeholder="$ 150,000"></td>
+
+                                                                <td>
+                                                                    <div style="
                                     display: flex;
-                                    gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
-                                    <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div></td>
-                                  </tr>
-                              </tbody>
-                            </table>
-                        
-                     </div>
-                     <div class="col-xxl-3 col-md-4 mb-30">
-                      <div class="sidebarLayout">
-                    <div class="innerWrapperSidebar mb-30">
-                      <div class="sidebarWidget">
-                        <div class="sidebarTitle">
-                          <h5 class="sidebarTitle__heading text-uppercase mb-30" style="
+                                    gap: 3px;"><i class="fa fa-edit" aria-hidden="true"
+                                                  style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i>
+                                                                        <i class="fa fa-trash" aria-hidden="true"
+                                                                           style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                    </div>
+                                                    <div class="col-xxl-3 col-md-4 mb-30">
+                                                        <div class="sidebarLayout">
+                                                            <div class="innerWrapperSidebar mb-30">
+                                                                <div class="sidebarWidget">
+                                                                    <div class="sidebarTitle">
+                                                                        <h5 class="sidebarTitle__heading text-uppercase mb-30"
+                                                                            style="
                           color: #283891;
                           font-size: 24px;
                           font-style: normal;
@@ -934,55 +1003,56 @@ li.option {
                           gap: 8px;
                           text-transform: none !important;
                       ">Project Detail</h5>
-                        </div>
-                        <div class="sidebarCategories">
-                          <ul>
-                            <li>
-                              <a href="#">
-                                <span>Donors</span>
-                                <span style="
+                                                                    </div>
+                                                                    <div class="sidebarCategories">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span>Donors</span>
+                                                                                    <span style="
                           color: #0d6efd;
                           font-weight: 600;
                       ">2</span>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                <span>Donation Amount</span>
-                                <span>$ 300,000</span>
-                              </a>
-                            </li>
-                             
-                            
-                            
-                            
-                            
-                          </ul>
-                        </div>
-                      </div>
-                      </div>
-                      
-                      </div>
-                      </div>
-                    </div>
-                   </div>
-                   </div>
-                     <div><input type="button" name="next" class="next action-button" value="Next"></div> 
-                 </fieldset>
-                
-                 <fieldset style=""><div class="row"><div class="col-xxl-9 col-md-8" style="
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span>Donation Amount</span>
+                                                                                    <span>$ 300,000</span>
+                                                                                </a>
+                                                                            </li>
+
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div><input type="button" name="next" class="next action-button" value="Next">
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset style="">
+                                        <div class="row">
+                                            <div class="col-xxl-9 col-md-8" style="
                   border: 1px solid #eee;
                   padding: 30px 20px 50px;
                   height: fit-content;
               ">
-                                <div style="
+                                                <div style="
                                 /* text-align: right; */
                                 margin-bottom: 20px;
                                 display: flex;
                                 gap: 15px;
                                 justify-content: space-between;
                                 align-items: center;
-                            "><div style="
+                            ">
+                                                    <div style="
                               display: flex;
                               align-items: center;
                               margin-bottom: 26px;
@@ -991,364 +1061,431 @@ li.option {
                           CONTAIN-INTRINSIC-BLOCK-SIZE: AUTO 100PX;
                               g
                           CONTAIN-INTRINSIC-BLOCK-SIZE: AUTO 100PX;
-                          ">  <label style="
+                          "><label style="
                               font-size: 15px;
                               color: #444;
                               font-weight: 600;
-                          ">Select Location: </label><select style="display: none;"><option value="1" disabled="" selected="" style="color: #444;font-weight: 500;font-size: 16px;">Select Location</option><option value="2" style="color: #444;font-weight: 500;font-size: 16px;">Jogmodi</option><option value="3" style="color: #444;font-weight: 500;font-size: 16px;">Gujarat</option></select><div class="nice-select" tabindex="0"><span class="current">Select Location</span><ul class="list"><li data-value="1" class="option selected disabled">Select Location</li><li data-value="2" class="option">Jogmodi</li><li data-value="3" class="option">Gujarat</li></ul></div></div></div>
-                                
-                                                
-                                <div class="row gx-3" style="
+                          ">Select Location: </label><select style="display: none;">
+                                                        <option value="1" disabled="" selected=""
+                                                                style="color: #444;font-weight: 500;font-size: 16px;">
+                                                            Select Location
+                                                        </option>
+                                                        <option value="2"
+                                                                style="color: #444;font-weight: 500;font-size: 16px;">
+                                                            Jogmodi
+                                                        </option>
+                                                        <option value="3"
+                                                                style="color: #444;font-weight: 500;font-size: 16px;">
+                                                            Gujarat
+                                                        </option>
+                                                    </select>
+                                                        <div class="nice-select" tabindex="0"><span class="current">Select Location</span>
+                                                            <ul class="list">
+                                                                <li data-value="1" class="option selected disabled">
+                                                                    Select Location
+                                                                </li>
+                                                                <li data-value="2" class="option">Jogmodi</li>
+                                                                <li data-value="3" class="option">Gujarat</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row gx-3" style="
                   flex-direction: row;
                   flex-wrap: nowrap;
                   width: 100%;
                   margin-bottom: 25px;
               ">
-                                  <div class="" style="
+                                                    <div class="" style="
                   flex: auto;
               ">
-                                    <div class="featureBlock" style="
+                                                        <div class="featureBlock" style="
                 position: relative;
-              ">    
-              
-                                      <div class="featureBlock__wrap">
-                                        
-                                        <div class="featureBlock__content" style="
+              ">
+
+                                                            <div class="featureBlock__wrap">
+
+                                                                <div class="featureBlock__content" style="
                                         display: flex;
                                         justify-content: flex-start;
                                         align-items: center;
                                         gap: 19px;
                                       ">
-                  <input type="radio" style="
+                                                                    <input type="radio" style="
                   width: fit-content;
                   margin-top: 11px;
               " name="ivd">
-                                                              <div style="
+                                                                    <div style="
                   text-align: left;
-              ">        <h3 class="featureBlock__heading" style="
+              "><h3 class="featureBlock__heading" style="
                   margin-bottom: 0;
               ">
-                                                                        <a class="featureBlock__heading__link" href="https://www.ekal.org/our-work/education">Integrated Village Devlopment (IVD)</a>
-                                                                      </h3>
-                                                                      
-                                                              </div>           </div>
-                                      </div>
-                                      
-                                    </div>
-                                  </div>
-                                  <div class="" style="
+                                                                        <a class="featureBlock__heading__link"
+                                                                           href="https://www.ekal.org/our-work/education">Integrated
+                                                                            Village Devlopment (IVD)</a>
+                                                                    </h3>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="" style="
                   flex: auto;
               ">
-                                    <div class="featureBlock" style="
+                                                        <div class="featureBlock" style="
                 position: relative;
-              ">    
-              
-                                      <div class="featureBlock__wrap">
-                                        
-                                        <div class="featureBlock__content" style="
+              ">
+
+                                                            <div class="featureBlock__wrap">
+
+                                                                <div class="featureBlock__content" style="
                                         display: flex;
                                         justify-content: flex-start;
                                         align-items: center;
                                         gap: 19px;
                                       ">
-                  <input type="radio" style="
+                                                                    <input type="radio" style="
                   width: fit-content;
                   margin-top: 11px;
               " name="sdc">
-                                                              <div style="
+                                                                    <div style="
                   text-align: left;
-              ">        <h3 class="featureBlock__heading" style="
+              "><h3 class="featureBlock__heading" style="
                   margin-bottom: 0;
               ">
-                                                                        <a class="featureBlock__heading__link" href="https://www.ekal.org/our-work/education">Skill Devlopment Center (SDC)</a>
-                                                                      </h3>
-                                                                      
-                                                              </div>           </div>
-                                      </div>
-                                      
-                                    </div>
-                                  </div><div class="" style="
+                                                                        <a class="featureBlock__heading__link"
+                                                                           href="https://www.ekal.org/our-work/education">Skill
+                                                                            Devlopment Center (SDC)</a>
+                                                                    </h3>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="" style="
                   flex: auto;
               ">
-                                    <div class="featureBlock" style="
+                                                        <div class="featureBlock" style="
                 position: relative;
-              ">    
-              
-                                      <div class="featureBlock__wrap">
-                                        
-                                        <div class="featureBlock__content" style="
+              ">
+
+                                                            <div class="featureBlock__wrap">
+
+                                                                <div class="featureBlock__content" style="
                                         display: flex;
                                         justify-content: flex-start;
                                         align-items: center;
                                         gap: 19px;
                                       ">
-                  <input type="radio" style="
+                                                                    <input type="radio" style="
                   width: fit-content;
                   margin-top: 11px;
               ">
-                                                              <div style="
+                                                                    <div style="
                   text-align: left;
-              ">        <h3 class="featureBlock__heading" style="
+              "><h3 class="featureBlock__heading" style="
                   margin-bottom: 0;
               ">
-                                                                        <a class="featureBlock__heading__link" href="https://www.ekal.org/our-work/education">Gramothan Resource Center (GRC)</a>
-                                                                      </h3>
-                                                                      
-                                                              </div>           </div>
-                                      </div>
-                                      
-                                    </div>
-                                  </div><div class="" style="
+                                                                        <a class="featureBlock__heading__link"
+                                                                           href="https://www.ekal.org/our-work/education">Gramothan
+                                                                            Resource Center (GRC)</a>
+                                                                    </h3>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="" style="
                   flex: auto;
               ">
-                                    <div class="featureBlock" style="
+                                                        <div class="featureBlock" style="
                 position: relative;
-              ">    
-              
-                                      <div class="featureBlock__wrap">
-                                        
-                                        <div class="featureBlock__content" style="
+              ">
+
+                                                            <div class="featureBlock__wrap">
+
+                                                                <div class="featureBlock__content" style="
                                         display: flex;
                                         justify-content: flex-start;
                                         align-items: center;
                                         gap: 19px;
                                       ">
-                  <input type="radio" style="
+                                                                    <input type="radio" style="
                   width: fit-content;
                   margin-top: 11px;
               ">
-                                                              <div style="
+                                                                    <div style="
                   text-align: left;
-              ">        <h3 class="featureBlock__heading" style="
+              "><h3 class="featureBlock__heading" style="
                   margin-bottom: 0;
               ">
-                                                                        <a class="featureBlock__heading__link" href="https://www.ekal.org/our-work/education">Ekal Vidyalaya </a>
-                                                                      </h3>
-                                                                      
-                                                              </div>           </div>
-                                      </div>
-                                      
-                                    </div>
-                                  </div></div>
-                                                  <div class="row gx-3" style="
+                                                                        <a class="featureBlock__heading__link"
+                                                                           href="https://www.ekal.org/our-work/education">Ekal
+                                                                            Vidyalaya </a>
+                                                                    </h3>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gx-3" style="
                   flex-direction: row;
                   flex-wrap: nowrap;
                   width: 100%;
                   margin-bottom: 25px;
               ">
-                                  
-                                  <div class="" style="
+
+                                                    <div class="" style="
                   flex: auto;
               ">
-                                    <div class="featureBlock" style="
+                                                        <div class="featureBlock" style="
                 position: relative;
-              ">    
-              
-                                      <div class="featureBlock__wrap">
-                                        
-                                        <div class="featureBlock__content" style="
+              ">
+
+                                                            <div class="featureBlock__wrap">
+
+                                                                <div class="featureBlock__content" style="
                                         display: flex;
                                         justify-content: flex-start;
                                         align-items: center;
                                         gap: 19px;
                                       ">
-                  <input type="radio" style="
+                                                                    <input type="radio" style="
                   width: fit-content;
                   margin-top: 11px;
               ">
-                                                              <div style="
+                                                                    <div style="
                   text-align: left;
-              ">        <h3 class="featureBlock__heading" style="
+              "><h3 class="featureBlock__heading" style="
                   margin-bottom: 0;
               ">
-                                                                        <a class="featureBlock__heading__link" href="https://www.ekal.org/our-work/education">Ekal On Wheels (EOW)</a>
-                                                                      </h3>
-                                                                      
-                                                              </div>           </div>
-                                      </div>
-                                      
-                                    </div>
-                                  </div><div class="" style="
+                                                                        <a class="featureBlock__heading__link"
+                                                                           href="https://www.ekal.org/our-work/education">Ekal
+                                                                            On Wheels (EOW)</a>
+                                                                    </h3>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="" style="
                   flex: auto;
               ">
-                                    <div class="featureBlock" style="
+                                                        <div class="featureBlock" style="
                 position: relative;
-              ">    
-              
-                                      <div class="featureBlock__wrap">
-                                        
-                                        <div class="featureBlock__content" style="
+              ">
+
+                                                            <div class="featureBlock__wrap">
+
+                                                                <div class="featureBlock__content" style="
                                         display: flex;
                                         justify-content: flex-start;
                                         align-items: center;
                                         gap: 19px;
                                       ">
-                  <input type="radio" style="
+                                                                    <input type="radio" style="
                   width: fit-content;
                   margin-top: 11px;
               ">
-                                                              <div style="
+                                                                    <div style="
                   text-align: left;
-              ">        <h3 class="featureBlock__heading" style="
+              "><h3 class="featureBlock__heading" style="
                   margin-bottom: 0;
               ">
-                                                                        <a class="featureBlock__heading__link" href="https://www.ekal.org/our-work/education">Computer Traning Lab (CTL)</a>
-                                                                      </h3>
-                                                                      
-                                                              </div>           </div>
-                                      </div>
-                                      
-                                    </div>
-                                  </div><div class="" style="
+                                                                        <a class="featureBlock__heading__link"
+                                                                           href="https://www.ekal.org/our-work/education">Computer
+                                                                            Traning Lab (CTL)</a>
+                                                                    </h3>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="" style="
                   flex: auto;
               ">
-                                    <div class="featureBlock" style="
+                                                        <div class="featureBlock" style="
                 position: relative;
-              ">    
-              
-                                      <div class="featureBlock__wrap">
-                                        
-                                        <div class="featureBlock__content" style="
+              ">
+
+                                                            <div class="featureBlock__wrap">
+
+                                                                <div class="featureBlock__content" style="
                                         display: flex;
                                         justify-content: flex-start;
                                         align-items: center;
                                         gap: 19px;
                                       ">
-                  <input type="radio" style="
+                                                                    <input type="radio" style="
                   width: fit-content;
                   margin-top: 11px;
               ">
-                                                              <div style="
+                                                                    <div style="
                   text-align: left;
-              ">        <h3 class="featureBlock__heading" style="
+              "><h3 class="featureBlock__heading" style="
                   margin-bottom: 0;
               ">
-                                                                        <a class="featureBlock__heading__link" href="https://www.ekal.org/our-work/education">Women Empowerment Center (WEC)</a>
-                                                                      </h3>
-                                                                      
-                                                              </div>           </div>
-                                      </div>
-                                      
-                                    </div>
-                                  </div><div class="" style="
+                                                                        <a class="featureBlock__heading__link"
+                                                                           href="https://www.ekal.org/our-work/education">Women
+                                                                            Empowerment Center (WEC)</a>
+                                                                    </h3>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="" style="
                   flex: auto;
               ">
-                                    <div class="featureBlock" style="
+                                                        <div class="featureBlock" style="
                 position: relative;
-              ">    
-              
-                                      <div class="featureBlock__wrap">
-                                        
-                                        <div class="featureBlock__content" style="
+              ">
+
+                                                            <div class="featureBlock__wrap">
+
+                                                                <div class="featureBlock__content" style="
                                         display: flex;
                                         justify-content: flex-start;
                                         align-items: center;
                                         gap: 19px;
                                       ">
-                  <input type="radio" style="
+                                                                    <input type="radio" style="
                   width: fit-content;
                   margin-top: 11px;
               ">
-                                                              <div style="
+                                                                    <div style="
                   text-align: left;
-              ">        <h3 class="featureBlock__heading" style="
+              "><h3 class="featureBlock__heading" style="
                   margin-bottom: 0;
               ">
-                                                                        <a class="featureBlock__heading__link" href="https://www.ekal.org/our-work/education">Sustanaible Agriculture Training (SAT)</a>
-                                                                      </h3>
-                                                                      
-                                                              </div>           </div>
-                                      </div>
-                                      
-                                    </div>
-                                  </div></div><div class="row gx-3" style="
+                                                                        <a class="featureBlock__heading__link"
+                                                                           href="https://www.ekal.org/our-work/education">Sustanaible
+                                                                            Agriculture Training (SAT)</a>
+                                                                    </h3>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gx-3" style="
                   flex-direction: row;
                   flex-wrap: nowrap;
                   width: 100%;
                   margin-bottom: 0;
               ">
-                                  
-                                  <div class="" style="
+
+                                                    <div class="" style="
                   flex: auto;
               ">
-                                    <div class="featureBlock featureBlock--active" style="
+                                                        <div class="featureBlock featureBlock--active" style="
                 position: relative;
-              ">    
-              
-                                      <div class="featureBlock__wrap">
-                                        
-                                        <div class="featureBlock__content" style="
+              ">
+
+                                                            <div class="featureBlock__wrap">
+
+                                                                <div class="featureBlock__content" style="
                                         display: flex;
                                         justify-content: flex-start;
                                         align-items: center;
                                         gap: 19px;
                                       ">
-                  <input type="radio" style="
+                                                                    <input type="radio" style="
                   width: fit-content;
                   margin-top: 11px;
               ">
-                                                              <div style="
+                                                                    <div style="
                   text-align: left;
-              ">        <h3 class="featureBlock__heading" style="
+              "><h3 class="featureBlock__heading" style="
                   margin-bottom: 0;
               ">
-                                                                        <a class="featureBlock__heading__link" href="https://www.ekal.org/our-work/education">Tele Medicine</a>
-                                                                      </h3>
-                                                                      
-                                                              </div>           </div>
-                                      </div>
-                                      
-                                    </div>
-                                  </div><div class="" style="
+                                                                        <a class="featureBlock__heading__link"
+                                                                           href="https://www.ekal.org/our-work/education">Tele
+                                                                            Medicine</a>
+                                                                    </h3>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="" style="
                   flex: auto;
               ">
-                                    <div class="featureBlock" style="
+                                                        <div class="featureBlock" style="
                 position: relative;
-              ">    
-              
-                                      <div class="featureBlock__wrap">
-                                        
-                                        <div class="featureBlock__content" style="
+              ">
+
+                                                            <div class="featureBlock__wrap">
+
+                                                                <div class="featureBlock__content" style="
                                         display: flex;
                                         justify-content: flex-start;
                                         align-items: center;
                                         gap: 19px;
                                       ">
-                  <input type="radio" style="
+                                                                    <input type="radio" style="
                   width: fit-content;
                   margin-top: 11px;
               ">
-                                                              <div style="
+                                                                    <div style="
                   text-align: left;
-              ">        <h3 class="featureBlock__heading" style="
+              "><h3 class="featureBlock__heading" style="
                   margin-bottom: 0;
               ">
-                                                                        <a class="featureBlock__heading__link" href="https://www.ekal.org/our-work/education">Other Health Initiative</a>
-                                                                      </h3>
-                                                                      
-                                                              </div>           </div>
-                                      </div>
-                                      
-                                    </div>
-                                  </div><div class="" style="
+                                                                        <a class="featureBlock__heading__link"
+                                                                           href="https://www.ekal.org/our-work/education">Other
+                                                                            Health Initiative</a>
+                                                                    </h3>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="" style="
                   flex: auto;
               ">
-                                    
-                                  </div><div class="" style="
+
+                                                    </div>
+                                                    <div class="" style="
                   flex: auto;
               ">
-                                    
-                                  </div></div>
-                                                      
-                                                      </div>
-                                                      
-                                                     
-                                                      <div class="col-xxl-3 col-md-4 mb-30">
-                                                        <div class="sidebarLayout">
-                                                      <div class="innerWrapperSidebar mb-30">
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="col-xxl-3 col-md-4 mb-30">
+                                                <div class="sidebarLayout">
+                                                    <div class="innerWrapperSidebar mb-30">
                                                         <div class="sidebarWidget">
-                                                          <div class="sidebarTitle">
-                                                            <h5 class="sidebarTitle__heading text-uppercase mb-30" style="
+                                                            <div class="sidebarTitle">
+                                                                <h5 class="sidebarTitle__heading text-uppercase mb-30"
+                                                                    style="
                                                             color: #283891;
                                                             font-size: 24px;
                                                             font-style: normal;
@@ -1359,82 +1496,87 @@ li.option {
                                                             gap: 8px;
                                                             text-transform: none !important;
                                                         ">Project Detail</h5>
-                                                          </div>
-                                                          <div class="sidebarCategories">
-                                                          <ul>
-                                                            <li>
-                                                              <a href="#">
-                                                                <span>Donors</span>
-                                                                <span style="
+                                                            </div>
+                                                            <div class="sidebarCategories">
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="#">
+                                                                            <span>Donors</span>
+                                                                            <span style="
                                                           color: #0d6efd;
                                                           font-weight: 600;
                                                       ">2</span>
-                                                              </a>
-                                                            </li>
-                                                            <li>
-                                                              <a href="#">
-                                                                <span>Donation Amount</span>
-                                                                <span>$ 300,000</span>
-                                                              </a>
-                                                            </li>
-                                                            <li>
-                                                              <a href="#" style="
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
+                                                                            <span>Donation Amount</span>
+                                                                            <span>$ 300,000</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" style="
     /* text-align: left; */
 ">
                                                                 <span style="
     text-align: left;
 ">Project Type</span>
-                                                                <span style="
+                                                                            <span style="
     text-align: right;
 ">Integrated Village Development (IVD)</span>
-                                                              </a>
-                                                            </li>
-                                                            <li>
-                                                              <a href="#">
-                                                                <span>Location</span>
-                                                                <span>Jogmodi</span>
-                                                              </a>
-                                                            </li>
-                                                             
-                                                            
-                                                            
-                                                            
-                                                            
-                                                          </ul>
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        
-                                                        </div>
-                                                        </div>
-                                                    
-                                                    </div><div>
-                                                      <input type="button" name="previous" class="previous action-button-previous" value="Previous">
-                                                      <input type="button" name="next" class="next action-button" value="Next"></div>
-                                                </fieldset>
-              
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
+                                                                            <span>Location</span>
+                                                                            <span>Jogmodi</span>
+                                                                        </a>
+                                                                    </li>
 
-                                                <fieldset>
-                                                               
-                                                  <div class="row gx-3 program-selection" style="
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div>
+                                            <input type="button" name="previous" class="previous action-button-previous"
+                                                   value="Previous">
+                                            <input type="button" name="next" class="next action-button" value="Next">
+                                        </div>
+                                    </fieldset>
+
+
+                                    <fieldset>
+
+                                        <div class="row gx-3 program-selection" style="
                                                   flex-direction: row;
                                                   flex-wrap: nowrap;
                                                   width: 100%;
                                                   /* margin-bottom: 25px; */
                                               ">
-                                    <div class="col-xxl-9 col-md-8"> 
-              <div style="
+                                            <div class="col-xxl-9 col-md-8">
+                                                <div style="
               border: 1px solid #eee;
               padding: 25px;
-              ">                            <div style="
+              ">
+                                                    <div style="
               text-align: left;
               margin-bottom: 30px;
-              "><a class="btn btn--styleOne btn--black it-btn wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated " data-wow-duration="1200ms" data-wow-delay="400ms" href="donation-listing.html" style="animation-duration: 1200ms; animation-delay: 400ms; background: rgb(46, 58, 136); visibility: visible; animation-name: fadeInUp;">
+              ">
+                                                        <a class="btn btn--styleOne btn--black it-btn wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated "
+                                                           data-wow-duration="1200ms" data-wow-delay="400ms"
+                                                           href="donation-listing.html"
+                                                           style="animation-duration: 1200ms; animation-delay: 400ms; background: rgb(46, 58, 136); visibility: visible; animation-name: fadeInUp;">
                                         <span class="btn__text" style="
               text-transform: capitalize;
               ">Add Program</span>
-              
-                                        <span class="it-btn__inner">
+
+                                                            <span class="it-btn__inner">
                                             <span class="it-btn__blobs">
                                                 <span class="it-btn__blob"></span>
                                                 <span class="it-btn__blob"></span>
@@ -1442,177 +1584,212 @@ li.option {
                                                 <span class="it-btn__blob"></span>
                                             </span>
                                         </span>
-                                        <svg class="it-btn__animation" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                            <defs>
-                                                <filter>
-                                                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10">
-                                                    </feGaussianBlur>
-                                                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
-                                                    </feColorMatrix>
-                                                    <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                                                </filter>
-                                            </defs>
-                                        </svg>
-                                    </a></div><div style="
+                                                            <svg class="it-btn__animation"
+                                                                 xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter>
+                                                                        <feGaussianBlur in="SourceGraphic" result="blur"
+                                                                                        stdDeviation="10">
+                                                                        </feGaussianBlur>
+                                                                        <feColorMatrix in="blur" mode="matrix"
+                                                                                       values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                                                                                       result="goo">
+                                                                        </feColorMatrix>
+                                                                        <feBlend in2="goo" in="SourceGraphic"
+                                                                                 result="mix"></feBlend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                        </a></div>
+                                                    <div style="
                                     display: flex;
                                     gap: 30px;
                                     margin-bottom: 30px;
                                 ">
-                                <div class="" style="
+                                                        <div class="" style="
                                                   flex: 0 50%;
                                               ">
-                                                                    <div class="featureBlock" style="
+                                                            <div class="featureBlock" style="
                                                 position: relative;
-                                              ">    
-                                              
-                                                                      <div class="featureBlock__wrap" style="
+                                              ">
+
+                                                                <div class="featureBlock__wrap" style="
                                     height: 100%;
                                 ">
-                                                                        
-                                                                        <div class="featureBlock__content" style="
+
+                                                                    <div class="featureBlock__content" style="
                                                                         display: flex;
                                                                         justify-content: flex-start;
                                                                         align-items: flex-start;
                                                                         gap: 19px;
                                                                       ">
-                                                  <input type="checkbox" style="
+                                                                        <input type="checkbox" style="
                                                   width: fit-content;
                                                   margin-top: 2px;
                                               " name="ivd" checked="">
-                                                                                              <div style="
+                                                                        <div style="
                                                   text-align: left;
-                                              ">        <h3 class="featureBlock__heading" style="
+                                              "><h3 class="featureBlock__heading" style="
                                                   margin-bottom: 0;
                                               ">
-                                                                                                        <a class="featureBlock__heading__link">Computer Training Center (CTL)</a>
-                                                                                                      </h3>
-                                                                                                      
-                                                                                              <p class="featureBlock__text" style="
+                                                                            <a class="featureBlock__heading__link">Computer
+                                                                                Training Center (CTL)</a>
+                                                                        </h3>
+
+                                                                            <p class="featureBlock__text" style="
                                     margin-bottom: 0;
                                     margin-top: 10px;
-                                ">Initially, the computer literacy program was started with a motive to create awareness of digitalization and information sharing. &ZeroWidthSpace;</p></div>           </div>
-                                                                      </div>
-                                                                      
+                                ">Initially, the computer literacy program was started with a motive to create awareness
+                                                                                of digitalization and information
+                                                                                sharing. &ZeroWidthSpace;</p></div>
                                                                     </div>
-                                                                  </div><div class="" style="
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="
                                                   flex: 0 50%;
                                               ">
-                                                                    <div class="featureBlock" style="
+                                                            <div class="featureBlock" style="
                                                 position: relative;
-                                              ">    
-                                              
-                                                                      <div class="featureBlock__wrap">
-                                                                        
-                                                                        <div class="featureBlock__content" style="
+                                              ">
+
+                                                                <div class="featureBlock__wrap">
+
+                                                                    <div class="featureBlock__content" style="
                                                                         display: flex;
                                                                         justify-content: flex-start;
                                                                         align-items: flex-start;
                                                                         gap: 19px;
                                                                       ">
-                                                  <input type="checkbox" style="
+                                                                        <input type="checkbox" style="
                                                   width: fit-content;
                                                   margin-top: 2px;
                                               " name="ivd" checked="">
-                                                                                              <div style="
+                                                                        <div style="
                                                   text-align: left;
-                                              ">        <h3 class="featureBlock__heading" style="
+                                              "><h3 class="featureBlock__heading" style="
                                                   margin-bottom: 0;
                                               ">
-                                                                                                        <a class="featureBlock__heading__link">Women Empowerment Center (WEC)</a>
-                                                                                                      </h3>
-                                                                                                      
-                                                                                              <p class="featureBlock__text" style="
+                                                                            <a class="featureBlock__heading__link">Women
+                                                                                Empowerment Center (WEC)</a>
+                                                                        </h3>
+
+                                                                            <p class="featureBlock__text" style="
                                     margin-bottom: 0;
                                     margin-top: 10px;
-                                ">WEC (women empowerment center) model has been identified keeping in view of the employment, empowerment, and entrepreneurship development at village or community level to the unemployed youths and their overall socio-economic development&ZeroWidthSpace;</p></div>           </div>
-                                                                      </div>
-                                                                      
-                                                                    </div></div>
-                                                                  </div>
-                                                                  <div style="
+                                ">WEC (women empowerment center) model has been identified keeping in view of the
+                                                                                employment, empowerment, and
+                                                                                entrepreneurship development at village
+                                                                                or community level to the unemployed
+                                                                                youths and their overall socio-economic
+                                                                                development&ZeroWidthSpace;</p></div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="
                                     display: flex;
                                     gap: 30px;
                                 ">
-                                <div class="" style="
+                                                        <div class="" style="
                                                   flex: 0 50%;
                                               ">
-                                                                    <div class="featureBlock featureBlock--active" style="
+                                                            <div class="featureBlock featureBlock--active" style="
                                                 position: relative;
-                                              ">    
-                                              
-                                                                      <div class="featureBlock__wrap">
-                                                                        
-                                                                        <div class="featureBlock__content" style="
+                                              ">
+
+                                                                <div class="featureBlock__wrap">
+
+                                                                    <div class="featureBlock__content" style="
                                                                         display: flex;
                                                                         justify-content: flex-start;
                                                                         align-items: flex-start;
                                                                         gap: 19px;
                                                                       ">
-                                                  <input type="checkbox" style="
+                                                                        <input type="checkbox" style="
                                                   width: fit-content;
                                                   margin-top: 2px;
                                               " name="ivd" checked="">
-                                                                                              <div style="
+                                                                        <div style="
                                                   text-align: left;
-                                              ">        <h3 class="featureBlock__heading" style="
+                                              "><h3 class="featureBlock__heading" style="
                                                   margin-bottom: 0;
                                               ">
-                                                                                                        <a class="featureBlock__heading__link">Nutritional Gardening &ZeroWidthSpace;</a>
-                                                                                                      </h3>
-                                                                                                      
-                                                                                              <p class="featureBlock__text" style="
+                                                                            <a class="featureBlock__heading__link">Nutritional
+                                                                                Gardening &ZeroWidthSpace;</a>
+                                                                        </h3>
+
+                                                                            <p class="featureBlock__text" style="
                                     margin-bottom: 0;
                                     margin-top: 10px;
-                                ">Ekal Gramothan foundation is providing training to families living in villages to set up a nutritional garden and through this program has spread awareness among rural families about the benefits of healthy food.&ZeroWidthSpace;</p></div>           </div>
-                                                                      </div>
-                                                                      
+                                ">Ekal Gramothan foundation is providing training to families living in villages to set
+                                                                                up a nutritional garden and through this
+                                                                                program has spread awareness among rural
+                                                                                families about the benefits of healthy
+                                                                                food.&ZeroWidthSpace;</p></div>
                                                                     </div>
-                                                                  </div><div class="" style="
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="" style="
                                                   flex: 0 50%;
                                               ">
-                                                                    <div class="featureBlock" style="
+                                                            <div class="featureBlock" style="
                                                 position: relative;
-                                              ">    
-                                              
-                                                                      <div class="featureBlock__wrap" style="
+                                              ">
+
+                                                                <div class="featureBlock__wrap" style="
                                     height: 100%;
                                 ">
-                                                                        
-                                                                        <div class="featureBlock__content" style="
+
+                                                                    <div class="featureBlock__content" style="
                                                                         display: flex;
                                                                         justify-content: flex-start;
                                                                         align-items: flex-start;
                                                                         gap: 19px;
                                                                       ">
-                                                  <input type="checkbox" style="
+                                                                        <input type="checkbox" style="
                                                   width: fit-content;
                                                   margin-top: 2px;
                                               " name="ivd" checked="">
-                                                                                              <div style="
+                                                                        <div style="
                                                   text-align: left;
-                                              ">        <h3 class="featureBlock__heading" style="
+                                              "><h3 class="featureBlock__heading" style="
                                                   margin-bottom: 0;
                                               ">
-                                                                                                        <a class="featureBlock__heading__link">Organic farming&ZeroWidthSpace;</a>
-                                                                                                      </h3>
-                                                                                                      
-                                                                                              <p class="featureBlock__text" style="
+                                                                            <a class="featureBlock__heading__link">Organic
+                                                                                farming&ZeroWidthSpace;</a>
+                                                                        </h3>
+
+                                                                            <p class="featureBlock__text" style="
                                     margin-bottom: 0;
                                     margin-top: 10px;
-                                ">Ekal Gramothan foundation is providing organic farming training to the farmers and educates them about the benefits of organic farming.&ZeroWidthSpace;</p></div>           </div>
-                                                                      </div>
-                                                                      
-                                                                    </div></div>
-                                                                  </div></div></div>
-              
-                                                                  <div class="col-xxl-3 col-md-4 mb-30" style="
+                                ">Ekal Gramothan foundation is providing organic farming training to the farmers and
+                                                                                educates them about the benefits of
+                                                                                organic farming.&ZeroWidthSpace;</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xxl-3 col-md-4 mb-30" style="
               margin: 0;
               ">
-                                                                    <div class="sidebarLayout">
-                                                                  <div class="innerWrapperSidebar mb-30">
-                                                                    <div class="sidebarWidget">
-                                                                      <div class="sidebarTitle">
-                                                                        <h5 class="sidebarTitle__heading text-uppercase mb-30" style="
+                                                <div class="sidebarLayout">
+                                                    <div class="innerWrapperSidebar mb-30">
+                                                        <div class="sidebarWidget">
+                                                            <div class="sidebarTitle">
+                                                                <h5 class="sidebarTitle__heading text-uppercase mb-30"
+                                                                    style="
                                                                         color: #283891;
                                                                         font-size: 24px;
                                                                         font-style: normal;
@@ -1623,69 +1800,73 @@ li.option {
                                                                         gap: 8px;
                                                                         text-transform: none !important;
                                                                     ">Project Detail</h5>
-                                                                      </div>
-                                                                      <div class="sidebarCategories">
-                                                                      <ul>
-                                                                        <li>
-                                                                          <a href="#">
+                                                            </div>
+                                                            <div class="sidebarCategories">
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="#">
                                                                             <span>Donors</span>
                                                                             <span style="
                                                                       color: #0d6efd;
                                                                       font-weight: 600;
                                                                   ">2</span>
-                                                                          </a>
-                                                                        </li>
-                                                                        <li>
-                                                                          <a href="#">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
                                                                             <span>Donation Amount</span>
                                                                             <span>$ 300,000</span>
-                                                                          </a>
-                                                                        </li>
-                                                                        <li>
-                                                                          <a href="#">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
                                                                             <span>Project Type</span>
                                                                             <span>Integrated Village Development (IVD)</span>
-                                                                          </a>
-                                                                        </li>
-                                                                        <li>
-                                                                          <a href="#">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
                                                                             <span>Location</span>
                                                                             <span>Jogmodi</span>
-                                                                          </a>
-                                                                        </li>
-                                                                        <li>
-                                                                          <a href="#">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
                                                                             <span>Program</span>
                                                                             <span>Computer Training Center</span>
-                                                                          </a>
-                                                                        </li> 
-                                                                        <li>
-                                                                          <a href="#">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">
                                                                             <span>Category</span>
                                                                             <span>Ekal Gramothan Foundation</span>
-                                                                          </a>
-                                                                        </li>
-                                                                      
-                                                                      </ul>
-                                                                    </div>
-                                                                    </div>
-                                                                    </div>
-                                                                    
-                                                                    </div>
-                                                                    </div>
-                                                                  </div>
-                                                                    
-                                                                  <div style="margin-top: 0px;"><input type="button" name="previous" class="previous action-button-previous" value="Previous">
-                                                                    <input type="submit" name="submit" class="submit action-button" value="Submit" id="submit"></div>
-                                                              </fieldset>
-              
-          
-          </form></div>
-        </div>
-       </div>
-       </div>
-       </div>
-       
+                                                                        </a>
+                                                                    </li>
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="margin-top: 0px;"><input type="button" name="previous"
+                                                                             class="previous action-button-previous"
+                                                                             value="Previous">
+                                            <input type="submit" name="submit" class="submit action-button"
+                                                   value="Submit" id="submit"></div>
+                                    </fieldset>
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
     <!-- About && Features && Doner End -->
@@ -1701,276 +1882,303 @@ li.option {
     <!-- Sponsors -->
 
     <!-- Sponsors End -->
-  </main>
-  <!-- Main End -->
-  <!-- footer -->
+</main>
+<!-- Main End -->
+<!-- footer -->
 
-  
-  <footer class="footer footer--bg footer--styleOne pt-70 pb-40" style="
+
+<footer class="footer footer--bg footer--styleOne pt-70 pb-40" style="
     /* margin-top: 113px; */
 ">
-    <img src="https://codercredit.com/tf/gainioz/image/shapes/footerShape2.png" alt="Gainioz Shape" class="footer__shape" style="
+    <img src="https://codercredit.com/tf/gainioz/image/shapes/footerShape2.png" alt="Gainioz Shape"
+         class="footer__shape" style="
     /* display: none; */
 ">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col">
-          <div class="footer__logo">
-            <img src="https://www.ekal.org/assets/images/ekal-logo.png" alt="Gainioz Logo" class="footer__logo__image">
-          </div>
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="footer__logo">
+                    <img src="https://www.ekal.org/assets/images/ekal-logo.png" alt="Gainioz Logo"
+                         class="footer__logo__image">
+                </div>
+            </div>
+            <div class="col">
+                <div class="footer__social itSocial">
+                    <ul>
+                        <li>
+                            <a class="facebook" href="https://codercredit.com/" rel="nofollow">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="twitter" href="https://codercredit.com/" rel="nofollow">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="instagram" href="https://codercredit.com/" rel="nofollow">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="pinterest" href="https://codercredit.com/" rel="nofollow">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
-        <div class="col">
-          <div class="footer__social itSocial">
-            <ul>
-              <li>
-                <a class="facebook" href="https://codercredit.com/" rel="nofollow">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li>
-                <a class="twitter" href="https://codercredit.com/" rel="nofollow">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a class="instagram" href="https://codercredit.com/" rel="nofollow">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-              <li>
-                <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-              <li>
-                <a class="pinterest" href="https://codercredit.com/" rel="nofollow">
-                  <i class="fab fa-pinterest-p"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-      </div>
-      
+
 
     </div>
-  </footer>
-  
-  <!-- Template Search -->
-  <div id="template-search" class="template-search">
+</footer>
+
+<!-- Template Search -->
+<div id="template-search" class="template-search">
     <button type="button" class="close">
-      <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-xmark"></i>
     </button>
     <form class="search-form">
-      <input type="search" value="" placeholder="Type your search">
-      <button type="submit" class="search-btn">
-        <i class="fas fa-search"></i>
-      </button>
+        <input type="search" value="" placeholder="Type your search">
+        <button type="submit" class="search-btn">
+            <i class="fas fa-search"></i>
+        </button>
     </form>
-  </div>
-  <!-- Template Search End -->
-  <script src="https://codercredit.com/tf/gainioz/assets/jquery/jquery.min.js"></script>
-  <script src="https://codercredit.com/tf/gainioz/assets/bootstrap/js/bootstrap.bundle.js"></script>
-  <script src="https://codercredit.com/tf/gainioz/assets/swiper/swiper.min.js"></script>
-  <script src="https://codercredit.com/tf/gainioz/assets/nice-select/jquery.nice-select.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+</div>
+<!-- Template Search End -->
+<script src="https://codercredit.com/tf/gainioz/assets/jquery/jquery.min.js"></script>
+<script src="https://codercredit.com/tf/gainioz/assets/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="https://codercredit.com/tf/gainioz/assets/swiper/swiper.min.js"></script>
+<script src="https://codercredit.com/tf/gainioz/assets/nice-select/jquery.nice-select.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 
-  <script src="https://codercredit.com/tf/gainioz/assets/validator.min.js"></script>
-  <script src="https://codercredit.com/tf/gainioz/assets/animation/wow.min.js"></script>
-  <script src="https://codercredit.com/tf/gainioz/js/app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.js"></script>
+<script src="https://codercredit.com/tf/gainioz/assets/validator.min.js"></script>
+<script src="https://codercredit.com/tf/gainioz/assets/animation/wow.min.js"></script>
+<script src="https://codercredit.com/tf/gainioz/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
 
 <script>
-  $(function() {
-    $('#table').bootstrapTable()
-  });
-  $(function() {
-    $('#table2').bootstrapTable()
-  });
+    $(function() {
+      $('#table').bootstrapTable()
+    });
+    $(function() {
+      $('#table2').bootstrapTable()
+    });
 
-  const swiper = new Swiper('.swiper', {
-    slidesPerView: 4
-});
-  </script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 4
+  });
+</script>
 <script>
- 
- $("#button").click(function(e){
-    console.log( "ready!" );
-  
-    e.preventDefault();
-      $("#wrap2").animate({ width: "toggle" }, 700);
-      $(".bg_drop").animate({ width: "toggle" }, 700);
-      $(".open-call").toggleClass("opened closed");
-    });
-  
-   $(".close-call").click(function () {
-      $("#wrap2").hide({ width: "toggle" }, 700);
-      $(".bg_drop").hide({ width: "toggle" }, 700);
-  
-    });
-  
 
-//jQuery time
-var current_fs, next_fs, previous_fs; //fieldsets
-var left, opacity, scale; //fieldset properties which we will animate
-var animating; //flag to prevent quick multi-click glitches
+    $("#button").click(function(e){
+       console.log( "ready!" );
 
-$(".next").click(function(){
-    if(animating) return false;
-    animating = true;
-    
-    current_fs = $(this).parent().parent();
-    next_fs = $(this).parent().parent().next();
-    
-    //activate next step on progressbar using the index of next_fs
-    $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-    
-    //show the next fieldset
-    next_fs.show(); 
-    //hide the current fieldset with style
-    current_fs.animate({opacity: 0}, {
-        step: function(now, mx) {
-            //as the opacity of current_fs reduces to 0 - stored in "now"
-            //1. scale current_fs down to 80%
-            scale = 1 - (1 - now) * 0.2;
-            //2. bring next_fs from the right(50%)
-            left = (now * 50)+"%";
-            //3. increase opacity of next_fs to 1 as it moves in
-            opacity = 1 - now;
-            current_fs.css({
-        'transform': 'scale('+scale+')',
+       e.preventDefault();
+         $("#wrap2").animate({ width: "toggle" }, 700);
+         $(".bg_drop").animate({ width: "toggle" }, 700);
+         $(".open-call").toggleClass("opened closed");
+       });
+
+      $(".close-call").click(function () {
+         $("#wrap2").hide({ width: "toggle" }, 700);
+         $(".bg_drop").hide({ width: "toggle" }, 700);
+
+       });
+
+
+   //jQuery time
+   var current_fs, next_fs, previous_fs; //fieldsets
+   var left, opacity, scale; //fieldset properties which we will animate
+   var animating; //flag to prevent quick multi-click glitches
+
+   $(".next").click(function(){
+       if(animating) return false;
+       animating = true;
+
+       current_fs = $(this).parent().parent();
+       next_fs = $(this).parent().parent().next();
+
+       //activate next step on progressbar using the index of next_fs
+       $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+       //show the next fieldset
+       next_fs.show();
+       //hide the current fieldset with style
+       current_fs.animate({opacity: 0}, {
+           step: function(now, mx) {
+               //as the opacity of current_fs reduces to 0 - stored in "now"
+               //1. scale current_fs down to 80%
+               scale = 1 - (1 - now) * 0.2;
+               //2. bring next_fs from the right(50%)
+               left = (now * 50)+"%";
+               //3. increase opacity of next_fs to 1 as it moves in
+               opacity = 1 - now;
+               current_fs.css({
+           'transform': 'scale('+scale+')',
+         });
+               next_fs.css({'left': left, 'opacity': opacity});
+           },
+           duration: 800,
+           complete: function(){
+               current_fs.hide();
+               animating = false;
+           },
+           //this comes from the custom easing plugin
+           easing: 'easeInOutBack'
+       });
+   });
+
+   $(".previous").click(function(){
+       if(animating) return false;
+       animating = true;
+
+       current_fs = $(this).parent().parent();
+       previous_fs = $(this).parent().parent().prev();
+
+       //de-activate current step on progressbar
+       $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+       //show the previous fieldset
+       previous_fs.show();
+       //hide the current fieldset with style
+       current_fs.animate({opacity: 0}, {
+           step: function(now, mx) {
+               //as the opacity of current_fs reduces to 0 - stored in "now"
+               //1. scale previous_fs from 80% to 100%
+               scale = 0.8 + (1 - now) * 0.2;
+               //2. take current_fs to the right(50%) - from 0%
+               left = ((1-now) * 50)+"%";
+               //3. increase opacity of previous_fs to 1 as it moves in
+               opacity = 1 - now;
+               current_fs.css({'left': left});
+               previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+           },
+           duration: 800,
+           complete: function(){
+               current_fs.hide();
+               animating = false;
+           },
+           //this comes from the custom easing plugin
+           easing: 'easeInOutBack'
+       });
+   });
+
+   $(".submit").click(function(){
+       return false;
+   })
+
+   /* Bind to 'click-cell' */
+   $('#table').on('click-cell.bs.table', onClickCell);
+
+   /* Hide a Columns */
+   $('.my-table').bootstrapTable('hideColumn', 'one');
+
+   /* Displey what we get */
+   function onClickCell(event, field, value, row, $element) {
+   $('.clicked-text').text($element.text());
+   $('.clicked-field').text(field);
+   $('.clicked-value').text(value);
+   $('.alert').removeClass('hidden');
+   }
+
+   var $table2 = $('#table').bootstrapTable()
+   var $button = $('#button_add')
+
+   $(function() {
+
+      $('#donor_save').click(function (e) {
+	    saveDonor();
       });
-            next_fs.css({'left': left, 'opacity': opacity});
-        }, 
-        duration: 800, 
-        complete: function(){
-            current_fs.hide();
-            animating = false;
-        }, 
-        //this comes from the custom easing plugin
-        easing: 'easeInOutBack'
-    });
-});
+     $button.click(function (e) {
+         e.preventDefault();
 
-$(".previous").click(function(){
-    if(animating) return false;
-    animating = true;
-    
-    current_fs = $(this).parent().parent();
-    previous_fs = $(this).parent().parent().prev();
-    
-    //de-activate current step on progressbar
-    $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-    
-    //show the previous fieldset
-    previous_fs.show(); 
-    //hide the current fieldset with style
-    current_fs.animate({opacity: 0}, {
-        step: function(now, mx) {
-            //as the opacity of current_fs reduces to 0 - stored in "now"
-            //1. scale previous_fs from 80% to 100%
-            scale = 0.8 + (1 - now) * 0.2;
-            //2. take current_fs to the right(50%) - from 0%
-            left = ((1-now) * 50)+"%";
-            //3. increase opacity of previous_fs to 1 as it moves in
-            opacity = 1 - now;
-            current_fs.css({'left': left});
-            previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-        }, 
-        duration: 800, 
-        complete: function(){
-            current_fs.hide();
-            animating = false;
-        }, 
-        //this comes from the custom easing plugin
-        easing: 'easeInOutBack'
-    });
-});
+       $table2.bootstrapTable('insertRow', {
+         index: 2,
+         row: {
 
-$(".submit").click(function(){
-    return false;
-})
+           itemname: $('#search').val(),
+           foundation: 'New Foundation',
+           phone: '543-322-2233',
+           email: 'aumpatel@gmail.com',
+           country: 'India',
+           amount: "<input type='text' placeholder='$ 150,000'>",
+         action: "<div style='display: flex;gap: 3px;'> <i class='fa fa-edit' aria-hidden='true' style=' color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px;'></i> <i class='fa fa-trash' aria-hidden='true' style='color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px;'></i></div>"
+         }
+       })
 
-/* Bind to 'click-cell' */
-$('#table').on('click-cell.bs.table', onClickCell);
+       $('#itemname').val('')
+       $('#itemtype').remove()
 
-/* Hide a Columns */
-$('.my-table').bootstrapTable('hideColumn', 'one');
-
-/* Displey what we get */
-function onClickCell(event, field, value, row, $element) {
-$('.clicked-text').text($element.text());
-$('.clicked-field').text(field);
-$('.clicked-value').text(value);
-$('.alert').removeClass('hidden');
-}
-
-var $table2 = $('#table').bootstrapTable()
-var $button = $('#button_add')
-
-$(function() {
-  $button.click(function (e) {
-      e.preventDefault();
-  
-    $table2.bootstrapTable('insertRow', {
-      index: 2,
-      row: {
-       
-        itemname: $('#search').val(),
-        foundation: 'New Foundation',
-        phone: '543-322-2233',
-        email: 'aumpatel@gmail.com',
-        country: 'India',
-        amount: "<input type='text' placeholder='$ 150,000'>",
-      action: "<div style='display: flex;gap: 3px;'> <i class='fa fa-edit' aria-hidden='true' style=' color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px;'></i> <i class='fa fa-trash' aria-hidden='true' style='color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px;'></i></div>"
-      }
-    })
-
-    $('#itemname').val('')
-    $('#itemtype').remove()
-
-  })
-})
+     })
+   })
 
 
 
-var people = ['Aum Patel', 'Bhaskar Sharma'];
+   var people = ['Aum Patel', 'Bhaskar Sharma'];
 
-function matchPeople(input) {
-  var reg = new RegExp(input.split("").join("\\w*").replace(/\W/, ""), "i");
-  var res = [];
-  if (input.trim().length === 0) {
-    return res;
+   function matchPeople(input) {
+     var reg = new RegExp(input.split("").join("\\w*").replace(/\W/, ""), "i");
+     var res = [];
+     if (input.trim().length === 0) {
+       return res;
+     }
+     for (var i = 0, len = people.length; i < len; i++) {
+       if (people[i].match(reg)) {
+         res.push(people[i]);
+       }
+     }
+     return res;
+   }
+
+   function changeInput(val) {
+     var autoCompleteResult = matchPeople(val);
+     document.getElementById("result").innerHTML = "";
+     for (var i = 0, limit = 10, len = autoCompleteResult.length; i < len  && i < limit; i++) {
+       document.getElementById("result").innerHTML += "<a class='list-group-item list-group-item-action' href='#' onclick='setSearch(\"" + autoCompleteResult[i] + "\")'>" + autoCompleteResult[i] + "</a>";
+     }
+   }
+
+
+   function setSearch(value) {
+     console.log(value)
+     document.getElementById("result").innerHTML = "";
+     $("#search").val(value)
+   }
+
+   function saveDonor(){
+        alert('save Donor Called');
+	  var settings = {
+		  "url": "/ekalivd/donor/save",
+		  "method": "POST",
+		  "timeout": 0,
+		  "headers": {
+		    "Content-Type": "application/json"
+		  },
+		  "data": JSON.stringify({
+		     "name" : 'Temp Name',
+		  	"trust" : $('#donorTrust').val()
+		  }),
+		};
+
+		$.ajax(settings).done(function (response) {
+		   console.log("Donor Saved")
+		});
   }
-  for (var i = 0, len = people.length; i < len; i++) {
-    if (people[i].match(reg)) {
-      res.push(people[i]);
-    }
-  }
-  return res;
-}
 
-function changeInput(val) {
-  var autoCompleteResult = matchPeople(val);
-  document.getElementById("result").innerHTML = "";
-  for (var i = 0, limit = 10, len = autoCompleteResult.length; i < len  && i < limit; i++) {
-    document.getElementById("result").innerHTML += "<a class='list-group-item list-group-item-action' href='#' onclick='setSearch(\"" + autoCompleteResult[i] + "\")'>" + autoCompleteResult[i] + "</a>";
-  }
-}
-
-
-function setSearch(value) {
-  console.log(value)
-  document.getElementById("result").innerHTML = "";
-  $("#search").val(value)
-}
-
-$("#submit").click(function(){
-  window.location ='new_project_plan.html'
-})
+   $("#submit").click(function(){
+     window.location ='new_project_plan.html'
+   })
 </script>
 
 
-</body></html>
+</body>
+</html>
