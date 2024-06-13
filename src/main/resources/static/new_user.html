@@ -723,10 +723,15 @@
                       <td>93705 33194</td>
                       <td>ivdjogmodi32@gmail.com</td>
                       <td>IVD Project Coordinator</td>
-                      <td><div style="
+                      <td>
+                        <div style="
                         display: flex;
-                        gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
-                        <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></td></div>
+                        gap: 3px;"><i class="fa fa-edit" aria-hidden="true"
+                                      style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i>
+                          <i class="fa fa-trash" aria-hidden="true"
+                             style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i>
+                        </div>
+                      </td>
                       </tr>
                     </tbody>
                   </table>
@@ -755,12 +760,12 @@
            font-size: 28px;
            margin-bottom: 20px;
            color: #2a398a;
-       ">Add New User</h2>  
+       " class="user-dialogue">Add New User</h2>
                
-       <input type="text" name="fname" placeholder="First Name">
-    </select><input type="text" name="fname" placeholder="Last Name">
-       <input type="number" name="fname" placeholder="Mobile Number">
-       <input type="text" name="fname" placeholder="Email ID">
+       <input id="NewUser_fname" type="text" name="fname" placeholder="First Name">
+    </select><input id="NewUser_lname" type="text" name="fname" placeholder="Last Name">
+       <input id="NewUser_mobilenumber" type="number" name="fname" placeholder="Mobile Number">
+       <input id="NewUser_emailId" type="text" name="fname" placeholder="Email ID">
        <select name="cars" id="cars" style=" width: 100%;padding: 8px;padding: 8px;border: 1px solid #ccc;border-radius: 4px;margin-bottom: 10px; width: 100%; box-sizing: border-box; color: inherit;">
         <option value="volvo" disabled="">Select Role</option>
         <option value="saab">IVD Project Coordinator</option>
@@ -883,7 +888,7 @@
   
   <script>
     $(function() {
-      $('#table').bootstrapTable()
+      $('#table').bootstrapTable();
     });
     $(function() {
       $('#table2').bootstrapTable()
@@ -896,12 +901,14 @@
   <script>
    $( document ).ready(function() {
        console.log( "ready!" );
+        showUsers();
    });
   
   $("a.btn.btn--styleOne").click(function(e){
-    console.log( "ready!" );
+    console.log( "styleOne click!" );
   
     e.preventDefault();
+      $(".user-dialogue").text("Add New User");
       $("#wrap").animate({ width: "toggle" }, 700);
       $(".bg_drop").animate({ width: "toggle" }, 700);
       $(".open-call").toggleClass("opened closed");
@@ -924,6 +931,7 @@
   var animating; //flag to prevent quick multi-click glitches
   
   $(".next").click(function(){
+      saveUser();
       if(animating) return false;
       animating = true;
       
@@ -998,10 +1006,94 @@
   $(".submit").click(function(){
       return false;
   });
-  
-  $.get("/ekalivd/user",function(resp){
-	  alert(resp.length);
-  });
+
+  function getUserModifyButtonsHtml(elmJson) {
+      var userModifyButtonsHtml = `
+            <td>
+              <div style="display: flex;gap: 3px;">
+                <span onclick="editUser(${elmJson})">
+                  <i class="fa fa-edit" aria-hidden="true"
+                              style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i>
+                </span>
+                <span onclick="deleteUser(${elmJson})">
+                  <i class="fa fa-trash" aria-hidden="true"
+                     style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i>
+                </span>
+              </div>
+            </td>
+			` ;
+	  return userModifyButtonsHtml;
+	};
+
+  function editUser(elm){
+      //elm = JSON.parse(elmJson);
+      alert("Edit User clicked with id : "+ elm);
+      $("#wrap").animate({ width: "toggle" }, 700);
+      $(".bg_drop").animate({ width: "toggle" }, 700);
+      $(".open-call").toggleClass("opened closed");
+
+      $(".user-dialogue").text("Update User");
+
+     $('#NewUser_fname').val(elm.firstName);
+     $('#NewUser_lname').val(elm.lastName);
+     $('#NewUser_mobilenumber').val(elm.mobile);
+     $('#NewUser_emailId').val(elm.email ?? '');
+  }
+
+  function deleteUser(elm){
+    //elm = JSON.parse(elmJson);
+    alert("Delete User clicked with id : "+ elm);
+  }
+
+  function showUsers(){
+     var settings = {
+       "url": "/ekalivd/user",
+       "method": "GET",
+       "timeout": 0,
+       "headers": {
+         "Content-Type": "application/json"
+       },
+       success: function(users) {
+        console.log("Show user called");
+        data = users.data;
+        var table = $("#table tbody");
+        table.empty();
+        $.each(data, function(idx, elem){
+            var elemJson = JSON.stringify(elem).replace(/\"/g,"'")
+            table.append("<tr><td>"+elem.firstName+"</td><td>"+elem.lastName+"</td><td>"+elem.mobile+"</td><td>"+(elem.email ?? '')+"</td><td>"+(elem.role?.roleName ?? '')+"</td>>"+getUserModifyButtonsHtml(elemJson)+"</tr>");
+        })
+       },
+       error: function(err) {
+         alert(err);
+       }
+     };
+
+     $.ajax(settings);
+  }
+
+   function saveUser(){
+
+     var settings = {
+       "url": "/ekalivd/user",
+       "method": "POST",
+       "timeout": 0,
+       "headers": {
+         "Content-Type": "application/json"
+       },
+       "data": JSON.stringify({
+          "firstName" : $('#NewUser_fname').val(),
+          "lastName" : $('#NewUser_lname').val(),
+          "whatsApp" : $('#NewUser_mobilenumber').val(),
+          "email" : $('#NewUser_emailId').val()
+       }),
+     };
+
+     $.ajax(settings).done(function (response) {
+        showUsers();
+        alert("User Saved")
+     });
+   }
+
   </script>
   
   </body></html>
