@@ -60,6 +60,7 @@ public class UserDao {
         existingData.setFirstName(userDTO.getFirstName());
         existingData.setLastName(userDTO.getLastName());
         existingData.setMobile(userDTO.getMobile());
+        existingData.setEmail(userDTO.getEmail());
 
         userRepository.save(existingData);
     }
@@ -138,5 +139,10 @@ public class UserDao {
         }
         User user = optUser.get();
         return user;
+    }
+
+    public void deleteUserById(int userId) {
+        logger.info("Deleting user with id: {}",userId);
+        userRepository.deleteById(userId);
     }
 }
