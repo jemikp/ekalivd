@@ -41,7 +41,7 @@ public class ItemMasterController {
 	}
 	
 	@PutMapping(value = "/{itemId}", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> updateUser(@PathVariable(name = "itemId") int itemId,@Valid @RequestBody ItemMasterDTO itemMasterDTO) {
+	public ResponseEntity<?> updateItem(@PathVariable(name = "itemId") int itemId,@Valid @RequestBody ItemMasterDTO itemMasterDTO) {
 		itemMasterDao.updateItemById(itemMasterDTO,itemId);
 		return ResponseEntity.status(HttpStatus.CREATED).body(itemMasterDTO);
 	}

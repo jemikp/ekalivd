@@ -57,7 +57,7 @@ public class ItemMasterDao {
             throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.ITEM_NOT_EXIST), HttpStatus.BAD_REQUEST, itemId+"");
         }
         List<ItemMaster> itemMasterList = itemMasterRepository.findByItemName(itemMasterDTO.getItemName());
-        if(itemMasterList.size() > 1 || !itemMasterList.get(0).getId().equals(itemId)){
+        if(itemMasterList.size() > 1 && !itemMasterList.get(0).getId().equals(itemId)){
             throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.ITEM_EXIST), HttpStatus.BAD_REQUEST, itemMasterDTO.getItemName());
         }
         ItemMaster itemMaster = itemMasterOpt.get();

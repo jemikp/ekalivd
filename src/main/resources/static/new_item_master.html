@@ -715,7 +715,7 @@
                     gap: 10px;
                 ">
                 
-                <input type="text" id="itemname" placeholder="Search Item" style="
+                <input type="text" id="itemname" placeholder="Item Name" style="
                     /* width: 100%; */
                     padding: 8px;
                     border: 1px solid rgb(204, 204, 204);
@@ -726,7 +726,7 @@
                     color: inherit;
                 ">
               <select name="cars" id="itemtype" style="padding: 8px; border: 1px solid rgb(204, 204, 204); border-radius: 4px; margin-bottom: 10px; width: 100%; box-sizing: border-box; color: inherit; display: none;">
-                <option value="volvo">Select Item Type</option>
+                <option value="" selected>Select Item Type</option>
                 <option value="text">Text</option>
                 <option value="numeric">Numeric</option>
                 <option value="list">List</option>
@@ -867,8 +867,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
   
   <script>
+    function loadBootstrapTable(){
+      $('#table').bootstrapTable();
+    }
     $(function() {
-      $('#table').bootstrapTable()
+      showItems(loadBootstrapTable);
     });
     $(function() {
       $('#table2').bootstrapTable()
@@ -880,26 +883,144 @@
    
   var $table2 = $('#table')
   var $button = $('#button')
+  var itemId;
 
   $(function() {
     $button.click(function (e) {
         e.preventDefault();
-    
-      $table2.bootstrapTable('insertRow', {
-        index: 1,
-        row: {
-         
-          itemname: $('#itemname').val(),
-          itemtype: $('#itemtype').val(),
-        action: "<div style='display: flex;gap: 3px;'> <i class='fa fa-edit' aria-hidden='true' style=' color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px;'></i> <i class='fa fa-trash' aria-hidden='true' style='color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px;'></i></div>"
-        }
-      })
-
-      $('#itemname').val('')
-      $('#itemtype').remove()
-
+        saveItem();
     })
   })
+
+  function showItems(func){
+     var settings = {
+       "url": "/ekalivd/item",
+       "method": "GET",
+       "timeout": 0,
+       "headers": {
+         "Content-Type": "application/json"
+       },
+       success: function(items) {
+        console.log("Show items called");
+        var table = $("#table tbody");
+        table.empty();
+        console.log("Received Item data",items)
+        $.each(items, function(idx, elem){
+            var elemJson = JSON.stringify(elem).replace(/\"/g,"'");
+            table.append("<tr><td>"+elem.itemName+"</td><td>"+elem.itemType+"</td><td>"+getTaskModifyButtonsHtml(elemJson)+"</td></tr>");
+        })
+        if(func){
+          func();
+        }
+       },
+       error: function(err) {
+         alert(err);
+       }
+     };
+
+     $.ajax(settings);
+  }
+
+
+   function saveItem(){
+     let apiUrl = "/ekalivd/item";
+     let method = "POST";
+     if(itemId){
+        apiUrl = apiUrl.concat("/"+itemId);
+        method = "PUT"
+     }
+
+     var settings = {
+       "url": apiUrl,
+       "method": method,
+       "timeout": 0,
+       "headers": {
+         "Content-Type": "application/json"
+       },
+       "data": JSON.stringify({
+          "id" : itemId ?? null,
+          "itemName" : $('#itemname').val(),
+          "itemType" : $('#itemtype').val()
+       }),
+       error: function(xhr, status, error) {
+          alert("Error while saving Item "+ status+ ":"+error);
+          console.log("Error Object", xhr);
+          console.log("textStatus", status);
+          console.log("errorThrown", error);
+          itemId = null;
+        },
+     };
+
+     $.ajax(settings).done(function (response) {
+        showItems();
+        /*var elemJson = JSON.stringify(response).replace(/\"/g,"'")
+        $table2.bootstrapTable('insertRow', {
+          index: 0,
+          row: {
+            itemname: $('#itemname').val(),
+            itemtype: $('#itemtype').val(),
+            action: getTaskModifyButtonsHtml(elemJson)
+          }
+        })*/
+        $('#itemname').val('');
+        $('#itemtype').val('');
+        if(itemId){
+          $button.text("Add Item");
+          itemId = null;
+        }
+     });
+   }
+
+   function getTaskModifyButtonsHtml(elemJson) {
+      var taskModifyButtonsHtml = `
+           <div style='display: flex;gap: 3px;'>
+              <span onclick="editItem(${elemJson})">
+                <i class='fa fa-edit' aria-hidden='true' style=' color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px;'></i>
+              </span>
+              <span onclick="deleteItem(${elemJson})">
+                <i class='fa fa-trash' aria-hidden='true' style='color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px;'></i>
+              </span>
+          </div>
+		` ;
+	  return taskModifyButtonsHtml;
+  }
+
+  function deleteItem(elm){
+      if(confirm("Are you sure you want to delete Item: "+ elm.itemName + "?")){
+         console.log("deleting item with ItemId: "+ elm.id)
+         let apiUrl = "/ekalivd/item/"+elm.id;
+         let method = "DELETE";
+
+         var settings = {
+           "url": apiUrl,
+           "method": method,
+           "timeout": 0,
+           "headers": {
+             "Content-Type": "application/json"
+           },
+           error: function(xhr, status, error) {
+              alert("Error while deleting item "+ status+ ":"+error);
+              console.log("Error Object", xhr);
+              console.log("textStatus", status);
+              console.log("errorThrown", error);
+            },
+         };
+
+         $.ajax(settings).always(function (response) {
+            showItems();
+         });
+      }
+    }
+
+    function editItem(elm){
+        $('#itemname').val(elm.itemName);
+        $('#itemtype').val(elm.itemType);
+
+        itemId = elm.id;
+
+        $button.text("Update Item");
+    }
+
 
 
 
