@@ -9,6 +9,7 @@ import org.ekal.ivd.entity.ItemMaster;
 import org.ekal.ivd.exception.DynamicException;
 import org.ekal.ivd.repository.ItemMasterRepository;
 import org.ekal.ivd.util.ErrorResponseCode;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,7 @@ public class ItemMasterDao {
 
     public void createItemMaster(@Valid ItemMasterDTO itemMasterDTO) {
         List<ItemMaster> optionalItemMaster = itemMasterRepository.findByItemName(itemMasterDTO.getItemName());
-        if(optionalItemMaster.size() > 0){
+        if (optionalItemMaster.size() > 0) {
             throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.ITEM_EXIST), HttpStatus.BAD_REQUEST, itemMasterDTO.getItemName());
         }
         ItemMaster master = new ItemMaster(itemMasterDTO);
@@ -38,26 +39,26 @@ public class ItemMasterDao {
         itemMasterDTO.setId(master.getId());
     }
 
-    public List<ItemMasterDTO> getItem(){
-        List<ItemMaster> itemMasters = itemMasterRepository.findByDelflag(0,Sort.by(Sort.Direction.DESC, "id"));
+    public List<ItemMasterDTO> getItem() {
+        List<ItemMaster> itemMasters = itemMasterRepository.findByDelflag(0, Sort.by(Sort.Direction.DESC, "id"));
         return itemMasters.stream().map(i -> new ItemMasterDTO(i)).collect(Collectors.toList());
     }
-    
-    public ItemMasterDTO getItemById(int itemId){
+
+    public ItemMasterDTO getItemById(int itemId) {
         Optional<ItemMaster> itemMaster = itemMasterRepository.findById(itemId);
-        if(itemMaster.isEmpty()){
-            throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.ITEM_NOT_EXIST), HttpStatus.BAD_REQUEST, itemId+"");
+        if (itemMaster.isEmpty()) {
+            throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.ITEM_NOT_EXIST), HttpStatus.BAD_REQUEST, itemId + "");
         }
         return new ItemMasterDTO(itemMaster.get());
     }
-    
-    public void updateItemById(@Valid ItemMasterDTO itemMasterDTO,int itemId){
+
+    public void updateItemById(@Valid ItemMasterDTO itemMasterDTO, int itemId) {
         Optional<ItemMaster> itemMasterOpt = itemMasterRepository.findById(itemId);
-        if(itemMasterOpt.isEmpty()){
-            throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.ITEM_NOT_EXIST), HttpStatus.BAD_REQUEST, itemId+"");
+        if (itemMasterOpt.isEmpty()) {
+            throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.ITEM_NOT_EXIST), HttpStatus.BAD_REQUEST, itemId + "");
         }
         List<ItemMaster> itemMasterList = itemMasterRepository.findByItemName(itemMasterDTO.getItemName());
-        if(itemMasterList.size() > 1 && !itemMasterList.get(0).getId().equals(itemId)){
+        if (itemMasterList.size() > 1 && !itemMasterList.get(0).getId().equals(itemId)) {
             throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.ITEM_EXIST), HttpStatus.BAD_REQUEST, itemMasterDTO.getItemName());
         }
         ItemMaster itemMaster = itemMasterOpt.get();
@@ -66,14 +67,28 @@ public class ItemMasterDao {
         itemMasterRepository.save(itemMaster);
     }
 
-    public ItemMasterDTO deleteById(int itemId){
+    public ItemMasterDTO deleteById(int itemId) {
         Optional<ItemMaster> itemMasterOpt = itemMasterRepository.findById(itemId);
-        if(itemMasterOpt.isEmpty()){
-            throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.ITEM_NOT_EXIST), HttpStatus.BAD_REQUEST, itemId+"");
+        if (itemMasterOpt.isEmpty()) {
+            throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.ITEM_NOT_EXIST), HttpStatus.BAD_REQUEST, itemId + "");
         }
         ItemMaster itemMaster = itemMasterOpt.get();
         itemMaster.setDelflag(1);
         itemMasterRepository.save(itemMaster);
         return new ItemMasterDTO(itemMaster);
+    }
+
+    public List<JSONObject> findByItemName(String itemName) {
+        logger.info("Querying for {}", itemName);
+        List<ItemMaster> itemMasterList = itemMasterRepository.findByItemNameStartingWith(itemName);
+        return itemMasterList.stream()
+                .map(itemMaster -> {
+                    JSONObject jsonObject = new JSONObject();
+                    jsonObject.put("id", itemMaster.getId());
+                    jsonObject.put("label", itemMaster.getItemName());
+                    jsonObject.put("data", itemMaster.getItemType());
+                    return jsonObject;
+                })
+                .toList();
     }
 }

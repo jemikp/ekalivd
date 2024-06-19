@@ -819,8 +819,8 @@
                  <fieldset>
                       <h2 style="           text-align: left;           font-size: 28px;           margin-bottom: 20px;           color: #2a398a;       ">Add New Task</h2>
 
-                <input type="text" name="fname" placeholder="Task Name">
-                <textarea placeholder="Task Description"></textarea>
+                <input type="text" name="fname" placeholder="Task Name" id="taskname">
+                <textarea placeholder="Task Description" id="taskdescription"></textarea>
 
                 <div id="toolbar" style="
                 width: 100%;
@@ -857,7 +857,7 @@
                         </table>
 
 
-       <input type="button" name="next" class="next action-button" value="Submit">
+       <input type="button" name="next" class="next action-button" value="Submit" id="save_task">
                        </fieldset>  </form></div>
                </div></div>
          </div>
@@ -1079,21 +1079,117 @@
 
   var $table2 = $('#table2')
   var $button = $('#button')
+  var taskId;
+
+  jQuery.curCSS = function(element, prop, val) {
+    return jQuery(element).css(prop, val);
+  };
 
   $(function() {
+     $("#itemname").autocomplete({
+      source: function( request, response ) {
+        $.ajax({
+          url: "/ekalivd/item/findByItemName/"+request.term,
+		  method: "GET",
+          dataType: "json",
+          data: {
+            q: request.term
+          },
+          success: function( data ) {
+            console.log("Registered1 response : ",data);
+            response($.map(data.item, function (itm) {
+                console.log("modifying resp ",itm.label, itm.id);
+                return {
+                    label: itm.label,
+                    value: itm.id
+                };
+            }));
+          }
+        });
+      },
+      appendTo: "#toolbar",
+      minLength: 3,
+      select: function( event, ui ) {
+		console.log("select function",ui);
+      },
+      open: function() {
+		console.log("Open function called")
+		$( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+      },
+      close: function() {
+		console.log("Close function called");
+		$( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+      }
+    });
+
     $button.click(function (e) {
         e.preventDefault();
       var randomId = 100 + ~~(Math.random() * 100)
       $table2.bootstrapTable('insertRow', {
         index: 1,
         row: {
-         
+
           itemname: $('#itemname').val(),
           itemtype: 'text'
         }
       })
     })
+
+    $("#save_task").click(function (e) {
+        alert('Saving Task');
+        saveTask();
+    });
   })
+
+  function saveTask(){
+     let apiUrl = "/ekalivd/tasks";
+     let method = "POST";
+     if(taskId){
+        apiUrl = apiUrl.concat("/"+taskId);
+        method = "PUT"
+     }
+
+     var settings = {
+       "url": apiUrl,
+       "method": method,
+       "timeout": 0,
+       "headers": {
+         "Content-Type": "application/json"
+       },
+       "data": JSON.stringify({
+          "id" : taskId ?? null,
+          "taskName" : $('#taskname').val(),
+          "taskDescription" : $('#taskdescription').val(),
+          "items":[
+            {
+                "id":"5",
+                "itemName":"Doner",
+                "itemType":"numeric",
+            },
+            {
+                "id":"6",
+                "itemName":"Project",
+                "itemType":"text",
+            }
+          ]
+       }),
+       error: function(xhr, status, error) {
+          alert("Error while saving Task "+ status+ ":"+error);
+          console.log("Error Object", xhr);
+          console.log("textStatus", status);
+          console.log("errorThrown", error);
+          itemId = null;
+        },
+     };
+
+     $.ajax(settings).done(function (response) {
+        $('#taskname').val('');
+        $('#taskdescription').val('');
+        if(taskId){
+          taskId = null;
+        }
+     });
+   }
 
 
 </script>
