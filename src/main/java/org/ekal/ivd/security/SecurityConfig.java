@@ -11,24 +11,14 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    private static final String[] SESSIONLESS_URLS = {
-            "/LoginController/**",
-            "/public/**",
-            "/index.html"
-    };
+
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.cors(AbstractHttpConfigurer::disable)
                 .csrf(AbstractHttpConfigurer::disable)
                 .formLogin(AbstractHttpConfigurer::disable);
-        http
-                .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers(SESSIONLESS_URLS).permitAll()
-                        .anyRequest().permitAll()
-//                        .anyRequest().authenticated()
-                );
-
+        http.authorizeHttpRequests((authorize) -> authorize.anyRequest().permitAll());
         return http.build();
     }
 }

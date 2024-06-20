@@ -104,7 +104,6 @@ public class UserDao {
         user.setOtp(otp);
         user.setOtp_time(LocalDateTime.now());
         userRepository.save(user);
-
         // Call method to send OTP in WhatsAPP
     }
 

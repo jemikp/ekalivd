@@ -13,9 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/css/bootstrap-multiselect.min.css" integrity="sha512-fZNmykQ6RlCyzGl9he+ScLrlU0LWeaR6MO/Kq9lelfXOw54O63gizFMSD5fVgZvU1YfDIc6mxom5n60qJ1nCrQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/js/bootstrap-multiselect.min.js" integrity="sha512-lxQ4VnKKW7foGFV6L9zlSe+6QppP9B2t+tMMaV4s4iqAv4iHIyXED7O+fke1VeLNaRdoVkVt8Hw/jmZ+XocsXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/css/bootstrap-multiselect.min.css"
+          integrity="sha512-fZNmykQ6RlCyzGl9he+ScLrlU0LWeaR6MO/Kq9lelfXOw54O63gizFMSD5fVgZvU1YfDIc6mxom5n60qJ1nCrQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/js/bootstrap-multiselect.min.js"
+            integrity="sha512-lxQ4VnKKW7foGFV6L9zlSe+6QppP9B2t+tMMaV4s4iqAv4iHIyXED7O+fke1VeLNaRdoVkVt8Hw/jmZ+XocsXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
 </head>
 <body>
@@ -39,14 +41,17 @@
         flex-direction: row;
         gap: 5px;
     }
+
     #ivdMasterDashboard .navbar-nav {
         float: left;
         margin: 0;
     }
-    #ivdMasterDashboard .navbar-brand, .navbar-nav>li>a {
-        text-shadow: 0 1px 0 rgba(255,255,255,.25);
+
+    #ivdMasterDashboard .navbar-brand, .navbar-nav > li > a {
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
     }
-    #ivdMasterDashboard .navbar-nav>li>a {
+
+    #ivdMasterDashboard .navbar-nav > li > a {
         padding-top: 15px;
         padding-bottom: 15px;
     }
@@ -847,6 +852,7 @@
     #ivdMasterDashboard tr td:nth-child(1) {
         text-align: left !important;
     }
+
     #ivdMasterDashboard tr th:nth-child(1) {
         text-align: left !important;
     }
@@ -854,6 +860,7 @@
     #ivdMasterDashboard tr td:nth-child(2) {
         text-align: left !important;
     }
+
     /*Popup Css Start*/
     #ivdMasterDashboard .modal-header {
         background-color: #F1592A;
@@ -873,10 +880,12 @@
         display: flex;
         flex-direction: column;
     }
-    .fade{
+
+    .fade {
         background: rgba(40, 43, 49, .8);
         -webkit-transition: all 0.3s;
     }
+
     #ivdMasterDashboard .mask-header {
         align-items: center;
         display: flex;
@@ -954,13 +963,16 @@
         font-weight: 600;
         line-height: normal;
     }
-    .popover{
+
+    .popover {
         max-width: 750px;
     }
-    .popover-body{
+
+    .popover-body {
         padding: 0 !important;
     }
-    .popover-header{
+
+    .popover-header {
         color: #41AB46 !important;
         font-size: 20px !important;
         background-color: #fff;
@@ -971,7 +983,8 @@
         /* margin-bottom: 10px; */
         padding: 15px !important;
     }
-    .pophoverContainer header{
+
+    .pophoverContainer header {
         color: #41AB46 !important;
         font-size: 20px !important;
         background-color: #fff;
@@ -982,10 +995,12 @@
         /* margin-bottom: 10px; */
         padding: 15px !important;
     }
+
     .pophoverContainer .chat-section .chat-body {
         padding: 0 0 15px 15px;
         height: 260px;
     }
+
     .pophoverContainer .chat-section .chat-body-height {
         padding-right: 10px;
         display: flex;
@@ -993,6 +1008,7 @@
         justify-content: flex-end;
         gap: 10px;
     }
+
     .pophoverContainer .chat-section .chat-box.other-chat {
         justify-content: flex-start;
         border-radius: 0px 10px 10px 0px;
@@ -1000,16 +1016,19 @@
         width: fit-content;
         align-items: flex-start;
     }
+
     .pophoverContainer .chat-section .chat-box {
         display: flex;
         /* align-items: center; */
         gap: 5px;
         flex-direction: column;
     }
+
     .pophoverContainer .chat-section .chat-box.my-chat {
         justify-content: end;
         align-items: end;
     }
+
     .pophoverContainer .chat-section .msg-info-name {
         color: #1C8BCB;
         font-size: 14px;
@@ -1017,6 +1036,7 @@
         font-weight: 600;
         line-height: normal;
     }
+
     .pophoverContainer .chat-section .chat {
         max-width: 450px;
         /* padding: 15px; */
@@ -1031,6 +1051,7 @@
         font-weight: 600;
         line-height: normal;
     }
+
     .pophoverContainer .chat-section .msger-inputarea {
         display: flex;
         padding: 10px;
@@ -1038,43 +1059,49 @@
         gap: 5px;
         align-items: center;
     }
-    .pophoverContainer .modal-footer{
+
+    .pophoverContainer .modal-footer {
         display: none;
     }
+
     .pophoverContainer i.fa-solid.fa-paper-plane {
         color: #1C8BCB;
         font-size: 18px;
         padding: 0 5px;
     }
+
     /*overflow css start*/
     .pophoverContainer .scrollbar {
         width: 100%;
         overflow-y: auto;
     }
+
     .pophoverContainer .force-overflow {
         min-height: 100%;
     }
-    .pophoverContainer #style-1::-webkit-scrollbar-track
-    {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+
+    .pophoverContainer #style-1::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
         background-color: #F5F5F5;
     }
-    .pophoverContainer #style-1::-webkit-scrollbar
-    {
+
+    .pophoverContainer #style-1::-webkit-scrollbar {
         width: 12px;
         background-color: #F5F5F5;
     }
-    .pophoverContainer #style-1::-webkit-scrollbar-thumb
-    {
+
+    .pophoverContainer #style-1::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
         background-color: #ccc;
     }
-    .dropdown-menu[data-bs-popper]{
+
+    .dropdown-menu[data-bs-popper] {
         right: 0 !important;
         left: auto;
     }
+
     .menu-dropdown .dropdown-toggle {
         background-color: unset;
         color: #283891;
@@ -1084,20 +1111,24 @@
         font-weight: 600;
         line-height: normal;
     }
+
     .menu-dropdown .dropdown-toggle:hover {
         background-color: unset;
         color: #303030;
         border-color: unset;
     }
+
     .menu-dropdown .dropdown-toggle:active {
         background-color: unset;
         color: #303030;
         border-color: unset;
     }
-    .dropdown-menu[data-bs-popper]{
+
+    .dropdown-menu[data-bs-popper] {
         right: 0 !important;
         left: auto;
     }
+
     .menu-dropdown .dropdown-toggle {
         background-color: unset;
         color: #283891;
@@ -1107,16 +1138,19 @@
         font-weight: 600;
         line-height: normal;
     }
+
     .menu-dropdown .dropdown-toggle:hover {
         background-color: unset;
         color: #303030;
         border-color: unset;
     }
+
     .menu-dropdown .dropdown-toggle:active {
         background-color: unset;
         color: #303030;
         border-color: unset;
     }
+
     /*overflow css end*/
     /*Popup Css Start*/
 </style>
@@ -1130,9 +1164,11 @@
         margin: 0;
         padding: 0;
     }
-    .form-wizard-header p{
+
+    .form-wizard-header p {
 
     }
+
     .wizard-content-left {
         background-blend-mode: darken;
         background-color: rgba(0, 0, 0, 0.45);
@@ -1384,6 +1420,7 @@
             height: auto;
         }
     }
+
     .form-set {
         display: flex;
         flex-direction: column;
@@ -1460,71 +1497,80 @@
             <ul class="navbar-nav nav-list p-0" style="">
                 <li class="nav-item top-navitembar" style="">
                     <a class="nav-link wcm-txt" style="">Welcome Mahesh Navani !</a>
-                </li><li class="nav-item top-navitembar" style="">
-                <a class="nav-link" style="" onclick="window.location.href='./public/login.html'">Log Out</a>
-            </li><li class="nav-item top-navitembar" style="border: 0;">
-                <div class="menu-dropdown btn-group">
-                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Menu</button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./ivdMaster.html'">IVD Master</a></li>
-                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./programMaster.html'">Program Master</a></li>
-                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./user.html'">User Master</a></li>
-                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./role.html'">Role Master</a></li>
-                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./taskMaster.html'">Task Master</a></li>
-                        <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./itemMaster.html'">Item Master</a></li>
-                    </ul>
-                </div>
-            </li>
+                </li>
+                <li class="nav-item top-navitembar" style="">
+                    <a class="nav-link" style="" onclick="window.location.href='LoginController/logout'">Log Out</a>
+                </li>
+                <li class="nav-item top-navitembar" style="border: 0;">
+                    <div class="menu-dropdown btn-group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Menu</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./ivdMaster.html'">IVD Master</a></li>
+                            <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./programMaster.html'">Program Master</a></li>
+                            <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./user.html'">User Master</a></li>
+                            <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./role.html'">Role Master</a></li>
+                            <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./taskMaster.html'">Task Master</a></li>
+                            <li><a class="dropdown-item" href="javascript:;" onclick="window.location.href='./itemMaster.html'">Item Master</a></li>
+                        </ul>
+                    </div>
+                </li>
 
 
             </ul>
 
-        </div></nav>
+        </div>
+    </nav>
     <div class="homepagewrapper" style="padding: 0 15px;">
         <div class="row wrapper-homepage mx-auto" style="margin-left: auto;margin-right: auto;">
             <div class="bg-2"><img src="public/img/bg-img-2.png" style="width: 100%;"></div>
             <div class="col-sm-12" style="padding:0 15px; z-index: 10;position: relative;">
                 <div class="section-header" style="margin-top: 40px;">
 
-                    <img src="public/img/admin.png">IVD Management</div>
+                    <img src="public/img/admin.png">IVD Management
+                </div>
                 <div class="col-sm-12" style="/* overflow: auto; *//* height: 358px; *//* margin: 0 15px; */">
                     <div class="panel panel-default" style="">
 
                         <div class="" style="
     float: right;
     margin-bottom: 20px;
-"><button type="button" id="btnAddIVD" href="https://www.ekal.org/in/donation" target="_self" class="btn btn-main sml_btn" style=""><i class="fa fa-plus" aria-hidden="true"></i> Add
-                        </button></div><table class="table table-responsive table-hover" s="" tyle="">
-                        <thead>
-                        <tr>
-                            <th style="">Project ID</th>
-                            <th style="">Donor Name</th><th>Location</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
-                            <th>Task(s)</th>
+">
+                            <button type="button" id="btnAddIVD" href="https://www.ekal.org/in/donation" target="_self" class="btn btn-main sml_btn" style=""><i class="fa fa-plus" aria-hidden="true"></i> Add
+                            </button>
+                        </div>
+                        <table class="table table-responsive table-hover" s="" tyle="">
+                            <thead>
+                            <tr>
+                                <th style="">Project ID</th>
+                                <th style="">Donor Name</th>
+                                <th>Location</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Task(s)</th>
 
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>MANIVDJOG</td>
-                            <td>Janki Foundation</td>
-                            <td>IVD Jogmodi</td>
-                            <td>12/14/2022</td>
-                            <td>12/14/2027</td>
-                            <td><a href="javascript:;" onclick="openPopup()">1</a></td>
-                            <td><div class="icon-set">
-                                <i style="cursor: pointer" class="fa fa-info-circle" onclick="window.location.href='./home.html'" aria-hidden="true"></i>
-                                <i class="fa fa-edit" aria-hidden="true"></i>
-                                <i class="fa fa-trash" aria-hidden="true"></i>
-                            </div></td>
-                        </tr>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>MANIVDJOG</td>
+                                <td>Janki Foundation</td>
+                                <td>IVD Jogmodi</td>
+                                <td>12/14/2022</td>
+                                <td>12/14/2027</td>
+                                <td><a href="javascript:;" onclick="openPopup()">1</a></td>
+                                <td>
+                                    <div class="icon-set">
+                                        <i style="cursor: pointer" class="fa fa-info-circle" onclick="window.location.href='./home.html'" aria-hidden="true"></i>
+                                        <i class="fa fa-edit" aria-hidden="true"></i>
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </div>
+                                </td>
+                            </tr>
 
 
-
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
                     </div>
 
                 </div>
@@ -1561,7 +1607,6 @@
                                     </div>
 
 
-
                                 </div>
                             </div>
                             <div class="col-12 p-0 tab-section" style="
@@ -1577,8 +1622,8 @@
 
                                             <th style="
     text-align: center !important;
-">Action</th>
-
+">Action
+                                            </th>
 
 
                                         </tr>
@@ -1587,12 +1632,12 @@
                                         <tr>
 
                                             <td>Photographs and short brief activities</td>
-                                            <td><div class="icon-set"><i class="fa fa-trash" aria-hidden="true"></i></div></td>
-
+                                            <td>
+                                                <div class="icon-set"><i class="fa fa-trash" aria-hidden="true"></i></div>
+                                            </td>
 
 
                                         </tr>
-
 
 
                                         </tbody>
@@ -1613,18 +1658,27 @@
 </div>
 </body>
 <script>
-    function openPopup(){
+    function openPopup() {
         $("#ivdTask").removeClass('hide').addClass('show');
-        $("#ivdTask").css('display','block');
+        $("#ivdTask").css('display', 'block');
+    }
+    var LogOutFunction = () => {
+        let url = `/ekalivd/LoginController/logout?m=${Math.random()}`
+        $.get(url).done(() => {
+            window.location.href = 'public/login.html'
+        }).fail(() => {
+            window.location.href = 'public/login.html'
+        });
     }
     $("#ivdTask").addClass('hide').removeClass('show');
-    $("#ivdTask").css('display','none');
-    $("#dialogClose").on("click",function (e){
+    $("#ivdTask").css('display', 'none');
+    $("#dialogClose").on("click", function (e) {
         $("#ivdTask").addClass('hide').removeClass('show');
-        $("#ivdTask").css('display','none');
+        $("#ivdTask").css('display', 'none');
     });
-    $("#btnAddIVD").on("click",function (e){
-       window.location.href = "./admin.html";
+    $("#btnAddIVD").on("click", function (e) {
+        window.location.href = "./admin.html";
     });
+    
 </script>
 </html>
