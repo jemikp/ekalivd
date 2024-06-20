@@ -800,6 +800,11 @@
         #msform > fieldset > div:nth-child(3) div {
     flex: 0 46% !important;
 }
+.row.projectdonorinfo {
+    flex-direction: column;
+}
+
+
 #msform > fieldset > div:nth-child(3)  {
    flex-wrap: wrap;
 }
@@ -953,7 +958,6 @@
                 ">Home</a>
                                       
                                     </li>
-                                    <li><a href="new_ivd_master.html">IVD</a></li>
                                     <li><a href="new_program_management.html">Programs</a></li>
                                     <li class="dropdown"><a href="new_donation_entry.html">Donations</a>
                                         <ul class="dropdown_menu dropdown_menu-2">
@@ -968,7 +972,7 @@
                                         <ul class="dropdown_menu dropdown_menu-2">
                   
                   
-                  
+                                            <li class="dropdown_item-5"><a href="new_admin.html">Add New Project</a></li>
                   
                                           <li class="dropdown_item-5"><a href="#">Projects</a></li>
                                                 <li class="dropdown_item-5"><a href="new_task_master.html">Tasks</a></li>
@@ -1228,17 +1232,16 @@
       gap: 10px;
       /* margin-bottom: 38px; */
   ">
-                                        <h2 class="donnerAreaContent__bigTitle wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated " data-wow-duration="1200ms" data-wow-delay="200ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 200ms; animation-name: fadeInUp; margin: 0px; display: flex; gap: 7px; font-size: 2rem;">
+                                        <h2 class="donnerAreaContent__bigTitle wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated " data-wow-duration="1200ms" data-wow-delay="200ms" style="visibility: hidden; animation-duration: 1200ms; animation-delay: 200ms; margin: 0px; display: flex; gap: 7px; font-size: 2rem; animation-name: none;">
                                             <span class="donnerAreaContent__bigTitle__text" style="
       text-transform: capitalize;
   ">Project Plan
 </span>
 
                                         </h2>
-                                        <h3 class="donnerAreaContent__heading text-uppercase wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated " data-wow-duration="1200ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 300ms; margin: 0px; color: rgb(46, 58, 136); display: none;">
-                                            Donated so far</h3>
+                                   
                                     </div>
-                                    <a class="btn btn--styleOne btn--black it-btn wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated " data-wow-duration="1200ms" data-wow-delay="400ms" href="donation-listing.html" style="visibility: visible; animation-duration: 1200ms; animation-delay: 400ms; animation-name: fadeInUp; background: rgb(46, 58, 136);">
+                                    <a class="btn btn--styleOne btn--black it-btn wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated " data-wow-duration="1200ms" data-wow-delay="400ms" href="new_admin.html" style="visibility: hidden; animation-duration: 1200ms; animation-delay: 400ms; background: rgb(46, 58, 136); animation-name: none;">
                                         <span class="btn__text" style="
       text-transform: capitalize;
   ">Create New Project</span>
@@ -1285,17 +1288,20 @@
                 align-items: flex-start;
                 flex-direction: column;
             ">
-                                              <div><div style="
+                                              <div style="
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+"><div style="
                 display: flex;
                 align-items: center;
                 gap: 33px;
                 margin-bottom: 28px;
             ">
-                                                  <h2 class="donnerAreaContent__bigTitle wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated " data-wow-duration="1200ms" data-wow-delay="200ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 200ms; animation-name: fadeInUp; margin: 0px; display: flex; gap: 7px; font-size: 1.5rem;">
+                                                  <h2 class="donnerAreaContent__bigTitle wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated " data-wow-duration="1200ms" data-wow-delay="200ms" style="visibility: hidden; animation-duration: 1200ms; animation-delay: 200ms; animation-name: none; margin: 0px; display: flex; gap: 7px; font-size: 1.5rem;">
                                                       <span class="donnerAreaContent__bigTitle__text" style="
                 text-transform: capitalize;
-            ">(SAIVDJOG) Maharashtra - Jogmodi IVD
-          </span>
+            ">Integrated Village Development (IVD) - Jogmodi</span>
           
                                                   </h2>
                                               <div class="ivd-details-imgs" style="
@@ -1330,18 +1336,27 @@
                                </div>
                                               </div></div>
                                               
-                                          <div class="row">
-                                      <div class="col-12">
+                                          <div class="row projectdonorinfo" style="
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: unset;
+">
+                                      <div style="
+    flex: auto;
+    width: fit-content;
+">
                                           <h2 style="
               font-weight: bold;
               color: #333;
               margin-bottom: 21px;
               font-size: 22px;
               font-weight: 500;
+              width: fit-content;
           ">IVD Project Coordinator Details: </h2><div class="donnerAreaContent mb-30" style="
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                width: fit-content;
             ">
                                               <div style="
                 display: flex;
@@ -1397,7 +1412,90 @@
                                               
                                           </div>
                                       </div>
-                                  </div><div class="form-group col-lg-9 m-0 p-0">
+                                  <div style="
+    flex: unset;
+    width: fit-content;
+">
+                                          <h2 style="
+              font-weight: bold;
+              color: #333;
+              margin-bottom: 21px;
+              font-size: 22px;
+              font-weight: 500;
+              width: fit-content;
+          ">Primary Donor Information</h2><div class="donnerAreaContent mb-30" style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: fit-content;
+            ">
+                                              <div style="
+                display: flex;
+                align-items: center;
+                gap: 33px;
+                font-size: 19px;
+            "><div style="
+              /* border: 2px solid #0700ad; */
+              /* background: #0700ad08; */
+              /* padding: 20px; */
+              border-radius: 15px;
+              display: flex;
+              gap: 20px;
+          "><p style="
+              margin: 0;
+              font-weight: bold;
+              color: #323b86;
+              margin: 0;
+          ">Name: </p><p style="
+              margin: 0;
+              font-weight: 500;
+          ">Mahesh Navani</p></div><div style="
+              /* border: 2px solid #0700ad; */
+              /* background: #0700ad08; */
+              /* padding: 20px; */
+              border-radius: 15px;
+              display: flex;
+              gap: 20px;
+          "><p style="
+              font-weight: bold;
+              color: #323b86;
+              margin: 0;
+          ">Donor Trust:</p><p style="
+              margin: 0;
+          ">Janki Foundation</p></div><div style="
+              /* border: 2px solid #0700ad; */
+              /* background: #0700ad08; */
+              /* padding: 20px; */
+              border-radius: 15px;
+              display: flex;
+              gap: 20px;
+          "><p style="
+              margin: 0;
+              font-weight: bold;
+              color: #323b86;
+              margin: 0;
+          ">Number:</p><p style="
+              margin: 0;
+          ">543-344-8900</p></div><div style="
+              /* border: 2px solid #0700ad; */
+              /* background: #0700ad08; */
+              /* padding: 20px; */
+              border-radius: 15px;
+              display: flex;
+              gap: 20px;
+          "><p style="
+              font-weight: bold;
+              color: #323b86;
+              margin: 0;
+          ">Email:</p><p style="
+              margin: 0;
+          ">maheshnavani@gmail.com</p></div>
+                                                  
+                                                  
+                                              </div>
+                                              
+                                          </div>
+                                      </div></div><div class="form-group col-lg-9 m-0 p-0">
                                       <input type="text" class="form-control login-field" placeholder="Search Project Information" autocomplete="off">
                                   </div></div>
                                       <table class="table table-responsive table-hover table-bordered">
@@ -1413,21 +1511,13 @@
                                               </tr>
                                               </thead>
                                               <tbody>
-                                              <tr>
-                                                  <td></td>
-                                                  <td class="task-section" colspan="6">
-                                                      <div class="task-details parent" style="
-          "><i data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample" class="fa-regular fa-square-plus"></i> Computer Training Center</div>
-                                                  </td>
-                                              </tr>
+                                              
                                               <tr class="collapse show" id="collapseExample" style="">
                                                   <td>651225</td>
-                                                  <td class="task-details">Visit to alumni Students (Vivekanand Youth club)
-          
-          </td>
-                                                  <td>4/22/2024</td>
-                                                  <td>04/28/2024</td>
-                                                  <td>Bhaskar</td>
+                                                  <td class="task-details">Identification of Existing Sanch (Min. 2 years old and if possible, it should be pragat sanch)</td>
+                                                  <td>01/01/2024</td>
+                                                  <td>30/01/2024</td>
+                                                  <td>--</td>
                                                   <td><p class="open">Open</p></td>
                                                   <td>
                                                       <div style="
@@ -1438,12 +1528,10 @@
                                               </tr>
                                               <tr class="collapse show" id="collapseExample" style="">
                                                   <td>651226</td>
-                                                  <td class="task-details">Class Test for Enrolled beneficial
-          
-          </td>
-                                                  <td>4/22/2024</td>
-                                                  <td>04/28/2024</td>
-                                                  <td>Bhaskar</td>
+                                                  <td class="task-details">Baseline Survey of Villages</td>
+                                                  <td>31/01/2024</td>
+                                                  <td>02/03/2024</td>
+                                                  <td>--</td>
                                                   <td><p class="open">Open</p></td>
                                                   <td>
                                                       <div style="
@@ -1454,12 +1542,10 @@
                                               </tr>
                                               <tr class="collapse show" id="collapseExample" style="">
                                                   <td>651227</td>
-                                                  <td class="task-details">Awareness about Government benefits policy
-          
-          </td>
-                                                  <td>4/22/2024</td>
-                                                  <td>04/28/2024</td>
-                                                  <td>Bhaskar</td>
+                                                  <td class="task-details">IVD Committee Formation</td>
+                                                  <td>03/03/2024</td>
+                                                  <td>03/04/2024</td>
+                                                  <td>--</td>
                                                   <td><p class="open">Open</p></td>
                                                   <td>
                                                       <div style="
@@ -1469,14 +1555,11 @@
                                                   </td>
                                               </tr><tr class="collapse show" id="collapseExample" style="">
                                                   <td>651220</td>
-                                                  <td class="task-details">Social Media Awareness Class
-          
-          
-          </td>
-                                                  <td>29/01/2024</td>
-                                                  <td>02/02/2024</td>
-                                                  <td>Bhaskar</td>
-                                                  <td><p class="address">Addressed</p></td>
+                                                  <td class="task-details">Identification and Finalization of Combined Premises of IVD Center</td>
+                                                  <td>04/04/2024</td>
+                                                  <td>04/05/2024</td>
+                                                  <td>--</td>
+                                                  <td><p class="open">Open</p></td>
                                                   <td>
                                                       <div style="
                                   display: flex;
@@ -1485,13 +1568,11 @@
                                                   </td>
                                               </tr><tr class="collapse show" id="collapseExample" style="">
                                                   <td>651221</td>
-                                                  <td class="task-details">Student Mobilization for next batch
-          
-          </td>
-                                                  <td>29/01/2024</td>
-                                                  <td>02/02/2024</td>
-                                                  <td>Bhaskar</td>
-                                                  <td><p class="address">Addressed</p></td>
+                                                  <td class="task-details">Appointment of Project Manager</td>
+                                                  <td>05/05/2024</td>
+                                                  <td>12/05/2024</td>
+                                                  <td>--</td>
+                                                  <td><p class="open">Open</p></td>
                                                   <td>
                                                       <div style="
                                   display: flex;
@@ -1500,68 +1581,111 @@
                                                   </td>
                                               </tr><tr class="collapse show" id="collapseExample" style="">
                                                   <td>651222</td>
-                                                  <td class="task-details">Certificate Distribution Program
-          
-          </td>
-                                                  <td>29/01/2024</td>
-                                                  <td>02/02/2024</td>
-                                                  <td>Bhaskar</td>
-                                                  <td><p class="address">Addressed</p></td>
+                                                  <td class="task-details">Hiring of Trainer and Co-ordinator</td>
+                                                  <td>13/05/2024</td>
+                                                  <td>20/05/2024</td>
+                                                  <td>--</td>
+                                                  <td><p class="open">Open</p></td>
                                                   <td>
                                                       <div style="
                                   display: flex;
                                   gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
                                   <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div>
                                                   </td>
-                                              </tr><tr>
-                                                  <td></td>
-                                                  <td colspan="6" class="task-section">
-                                                      <div class="task-details parent"><i data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1" class="fa-regular fa-square-plus collapsed"></i> Women
-                                                          Empowerment Centres
-                                                      </div>
+                                              </tr><tr class="collapse show" id="collapseExample" style="">
+                                                  <td>651223</td>
+                                                  <td class="task-details">Training of Trainer</td>
+                                                  <td>21/05/2024</td>
+                                                  <td>28/05/2024</td>
+                                                  <td>--</td>
+                                                  <td><p class="open">Open</p></td>
+                                                  <td>
+                                                      <div style="
+                                  display: flex;
+                                  gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                                  <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div>
+                                                  </td>
+                                              </tr><tr class="collapse show" id="collapseExample" style="">
+                                                  <td>651224</td>
+                                                  <td class="task-details">WEC, CTL and Nutritional Garden (Material request and delivering of material at center - capital items only)</td>
+                                                  <td>29/05/2024</td>
+                                                  <td>04/07/2024</td>
+                                                  <td>--</td>
+                                                  <td><p class="open">Open</p></td>
+                                                  <td>
+                                                      <div style="
+                                  display: flex;
+                                  gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                                  <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div>
+                                                  </td>
+                                              </tr><tr class="collapse show" id="collapseExample" style="">
+                                                  <td>651225</td>
+                                                  <td class="task-details">Commencement of Training Porgram at Skill Center</td>
+                                                  <td>05/07/2024</td>
+                                                  <td>--</td>
+                                                  <td>--</td>
+                                                  <td><p class="open">Open</p></td>
+                                                  <td>
+                                                      <div style="
+                                  display: flex;
+                                  gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                                  <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div>
+                                                  </td>
+                                              </tr><tr class="collapse show" id="collapseExample" style="">
+                                                  <td>651226</td>
+                                                  <td class="task-details">Spoke Tailoring Center (after 6 months of commencement of master tailoring center</td>
+                                                  <td>--</td>
+                                                  <td>--</td>
+                                                  <td>--</td>
+                                                  <td><p class="open">Open</p></td>
+                                                  <td>
+                                                      <div style="
+                                  display: flex;
+                                  gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                                  <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div>
+                                                  </td>
+                                              </tr><tr class="collapse show" id="collapseExample" style="">
+                                                  <td>651227</td>
+                                                  <td class="task-details">Identification and training of farmers</td>
+                                                  <td>--</td>
+                                                  <td>--</td>
+                                                  <td>--</td>
+                                                  <td><p class="open">Open</p></td>
+                                                  <td>
+                                                      <div style="
+                                  display: flex;
+                                  gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                                  <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div>
+                                                  </td>
+                                              </tr><tr class="collapse show" id="collapseExample" style="">
+                                                  <td>651228</td>
+                                                  <td class="task-details">Establishment of Nutritional Garden in Rainy Season</td>
+                                                  <td>--</td>
+                                                  <td>--</td>
+                                                  <td>--</td>
+                                                  <td><p class="open">Open</p></td>
+                                                  <td>
+                                                      <div style="
+                                  display: flex;
+                                  gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                                  <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div>
                                                   </td>
                                               </tr>
-                                              <tr class="collapse" id="collapseExample1" style="">
-                                                  <td>651228</td>
-                                                  <td class="task-details">Training for new trending garment design
-          
-          </td>
-                                                  <td>3/10/2024</td>
-                                                  <td>07/16/2024</td>
-                                                  <td>Bhaskar</td>
-                                                  <td>Open</td>
-                                                  <td><div style="
+                                              <tr class="collapse show" id="collapseExample" style="">
+                                                  <td>651229</td>
+                                                  <td class="task-details">Attendance</td>
+                                                  <td>--</td>
+                                                  <td>--</td>
+                                                  <td>--</td>
+                                                  <td><p class="open">Open</p></td>
+                                                  <td>
+                                                      <div style="
                                   display: flex;
                                   gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
-                                  <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div></td>
+                                  <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div>
+                                                  </td>
                                               </tr>
-                                              <tr class="collapse" id="collapseExample1" style="">
-                                                  <td>651228</td>
-                                                  <td class="task-details">Class Test for Enrolled beneficial
-          
-          </td>
-                                                  <td>3/10/2024</td>
-                                                  <td>07/16/2024</td>
-                                                  <td>Bhaskar</td>
-                                                  <td>Open</td>
-                                                  <td><div style="
-                                  display: flex;
-                                  gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
-                                  <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div></td>
-                                              </tr><tr class="collapse" id="collapseExample1" style="">
-                                                  <td>651228</td>
-                                                  <td class="task-details">Visit to alumni Students (Vivekanand Youth club)
-          
-          </td>
-                                                  <td>3/10/2024</td>
-                                                  <td>07/16/2024</td>
-                                                  <td>Bhaskar</td>
-                                                  <td>Open</td>
-                                                  <td><div style="
-                                  display: flex;
-                                  gap: 3px;">                    <i class="fa fa-edit" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
-                                  <i class="fa fa-trash" aria-hidden="true" style=" color: #c70000; color: #fff; background: #c70000bf; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i></div></td>
-                                              </tr></tbody>
+                                              </tbody>
                                           </table></div>
                                           <div class="col-sm-3 sub-cont" id="searchResultOuterDiv" style="display: none;">
                                   <div class="section-header">
@@ -1580,7 +1704,7 @@
                                               <ol>
                                                   <li>
                                                       <div>
-                                                          <h2 class="txt-1">Bhaskar</h2>
+                                                          <h2 class="txt-1">--</h2>
                                                           <h2 class="txt-2">IVD Project Sub-Coordinator</h2>
                                                       </div>
                                                   </li>
@@ -1622,81 +1746,11 @@
                                                   </div>
                                               </div>
                                   </div>
-                                  <div class="bg_drop" style="width: 100%; height: 100vh; position: fixed; top: 0px; left: 0px; background: rgba(0, 0, 0, 0.18); z-index: 1111; ">
-                                    <div id="wrap">
-                                            <h2 style="text-align: left;font-size: 28px;margin-bottom: 20px;color: #fff;background: #323b86;padding: 20px;font-weight: 400 !important;">Create New Project</h2><div class="content">
-                                             <button class="close-call" style="
-                 color: #333;
-                 font-size: 20px;
-                 background: #ffffff;
-                 padding: 3px 10px;
-                 line-height: 25px;
-                 padding-top: 0px;
-                 border-radius: 50%;
-                 top: 21px;
-             ">x</button>
-                         <form id="msform" style=" margin: 0; ">
-                                                               <!-- progressbar -->
-                                        <fieldset>
-                                             
-                       
-                                       <input type="text" name="fname" placeholder="Project Name"><div style="
-                           text-align: left;
-                           display: flex;
-                           gap: 50px;
-                       "><div style="flex: 0 50%;"><label>Project Start Date</label><input type="date" name="fname" placeholder="Project Start Date"></div><div style="flex: 0 50%;"><label>Project End Date</label><input type="date" name="fname" placeholder="Project Start Date"></div></div>
-                                       <input type="text" name="fname" placeholder="Select Project Coordinator">
-                                       <textarea placeholder="Project Description"></textarea>
-                       
-                       
-             
-                            <div id="toolbar" style="
-                                           width: 100%;
-                                           display: flex;
-                                           gap: 10px;
-                                       ">
-                                       
-                                       <input type="text" id="itemname" placeholder="Search Task" style="
-                                           /* width: 100%; */
-                                           padding: 8px;
-                                           border: 1px solid rgb(204, 204, 204);
-                                           border-radius: 4px;
-                                           margin-bottom: 10px;
-                                           width: 100%;
-                                           box-sizing: border-box;
-                                           color: inherit;
-                                       ">
-                                     <select name="cars" id="itemtype" style="padding: 8px; border: 1px solid rgb(204, 204, 204); border-radius: 4px; margin-bottom: 10px; width: 100%; box-sizing: border-box; color: inherit; display: none;">
-                                       <option value="volvo">Select Item Type</option>
-                                       <option value="text">Text</option>
-                                       <option value="numeric">Numeric</option>
-                                       <option value="list">List</option>
-                                   </select><div class="nice-select" tabindex="0"><span class="current">Select Program Name</span><ul class="list"><li data-value="volvo" class="option selected">Select Program Name</li><li data-value="text" class="option">Education</li><li data-value="numeric" class="option">Women Empowerment Center</li></ul></div>
-                                       <button id="button" class="btn btn-secondary" style="
-                                           width: 55%;
-                                           /* margin: 10px 5px; */
-                                           visibility: visible;
-                                           animation-duration: 1200ms;
-                                           animation-delay: 400ms;
-                                           animation-name: fadeInUp;
-                                           background: #444;
-                                           padding: 6px 5px;
-                                           height: 42px;
-                                           line-height: 1;
-                                       ">Add Item</button>  </div>
-                   
-               
-                   <table id="table2" data-toolbar="#toolbar" class="table table-bordered table-hover">
-                                                   <thead><tr><th data-field="itemname">Task Name</th><th data-field="itemtype">Program Name</th></tr></thead></table>
-                
-                                                   
-                       
-                              <input type="button" name="next" class="next action-button" value="Submit">
-                                              </fieldset>  </form></div>
-                                      </div>
+                                  <div class="bg_drop" style="width: 100%; height: 100vh; position: fixed; top: 0px; left: 0px; background: rgba(0, 0, 0, 0.18); z-index: 1111; display: none;">
+                            
                                     
-                                      <div id="wrap2">
-                                        <h2 style="text-align: left;font-size: 28px;margin-bottom: 0px;color: #fff;background: #323b86;padding: 20px;font-weight: 400 !important;">Task - Visit to alumni Students (Vivekanand Youth club)</h2><div class="content">
+                                      <div id="wrap2" style="display: none;">
+                                        <h2 style="text-align: left;font-size: 28px;margin-bottom: 0px;color: #fff;background: #323b86;padding: 20px;font-weight: 400 !important;" class="popup-title">Identification of Existing Sanch (Min. 2 years old and if possible, it should be pragat sanch)</h2><div class="content">
                                          <button class="close-call" style="
              color: #333;
              font-size: 20px;
@@ -1721,12 +1775,12 @@
                                                            text-align: left;
                                                            display: flex;
                                                            gap: 20px;
-                                                       "><div style="flex: 0 50%;"><label>Project Start Date</label><input type="date" name="fname" placeholder="Project Start Date"></div><div style="flex: 0 50%;"><label>Project End Date</label><input type="date" name="fname" placeholder="Project Start Date"></div><div style="flex: 0 50%;"><label>Assigned to</label><input type="text" name="fname" placeholder="Select User"></div><div style="flex: 0 50%;"><label>Task Status</label><div class="nice-select" tabindex="0"><span class="current">Select Status</span><ul class="list"><li data-value="volvo" class="option selected">Not Started</li><li data-value="text" class="option">Open</li><li data-value="numeric" class="option">Addressed</li></ul></div></div></div>
+                                                       "><div style="flex: 0 50%;"><label>Task Start Date</label><input type="date" name="fname" placeholder="Task Start Date"></div><div style="flex: 0 50%;"><label>Task End Date</label><input type="date" name="fname" placeholder="Task Start Date"></div><div style="flex: 0 50%;"><label>Assigned to</label><input type="text" name="fname" placeholder="Select User"></div><div style="flex: 0 50%;"><label>Task Status</label><div class="nice-select" tabindex="0"><span class="current">Select Status</span><ul class="list"><li data-value="volvo" class="option selected">Not Started</li><li data-value="text" class="option">Open</li><li data-value="numeric" class="option">Addressed</li></ul></div></div></div>
                                     <div class="card">
         <div class="card-header">
           <ul class="nav nav-tabs nav-tabs-neutral" role="tablist" data-background-color="orange">
             <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">Checklist</a>
+              <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">Items</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data-toggle="tab" href="#profile1" role="tab">Logs</a>
@@ -1741,8 +1795,52 @@
           <!-- Tab panes -->
           <div class="tab-content text-center">
             <div class="tab-pane active" id="home1" role="tabpanel">
-              <p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
-            </div>
+            <div style="
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    margin-top: 12px;
+"><p style="
+    flex: auto;
+    color: #333;
+    font-weight: 500;
+">Name of Sanch</p><input type="text" placeholder="Enter Sanch Name" style="
+    flex: 0 40%;
+"></div>
+
+<div style="
+display: flex;
+justify-content: space-between;
+text-align: left;
+align-items: center;
+border-bottom: 1px solid #eee;
+margin-top: 12px;
+"><p style="
+flex: auto;
+color: #333;
+font-weight: 500;
+">Number of Villages (1-30)</p><input type="number" placeholder="Enter Number of Villages" style="
+flex: 0 40%;
+"></div>
+
+<div style="
+display: flex;
+justify-content: space-between;
+text-align: left;
+align-items: center;
+border-bottom: 1px solid #eee;
+margin-top: 12px;
+"><p style="
+flex: auto;
+color: #333;
+font-weight: 500;
+">Name of Sanch Pramukh</p><input type="text" placeholder="Enter of Sanch Pramukh" style="
+flex: 0 40%;
+"></div>
+
+</div>
             <div class="tab-pane" id="profile1" role="tabpanel">
               <p> I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. </p>
             </div>
@@ -1846,16 +1944,7 @@
   
       </div>
     </footer>
-    <!-- CURSOR -->
-    <div class="mouseCursor cursor-outer" style="visibility: visible; transform: translate(601px, 274px);"></div>
-    <div class="mouseCursor cursor-inner" style="visibility: visible; transform: translate(601px, 274px);"></div>
-    <!-- /CURSOR -->
-    <div class="progress-wrap">
-      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
-        </path>
-      </svg>
-    </div>
+  
     <!-- Template Search -->
     <div id="template-search" class="template-search">
       <button type="button" class="close">
@@ -1905,7 +1994,7 @@ $(function() {
                 html += '                    <div class="chat-box my-chat">';
                 html += '                        <div class="chat">I have sent you an eMail with a Link which contains all the screenshots for Women Empowerment Centers';
                 html += '                        </div>';
-                html += '                        <div class="msg-info-name">Bhaskar</div>';
+                html += '                        <div class="msg-info-name">--</div>';
                 html += '                    </div>';
                 html += '                </div>';
                 html += '            </div>';
@@ -1936,20 +2025,20 @@ $(function() {
                                                                                                    //     console.log( "ready!" );
                                                                                                    // });
 
-                                                                                                   $("a.btn.btn--styleOne").click(function (e) {
-                                                                                                       console.log("ready!");
+    //                                                                                                $("a.btn.btn--styleOne").click(function (e) {
+    //                                                                                                    console.log("ready!");
 
-                                                                                                       e.preventDefault();
-                                                                                                       $("#wrap").animate({ width: "toggle" }, 700);
-                                                                                                       $(".bg_drop").animate({ width: "toggle" }, 700);
-                                                                                                       $(".open-call").toggleClass("opened closed");
-                                                                                                   });
+    //                                                                                                    e.preventDefault();
+    //                                                                                                    $("#wrap").animate({ width: "toggle" }, 700);
+    //                                                                                                    $(".bg_drop").animate({ width: "toggle" }, 700);
+    //                                                                                                    $(".open-call").toggleClass("opened closed");
+    //                                                                                                });
 
-                                                                                               $(".close-call").click(function () {
-                                                                                                   $("#wrap").hide({ width: "toggle" }, 700);
-                                                                                               $(".bg_drop").hide({width: "toggle" }, 700);
+    //                                                                                            $(".close-call").click(function () {
+    //                                                                                                $("#wrap").hide({ width: "toggle" }, 700);
+    //                                                                                            $(".bg_drop").hide({width: "toggle" }, 700);
   
-    });
+    // });
 
 
 
@@ -2110,7 +2199,55 @@ $(".bg_drop").hide({width: "toggle" }, 700);
 
 
 })
+
+$("#student_registration").click(function(){
+    window.location = 'new_student_registration.html'
+})
+
+$("#attendance").click(function(){
+    window.location = 'new_attendance.html'
+})
+
+
+
+$("#batches").click(function(){
+    window.location = 'new_batches.html'
+})
+
+
+$(".collapse.show").click(function(){
+    var value1 = $(this).find("td:nth-child(2)").text()
+        $(".popup-title").text(value1)
+        $("#home1>div").css('display','flex');
+        $("#msform fieldset .action-button").css('display','inline-block');
+        $(".card-body").css('display','block');
+                $(".nav.nav-tabs.nav-tabs-neutral li").css('display','flex');
+                $("#batch_tab").remove();
+                $("#attendance_action").remove();
+                $("#attendanceitem").remove();
+                $("#reg_tab").remove();
+
+        if(value1 == "Commencement of Training Porgram at Skill Center"){
+            $(".card-body").css('display','none');
+            $(".nav.nav-tabs.nav-tabs-neutral li").css('display','none');
+            $(".nav.nav-tabs.nav-tabs-neutral").append('<li class="nav-item"><a class="nav-link" data-toggle="tab" target="_blank" id="batch_tab" href="new_batches.html" role="tab">Batch Registration</a></li><li class="nav-item"><a class="nav-link"  target="_blank" id="reg_tab"  data-toggle="tab" href="new_student_registration.html" role="tab">Student Registration</a></li>');
+        }
+        else if(value1 == "Attendance"){
+            $("#home1>div").css('display','none');
+            $("#msform fieldset .action-button").css('display','none');
+            $("#home1").append('<div style="display: flex;justify-content: space-between;text-align: left;align-items: center;border-bottom: 1px solid #eee;padding-bottom: 6px !important;" id="attendanceitem"><p style="flex: auto;color: #333;font-weight: 500;margin: 0;">Attendance</p><div style="display: flex;align-items: center;margin: 0;gap: 9px;"><a href="new_attendance.html" target="_blank" style="display: flex;gap:10px;color: #333;font-weight: 500;"><span style="color: green;">Present: 3  </span><span style="color:red;">Absent: 1</span></a></div></div>'); 
+            $("#msform fieldset").append('<div style="margin-top: 17px;" id="attendance_action"><a type="button" name="next" class="next action-button" value="attendance" id="attendance_action_button" style="background: #323b86;padding: 8.5px;border-radius: 2px;" href="new_attendance.html">Attendance</a><input type="button" name="next" class="next action-button" value="Submit" style="/* display: none; */"></div>'); 
+            $(".nav.nav-tabs.nav-tabs-neutral li").css('display','none');
+
+            }
+          
+
+});
+
+$("#attendance_action_button").click(function(){
+    window.location = 'new_attendance.html'
+})
 </script>
   
   
-  </body></html>
+      </body></html>

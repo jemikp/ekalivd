@@ -39,9 +39,15 @@ public class User extends BaseEntity{
 
 	@Column(name = "last_name")
 	String lastName;
-	
+
+	@Column(name = "email",columnDefinition = "varchar(50)")
+	String email;
+
 	@Column(name = "mobile",columnDefinition = "varchar(20)")
 	String mobile;
+
+	@Column(name = "password",columnDefinition = "varchar(500)")
+	String password;
 	
 	@Column(name = "otp",columnDefinition = "varchar(6)")
 	String otp;
@@ -65,6 +71,7 @@ public class User extends BaseEntity{
 			this.roleId = u.getRoleId();
 			this.reportingTo = u.getReportingTo();
 			this.delflag = 0;
+			this.email = u.getEmail();
 		});
 		
 	}

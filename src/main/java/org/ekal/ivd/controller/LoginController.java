@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpSession;
 import lombok.extern.log4j.Log4j2;
 import org.ekal.ivd.dao.UserDao;
 import org.ekal.ivd.dto.UserDTO;
+import org.ekal.ivd.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -40,6 +41,14 @@ public class LoginController {
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid");
         }
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> login(UserDTO userDTO, HttpServletResponse httpServletResponse) throws IOException {
+        User user = userDao.validateEmailAndPassword(userDTO.getEmail(),userDTO.getPassword());
+        System.out.println(user);
+     //   httpServletResponse.sendRedirect("http://localhost:8088/ekalivd/new_admin.html");
+        return ResponseEntity.status(HttpStatus.OK).body("Success");
     }
 
     @GetMapping("/logout")

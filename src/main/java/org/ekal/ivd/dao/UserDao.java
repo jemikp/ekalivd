@@ -129,4 +129,13 @@ public class UserDao {
         }
         return user;
     }
+
+    public User validateEmailAndPassword(String email,String password){
+        Optional<User> optUser = userRepository.getByEmailAndPassword(email,password);
+        if(optUser.isEmpty()){
+            throw new DynamicException(new ErrorResponseDTO(ErrorResponseCode.INVALID_EMAIL_OR_PASSWORD), HttpStatus.BAD_REQUEST, email +" - "+password);
+        }
+        User user = optUser.get();
+        return user;
+    }
 }

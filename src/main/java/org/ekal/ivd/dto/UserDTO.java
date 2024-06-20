@@ -29,7 +29,10 @@ public class UserDTO {
 	String lastName;
 	
 	String mobile;
-	
+
+	@NotNull
+	String email;
+
 	@NotNull
 	String whatsApp;
 	
@@ -40,6 +43,8 @@ public class UserDTO {
 	UserDTO reporting;
 	
 	Integer reportingTo;
+
+	String password;
 	
 	public UserDTO(User user) {
 
@@ -50,6 +55,7 @@ public class UserDTO {
 			this.mobile = u.getMobile();
 			this.role = new RoleMasterDTO(u.getRole());
 			this.reporting = new UserDTO(u.getUserReporting());
+			this.email = u.getEmail();
 		});
 	}
 
