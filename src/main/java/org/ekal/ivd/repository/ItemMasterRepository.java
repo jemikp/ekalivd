@@ -11,7 +11,8 @@ import java.util.Optional;
 @Repository
 public interface ItemMasterRepository extends JpaRepository<ItemMaster, Integer> {
 	List<ItemMaster> findByItemName(String itemName);
-	
+	List<ItemMaster> findByItemNameStartingWith(String itemName);
+
 	Optional<ItemMaster> findById(int id);
 
 	List<ItemMaster> findByDelflag(int delflag, Sort sort);

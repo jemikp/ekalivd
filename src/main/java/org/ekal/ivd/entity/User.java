@@ -12,6 +12,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
+import org.apache.commons.lang3.StringUtils;
 import org.ekal.ivd.dto.UserDTO;
 
 import java.time.LocalDateTime;
@@ -67,7 +68,7 @@ public class User extends BaseEntity{
 		Optional.ofNullable(userDTO).ifPresent(u -> {
 			this.firstName = u.getFirstName();
 			this.lastName = u.getLastName();
-			this.mobile = u.getMobile();
+			this.mobile = StringUtils.isEmpty(u.getMobile()) ? u.getWhatsApp() : u.getMobile() ;
 			this.roleId = u.getRoleId();
 			this.reportingTo = u.getReportingTo();
 			this.delflag = 0;

@@ -5,17 +5,17 @@
   <meta name="author" content="">
   <title>Ekal Vidhyalaya Foundation</title>
   <link rel="icon" href="image/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/animation/animate.min.css">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/animation/custom-animation.css">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/swiper/swiper.min.css">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/assets/nice-select/nice-select.css">
+  <link rel="stylesheet" href="donor_view/new_home1_files/animate.min.css">
+  <link rel="stylesheet" href="donor_view/new_home1_files/custom-animation.css">
+  <link rel="stylesheet" href="donor_view/new_home1_files/bootstrap.min.css">
+  <link rel="stylesheet" href="donor_view/new_home1_files/swiper.min.css">
+  <link rel="stylesheet" href="donor_view/new_home1_files/all.min.css">
+  <link rel="stylesheet" href="donor_view/new_home1_files/nice-select.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&amp;family=Oswald:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://codercredit.com/tf/gainioz/css/main.css">
+  <link rel="stylesheet" href="donor_view/new_home1_files/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css">
   <link rel="stylesheet" href="https://rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.css" rel="stylesheet">
@@ -192,7 +192,9 @@ button.close-call {
     height: calc(100vh - 40px);
     width: 90%;
 } */
-
+.task-details.parent {
+    padding: 10px 0;
+}
 
 .content {
     overflow-y: auto;
@@ -210,16 +212,16 @@ button.close-call {
     border: none;
     cursor: pointer;
 }
-div#wrap2 {
+div#wrap2 ,div#wrap3{
     position: fixed;
-    right: 0;
-    top: 0;
+    left: 35%;
+    top: 100px;
     display: none;
     width: 30%;
     background: #fff;
     z-index: 100;
     box-shadow: 0 0 7px 1px #3333335c;
-    height: 100vh;
+    height: fit-content;
     overflow-y: auto;
     background: #ffffff;
 }
@@ -345,22 +347,10 @@ li.option {
     .bootstrap-table .fixed-table-container .fixed-table-body{
       height:auto
     }
-/*headings*/
-/* .fs-title {
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #2C3E50;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    font-weight: bold;
+    table.table.table-responsive.table-hover.table-bordered th {
+    background: #666666;
+    color: #fff;
 }
-
-.fs-subtitle {
-    font-weight: normal;
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 20px;
-} */
 
 /*progressbar*/
 #progressbar {
@@ -374,7 +364,7 @@ li.option {
     /* color: #666; */
     /* text-transform: uppercase; */
     font-size: 16px;
-    width: 33.33%;
+    width: 20%;
     float: left;
     position: relative;
     letter-spacing: 1px;
@@ -457,7 +447,7 @@ li.option {
               <!-- logo start -->
               <div class="header__logo">
                 <a href="index.html" class="header__logo__link">
-                  <img src="https://www.ekal.org/assets/images/ekal-logo.png" alt="Gainioz" class="header__logo__image">
+                  <img src="donor_view/new_home1_files/ekal-logo.png" alt="Ekal" class="header__logo__image">
                 </a>
               </div>
               <!-- logo end -->
@@ -553,7 +543,7 @@ li.option {
     <div class="header header--mobile cc-header-menu mean-container position-relative" id="meanmenu">
       <div class="mean-bar headerBurgerMenu">
         <a href="index.html">
-          <img class="mean-bar__logo" alt="Techkit" src="https://www.ekal.org/assets/images/ekal-logo.png">
+          <img class="mean-bar__logo" alt="Techkit" src="donor_view/new_home1_files/ekal-logo.png">
         </a>
         <!-- Header Right Buttons Search Cart -->
         <div class="header__right">
@@ -591,7 +581,7 @@ li.option {
     <div class="cc cc--slideNav">
       <div class="cc__logo mb-40">
         <a href="index.html">
-          <img class="mean-bar__logo" alt="Techkit" src="https://www.ekal.org/assets/images/ekal-logo.png">
+          <img class="mean-bar__logo" alt="Techkit" src="donor_view/new_home1_files/ekal-logo.png">
         </a>
       </div>
       <div class="offscreen-navigation mb-40">
@@ -706,7 +696,7 @@ li.option {
     <!-- Hero/Welcome Section Start -->
     <section class="hero hero--style1 overflow-hidden">
 
-      <img src="https://codercredit.com/tf/gainioz/image/shapes/love-shape1.svg" alt="Gainioz" class="hero__shape hero__shape--one">
+      <img src="donor_view/new_home1_files/love-shape1.svg" alt="Gainioz" class="hero__shape hero__shape--one">
 
 
     </section>
@@ -715,7 +705,7 @@ li.option {
     <section class="about">
 
 
-      <img class="about__shape about__shape--three" src="https://codercredit.com/tf/gainioz/image/shapes/love-shape5.svg" alt="Gainioz Shape">
+      <img class="about__shape about__shape--three" src="donor_view/new_home1_files/love-shape5.svg" alt="Gainioz Shape">
 
       <div class="featureArea pt-70" style="
     padding-top: 0;
@@ -742,32 +732,123 @@ li.option {
               left: 0;
               background: #0000002e;
               z-index: 1111;
-          "><div id="wrap2">
-                    <div class="content">
-                      <button class="close-call">❌</button>
-                      <form id="msform" style="
-              margin: 0;
           ">
-                        <!-- progressbar -->
-                        
-                        <!-- fieldsets -->
-                        <fieldset>
-                          <h2 style="
-              text-align: left;
-              font-size: 28px;
-              margin-bottom: 20px;
-              color: #2a398a;
-          ">New Donor</h2>  
-                  
-          <input type="text" name="fname" placeholder="Donor Trust">
-          <input type="text" name="fname" placeholder="Donor Name">
-          <input type="number" name="fname" placeholder="Phone">
-          <input type="number" name="fname" placeholder="Whatsapp Number"><input type="email" name="fname" placeholder="Email ID">
-          <!-- <input type="text" name="fname" placeholder="Location"> -->
-   
-          <input type="text" name="fname" placeholder="PAN Card Number"><input type="text" name="fname" placeholder="Address 1"><input type="text" name="fname" placeholder="Address 2"><input type="text" name="fname" placeholder="City"><input type="text" name="fname" placeholder="Zip code"><input type="text" name="fname" placeholder="State"><input type="text" name="fname" placeholder="Country"><input type="button" name="next" class="next action-button" value="Submit">
-                          </fieldset> </form></div>
-                  </div></div>
+       <div id="wrap2">
+        <div class="content">
+          <button class="close-call" style="
+background: #fff;
+border-radius: 50%;
+padding: 2px 8px;
+top: 20px;
+">x</button>
+          <form id="msform" style="
+  margin: 0;
+">
+            <!-- progressbar -->
+            
+            <!-- fieldsets -->
+            <fieldset style="
+padding: 0;
+">
+              <h2 style="
+  text-align: left;
+  font-size: 28px;
+  margin-bottom: 20px;
+  background: #2a398a;
+  color: #fff;
+  padding: 15px;
+">Select Program</h2>  
+             <table id="table_location" data-filter-control="true"  data-show-search-clear-button="false" style="
+             border: 1px solid #eee;
+         ">
+              <thead>
+                <tr>
+                  <th data-field="itemname"><input type="checkbox"></th>
+                  <th data-field="foundation" data-filter-control="input" data-filter-control-placeholder="Search">Program Name</th>
+                  <th data-field="phone" data-filter-control="input" data-filter-control-placeholder="Search">Description</th>
+                
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>Telemedicine</td>
+                <td>Telemedicine is the program run by Ekal...</td>
+              
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Toilet Use Awareness</td>
+                  <td>Toilet Use Awareness is the program run by Ekal...</td>
+                
+                  </tr>
+              </tbody>
+            </table> 
+
+
+
+  <input type="button" value="Select" style="
+background: #2a398a;
+color: #fff;
+width: fit-content;
+margin-top: 20px;
+padding: 8px 20px;
+">
+              </fieldset> </form></div>
+      </div>
+
+
+      <div id="wrap3">
+        <div class="content">
+          <button class="close-call" style="
+background: #fff;
+border-radius: 50%;
+padding: 2px 8px;
+top: 20px;
+">x</button>
+          <form id="msform" style="
+  margin: 0;
+">
+            <!-- progressbar -->
+            
+            <!-- fieldsets -->
+            <fieldset style="padding: 0;">
+              <h2 style="
+  text-align: left;
+  font-size: 28px;
+  margin-bottom: 20px;
+  background: #2a398a;
+  color: #fff;
+  padding: 15px;
+">Add Location</h2>  
+           <div style="
+    padding: 0 18px;
+"> <input type="text" name="fname" placeholder="Location Custom Name">
+           <select style="width: 100%; padding: 8px; border: 1px solid rgb(204, 204, 204); margin-bottom: 10px; color: rgb(102, 102, 102); display: none;"><option>Select Zone</option></select><div class="nice-select" tabindex="0" style="
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgb(204, 204, 204);
+    margin-bottom: 10px;
+    color: rgb(102, 102, 102);
+    display: none;
+"><span class="current">Select Zone</span><ul class="list"><li data-value="Select Zone" class="option selected">Select Zone</li></ul></div>
+           <input type="text" name="fname" placeholder="Address 1"><input type="number" name="fname" placeholder="Address 2">
+           <input type="email" name="fname" placeholder="City">
+           <input type="text" name="fname" placeholder="State">
+
+
+  <input type="text" name="fname" placeholder="Country"><input type="text" name="fname" placeholder="Zip"><input type="button" value="Submit" style="
+background: #2a398a;
+color: #fff;
+width: fit-content;
+margin-top: 20px;
+padding: 8px 20px;
+"></div>
+          
+              </fieldset> </form></div>
+      </div>
+      </div>
+              
               
          <div id="wrap">
           <div class="content">
@@ -778,6 +859,8 @@ li.option {
                   <li class="active">Donor Selection</li>
                   <li>Project Type</li>
                   <li>Program</li>
+                  <li>Funds Allocation</li>
+                  <li>Assets Allocation</li>
               </ul>
               <!-- fieldsets -->
               <fieldset>
@@ -788,23 +871,7 @@ li.option {
                 padding-bottom: 20px;
             ">
                       <div class="">
-                        <!-- <div style="
-                        text-align: right;
-                        margin-bottom: 20px;
-                        display: flex;
-                        gap: 15px;
-                        justify-content: end;
-                        align-items: center;
-                    "><label style="color: #444;font-weight: 500;font-size: 16px;">Total Donation:</label><input type="text" id="total" placeholder="₹ 30,00,000" style="
-                                                padding: 8px;
-                                                border: 1px solid rgb(204, 204, 204);
-                                                border-radius: 4px;
-                                                margin-bottom: 10px;
-                                                width: 208px;
-                                                box-sizing: border-box;
-                                                color: inherit;
-                                                margin: 0;
-                                            "></div> -->
+                     
                         <div class="row">
 
                           <div class="col-xxl-9 col-md-8">
@@ -826,29 +893,7 @@ li.option {
                             margin: 0;
                         ">
                          <div id="result" class="list-group"></div></div>
-                      <!-- <input type="text" id="itemtype" placeholder="Donation Amount" style="
-                            /* width: 100%; */
-                            padding: 8px;
-                            border: 1px solid rgb(204, 204, 204);
-                            border-radius: 4px;
-                            margin-bottom: 10px;
-                            width: 100%;
-                            box-sizing: border-box;
-                            color: inherit;
-                            margin: 0;
-                        ">
-                        <select id="itemtype" placeholder="Currency" style="
-                            /* width: 100%; */
-                            padding: 8px;
-                            border: 1px solid rgb(204, 204, 204);
-                            border-radius: 4px;
-                            margin-bottom: 10px;
-                            width: 20%;
-                            box-sizing: border-box;
-                            color: inherit;
-                            margin: 0;
-                        "><option selected="">Currency
-                        </option></select> -->
+                    
                         <button id="button_add" class="btn btn-secondary" style="
                             /* width: 35%; */
                             /* margin: 10px 5px; */
@@ -861,20 +906,8 @@ li.option {
                             height: 42px;
                             line-height: 1;
                         ">Select</button>
-                        <button id="button" class="btn btn-secondary" style="
-                            /* width: 247px; */
-                            /* margin: 10px 5px; */
-                            visibility: visible;
-                            animation-duration: 1200ms;
-                            animation-delay: 400ms;
-                            animation-name: fadeInUp;
-                            background: rgb(231 90 49);
-                            padding: 6px 40px;
-                            height: 42px;
-                            line-height: 1;
-                            border: none;
-                            flex: none;
-                        ">Add New Donor</button></div>
+                   
+                        </div>
                               <table id="table" data-filter-control="true"  data-toolbar="#toolbar"  data-show-search-clear-button="false">
                               <thead>
                                 <tr>
@@ -883,7 +916,7 @@ li.option {
                                   <th data-field="phone" data-filter-control="input" data-filter-control-placeholder="Search">Phone Number</th>
                                   <th data-field="email" data-filter-control="input" data-filter-control-placeholder="Search">Email</th>
                                   <th data-field="country" data-filter-control="input" data-filter-control-placeholder="Search">Country</th>
-                                  <th data-field="amount" data-filter-control="input" data-filter-control-placeholder="Search">Donation Amount</th>
+                                  <th data-field="amount" data-filter-control="input" data-filter-control-placeholder="Search">Pledge Amount</th>
                                   <th data-field="action">Action</th>
                                 </tr>
                               </thead>
@@ -948,7 +981,7 @@ li.option {
                             </li>
                             <li>
                               <a href="#">
-                                <span>Donation Amount</span>
+                                <span>Pledge Amount</span>
                                 <span>$ 300,000</span>
                               </a>
                             </li>
@@ -970,32 +1003,53 @@ li.option {
                      <div><input type="button" name="next" class="next action-button" value="Next"></div> 
                  </fieldset>
                 
-                 <fieldset style=""><div class="row"><div class="col-xxl-9 col-md-8" style="
+                 <fieldset style="">
+                  <div class="row"><div class="col-xxl-9 col-md-8" style="
                   border: 1px solid #eee;
                   padding: 30px 20px 50px;
                   height: fit-content;
               ">
-                                <div style="
-                                /* text-align: right; */
-                                margin-bottom: 20px;
-                                display: flex;
-                                gap: 15px;
-                                justify-content: space-between;
-                                align-items: center;
-                            "><div style="
+                              <div style="
+                              /* text-align: right; */
+                              margin-bottom: 20px;
                               display: flex;
+                              gap: 21px;
+                              justify-content: flex-start;
                               align-items: center;
-                              margin-bottom: 26px;
-                              gap: 17px;
-                              g
-                          CONTAIN-INTRINSIC-BLOCK-SIZE: AUTO 100PX;
-                              g
-                          CONTAIN-INTRINSIC-BLOCK-SIZE: AUTO 100PX;
-                          ">  <label style="
-                              font-size: 15px;
-                              color: #444;
-                              font-weight: 600;
-                          ">Select Location: </label><select style="display: none;"><option value="1" disabled="" selected="" style="color: #444;font-weight: 500;font-size: 16px;">Select Location</option><option value="2" style="color: #444;font-weight: 500;font-size: 16px;">Jogmodi</option><option value="3" style="color: #444;font-weight: 500;font-size: 16px;">Gujarat</option></select><div class="nice-select" tabindex="0"><span class="current">Select Location</span><ul class="list"><li data-value="1" class="option selected disabled">Select Location</li><li data-value="2" class="option">Jogmodi</li><li data-value="3" class="option">Gujarat</li></ul></div></div></div>
+                          ">
+                          
+                       
+                          <div style="
+                          /* text-align: right; */
+                          margin-bottom: 20px;
+                          display: flex;
+                          gap: 21px;
+                          justify-content: flex-start;
+                          align-items: center;
+                      "><div style="
+                        display: flex;
+                        align-items: center;
+                        /* margin-bottom: 26px; */
+                        gap: 17px;
+                      
+                    ">  <label style="
+                        font-size: 15px;
+                        color: #444;
+                        font-weight: 600;
+                        width: 164px;
+                    ">Project Code: </label><input type="text" placeholder="Enter Project Code" style="
+margin: 0;
+"></div><div style="
+                        display: flex;
+                        align-items: center;
+                        /* margin-bottom: 26px; */
+                        gap: 17px;
+                    ">  <label style="
+                        font-size: 15px;
+                        color: #444;
+                        font-weight: 600;
+                    ">Select Location: </label><select style="display: none;"><option value="1" disabled="" selected="" style="color: #444;font-weight: 500;font-size: 16px;">Select Location</option><option value="2" style="color: #444;font-weight: 500;font-size: 16px;">Jogmodi</option><option value="3" style="color: #444;font-weight: 500;font-size: 16px;">Gujarat</option></select><div class="nice-select" tabindex="0"><span class="current">Jogmodi</span><ul class="list"><li data-value="1" class="option disabled">Select Location</li><li data-value="2" class="option selected focus">Jogmodi</li><li data-value="3" class="option">Gujarat</li></ul></div></div><i class="fa fa-plus-square" style="font-size: 31px;cursor: pointer;" id="add_location"></i></div>
+                 </div>
                                 
                                                 
                                 <div class="row gx-3" style="
@@ -1364,6 +1418,15 @@ li.option {
                                                           <ul>
                                                             <li>
                                                               <a href="#">
+                                                                <span>Project Code</span>
+                                                                <span style="
+                                                          /* color: #0d6efd; */
+                                                          /* font-weight: 600; */
+                                                      ">IVDPROJ</span>
+                                                              </a>
+                                                            </li>
+                                                            <li>
+                                                              <a href="#">
                                                                 <span>Donors</span>
                                                                 <span style="
                                                           color: #0d6efd;
@@ -1373,7 +1436,7 @@ li.option {
                                                             </li>
                                                             <li>
                                                               <a href="#">
-                                                                <span>Donation Amount</span>
+                                                                <span>Pledge Amount</span>
                                                                 <span>$ 300,000</span>
                                                               </a>
                                                             </li>
@@ -1429,10 +1492,10 @@ li.option {
               ">                            <div style="
               text-align: left;
               margin-bottom: 30px;
-              "><a class="btn btn--styleOne btn--black it-btn wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated " data-wow-duration="1200ms" data-wow-delay="400ms" href="donation-listing.html" style="animation-duration: 1200ms; animation-delay: 400ms; background: rgb(46, 58, 136); visibility: visible; animation-name: fadeInUp;">
+              "><a class="btn btn--styleOne btn--black it-btn wow animate__fadeInUp animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated  animate__animated " data-wow-duration="1200ms" id="select_program" data-wow-delay="400ms" href="donation-listing.html" >
                                         <span class="btn__text" style="
               text-transform: capitalize;
-              ">Add Program</span>
+              ">Select Program</span>
               
                                         <span class="it-btn__inner">
                                             <span class="it-btn__blobs">
@@ -1628,6 +1691,15 @@ li.option {
                                                                       <ul>
                                                                         <li>
                                                                           <a href="#">
+                                                                            <span>Project Code</span>
+                                                                            <span style="
+                                                                      /* color: #0d6efd; */
+                                                                      /* font-weight: 600; */
+                                                                  ">IVDPROJ</span>
+                                                                          </a>
+                                                                        </li>
+                                                                        <li>
+                                                                          <a href="#">
                                                                             <span>Donors</span>
                                                                             <span style="
                                                                       color: #0d6efd;
@@ -1637,7 +1709,7 @@ li.option {
                                                                         </li>
                                                                         <li>
                                                                           <a href="#">
-                                                                            <span>Donation Amount</span>
+                                                                            <span>Pledge Amount</span>
                                                                             <span>$ 300,000</span>
                                                                           </a>
                                                                         </li>
@@ -1655,8 +1727,8 @@ li.option {
                                                                         </li>
                                                                         <li>
                                                                           <a href="#">
-                                                                            <span>Program</span>
-                                                                            <span>Computer Training Center</span>
+                                                                            <span>Enrolled Programs</span>
+                                                                            <span class="popover-icon" id="popover" data-toggle="popover" type="button" data-html="true" tabindex="0" data-placement="bottom">4</span>
                                                                           </a>
                                                                         </li> 
                                                                         <li>
@@ -1676,8 +1748,695 @@ li.option {
                                                                   </div>
                                                                     
                                                                   <div style="margin-top: 0px;"><input type="button" name="previous" class="previous action-button-previous" value="Previous">
-                                                                    <input type="submit" name="submit" class="submit action-button" value="Submit" id="submit"></div>
+                                                                    <input type="button" name="next" class="next action-button" value="Next"></div>
                                                               </fieldset>
+
+                        <fieldset>
+                          
+                          <div class="row gx-3 program-selection" style="
+                          flex-direction: row;
+                          flex-wrap: nowrap;
+                          width: 100%;
+                          /* margin-bottom: 25px; */
+                      ">
+            <div class="col-xxl-9 col-md-8"> 
+
+              <table class="table table-responsive table-hover table-bordered">
+                <thead>
+                <tr>
+                  <th>Programs</th>
+                  <th>1st Year</th>
+                  <th>2nd Year</th>
+                  <th>3rd Year</th>
+                  <th>4th Year</th>
+                  <th>5th Year</th>
+                  
+                  <th data-field="action">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr style="
+    background: #fcfcfc;
+">
+                    <td class="task-section" colspan="7"><b>
+                        <div class="task-details parent" style="
+"><i data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample" class="fa-regular fa-square-plus"></i> Computer Training Center</div></b>
+                    </td>
+                </tr>
+                <tr class="collapse show" id="collapseExample" style="">
+                    <td><b>Allocated funds</b></td>
+                    <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                    <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                    <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                    <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                    <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                    
+                    <td>
+                        <!-- <div style="
+    display: flex;
+    gap: 3px;">                    <i class="fa fa-square-plus" href="#collapseExample2" data-bs-toggle="collapse" aria-controls="collapseExample2" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+    </div> -->
+                    </td>
+                </tr>
+                <tr class="collapse show" id="collapseExample" style="">
+                  <td><b># of Villages</b></td>
+                  <td><input type="text" value="30" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="25" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="29" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="30" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="30" style="margin-bottom: 0;"></td>
+                  
+                  <td>
+                      <div style="
+  display: flex;
+  gap: 3px;">                    <i class="fa fa-square-plus collapsed" href="#collapseExample2" data-bs-toggle="collapse" aria-controls="collapseExample2" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; " aria-expanded="false"></i> 
+  </div>
+                  </td>
+              </tr>
+                <tr class="collapse" id="collapseExample2" style="">
+                  <td><input type="text" placeholder="Enter KPI Name" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 1st Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 2nd Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 3rd Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 4th Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 5th Year" style="margin-bottom: 0;"></td>
+                  
+                  <td>
+                    <div style="
+  display: flex;
+  gap: 3px;">                    <i class="fa fa-square-minus collapsed" href="#collapseExample2" data-bs-toggle="collapse" aria-controls="collapseExample2" role="button" aria-hidden="true" style=" color: #863c32; color: #fff; background: #863c328f; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; " aria-expanded="false"></i> 
+  </div>
+                  </td>
+              </tr>
+             <tr style="
+    background: #fcfcfc;
+">
+                    <td colspan="7" class="task-section"><b>
+                        <div class="task-details parent"><i data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1" class="fa-regular fa-square-plus collapsed"></i> Women
+                            Empowerment Centres
+                        </div></b>
+                    </td>
+                </tr>
+                <tr class="collapse" id="collapseExample1" style="">
+                  <td><b>Allocated funds</b></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  
+                  <td>
+                    <!-- <div style="
+                    display: flex;
+                    gap: 3px;">                    <i class="fa fa-square-plus" href="#collapseExample3" data-bs-toggle="collapse" aria-controls="collapseExample3" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                    </div> -->
+                  </td>
+              </tr>
+              <tr class="collapse" id="collapseExample1" style="">
+                  <td><b># of Satellite Center Per Year</b></td>
+                  <td><input type="text" value="1" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="1" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="1" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="1" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="1" style="margin-bottom: 0;"></td>
+                  
+                  <td>
+                    <!-- <div style="
+                    display: flex;
+                    gap: 3px;">                    <i class="fa fa-square-plus" href="#collapseExample3" data-bs-toggle="collapse" aria-controls="collapseExample3" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                    </div> -->
+                  </td>
+              </tr><tr class="collapse" id="collapseExample1" style="">
+                <td><b># of Student per Batch for Tailoring</b></td>
+                <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                <td><input type="text" value="18" style="margin-bottom: 0;"></td>
+                <td><input type="text" value="15" style="margin-bottom: 0;"></td>
+                <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                <td><input type="text" value="18" style="margin-bottom: 0;"></td>
+                
+                <td>
+                  <div style="
+                  display: flex;
+                  gap: 3px;">                    <i class="fa fa-square-plus" href="#collapseExample3" data-bs-toggle="collapse" aria-controls="collapseExample3" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                  </div>
+                </td>
+            </tr>
+              <tr class="collapse" id="collapseExample3" style="">
+                <td><input type="text" placeholder="Enter KPI Name" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 1st Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 2nd Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 3rd Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 4th Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 5th Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="Total" style="margin-bottom: 0;"></td>
+                <td>
+                  <div style="
+                  display: flex;
+                  gap: 3px;">                    <i class="fa fa-square-minus" href="#collapseExample3" data-bs-toggle="collapse" aria-controls="collapseExample3" role="button" aria-hidden="true" style=" color: #863c32; color: #fff; background: #863c328f; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                  </div>
+                </td>
+            </tr>
+              <tr style="
+    background: #fcfcfc;
+">
+                    <td colspan="7" class="task-section"><b>
+                        <div class="task-details parent"><i data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4" class="fa-regular fa-square-plus collapsed"></i> Nutritional Gardening</div></b>
+                    </td>
+                </tr><tr class="collapse" id="collapseExample4" style="">
+                  <td><b>Allocated funds</b></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  
+                  <td>
+                    <!-- <div style="
+                    display: flex;
+                    gap: 3px;">                    <i class="fa fa-square-plus" href="#collapseExample3" data-bs-toggle="collapse" aria-controls="collapseExample3" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                    </div> -->
+                  </td>
+              </tr><tr class="collapse" id="collapseExample4" style="">
+                  <td><b># of Farmer Trainers
+</b></td>
+                  <td><input type="text" value="2" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="2" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="2" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="2" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="2" style="margin-bottom: 0;"></td>
+                  
+                  <td>
+                    <!-- <div style="
+                    display: flex;
+                    gap: 3px;">                    <i class="fa fa-square-plus" href="#collapseExample3" data-bs-toggle="collapse" aria-controls="collapseExample3" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                    </div> -->
+                  </td>
+              </tr><tr class="collapse" id="collapseExample4" style="">
+                  <td><b># of Camps Organized
+</b></td>
+                  <td><input type="text" value="3" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="3" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="3" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="3" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="3" style="margin-bottom: 0;"></td>
+                  
+                  <td>
+                    <!-- <div style="
+                    display: flex;
+                    gap: 3px;">                    <i class="fa fa-square-plus" href="#collapseExample3" data-bs-toggle="collapse" aria-controls="collapseExample3" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                    </div> -->
+                  </td>
+              </tr><tr class="collapse" id="collapseExample4" style="">
+                <td><b># of Vermi Compost Bed Distribution</b></td>
+                <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                
+                <td>
+                  <div style="
+                  display: flex;
+                  gap: 3px;">                    <i class="fa fa-square-plus collapsed" href="#collapseExample5" data-bs-toggle="collapse" aria-controls="collapseExample5" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; " aria-expanded="false"></i> 
+                  </div>
+                </td>
+            </tr><tr class="collapse" id="collapseExample5" style="">
+                <td><input type="text" placeholder="Enter KPI Name" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 1st Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 2nd Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 3rd Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 4th Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 5th Year" style="margin-bottom: 0;"></td>
+                  
+                <td>
+                  <div style="
+                  display: flex;
+                  gap: 3px;">                    <i class="fa fa-square-minus collapsed" href="#collapseExample5" data-bs-toggle="collapse" aria-controls="collapseExample5" role="button" aria-hidden="true" style=" color: #863c32; color: #fff; background: #863c328f; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; " aria-expanded="false"></i> 
+                  </div>
+                </td>
+            </tr><tr style="
+    background: #fcfcfc;
+">
+                    <td colspan="7" class="task-section"><b>
+                        <div class="task-details parent"><i data-bs-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample6" class="fa-regular fa-square-plus collapsed"></i> Organic Farming</div></b>
+                    </td>
+                </tr><tr class="collapse" id="collapseExample6" style="">
+                  <td><b>Allocated funds</b></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="$ 10,000" style="margin-bottom: 0;"></td>
+                  
+                  <td>
+                    <!-- <div style="
+                    display: flex;
+                    gap: 3px;">                    <i class="fa fa-square-plus" href="#collapseExample3" data-bs-toggle="collapse" aria-controls="collapseExample3" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                    </div> -->
+                  </td>
+              </tr><tr class="collapse" id="collapseExample6" style="">
+                  <td><b># of Farmer Trainers
+</b></td>
+                  <td><input type="text" value="2" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="2" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="2" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="2" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="2" style="margin-bottom: 0;"></td>
+                  
+                  <td>
+                    <!-- <div style="
+                    display: flex;
+                    gap: 3px;">                    <i class="fa fa-square-plus" href="#collapseExample3" data-bs-toggle="collapse" aria-controls="collapseExample3" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                    </div> -->
+                  </td>
+              </tr><tr class="collapse" id="collapseExample6" style="">
+                  <td><b># of Camps Organized
+</b></td>
+                  <td><input type="text" value="3" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="3" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="3" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="3" style="margin-bottom: 0;"></td>
+                  <td><input type="text" value="3" style="margin-bottom: 0;"></td>
+                  
+                  <td>
+                    <!-- <div style="
+                    display: flex;
+                    gap: 3px;">                    <i class="fa fa-square-plus" href="#collapseExample3" data-bs-toggle="collapse" aria-controls="collapseExample3" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                    </div> -->
+                  </td>
+              </tr><tr class="collapse" id="collapseExample6" style="">
+                <td><b># of Vermi Compost Bed Distribution</b></td>
+                <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                
+                
+            <td>
+                  <div style="
+                  display: flex;
+                  gap: 3px;">                    <i class="fa fa-square-plus collapsed" href="#collapseExample7" data-bs-toggle="collapse" aria-controls="collapseExample7" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; " aria-expanded="false"></i> 
+                  </div>
+                </td></tr><tr class="collapse" id="collapseExample7" style="">
+                <td><input type="text" placeholder="Enter KPI Name" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 1st Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 2nd Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 3rd Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 4th Year" style="margin-bottom: 0;"></td>
+                  <td><input type="text" placeholder="KPI Value for 5th Year" style="margin-bottom: 0;"></td>
+                  
+                <td>
+                  <div style="
+                  display: flex;
+                  gap: 3px;">                    <i class="fa fa-square-minus collapsed" href="#collapseExample7" data-bs-toggle="collapse" aria-controls="collapseExample7" role="button" aria-hidden="true" style=" color: #863c32; color: #fff; background: #863c328f; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; " aria-expanded="false"></i> 
+                  </div>
+                </td>
+            </tr></tbody>
+            </table>
+                      
+                      
+                      </div>
+                      
+                        <div class="col-xxl-3 col-md-4 mb-30" style="
+                        margin: 0;
+                        ">
+                                                                              <div class="sidebarLayout">
+                                                                            <div class="innerWrapperSidebar mb-30">
+                                                                              <div class="sidebarWidget">
+                                                                                <div class="sidebarTitle">
+                                                                                  <h5 class="sidebarTitle__heading text-uppercase mb-30" style="
+                                                                                  color: #283891;
+                                                                                  font-size: 24px;
+                                                                                  font-style: normal;
+                                                                                  font-weight: 400 !important;
+                                                                                  line-height: normal;
+                                                                                  display: flex;
+                                                                                  align-items: center;
+                                                                                  gap: 8px;
+                                                                                  text-transform: none !important;
+                                                                              ">Project Detail</h5>
+                                                                                </div>
+                                                                                <div class="sidebarCategories">
+                                                                                <ul>
+                                                                                  <li>
+                                                                                    <a href="#">
+                                                                                      <span>Project Code</span>
+                                                                                      <span style="
+                                                                                /* color: #0d6efd; */
+                                                                                /* font-weight: 600; */
+                                                                            ">IVDPROJ</span>
+                                                                                    </a>
+                                                                                  </li>
+                                                                                  <li>
+                                                                                    <a href="#">
+                                                                                      <span>Donors</span>
+                                                                                      <span style="
+                                                                                color: #0d6efd;
+                                                                                font-weight: 600;
+                                                                            ">2</span>
+                                                                                    </a>
+                                                                                  </li>
+                                                                                  <li>
+                                                                                    <a href="#">
+                                                                                      <span>Pledge Amount</span>
+                                                                                      <span>$ 300,000</span>
+                                                                                    </a>
+                                                                                  </li>
+                                                                                  <li>
+                                                                                    <a href="#">
+                                                                                      <span>Project Type</span>
+                                                                                      <span>Integrated Village Development (IVD)</span>
+                                                                                    </a>
+                                                                                  </li>
+                                                                                  <li>
+                                                                                    <a href="#">
+                                                                                      <span>Location</span>
+                                                                                      <span>Jogmodi</span>
+                                                                                    </a>
+                                                                                  </li>
+                                                                                  <li>
+                                                                                    <a href="#">
+                                                                                      <span>Enrolled Programs</span>
+                                                                                      <span class="popover-icon" id="popover" data-toggle="popover" type="button" data-html="true" tabindex="0" data-placement="bottom">4</span>
+                                                                                    </a>
+                                                                                  </li> 
+                                                                                  <li>
+                                                                                    <a href="#">
+                                                                                      <span>Category</span>
+                                                                                      <span>Ekal Gramothan Foundation</span>
+                                                                                    </a>
+                                                                                  </li>
+                                                                                
+                                                                                </ul>
+                                                                              </div>
+                                                                              </div>
+                                                                              </div>
+                                                                              
+                                                                              </div>
+                                                                              </div>
+                      
+                      </div>
+                                                                                  
+                      <div style="margin-top: 0px;"><input type="button" name="previous" class="previous action-button-previous" value="Previous">
+                        <input type="button" name="next" class="next action-button" value="Next"></div>
+                                                                            </fieldset>
+                                                                            <fieldset>
+                          
+                                                                              <div class="row gx-3 program-selection" style="
+                                                                              flex-direction: row;
+                                                                              flex-wrap: nowrap;
+                                                                              width: 100%;
+                                                                              /* margin-bottom: 25px; */
+                                                                          ">
+                                                                <div class="col-xxl-9 col-md-8"> 
+                                                    
+                                                                  <table class="table table-responsive table-hover table-bordered">
+                                                                    <thead>
+                                                                    <tr>
+                                                                      <th>Programs</th>
+                                                                      <th>1st Year</th>
+                                                                      <th>2nd Year</th>
+                                                                      <th>3rd Year</th>
+                                                                      <th>4th Year</th>
+                                                                      <th>5th Year</th>
+                                                                      
+                                                                      <th data-field="action">Action</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    <tr style="
+                                                        background: #fcfcfc;
+                                                    ">
+                                                                        <td class="task-section" colspan="7"><b>
+                                                                            <div class="task-details parent" style="
+                                                    "><i data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample" class="fa-regular fa-square-plus"></i> Computer Training Center</div></b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="collapse show" id="collapseExample" style="">
+                                                                        <td><b># of Monitors</b></td>
+                                                                        <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                        <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                        <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                        <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                        <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                        
+                                                                        <td>
+                                                                            <!-- <div style="
+                                                        display: flex;
+                                                        gap: 3px;">                    <i class="fa fa-square-plus" href="#collapseExample2" data-bs-toggle="collapse" aria-controls="collapseExample2" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                                                        </div> -->
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="collapse show" id="collapseExample" style="">
+                                                                      <td><b># of Keyboards</b></td>
+                                                                      <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                      
+                                                                      <td>
+                                                                          
+                                                                      </td>
+                                                                  </tr>
+                                                                    <tr class="collapse show" id="collapseExample" style="">
+                                                                      <td><b># of Mouse</b></td>
+                                                                      <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="10" style="margin-bottom: 0;"></td>
+                                                                      
+                                                                      <td>
+                                                                          
+                                                                      </td>
+                                                                  </tr><tr class="collapse show" id="collapseExample" style="">
+                                                                      <td><b># of Wifi Routers</b></td>
+                                                                      <td><input type="text" value="1" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="1" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="1" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="1" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="1" style="margin-bottom: 0;"></td>
+                                                                      
+                                                                      <td>
+                                                                          <div style="
+                                                      display: flex;
+                                                      gap: 3px;">                    <i class="fa fa-square-plus collapsed" href="#collapseExample2" data-bs-toggle="collapse" aria-controls="collapseExample2" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; " aria-expanded="false"></i> 
+                                                      </div>
+                                                                      </td>
+                                                                  </tr><tr class="collapse" id="collapseExample2" style="">
+                                                                      <td><input type="text" placeholder="Enter KPI Name" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 1st Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 2nd Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 3rd Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 4th Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 5th Year" style="margin-bottom: 0;"></td>
+                                                                      
+                                                                      <td>
+                                                                        <div style="
+                                                      display: flex;
+                                                      gap: 3px;">                    <i class="fa fa-square-minus collapsed" href="#collapseExample2" data-bs-toggle="collapse" aria-controls="collapseExample2" role="button" aria-hidden="true" style=" color: #863c32; color: #fff; background: #863c328f; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; " aria-expanded="false"></i> 
+                                                      </div>
+                                                                      </td>
+                                                                  </tr>
+                                                                 <tr style="
+                                                        background: #fcfcfc;
+                                                    ">
+                                                                        <td colspan="7" class="task-section"><b>
+                                                                            <div class="task-details parent"><i data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1" class="fa-regular fa-square-plus collapsed"></i> Women
+                                                                                Empowerment Centres
+                                                                            </div></b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="collapse" id="collapseExample1" style="">
+                                                                      <td><b># of Tailoring Machines</b></td>
+                                                                      <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                                                                      
+                                                                      <td>
+                                                                        
+                                                                      <div style="
+                                                                      display: flex;
+                                                                      gap: 3px;">                    <i class="fa fa-square-plus" href="#collapseExample3" data-bs-toggle="collapse" aria-controls="collapseExample3" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                                                                      </div></td>
+                                                                  </tr>
+                                                                  
+                                                                  <tr class="collapse" id="collapseExample3" style="">
+                                                                    <td><input type="text" placeholder="Enter KPI Name" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 1st Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 2nd Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 3rd Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 4th Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 5th Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="Total" style="margin-bottom: 0;"></td>
+                                                                    <td>
+                                                                      <div style="
+                                                                      display: flex;
+                                                                      gap: 3px;">                    <i class="fa fa-square-minus" href="#collapseExample3" data-bs-toggle="collapse" aria-controls="collapseExample3" role="button" aria-hidden="true" style=" color: #863c32; color: #fff; background: #863c328f; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; "></i> 
+                                                                      </div>
+                                                                    </td>
+                                                                </tr>
+                                                                  <tr style="
+                                                        background: #fcfcfc;
+                                                    ">
+                                                                        <td colspan="7" class="task-section"><b>
+                                                                            <div class="task-details parent"><i data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4" class="fa-regular fa-square-plus collapsed"></i> Nutritional Gardening</div></b>
+                                                                        </td>
+                                                                    </tr><tr class="collapse" id="collapseExample4" style="">
+                                                                      <td><b>Seeds (in Kgs)</b></td>
+                                                                      <td><input type="text" value="25" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="25" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="25" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="25" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" value="25" style="margin-bottom: 0;"></td>
+                                                                      
+                                                                      
+                                                                  <td>
+                                                                      <div style="
+                                                                      display: flex;
+                                                                      gap: 3px;">                    <i class="fa fa-square-plus collapsed" href="#collapseExample7" data-bs-toggle="collapse" aria-controls="collapseExample5" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; " aria-expanded="false"></i> 
+                                                                      </div>
+                                                                    </td></tr><tr class="collapse" id="collapseExample5" style="">
+                                                                    <td><input type="text" placeholder="Enter KPI Name" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 1st Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 2nd Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 3rd Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 4th Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 5th Year" style="margin-bottom: 0;"></td>
+                                                                      
+                                                                    <td>
+                                                                      <div style="
+                                                                      display: flex;
+                                                                      gap: 3px;">                    <i class="fa fa-square-minus collapsed" href="#collapseExample5" data-bs-toggle="collapse" aria-controls="collapseExample5" role="button" aria-hidden="true" style=" color: #863c32; color: #fff; background: #863c328f; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; " aria-expanded="false"></i> 
+                                                                      </div>
+                                                                    </td>
+                                                                </tr><tr style="
+                                                        background: #fcfcfc;
+                                                    ">
+                                                                        <td colspan="7" class="task-section"><b>
+                                                                            <div class="task-details parent"><i data-bs-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample6" class="fa-regular fa-square-plus collapsed"></i> Organic Farming</div></b>
+                                                                        </td>
+                                                                    </tr><tr class="collapse" id="collapseExample6" style="">
+                                                                    <td><b>Seeds (in Kgs)</b></td>
+                                                                    <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                                                                    <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                                                                    <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                                                                    <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                                                                    <td><input type="text" value="20" style="margin-bottom: 0;"></td>
+                                                                    
+                                                                    
+                                                                <td>
+                                                                      <div style="
+                                                                      display: flex;
+                                                                      gap: 3px;">                    <i class="fa fa-square-plus collapsed" href="#collapseExample7" data-bs-toggle="collapse" aria-controls="collapseExample7" role="button" aria-hidden="true" style=" color: #323b86; color: #fff; background: #323b86ba; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; " aria-expanded="false"></i> 
+                                                                      </div>
+                                                                    </td></tr><tr class="collapse" id="collapseExample7" style="">
+                                                                    <td><input type="text" placeholder="Enter KPI Name" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 1st Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 2nd Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 3rd Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 4th Year" style="margin-bottom: 0;"></td>
+                                                                      <td><input type="text" placeholder="KPI Value for 5th Year" style="margin-bottom: 0;"></td>
+                                                                      
+                                                                    <td>
+                                                                      <div style="
+                                                                      display: flex;
+                                                                      gap: 3px;">                    <i class="fa fa-square-minus collapsed" href="#collapseExample7" data-bs-toggle="collapse" aria-controls="collapseExample7" role="button" aria-hidden="true" style=" color: #863c32; color: #fff; background: #863c328f; padding: 6px; border-radius: 8px; font-size: 13px; padding-top: 8px; " aria-expanded="false"></i> 
+                                                                      </div>
+                                                                    </td>
+                                                                </tr></tbody>
+                                                                </table>
+                                                                          
+                                                                          
+                                                                          </div>
+                                                                          
+                                                                            <div class="col-xxl-3 col-md-4 mb-30" style="
+                                                                            margin: 0;
+                                                                            ">
+                                                                                                                                  <div class="sidebarLayout">
+                                                                                                                                <div class="innerWrapperSidebar mb-30">
+                                                                                                                                  <div class="sidebarWidget">
+                                                                                                                                    <div class="sidebarTitle">
+                                                                                                                                      <h5 class="sidebarTitle__heading text-uppercase mb-30" style="
+                                                                                                                                      color: #283891;
+                                                                                                                                      font-size: 24px;
+                                                                                                                                      font-style: normal;
+                                                                                                                                      font-weight: 400 !important;
+                                                                                                                                      line-height: normal;
+                                                                                                                                      display: flex;
+                                                                                                                                      align-items: center;
+                                                                                                                                      gap: 8px;
+                                                                                                                                      text-transform: none !important;
+                                                                                                                                  ">Project Detail</h5>
+                                                                                                                                    </div>
+                                                                                                                                    <div class="sidebarCategories">
+                                                                                                                                    <ul>
+                                                                                                                                      <li>
+                                                                                                                                        <a href="#">
+                                                                                                                                          <span>Project Code</span>
+                                                                                                                                          <span style="
+                                                                                                                                    /* color: #0d6efd; */
+                                                                                                                                    /* font-weight: 600; */
+                                                                                                                                ">IVDPROJ</span>
+                                                                                                                                        </a>
+                                                                                                                                      </li>
+                                                                                                                                      <li>
+                                                                                                                                        <a href="#">
+                                                                                                                                          <span>Donors</span>
+                                                                                                                                          <span style="
+                                                                                                                                    color: #0d6efd;
+                                                                                                                                    font-weight: 600;
+                                                                                                                                ">2</span>
+                                                                                                                                        </a>
+                                                                                                                                      </li>
+                                                                                                                                      <li>
+                                                                                                                                        <a href="#">
+                                                                                                                                          <span>Pledge Amount</span>
+                                                                                                                                          <span>$ 300,000</span>
+                                                                                                                                        </a>
+                                                                                                                                      </li>
+                                                                                                                                      <li>
+                                                                                                                                        <a href="#">
+                                                                                                                                          <span>Project Type</span>
+                                                                                                                                          <span>Integrated Village Development (IVD)</span>
+                                                                                                                                        </a>
+                                                                                                                                      </li>
+                                                                                                                                      <li>
+                                                                                                                                        <a href="#">
+                                                                                                                                          <span>Location</span>
+                                                                                                                                          <span>Jogmodi</span>
+                                                                                                                                        </a>
+                                                                                                                                      </li>
+                                                                                                                                      <li>
+                                                                                                                                        <a href="#">
+                                                                                                                                          <span>Enrolled Programs</span>
+                                                                                                                                          <span class="popover-icon" id="popover" data-toggle="popover" type="button" data-html="true" tabindex="0" data-placement="bottom">4</span>
+                                                                                                                                        </a>
+                                                                                                                                      </li> 
+                                                                                                                                      <li>
+                                                                                                                                        <a href="#">
+                                                                                                                                          <span>Category</span>
+                                                                                                                                          <span>Ekal Gramothan Foundation</span>
+                                                                                                                                        </a>
+                                                                                                                                      </li>
+                                                                                                                                    
+                                                                                                                                    </ul>
+                                                                                                                                  </div>
+                                                                                                                                  </div>
+                                                                                                                                  </div>
+                                                                                                                                  
+                                                                                                                                  </div>
+                                                                                                                                  </div>
+                                                                          
+                                                                          </div>
+                                                                                                                                      
+                                                                                                                                    <div style="margin-top: 0px;"><input type="button" name="previous" class="previous action-button-previous" value="Previous">
+                                                                                                                                      <input type="submit" name="submit" class="submit action-button" value="Submit" id="submit"></div>
+                                                                                                                                </fieldset>
               
           
           </form></div>
@@ -1709,14 +2468,14 @@ li.option {
   <footer class="footer footer--bg footer--styleOne pt-70 pb-40" style="
     /* margin-top: 113px; */
 ">
-    <img src="https://codercredit.com/tf/gainioz/image/shapes/footerShape2.png" alt="Gainioz Shape" class="footer__shape" style="
+    <img src="donor_view/new_home1_files/footerShape2.png" alt="Gainioz Shape" class="footer__shape" style="
     /* display: none; */
 ">
     <div class="container">
       <div class="row align-items-center">
         <div class="col">
           <div class="footer__logo">
-            <img src="https://www.ekal.org/assets/images/ekal-logo.png" alt="Gainioz Logo" class="footer__logo__image">
+            <img src="donor_view/new_home1_files/ekal-logo.png" alt="Gainioz Logo" class="footer__logo__image">
           </div>
         </div>
         <div class="col">
@@ -1756,7 +2515,8 @@ li.option {
 
     </div>
   </footer>
-  
+  <!-- Generated markup by the plugin -->
+
   <!-- Template Search -->
   <div id="template-search" class="template-search">
     <button type="button" class="close">
@@ -1770,25 +2530,28 @@ li.option {
     </form>
   </div>
   <!-- Template Search End -->
-  <script src="https://codercredit.com/tf/gainioz/assets/jquery/jquery.min.js"></script>
-  <script src="https://codercredit.com/tf/gainioz/assets/bootstrap/js/bootstrap.bundle.js"></script>
-  <script src="https://codercredit.com/tf/gainioz/assets/swiper/swiper.min.js"></script>
-  <script src="https://codercredit.com/tf/gainioz/assets/nice-select/jquery.nice-select.min.js"></script>
+  <script src="donor_view/new_home1_files/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+
+  <script src="donor_view/new_home1_files/swiper.min.js"></script>
+  <script src="donor_view/new_home1_files/jquery.nice-select.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 
   <script src="https://codercredit.com/tf/gainioz/assets/validator.min.js"></script>
-  <script src="https://codercredit.com/tf/gainioz/assets/animation/wow.min.js"></script>
-  <script src="https://codercredit.com/tf/gainioz/js/app.js"></script>
+  <script src="donor_view/new_home1_files/wow.min.js"></script>
+  <script src="donor_view/new_home1_files/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
 
 <script>
   $(function() {
     $('#table').bootstrapTable()
-  });
-  $(function() {
+  
     $('#table2').bootstrapTable()
+    $('#table_location').bootstrapTable()
   });
+  
 
   const swiper = new Swiper('.swiper', {
     slidesPerView: 4
@@ -1796,7 +2559,7 @@ li.option {
   </script>
 <script>
  
- $("#button").click(function(e){
+ $("#select_program").click(function(e){
     console.log( "ready!" );
   
     e.preventDefault();
@@ -1811,6 +2574,20 @@ li.option {
   
     });
   
+    $("#add_location").click(function(e){
+    console.log( "ready!" );
+  
+    e.preventDefault();
+      $("#wrap3").animate({ width: "toggle" }, 700);
+      $(".bg_drop").animate({ width: "toggle" }, 700);
+      $(".open-call").toggleClass("opened closed");
+    });
+  
+   $(".close-call").click(function () {
+      $("#wrap3").hide({ width: "toggle" }, 700);
+      $(".bg_drop").hide({ width: "toggle" }, 700);
+  
+    });  
 
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
@@ -1825,7 +2602,11 @@ $(".next").click(function(){
     next_fs = $(this).parent().parent().next();
     
     //activate next step on progressbar using the index of next_fs
-    $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+     //activate next step on progressbar using the index of next_fs
+     var ind = next_fs.index() - 1
+    console.log(ind)
+    $("#progressbar li").eq(ind).addClass("active")
+    
     
     //show the next fieldset
     next_fs.show(); 
@@ -1862,7 +2643,9 @@ $(".previous").click(function(){
     previous_fs = $(this).parent().parent().prev();
     
     //de-activate current step on progressbar
-    $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+    var ind = next_fs.index() - 1
+    console.log(ind)
+    $("#progressbar li").eq(ind).removeClass("active");
     
     //show the previous fieldset
     previous_fs.show(); 
@@ -1908,6 +2691,8 @@ $('.alert').removeClass('hidden');
 }
 
 var $table2 = $('#table').bootstrapTable()
+var $table3 = $('#table3').bootstrapTable()
+
 var $button = $('#button_add')
 
 $(function() {
@@ -1934,6 +2719,16 @@ $(function() {
   })
 })
 
+
+$(function(){
+    // Enables popover
+    $("[data-toggle=popover]").popover({
+      trigger: 'focus',
+        html: true,
+        title: 'Entrolled Programs',
+        content: '<p>Computer Training Lab</p><p>Women Empowerment Center</p><p>Nutrition Gardening</p><p>Oragnic Farming</p>'
+    });
+});
 
 
 var people = ['Aum Patel', 'Bhaskar Sharma'];
@@ -1967,7 +2762,7 @@ function setSearch(value) {
   $("#search").val(value)
 }
 
-$("#submit").click(function(){
+$(".submit.action-button").click(function(){
   window.location ='new_project_plan.html'
 })
 </script>

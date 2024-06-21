@@ -3,8 +3,10 @@ package org.ekal.ivd.controller;
 import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.ekal.ivd.dao.ItemMasterDao;
 import org.ekal.ivd.dto.ItemMasterDTO;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -20,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/item")
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -41,7 +44,7 @@ public class ItemMasterController {
 	}
 	
 	@PutMapping(value = "/{itemId}", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> updateUser(@PathVariable(name = "itemId") int itemId,@Valid @RequestBody ItemMasterDTO itemMasterDTO) {
+	public ResponseEntity<?> updateItem(@PathVariable(name = "itemId") int itemId,@Valid @RequestBody ItemMasterDTO itemMasterDTO) {
 		itemMasterDao.updateItemById(itemMasterDTO,itemId);
 		return ResponseEntity.status(HttpStatus.CREATED).body(itemMasterDTO);
 	}
@@ -56,5 +59,15 @@ public class ItemMasterController {
 	public ResponseEntity<?> deleteItemById(@PathVariable(name = "itemId") int itemId) {
 		ItemMasterDTO itemMasterDTO = itemMasterDao.deleteById(itemId);
 		return ResponseEntity.status(HttpStatus.OK).body(itemMasterDTO);
+	}
+
+	@GetMapping(value = "/findByItemName/{itemName}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> getItemByName(@PathVariable(name = "itemName") String itemName) {
+		log.info("getItemByName {}",itemName);
+		List<JSONObject> itemMasterJson = itemMasterDao.findByItemName(itemName);
+		log.info("Result from search {}",itemMasterJson);
+		JSONObject response = new JSONObject();
+		response.put("item", itemMasterJson);
+		return ResponseEntity.status(HttpStatus.OK).body(response.toString());
 	}
 }
