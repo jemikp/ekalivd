@@ -1,14 +1,9 @@
 package org.ekal.ivd.entity;
 
-import java.util.Optional;
-
-import org.ekal.ivd.dto.ItemMasterDTO;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.Data;
@@ -16,6 +11,10 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
+import org.ekal.ivd.dto.ItemMasterDTO;
+
+import java.util.Optional;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -32,12 +31,18 @@ public class ItemMaster extends BaseEntity {
     @Column(name = "item_type", columnDefinition = "VARCHAR(50)")
     String itemType;
 
+	@Column(name = "item_desc", columnDefinition = "VARCHAR(100)")
+    String itemDesc;
+
+	@OneToMany(mappedBy = "item", fetch = FetchType.EAGER)
+	Set<ItemOption> itemOptions;
+
 	public ItemMaster(ItemMasterDTO itemMaster) {
 
 		Optional.ofNullable(itemMaster).ifPresent(i -> {
 			this.itemName = i.getItemName();
 			this.itemType = i.getItemType();
-			
+			this.itemDesc = i.getItemDesc();
 		});
 	}
 }
