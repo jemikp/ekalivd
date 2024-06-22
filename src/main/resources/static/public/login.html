@@ -452,7 +452,7 @@
         }
         $.post(url, parmas, function (resp) {
             localStorage.setItem("username", resp.firstName + " " + resp.lastName);
-            window.location.href = "../ivdMaster.html";
+            window.location.href = "../new_project_list.html";
         }).fail(function (data) {
             $('#errdiv').html(data.responseJSON.message).removeClass('theHide')
         });
