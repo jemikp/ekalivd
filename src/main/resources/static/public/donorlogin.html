@@ -288,17 +288,17 @@
     margin-bottom: 20px;
 ">
                                             <label>Email ID</label>
-                                            <input type="text" class="form-control login-field" id="txtPhoneNumber" placeholder="Enter Email ID" autocomplete="off">
-                                            <div class="errmsgdiv" style="display: none;"><span style="display: none; align-items: center;justify-content: center;color: red;">Invalid Phone Number</span></div>
+                                            <input type="text" class="form-control login-field" id="txtEmail" placeholder="Enter Email ID" autocomplete="off">
+                                            <div class="errmsgdiv" style="display: none;"><span style="display: none; align-items: center;justify-content: center;color: red;">Invalid Email</span></div>
                                         </div>
                                     <div class="">
                                             <label>Password</label>
-                                            <input type="password" class="form-control login-field" id="txtPhoneNumber" placeholder="Enter Password" autocomplete="off">
-                                            <div class="errmsgdiv" style="display: none;"><span style="display: none; align-items: center;justify-content: center;color: red;">Invalid Phone Number</span></div>
+                                            <input type="password" class="form-control login-field" id="txtPassword" placeholder="Enter Password" autocomplete="off">
+                                            <div class="errmsgdiv" style="display: none;"><span style="display: none; align-items: center;justify-content: center;color: red;">Invalid Password</span></div>
                                         </div></div>
 
                                     <div class="col-sm-12" style="justify-content: center;display: flex;margin-top: 15px;" id="getOtpDiv">
-                                        <button class="btn btn-primary btn-login btn-sm" onclick="window.location='../donor_view/new_home.html'" style="">Login</button>
+                                        <button class="btn btn-primary btn-login btn-sm" onclick="LoginPage.login()" style="">Login</button>
                                     </div>
                                     <div class="col-sm-12 p-0 validateOTP" style="justify-content: center; display: none; margin-top: 15px;">
                                         <div class="col-sm-6">
@@ -373,9 +373,23 @@
 </div>
 
 <script defer="">
+
     var LoginPage = () => {
+
     }
-    LoginPage.controller = '/ekalivd/LoginController'
+    LoginPage.controller = '/ekalivd/LoginController';
+    LoginPage.login = () => {
+        var email = $("#txtEmail").val();
+        var pwd = $("#txtPassword").val();
+
+        $.post(LoginPage.controller+"/login",{'email' : email,'password' : pwd},function(res){
+            if(res == "Success"){
+                window.location = "/ekalivd/new_project_list.html";
+            }else{
+                alert(res);
+            }
+        });
+    }
 
     LoginPage.createUser = () => {
         let firstName = $.trim($("#u_firstName").val());
