@@ -71,7 +71,7 @@ public class SessionFilter implements Filter {
         if (userID > 0) {
             ThreadContext.put("USERID", String.valueOf(userID));
             if (uri.endsWith("/public/login.html")) {
-                res.sendRedirect(path + "/ivdMaster.html");
+                res.sendRedirect(path + "/new_project_list.html");
             } else {
                 chain.doFilter(req, res);
             }
