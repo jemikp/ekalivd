@@ -8,11 +8,11 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
-
 import org.ekal.ivd.entity.ItemMaster;
-import org.ekal.ivd.entity.User;
 
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Data
 @JsonSerialize
@@ -27,13 +27,26 @@ public class ItemMasterDTO {
 	String itemName;
 	
 	String itemType;
-	
+
+	String itemDesc;
+
+	Set<ItemOptionDTO> itemOptions;
+
 	public ItemMasterDTO(ItemMaster itemMaster) {
 
 		Optional.ofNullable(itemMaster).ifPresent(i -> {
 			this.id = i.getId();
 			this.itemName = i.getItemName();
 			this.itemType = i.getItemType();
+			this.itemDesc = i.getItemDesc();
+			this.itemOptions = i.getItemOptions()
+					.stream()
+					.map(itemOption -> {
+						ItemOptionDTO itemOptionDTO = new ItemOptionDTO();
+						itemOptionDTO.setId(itemOption.getId());
+						itemOptionDTO.setOptionName(itemOption.getOptionName());
+						return itemOptionDTO;
+					}).collect(Collectors.toSet());
 		});
 	}
 
