@@ -24,6 +24,8 @@ public class DonorDTO {
             this.trust = u.getTrust();
             this.phoneNumber = u.getPhoneNumber();
             this.zipCode = u.getZipCode();
+            this.country = u.getCountry();
+            this.emailId = u.getEmailId();
         });
     }
 }
